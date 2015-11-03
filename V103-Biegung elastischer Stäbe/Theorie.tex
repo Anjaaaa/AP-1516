@@ -9,11 +9,16 @@ beschreibt hierbei die angreifende Kraft pro Fläche. Für hinreichend kleine re
 beschrieben werden. Der Elastizitätsmodul $E$ ist dabei eine Materialkonstante.
 % Bild von Gummi, das sich verformt.
 Soll allerdings der Elastizitätsmodul einer Metallstange, wie der des Turners, bestimmt werden, kann die Änderung der Länge oder des Durchmessers nur sehr mühsam bestimmt werden. In diesem Fall bietet sich die Verwendung des Zusammenhangs
-\begin{equation}\label{einseitige Einspannung}
+\begin{equation}\label{beidseitige Einspannung}
 D(x) = \frac{F}{48\cdot E I}\left(3L^2x-4x^3\right)
 \end{equation}
 an. $F$ ist die wirkende Kraft, also die Gewichtskraft des Turners. Sie übt einen Drehmoment auf die Stange aus. Das Flächenträgheitsmoment
 \begin{equation}\label{Flachentragheitsmoment}
 	I = \int_Q y^2\ dq\quad,
 \end{equation}
-mit der Querschnittsfläche $Q$ und dem dazugehörigen Flächenelement $dq$, verursacht im Inneren des Körpers ein entgegengesetzt gerichtetes, gleich großes Drehmoment, sodass sich ein Gleichgewicht einstellt.
+mit der Querschnittsfläche $Q$ und dem dazugehörigen Flächenelement $dq$, verursacht im Inneren des Körpers ein entgegengesetzt gerichtetes, gleich großes Drehmoment, sodass sich ein Gleichgewicht einstellt. Bei diesem Gleichgewicht kann dann an einer beliebigen Stelle mit Abstand $x$ zur nähergelegenen Aufhängung, die Auslenkung $D$ vom entspannten Zustand gemessen werden. $L$ ist der Abstand zwischen den beiden Aufhängungen. \\
+Bei Betrachtung eines Systems, das nur an einer Seite befestigt ist, wie einen Ast, an dem eine Schaukel hängt, verändert sich Gleichung \ref{beidseitige Einspannung} zu
+\begin{equation}\label{einseitige Einspannung}
+	D(x) = \frac{F}{2\cdot E I}\left(Lx^2-\frac{x^3}{3}\right)\quad.
+\end{equation}
+$L$ ist jetzt der Abstand von der Einspannung bis zum Ende des Stabes und $x$ der Abstand zwischen Einspannung und Messpunkt.
