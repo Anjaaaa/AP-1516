@@ -1,0 +1,30 @@
+Die Feder, der uns zur Verfügung gestellte Drillachse, war nicht mehr sehr elastisch, sodass die Bewegung, selbst bei hohen Trägheitsmomenten, keine zwei Perioden lang andauerte. Wir haben daher immer mehrfach eine Periodendauer gestoppt, anstatt beispielsweise fünf oder zehn Perioden zu messen und dann durch die Anzahl zu teilen. Das führt zu einem, bis hier vernachlässgten, sehr großem systematischen Fehler. Bei der Wahl der Körper, deren Trägheitsmomente wir bestimmen wollten, mussten wir uns auf Grund der kaputten Feder für die schwersten entscheiden. Daher verwendeten wir zwei Zylinder, die um die gleiche Achse gedreht wurden und sich lediglich in der Größe unterschieden. \\
+
+Bei der Auswertung ist aufgefallen, dass sich der gemessener Wert vom theoretisch berechneten Wert unterscheidet. Tabelle 7 zeigt die jeweiligen Werte und die Differenzen. \\
+Trägheitsmomente in $\si{\gram\meter\squared}$:
+\begin{center}
+	\begin{tabular}{c | c c c}
+	   & Experiment & Theorie & Differenz \\
+	   \hline
+	   kleiner Zylinder & $\num{0,890 \pm 0,050}$ & $\num{0,7570 \pm 0,00051}$ & $\num{0,1310 \pm 0,0469}$ \\
+	   großer Zylinder & $\num{3,2900 \pm 1,2000}$ & $\num{3,0700 \pm 0,0031}$ & $\num{0,2210 \pm 0,1230}$ \\
+	   Puppe & $\num{1,8000 \pm 0,4000}$ & $\num{11,2500 \pm 2,7000}$ & $\num{-9,4100 \pm 0,493 }$ \\
+	\end{tabular}
+	\captionof{table}{Gemessene und berechnete Werte für das Trägheitsmoment}
+\end{center}
+
+Die Vermutung liegt nahe, dass in der Differenz das Eigenträgheitsmoment und Reibungsverluste stecken, da wir das in der theoretischen Rechnung vernachlässigt hatten. Hier gibt es scheinbar einen Fehler, denn das Eigenträgheits-moment, das durch die Regressionsgerade berechnet wurde, ist fast 17-mal so groß wie die Differenz beim großen Zylinder und 28-mal so groß wie beim kleinen Zylinder. Dieser Widerspruch löst sich auf, wenn man bedenkt, dass wir bei der Berechnung mit der Regressiongeraden die Stange, an der die Zylinder hingen, vernachlässigt haben. Nehmen wir an, dass das echte Eigenträgheitsmoment (inklusive kleiner Reibungsverluste) $ I_\text{D, echt} = 0,1310\cdot 10^{-3}\ \text{kg\ m}^2 $ ist. Dann erhalten wir das Trägheitsmoment der Stange $ I_\text{S} $ indem wir vom anfangs berechneten Eigenträgheitsmoment das echte Trägheits-moment abziehen
+\begin{equation}
+	I_\text{S} = I_\text{D, berechnet} - I_\text{D, echt}
+\end{equation}
+Setzen wir das nun in die Formel für das Trägheitsmoment eines langen dünnen Stabes (aus der Praktikumsanleitung zu V101)
+\begin{equation}
+	I_\text{S} = \frac{m\cdot l^2}{12}
+\end{equation}
+ein, nehmen für die Länge $ l = 0,6 $ m an (der größte Abstand von der Drehachse zu einem Zylinder war $ 0.27 $ m) und lösen nach der Masse auf, erhalten wir einen Wert von
+\begin{equation}
+	m = \frac{12\cdot (I_\text{D, berechnet}-I_\text{D, echt})}{l^2} = 0,118\ \text{kg}
+\end{equation}
+Das erscheint uns durchaus realistisch und bekräftigt unsere Interpretation. \\
+
+Bei der Puppe ist der theoretische Wert mehr als $ 500 \% $ größer, als der experimentell gemessene. Wir sehen dafür zwei Ursachen. Erstens hingen die Arme der Puppe etwas unter der senkrechten, sodass der Abstand der Masse zur Drehachse kleiner ist, als in der theoretischen Berechnung angenommen. Zweitens haben wir die Gliedmaße als Zylinder genähert. Auch hier ist die Folge, dass bei der Rechnung mehr Masse weiter weg von der Drehachse ist.

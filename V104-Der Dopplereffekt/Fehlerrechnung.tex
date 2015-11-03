@@ -1,0 +1,24 @@
+Im folgenden wurden Mittelwerte von N Messungen der Größe $x$ berechnet
+\begin {equation}
+\bar{x} =  \frac{1}{N} \sum_{i=1}^\text{N} x_i
+\end{equation}
+
+sowie die Varianz
+\begin {equation}
+V(x) = \frac{1}{N} \sum_{i=1}^\text{N} (x_i - \bar{x})^2
+\end{equation}
+
+woraus die Standartabweichung folgt
+\begin {equation}
+\sigma_x = \sqrt{V(x)} \quad .
+\end{equation}
+
+Die Standartabweichung des Mittelwertes, kürzer auch Fehler des Mittelwertes genannt, bezieht noch die Anzahl der Messungen mit ein. Mehr Messungen führen zu einem kleineren Fehler
+\begin {equation}
+\Delta_{x} = \frac{\sigma_x}{\sqrt{N}} \quad .
+\end{equation}
+\\
+Wird mit fehlerbehafteten Größen weitergerechnet, muss die Gauß'sche Fehlerfortpflanzung verwendet werden. Für den Fehler der errechneten Größe $f(x_1, ... , x_n)$ gilt
+\begin{equation}
+  \sigma_y = \sqrt{ \sum_{i=1}^{n} \left( \frac{\partial f}{\partial x_i} \right)^2 \cdot \sigma_{x_i} ^2 } \quad .
+\end{equation}

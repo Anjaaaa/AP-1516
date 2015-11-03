@@ -1,0 +1,176 @@
+\subsection{Fehlerrechnung}
+Im folgenend wurden Mittelwerte von N Messungen der Größe $x$ berechnet
+\begin {equation}
+\bar{x} =  \frac{1}{N} \sum_{i=1}^\text{N} x_i
+\end{equation}
+
+sowie die Varianz
+\begin {equation}
+V(x) = \frac{1}{N} \sum_{i=1}^\text{N} (x_i - \bar{x})^2
+\end{equation}
+
+woraus die Standartabweichung folgt
+\begin {equation}
+\sigma_x = \sqrt{V(x)}.
+\end{equation}
+
+Die Standartabweichung des Mittelwertes, kürzer auch Fehler des Mittelwertes genannt, bezieht noch die Anzahl der Messungen mit ein. Mehr Messungen führen zu einem kleineren Fehler
+\begin {equation}
+\sigma_{\bar{x}} = \frac{\sigma_x}{\sqrt{N}}.
+\end{equation}
+
+
+\subsection{Bestimmung der Winkelrichtgröße}
+Zur Bestimmung der Winkelrichtgröße $D$ stellt man Formel (8) um und setzt für das Drehmoment den Ausdruck aus (4) ein
+\begin{equation}
+	D = \frac{r \cdot F}{\varphi}
+\end{equation}
+(es genügen die Absolutwerte von $\vec{F}$ und $\vec{r}$, da gilt $ \vec{r}\times\vec{F}=r\cdot F\cdot \sin(\theta)= r\cdot F $ für $ \theta = \frac{\pi}{2} $ ). \\
+\input{Tabelle_1.tex}
+Berechnet man die Winkelrichtgröße für die Datenpaare aus Tabelle 1 erhält man den gemittelten Wert $ D = 0.0285742392151\ \text{Nm}$.
+
+
+\subsection{Das Eigenträgheitsmoment der Drillachse}
+Wir nehmen nun den Zusammenhang (9) und wenden ihn auf einen experimentellen Aufbau an, der den Satz von Steiner erfordert. Das Trägheitsmoment setzt sich daher aus dem Eigenträgheitsmoment $I_D$ der Apparatur und dem um $a$ verschobenen Trägheitsmoment $I_{sym}$ des Körpers zusammen. Dann erhalten wir
+\begin{equation}
+	T = 2 \pi \sqrt{\frac{I_D + I_{sym} + m a^2}{D}}
+\end{equation}
+Wenn man diese Gleichung quadriert wird der lineare Zusammenhang zwischen $ T^2 $ und $ a^2 $ deutlich
+\begin{equation}
+		T^2 = (2\pi)^2\frac{I_D + I_{sym} + m a^2}{D}
+\end{equation}
+Der $y$-Achsenabschnitt $b$ dieser Geraden wird durch
+\begin{equation}
+	b = \frac{(2\pi)^2}{D}(I_D + I_{sym})
+\end{equation}
+und die Steigung $m$ durch
+\begin{equation}
+	m = \frac{(2\pi)^2m}{D}
+\end{equation}
+beschrieben. \\
+\ \\
+Um diesen Zusammenhang auch aus den Messdaten herauslesen zu können, führen wir eine lineare Ausgleichsrechnung durch. Die nachfolgend verwendeten Formeln kommen aus Kapitel 1.2.10 \glqq Ausgleichende Auswertung. Ausgleichsgerade. Lineare Regression. Methode der kleinsten (Abweichungs-) Quadrate\grqq\ in \glqq Praktikum der Physik\grqq\ von W. Walcher.
+\input{Tabelle_2.tex }
+Um die bestmögliche Ausgleichsgerade zu finden verwenden wir die Methode der kleinsten Quadrate. Bei unseren Messdaten erhalten wir damit einen minimalen quadratischen Fehler der Regressionsgeraden von
+\begin{equation}
+	\sigma_y^2 = \frac{\sum_i(y_i-b-mx_i)^2}{n-2} = 0.419358266383\ \text{m}^2
+\end{equation}
+wenn wir als $y$-Achsenabschnitt
+\begin{equation}
+	b = \frac{\sum_i x_i^2\cdot\sum_i y_i-\sum_i x_i\cdot\sum_i x_iy_i}{n\sum_ix_i^2-\left(\sum_ix_i\right)^2} = 5.17731001549\ \text{s}^2
+\end{equation}
+und als Steigung
+\begin{equation}
+	m = \frac{n\sum_ix_iy_i-\sum_ix_i\sum_iy_i}{n\sum_ix_i^2-\left(\sum_ix_i\right)^2} = 665.524369256\ \frac{\text{s}^2}{\text{m}^2}
+\end{equation}
+wählen. Zu Beachten sind allerdings, dass $b$ und $m$ fehlerbehaftete Größen sind, sodass die (quadrierten) Standardabweichungen
+\begin{equation}
+	\sigma_b^2 = \sigma_y^2\frac{\sum_ix_i^2}{n\sum_ix_i^2-\left(\sum_ix_i\right)^2} =
+\end{equation}
+und
+\begin{equation}
+	\sigma_m^2 = \sigma_y^2\frac{n}{n\sum_ix_i^2-\left(\sum_ix_i\right)^2} = 0.16448423374\ \left(\frac{\text{s}^2}{\text{m}^2}\right)^2
+\end{equation}
+zu berücksichtigen sind. \\
+Abbildung 1 zeigt die Messwerte mit Ausgleichsgerade. \\
+Schlussendlich können wir nun das Eigendrehmoment der Drillachse bestimmen, indem wir $b$ in Ausdruck (13) einsetzen und nach $I_D$ auflösen
+\begin{equation}
+	I_D = \frac{b\cdot D}{(2\pi)^2} - 2\cdot I_{sym} = (0.00367996 \pm 0.00000012)\ \text{kg\ m}^2
+\end{equation}
+Wir brauchen das doppelte Trägheitsmoment, da zwei Zylinder (je links und rechts) an der Stange hingen. \\
+Den angegebenen Fehler erhält man mit der Gaußsche Fehlerfortpflanzung
+\begin{equation}
+	\sigma_{I_D} = \sqrt{\left(\frac{\partial I_D}{\partial b}s_b\right)^2+\left(\frac{\partial I_D}{\partial I_{sym}}s_{I_{sym}}\right)^2}
+\end{equation}
+wobei
+\begin{equation}
+	\sigma_{I_{sym}}^2 = \cdot0.00000006 \ (\text{kg\ m}^2)^2
+\end{equation}
+\subsection{Trägheitsmomente verschiedener Körper}
+
+\subsubsection*{Zylinder}
+Die experimmentelle Bestimmung des Trägheitsmomentes für verschiedene Körper ist duch die Messung der Schwingungsdauer möglich.
+Es gilt der Zusammenhang aus Formel \eqref{eq: Periodendauer}. Nach Umformung erhält man
+\begin{equation} I = \frac{T^2}{(2 \cdot \pi)^2} \cdot D  \label{eq: Traegheitsmoment}\end{equation}
+	mit einem Fehler nach der Gauß'schen Fehlerfortpflanzung
+	\begin{equation}
+		\sigma _\text{I} = \sqrt{ \left(\frac{2}{(2 \pi)^2}  \cdot T \cdot D \right)^2 \cdot (\sigma_\text{T})^2}  \ .
+		\label{eq: Traegheitsmoment_Fehler}
+	\end{equation}
+Wir haben für zwei liegende Zylinder die Periodendauer gemessen und sie für eine spätere Bestimmung
+des theoretischen Trägheitsmomentes Längen und Breiten notiert.
+\input{Tabelle_3.tex}
+\input{Tabelle_4.tex}
+Eine Berechnung des Mittelwertes und dessen Fehler ergibt eine Periodendauer von \SI{1.108 \pm 0.029}{\per\second}
+für den kleinen Zylinder und \SI{2,13 \pm 0,04}{\per\second} für den Großen. Daraus folgen die experimentellen Trägheitsmomente \SI{0,00089 \pm 0,00005}{\kilo\gram\meter\squared} (kleiner Zylinder) und \SI{0,00329 \pm 0,00012}{\kilo\gram\meter\squared}
+(großer Zylinder) nach Formel \eqref{eq: Traegheitsmoment} und \eqref{eq: Traegheitsmoment_Fehler}. \\
+Die Trägheitsmomente dieser Zylinder lassen sich mittels
+\begin{equation}
+	I_{ZH} = m \left(\frac{R^2}{4} + \frac{h^2}{12} \right)
+\end{equation}
+mit einem Fehler nach der Gauß'schen Fehlerfortpflanzung
+\begin{equation}
+	\sigma_{\text{I}_{\text{ZH}}} = \sqrt{\left(\frac{m \cdot R}{2} \right)^2 \cdot (\sigma_\text{R})^2
+	+ \left(\frac{m \cdot h}{6} \right)^2 \cdot (\sigma_\text{h})^2}
+\end{equation}
+berechnen. Der kleine Zylinder kommt bei einer mittleren Höhe von \SI{0,042 \pm 0,000017}{\meter} und
+einem mittleren Radius von \SI{0,03 \pm 0,00}{\meter} auf ein Trägheitsmoment von \SI{0,00013 \pm 0.000047}{\kilo\gram\meter\squared}.
+Der große Zylinder misst eine mittlere Höhe von \SI{0,13913 \pm 0,00009}{\meter}
+und einen mittleren Radius von \SI{0,040020 \pm 0.000011}{\meter} und hat somit ein
+Trägheitsmoment von \SI{0,003071 \pm  0.000003086}{\kilo\gram\meter\squared}.
+
+
+\subsubsection*{Puppe}
+Für die Puppe mit rechtwinklig abgespreizten Armen und Beinen sind neben der Schwingungsdauer zur experimentellen Bestimmung des Trägheitsmomentes alle Körpermaße entscheidend, um das theoretische Trägheitsmoment zu bestimmen. Folgende Werte haben wir gemessen:
+\input{Tabelle_5.tex}
+Das Trägheitsmoment berechnen wir ebenso wie bei den Zylindern in Formel \eqref{eq: Traegheitsmoment}
+mit dem Fehler in Formel \eqref{eq: Traegheitsmoment_Fehler} aus der Schwingungsdauer.
+Das Ergebniss für die mittlere Schwingungsdauer \SI{1,60 \pm 0,18}{\per\second} ist \SI{0,0018 \pm 0,004}{\kilo\gram\meter\squared}. \linebreak %\vspace{\baselineskip}
+
+Um das gesamte (theoretische) Trägheitsmoment auszurechnen, teilen wir die Puppe in kleine Körper ein. Die
+Summe der einzelnen Trägheitsmomente liefert das Ergebnis.
+In grober Näherung nehmen wir  Kopf und Rumpf als Zylinder an, die sich um ihre Symmetrieachse drehen.
+Arme und Beine sind liegende Zylinder, deren Schwerpunkt nicht auf der Rotationsachse liegt d.h. mit Hife der Satzes von Steiner (siehe Formel \eqref{eq: Steiner}) berechnet werden.
+Die Beine sind jeweils um ihre halbe eigene Länge $(=d)$ verschoben. Bei den Armen kommt noch die Hälfte des Rumpfduchmessers (gesamt $=e$) hinzu. \\
+Zunächst bestimmen wir die Volumina der einzelnen Zylinder und errechnen daraus die einzelnen Massen:
+\begin{align}
+	\text{Volumen}_{\text{Körper}} = \frac{1}{2} \cdot \pi \cdot \text{Breite}_\text{Körper} \cdot \text{Länge}_\text{Körper} \\
+	\text{Masse}_\text{Körper} = \text{Masse}_\text{gesamt} \cdot \frac{\text{Volumen}_\text{Körper}}{\text{Volumen}_\text{gesamt}}
+\end{align}
+\begin{center}
+	\begin{tabular}{c|c|c|c|c}{h}
+		 & Arm & Bein & Rumpf & Kopf \\
+		 \hline \hline
+		 Breite in m & 0,0173400 & 0,0207 & 0,045 & 0,030 \\
+		 Fehler der Breite in m & 0,0028090 & 0,0030 & 0,008 & 0,005 \\
+		 \hline
+		 Länge in m & 0,1813 & 0,2358 & 0,1241 & 0,746 \\
+	 Fehler der Länge in m & 0,0005 & 0,0017 & 0,0030 & 0,0021 \\
+	 \hline
+	 Volumen in $\text{m}^3$ & 0,0099 & 0,0153 & 0,0176 & 0,0070 \\
+	 Fehler Volumen in $\text{m}^3$ & 0,0013 & 0,0023 & 0,0033 & 0,0012 \\
+	 \hline
+	 Masse in kg & 0,04552 & 0,07050 & 0,08089 & 0,03234 \\
+	Fehler der Masse in kg & 0,00644 & 0,00759 & 0,01315 & 0,00578 \\
+	\end{tabular}
+	\captionof{table}{Maße der Puppe mit Fehler}
+\end{center}
+\vspace{\baselineskip}
+
+Daraus folgen die Trägheitsmomente nach \eqref{eq: Traegheitsmoment} mit Fehlern nach \eqref{eq: Traegheitsmoment_Fehler}.
+\begin{center}
+	\begin{tabular}{c|c|c|c|c}{h}
+		 & Arm & Bein & Rumpf & Kopf \\
+		 \hline \hline
+		Trägheitsmoment in $\si{\milli\gram\meter\squared}$ & 2742,000 & 4633,000 & 20, 481 & 3,624 \\
+		Fehler in $\si{\milli\gram\meter\squared}$ & 16,392 & 66,444 & 10,686 & 1,829 \\
+	\end{tabular}
+	\captionof{table}{Trägheitsmomente der Körperteile mit Fehler}
+\end{center}
+Das Gesamtträgheitsmoment setzt sich aus diesen Werten zusammen. Bei den zwei Armen und Beinen ist der Faktor zwei und die Verschiebung nach dem Statz von Steiner wichtig.
+\begin{equation}
+	\begin{split}
+	I_\text{theoritsch} & = I_\text{Kopf} + I_\text{Rumpf} + 2 \cdot (I_\text{Arm} + m_\text{Arm} \cdot e^2) + 2 \cdot (I_\text{Bein} + m_\text{Bein} \cdot e^2) \\
+	& =   \SI{11250 \pm 2700}{\milli\gram\meter\squared} = \SI{0,01125 \pm 0,0027}{\kilo\gram\meter\squared}
+\end{split}
+ \end{equation}

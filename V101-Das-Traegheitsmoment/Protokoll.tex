@@ -1,0 +1,56 @@
+\documentclass[a4,12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, top=30mm, left=35mm, right=35mm, bottom=30mm}
+\usepackage{multicol}
+
+\setlength\parindent{0pt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb}
+
+\usepackage{caption}
+
+\usepackage[
+locale=DE,
+separate-uncertainty=true, % Immer Fehler mit ±
+%per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
+% alternativ:
+% per-mode=reciprocal,
+% m s^{-1}
+% output-decimal-marker=.,
+% . statt , für Dezimalzahlen
+]{siunitx}
+
+
+%\usepackage{fontspec}
+
+\title{Das Trägheitsmoment}
+\author{Clara Rittmann \\ Anja Beck}
+\date{Durchführung: 20.10.15}
+
+\begin{document}
+	\maketitle
+	\date{}
+	\tableofcontents
+	
+	\section{Theorie}
+	\input{Theorie.tex}
+
+	\section{Aufbau und Ablauf des Experiments}
+	\input{Aufbau_Ablauf.tex}
+
+%	\section{Messergebnisse}
+
+%	\input{Tabelle_1.tex}
+%	\input{Tabelle_2.tex}
+%	\input{Tabelle_3.tex}
+%	\input{Tabelle_4.tex}
+
+%	\input{Tabelle_5.tex}
+
+	\section{Auswertung}
+	\input{Auswertung.tex}
+
+	\section{Diskussion}
+	\input{Diskussion.tex}
+\end{document}

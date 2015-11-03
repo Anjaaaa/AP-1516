@@ -1,0 +1,60 @@
+\documentclass[a4,12pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, top=30mm, left=35mm, right=35mm, bottom=30mm}
+\usepackage{multicol}
+
+\setlength\parindent{0pt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb}
+
+\usepackage{caption}
+
+\usepackage{graphicx}
+
+\usepackage[
+locale=DE,
+separate-uncertainty=true, % Immer Fehler mit ±
+%per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
+% alternativ:
+% per-mode=reciprocal,
+% m s^{-1}
+% output-decimal-marker=.,
+% . statt , für Dezimalzahlen
+]{siunitx}
+
+\usepackage{url} %für Linkadressen
+
+
+
+
+\title{Der Dopplereffekt}
+\author{Clara Rittmann \\ Anja Beck}
+\date{Durchführung: 27.10.15}
+
+\begin{document}
+	\maketitle
+	\date{}
+	\tableofcontents
+
+	\section{Theorie}
+	\input{Theorie.tex}
+
+	\section{Aufbau und Ablauf des Experiments}
+	\input{Aufbau_Ablauf.tex}
+
+%	\section{Messergebnisse}
+
+
+	\section{Auswertung}
+	\subsection{Statistische Formeln}
+	\subsubsection{Fehlerrechnung}
+	\input{Fehlerrechnung.tex}
+	\subsubsection{Regression}
+	\input{Regression.tex}
+
+	\input{Auswertung.tex}
+
+	\section{Diskussion}
+	\input{Diskussion.tex}
+\end{document}

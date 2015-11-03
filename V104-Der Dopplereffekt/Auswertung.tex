@@ -1,0 +1,113 @@
+\subsection{Bestimmung der Geschwindigkeit}
+\input{Zeitmessung.tex}
+\input{Mittelwert_Zeitmessung.tex}
+Mit Hilfe der gemittelten Zeitwerte und dem Abstand der beiden Lichtschranken von
+\begin{equation}
+	s = (0.420 \pm 0)\ \text{m}
+\end{equation}
+lassen sich über
+\begin{equation}
+	v = \frac{\Delta s}{\Delta t}
+\end{equation}
+die Geschwindigkeiten berechnen
+\input{Geschwindigkeiten.tex}
+In den weiteren Berechnungen werden die Geschwindigkeiten mit $v_1,...,v_{10}$ , beginnend mit der kleinsten und in aufsteigender Reihenfolge, benannt.
+\subsection{Bestimmung der Schallgeschwindigkeit}
+Die Schallgeschwindigkeit soll mit Hilfe von Gleichung (1) bestimmt werden.
+\input{Wellenlange.tex}
+Tabelle 4 zeigt die gemessenen Wellenlängen, die einen Mittelwert von
+\begin{equation}
+	\lambda = (0.0177 \pm 0.0002)\ \text{m}
+\end{equation}
+ergeben.
+\input{Ruhefrequenz.tex}
+Das Mittel der Ruhefrequenzen ist
+\begin{equation}
+	\nu_0 = (20357.4 \pm 0.2)\ \text{Hz}\quad .
+\end{equation}
+Und daraus ergibt sich die Schallgeschwindigkeit
+\begin{equation}
+	c = (360.1 \pm 4.5)\ \frac{\text{m}}{\text{s}} \quad .
+\end{equation}
+
+\subsection{Lineare Regression}
+Durch lineare Regression soll nun der Zusammenhang zwischen der Geschwindigkeit des Senders $v$ und dem Frequenzunterschied
+\begin{equation}
+	\Delta\nu = \nu_i - \nu_0
+\end{equation}
+zwischen der Frequenz $\nu_i$, die bei Geschwindigkeit $v_i$ gemessen wurde und der Ruhefrequenz $\nu_0$.
+
+\subsubsection{Die Quelle bewegt sich auf den Empfänger zu}
+Im ersten Fall bewegt sich die Quelle auf den Empfänger zu. Tabelle 6 zeigt die dabei gemessenen Frequenzen, Tabelle 7 die Mittelwerte.
+\input{Quelle_bewegt_sich_hin.tex}
+Wird nun noch die Differenz zwischen diesen Frequenzen und der Ruhefrequenz gebildet, ergeben sich folgende Wertepaare
+\input{Wertepaare_hin.tex}
+aus denen die Regressionsgerade berechnet wird.
+Mit obigen Formeln ergibt sich somit die Steigung
+\begin{equation}
+	m_{hin} = (58.86 \pm 0.23)\ \text{m}^{-1}
+\end{equation}
+und der y-Achsenabschnitt
+\begin{equation}
+	b_{hin} = (0.46 \pm 0.72)\ \text{Hz} \quad .
+\end{equation}
+Abbildung X zeigt die Messpunkte mit der Ausgleichsgeraden.
+
+\subsubsection{Quelle bewegt sich vom Empfänger weg}
+Im zweiten Fall entfernt sich nun die Quelle vom Empfänger. Tabelle 9 zeigt die hier gemessenen Werte und in Tabelle 10 finden sich die zugehörigen Mittelwerte.
+\input{Quelle_bewegt_sich_weg.tex}
+Wiederrum kann die Differenz zwischen diesen Frequenzen und der Ruhefrequenz und damit die Wertepaare für die Regression gebildet werden.
+\input{Wertepaare_weg.tex}
+
+Die Steigung ist diesmal
+\begin{equation}
+	m_{weg} = (-65.7 \pm 2.2)\ \text{m}^{-1}
+\end{equation}
+und der y-Achsenabschnitt ist
+\begin{equation}
+	b_{weg} = (3.3 \pm 7.1)\ \text{Hz}\quad .
+\end{equation}
+
+\subsubsection{Bestimmung der Wellenlänge}
+Theoretisch verläuft die Gerade zu $ \Delta\nu(v)=m v $ durch den Nullpunkt, da gerade bei $v=0\ \frac{\text{m}}{\text{s}}$ gerade kein Dopplereffekt auftritt. Die Ergebnisse für die y-Achsenabschnitte oben bestätigen dies. Die Steigung kann demnach einfach mit
+\begin{equation}
+	m = \frac{\Delta\nu}{v}
+\end{equation}
+berechnet werden. Durch Umformung mit Hilfe von (3) und einer Taylorentwicklung für $f(v) = \frac{1}{1-\frac{v}{c}}$ um $v=0$, erhält man
+\begin{equation}
+	m \approx \frac{\nu_0}{c} = \frac{1}{\lambda_0} \quad .
+\end{equation}
+Der so errechnete Wert für die Wellenlänge $\lambda_0$ beträgt bei der Bewegung auf den Empfänger zu
+\begin{equation}
+	\lambda_{0, \text{hin}} = (0.01737 \pm 0.00007)\ \text{m}
+\end{equation}
+und vom Empfänger weg
+\begin{equation}
+	\lambda_{0, \text{weg}} = (-0.0152 \pm 0.0005)\ \text{m} \quad .
+\end{equation}
+
+\subsection{Studentischer T-Test}
+Ziel des studentischen T-Tests ist es zu bestimmen, wie ähnlich sich zwei Messungen sind. Hier soll überprüft werden, ob die direkte Wellenlängenmessung mit der Wellenlängenmessung durch die lineare Regression übereinstimmt. \\
+Der studentische T-Test bezieht neben dem Mittelwert auch die Varianz der Werte mit ein. Zudem ist wichtig, wie häufig welche Messung durchgeführt wurde und die daraus berechnete Zahl der Freiheitsgerade.
+Die Anzahl der ersten Messung mit dem Mittelwert $x$ und der Varianz $x_s$ sei $n$ sowie die Anzahl der zweiten Messung mit dem Mittelwert $y$ und Varianz  $y_s$  $m$ sei. Die Zahl der Freiheitsgerade ist dann durch $n + m - 2$ gegeben. \\
+Zunächt wird die gewichtete Varianz ausgerechnet
+\begin{equation}
+s^2 = \frac{(n-1) \cdot  s_x^2 +(m-1) \cdot s_y^2]}{n +m -2}
+\end{equation}
+und dann die Richtgröße $t$ bestimmt
+\begin{equation}
+t = \sqrt{\frac{n \cdot m}{n+m}} \cdot \frac{x-y}{s}  \quad .
+\end{equation}
+Diese Richtgröße $t$ wird nun mit einem vom Freiheitsgrad und der gewünschten Genauigkeit abhängigen Literaturwert $t'$ verglichen.
+Ist $t'$ kleiner als $t$ stimmen die Messwerte nicht mit der Genauigkeit überein -- zumindest nicht mit der angegebenen Genauigkeit. \\
+\begin{tabular}{c | c c c c c c}
+	& Wellenlänge & Varianz & Anzahl Messungen & $t'$ & s & t \\
+	\hline
+	Direkte Messung &  0,01769 & 0.0004 & 4 &  &  &  \\
+	Regession (hin) & 0,01737 & 0.0001 & 10 & 2,18 & 0.000 & 2,588 \\
+	Regession (weg) & 0,0152 & 0,0005 & 10 & 2,18 & 0.000 & 8,824 \\
+	\end{tabular}
+Die Tabelle zeigt den Vergleich der direkten Messung mit der Ermittlung der Wellenlänge durch die Regression. Die direkte Messung wurde als erste Messung angenommen und die Regession (hin) bzw. Regession (weg)  als Zweite. Der Wert $t'$ entschreicht einer Übereinstimmung der Messwerte von $97,5 \%$ und stammt aus der Quantiltabelle der Internetseite \url{http://evol.bio.lmu.de/_statgen/StatBiol/11SS/quantile.pdf}. \\
+Die Auswertung ergibt, dass die Messergebnisse kaum übereinstimmen, folglich ein grpßer systematischer Fehler gemacht wurde.
+
+

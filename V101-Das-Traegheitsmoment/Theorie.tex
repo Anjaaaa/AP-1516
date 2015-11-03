@@ -1,0 +1,49 @@
+% Trägheitsmoment
+Man stelle sich eine Eiskunstläuferin vor, die eine Pirouette mit angezogenen Armen und Beinen macht. Wenn sie die Gliedmaßen nun schnell von sich streckt, ist intuitiv klar, dass sie sich plötzlich langsamer dreht. Der Grund dafür ist die Änderung des Trägheitsmoments $I$. Dreht sich ein Körper um seine Symmetrieachse lautet das Trägheitsmoment
+\begin{equation}
+	I = \int_V r^2\rho(r)\ dV
+\end{equation}
+$r$ ist hierbei der Abstand zur Rotationsachse. Das Trägheitsmoment ist also abhängig davon wie die Masse in Bezug auf die Symmetrieachse verteilt ist. \\
+
+
+% Satz von Steiner
+Dreht sich ein Körper allerdings nicht um seine Symmetrieachse, muss das Trägheitsmoment mit dem Satz von Steiner
+\begin{equation}
+	I = I_{sym} + m\cdot a^2
+	\label{eq: Steiner}
+\end{equation}
+berechnet werden. $I_{sym}$ ist hier das Trägheitsmoment für eine Drehung um die Symmetrieachse des Körpers, $m$ seine Masse und $a$ ist der Abstand zwischen Symmetrie- und Rotationsachse. \\
+Außerdem gilt
+\begin{equation}
+	I = \sum_i I_i = \sum_i m_i\cdot r_i^2
+\end{equation}
+sodass komplizierte Formen zur Berechnung des Trägheitsmoments in einfachere Teilstücke zerlegt werden können. \\
+
+
+% Trägheitsmoment = Masse
+Das Trägheitsmoment spielt eine wichtige Rolle bei der Berechnung von Rotationsbewegungen, weil es das Analogon zur (trägen) Masse bei beispielsweise geradlinigen Bewegungen ist. Ähnlich verhält es sich mit dem Drehmoment $\vec{M}$. Es wird berechnet durch
+\begin{equation}
+	\vec{M} = \vec{r}\times\vec{F} % Ich finde diese Formel verwirrt hier nur. Dann ist mir aber aufgefallen, dass wir genau damit doch später die Winkelrichtgröße bestimmen :s
+\end{equation}
+Das Drehmoment repräsentiert die \glqq Kraft\grqq\ bei Rotationsbewegungen. Das heißt
+\begin{equation}
+	F = m \cdot \ddot{x}
+\end{equation}
+wird zu
+\begin{equation}
+	 M = I \cdot \ddot{\varphi}
+\end{equation}
+und bei Bewegungen, die durch die rücktreibende Kraft einer Feder (Federkonstante $k$) verursacht werden, wird
+\begin{equation}
+	F = k \cdot x
+\end{equation}
+zu
+\begin{equation}
+M = D \cdot \varphi
+\end{equation}
+$D$ heißt hier Winkelrichtgröße. % Was macht die eigentlich genau?
+Betrachtet man ein System, das eine rotierende Bewegung ausführt und bei dem die rücktreibende Kraft aus einer Feder kommt, kann man zudem folgenden Zusammenhang zwischen der Schwingungsdauer $T$, dem Trägheitsmoment $I$ und der Winkelrichtgröße $D$ herstellen
+\begin{equation}
+	T = 2\pi\sqrt{\frac{I}{D}} % Mit Praktikumsanleitung = Quelle.
+	\label{eq: Periodendauer}
+\end{equation}

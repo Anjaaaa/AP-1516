@@ -1,0 +1,15 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Theorie}{1}
+\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{2}
+\contentsline {section}{\numberline {3}Auswertung}{3}
+\contentsline {subsection}{\numberline {3.1}Statistische Formeln}{3}
+\contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{3}
+\contentsline {subsubsection}{\numberline {3.1.2}Regression}{3}
+\contentsline {subsection}{\numberline {3.2}Bestimmung der Geschwindigkeit}{4}
+\contentsline {subsection}{\numberline {3.3}Bestimmung der Schallgeschwindigkeit}{5}
+\contentsline {subsection}{\numberline {3.4}Lineare Regression}{6}
+\contentsline {subsubsection}{\numberline {3.4.1}Die Quelle bewegt sich auf den Empf\IeC {\"a}nger zu}{6}
+\contentsline {subsubsection}{\numberline {3.4.2}Quelle bewegt sich vom Empf\IeC {\"a}nger weg}{7}
+\contentsline {subsubsection}{\numberline {3.4.3}Bestimmung der Wellenl\IeC {\"a}nge}{8}
+\contentsline {subsection}{\numberline {3.5}Studentischer T-Test}{9}
+\contentsline {section}{\numberline {4}Diskussion}{9}
