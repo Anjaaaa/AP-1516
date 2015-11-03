@@ -18,7 +18,7 @@ D = D_ohne - D_mit  # Differenz berechnen
 D = D/1000   # von mm in m umrechnen
 
 
-I = 1   # Flächenträgheitsmoment
+I = 8.33*10**(-10)   # Flächenträgheitsmoment
 L = 0.50   # Länge des Stabes beim Einspannen
 gewicht = 0.7676   # Gewicht des Gewichts nicht des Stabes
 
@@ -45,6 +45,8 @@ print('Steigung:', parameters[0])
 print('Fehler Steigung:', np.sqrt(popt[1,1]))
 print('y-Achsenabschnitt:', parameters[1])
 print('Fehler y-Achsenabschnitt:', np.sqrt(popt[0,0]))
+
+print('Elastizitätsmodul:', 1/parameters[0])
 plt.plot(X, D, 'r.')
 plt.plot(X, fit_fn(X), 'g-')
 plt.show()
