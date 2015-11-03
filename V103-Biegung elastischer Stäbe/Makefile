@@ -15,6 +15,7 @@ clean:
 	rm -rf *.aux
 	rm -rf *.log
 	rm -rf *.idx
+	rm -rf *.toc
 	rm -rf *.synctex.gz
 
 clean-all:
@@ -23,3 +24,4 @@ clean-all:
 	rm -rf *.idx
 	rm -rf *.synctex.gz
 	rm -rf $(NAME).pdf
+	rm -rf *.toc
