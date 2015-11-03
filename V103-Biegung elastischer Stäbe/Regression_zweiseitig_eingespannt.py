@@ -14,15 +14,16 @@ x, D_mit_links, D_mit_rechts, D_ohne_links, D_ohne_rechts = np.genfromtxt('Biegu
 
 x = x/100   # von cm in m umrechnen
 
-D_links = D_ohne_links - D_mit_links  # Differenz berechnen
+D_links = D_ohne_links - D_mit_links          # Differenz berechnen
 D_rechts = D_ohne_rechts - D_mit_rechts
-D_links = D_links/1000   # von mm in m umrechnen
+D_links = D_links/1000                        # von mm in m umrechnen
 D_rechts = D_rechts/1000
 
 
-I = 1   # Flächenträgheitsmoment
-L = 0.50   # Länge des Stabes beim Einspannen
-gewicht = 0.7476   # Gewicht des Gewichts nicht des Stabes
+I = 8.33*10**(-10)   # Flächenträgheitsmoment
+L = 0.555   # Länge des Stabes beim Einspannen
+gewicht = 4.7004   # Gewicht des Gewichts, nicht des Stabes
+
 
 F = gewicht * 9.81
 
@@ -46,12 +47,13 @@ fit_fn = np.poly1d(fit)
 def f(X_links, m, b):
     return m*X_links+b
 
-parameters, popt = curve_fit(f, X_links, D_links)
+parameters_l, popt_l = curve_fit(f, X_links, D_links)
 
-print('Steigung:', parameters[0])
-print('Fehler Steigung:', np.sqrt(popt[1,1]))
-print('y-Achsenabschnitt:', parameters[1])
-print('Fehler y-Achsenabschnitt:', np.sqrt(popt[0,0]))
+print('Steigung:', parameters_l[0])
+print('Fehler Steigung:', np.sqrt(popt_l[1,1]))
+print('y-Achsenabschnitt:', parameters_l[1])
+print('Fehler y-Achsenabschnitt:', np.sqrt(popt_l[0,0]))
+print('Elastizitätsmodul:', 1/parameters_l[0])
 plt.plot(X_links, D_links, 'r.')
 plt.plot(X_links, fit_fn(X_links), 'g-')
 plt.show()
@@ -66,15 +68,17 @@ fit_fn = np.poly1d(fit)
 def f(X_rechts, m, b):
     return m*X_rechts+b
 
-parameters, popt = curve_fit(f, X_rechts, D_rechts)
+parameters_r, popt_r = curve_fit(f, X_rechts, D_rechts)
 
-print('Steigung:', parameters[0])
-print('Fehler Steigung:', np.sqrt(popt[1,1]))
-print('y-Achsenabschnitt:', parameters[1])
-print('Fehler y-Achsenabschnitt:', np.sqrt(popt[0,0]))
+print('Steigung:', parameters_r[0])
+print('Fehler Steigung:', np.sqrt(popt_r[1,1]))
+print('y-Achsenabschnitt:', parameters_r[1])
+print('Fehler y-Achsenabschnitt:', np.sqrt(popt_r[0,0]))
+print('Elastizitätsmodul:', 1/parameters_r[0])
 plt.plot(X_rechts, D_rechts, 'r.')
 plt.plot(X_rechts, fit_fn(X_rechts), 'g-')
 plt.show()
+
 
 
 
@@ -88,13 +92,16 @@ fit_fn = np.poly1d(fit)
 def f(X, m, b):
     return m*X+b
 
-parameters, popt = curve_fit(f, X, D)
+parameters_m, popt_m = curve_fit(f, X, D)
 
-print('Steigung:', parameters[0])
-print('Fehler Steigung:', np.sqrt(popt[1,1]))
-print('y-Achsenabschnitt:', parameters[1])
-print('Fehler y-Achsenabschnitt:', np.sqrt(popt[0,0]))
+print('Steigung:', parameters_m[0])
+print('Fehler Steigung:', np.sqrt(popt_m[1,1]))
+print('y-Achsenabschnitt:', parameters_m[1])
+print('Fehler y-Achsenabschnitt:', np.sqrt(popt_m[0,0]))
+print('Elastizitätsmodul:', 1/parameters_m[0])
 plt.plot(X, D_rechts, 'r.')
 plt.plot(X, fit_fn(X), 'g-')
 plt.show()
 
+ 
+print('Schallgeschwindigkeit:', np.sqrt(1/(parameters_m[0]*2785)))
