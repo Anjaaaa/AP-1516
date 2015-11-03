@@ -15,3 +15,9 @@ machen.
 
 Bei deiner Tabelle 1 steht oben "Breite h in 0.05mm" und "Durchmesser 2r in 0.05mm". Das 0.05 kann in 
 der Form doch so nicht da stehen?
+
+
+
+
+
+Wir müssen uns mal was für die Gliederung der Auswertung einfallen lassen.
