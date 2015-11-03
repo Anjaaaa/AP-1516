@@ -15,7 +15,8 @@ länge_rund = länge_rund[np.invert(np.isnan(länge_rund))] /1000
 höhe_eckig_gesamt = ufloat(np.mean(höhe_eckig), np.std(höhe_eckig)/np.sqrt(len(höhe_eckig))+ 0.05) /1000
 höhe_rund_gesamt = ufloat(np.mean(höhe_rund), np.std(höhe_rund)/np.sqrt(len(höhe_rund))+ 0.05) /1000
 
-
+print('h:', höhe_eckig_gesamt)
+print('r:', höhe_rund_gesamt /2)
 #flächenträgheitsmomente bestimmen
 I_eckig = (höhe_eckig_gesamt)**4 / 12
 I_rund = (höhe_rund_gesamt / 2)**4 *np.pi / 4

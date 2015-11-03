@@ -1,5 +1,5 @@
 #dicke länge gewicht
-#mm mm kg
+#mm mm g
 10.00 600.00 167.1
 10.00 - -
 10.00 - -
