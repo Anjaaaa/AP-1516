@@ -1,0 +1,17 @@
+Die Formeln haben jetzt Label, weil guter Stil und weil Verweise dann einfacher sind.
+
+
+
+
+In Aufbau und Ablauf -> beidseitig eingespannter Stab, erzähl ich was von Abstand zum Gewicht, weil wir 
+das ja auch so gemessen haben.
+Ich würde jetzt entweder hier direkt "Abstand vom Rand" schreiben und dann bei den Messwerten im 
+Protokoll auch einfach den Abstand zum Rand angeben (also statt 3,75cm Abstand zum Gewicht, 27.75-3.75cm 
+vom Rand) oder wir lassen beides bei "Abstand vom Gewicht" und erklären dann in der Auswertung, was wir 
+machen.
+
+
+
+
+Bei deiner Tabelle 1 steht oben "Breite h in 0.05mm" und "Durchmesser 2r in 0.05mm". Das 0.05 kann in 
+der Form doch so nicht da stehen?
