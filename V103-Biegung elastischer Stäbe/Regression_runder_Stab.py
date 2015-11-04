@@ -42,10 +42,18 @@ def f(X, m, b):
 parameters, popt = curve_fit(f, X, D)
 
 print('Steigung:', parameters[0])
-print('Fehler Steigung:', np.sqrt(popt[1,1]))
+print('Fehler Steigung:', np.sqrt(popt[0,0]))
 print('y-Achsenabschnitt:', parameters[1])
-print('Fehler y-Achsenabschnitt:', np.sqrt(popt[0,0]))
-print('Elastizitätsmodul:', 1/parameters[0])
-plt.plot(X, D, 'r.')
-plt.plot(X, fit_fn(X), 'g-')
+print('Fehler y-Achsenabschnitt:', np.sqrt(popt[1,1]))
+steigung = ufloat(parameters[0],np.sqrt(popt[0,0]))
+print('Elastizitätsmodul:', 1/steigung)
+plt.plot(X, D, 'r.', label='Datenpunkte')
+plt.plot(X, fit_fn(X), 'g-', label = 'Regressionsgerade')
+
+plt.xlabel(r'$A \ /\  \mathrm{N/m}$')
+plt.ylabel(r'$D \ /\  \mathrm{m}$')
+
+plt.legend(loc='best')
+plt.savefig('Regression_runder_Stab.pdf')
+
 plt.show()

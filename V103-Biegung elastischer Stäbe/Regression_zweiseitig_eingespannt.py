@@ -54,8 +54,15 @@ print('Fehler Steigung:', np.sqrt(popt_l[1,1]))
 print('y-Achsenabschnitt:', parameters_l[1])
 print('Fehler y-Achsenabschnitt:', np.sqrt(popt_l[0,0]))
 print('Elastizitätsmodul:', 1/parameters_l[0])
-plt.plot(X_links, D_links, 'r.')
-plt.plot(X_links, fit_fn(X_links), 'g-')
+plt.plot(X_links, D_links, 'r.', label='Datenpunkte')
+plt.plot(X_links, fit_fn(X_links), 'g-', label = 'Regressionsgerade')
+
+plt.xlabel(r'$C \ /\  \mathrm{N/m}$')
+plt.ylabel(r'$D \ /\  \mathrm{m}$')
+
+plt.legend(loc='best')
+plt.savefig('Regression_zweiseitig_eingespannt_1')
+
 plt.show()
 
 
@@ -75,8 +82,15 @@ print('Fehler Steigung:', np.sqrt(popt_r[1,1]))
 print('y-Achsenabschnitt:', parameters_r[1])
 print('Fehler y-Achsenabschnitt:', np.sqrt(popt_r[0,0]))
 print('Elastizitätsmodul:', 1/parameters_r[0])
-plt.plot(X_rechts, D_rechts, 'r.')
-plt.plot(X_rechts, fit_fn(X_rechts), 'g-')
+plt.plot(X_rechts, D_rechts, 'r.', label = 'Datenpunkte')
+plt.plot(X_rechts, fit_fn(X_rechts), 'g-', label = 'Regressionsgerade')
+
+plt.xlabel(r'$C \ /\  \mathrm{N/m}$')
+plt.ylabel(r'$D \ /\  \mathrm{m}$')
+
+plt.legend(loc='best')
+plt.savefig('Regression_zweiseitig_eingespannt_2.pdf')
+
 plt.show()
 
 
@@ -99,9 +113,16 @@ print('Fehler Steigung:', np.sqrt(popt_m[1,1]))
 print('y-Achsenabschnitt:', parameters_m[1])
 print('Fehler y-Achsenabschnitt:', np.sqrt(popt_m[0,0]))
 print('Elastizitätsmodul:', 1/parameters_m[0])
-plt.plot(X, D_rechts, 'r.')
-plt.plot(X, fit_fn(X), 'g-')
+plt.plot(X, D_rechts, 'r.', label = 'Datenpunkte')
+plt.plot(X, fit_fn(X), 'g-', label = 'Regressionsgerade')
+
+plt.xlabel(r'$C \ /\  \mathrm{N/m}$')
+plt.ylabel(r'$D \ /\  \mathrm{m}$')
+
+plt.legend(loc='best')
+plt.savefig('Regression_zweiseitig_eingespannt_3.pdf')
+
 plt.show()
 
- 
+
 print('Schallgeschwindigkeit:', np.sqrt(1/(parameters_m[0]*2785)))

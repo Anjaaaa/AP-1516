@@ -23,6 +23,7 @@ Für den eckigen Stab folgt aus dem Mittelwert der Breite
 ein Flächenträgheitsmoment von
 \begin{align}
 I_\text{E}=\SI{3.88(17)e-10}{\metre\raiseto{4}} \quad .
+\label{I_E}
 \end{align}
 
 Für den runden Stab folgt aus einem Radius von duschnittlich
@@ -32,7 +33,78 @@ Für den runden Stab folgt aus einem Radius von duschnittlich
 das Flächenträgheitsmoment
 \begin{equation}
   I_\text{R} = \SI{4.81(12)e-10}{\metre\raiseto{4}} \quad .
+  \label{I_R}
 \end{equation}
+
+
+\subsection{Bestimmung des Elastizitätsmodul durch lineare Regression}
+\subsubsection{Runder Stab -- einseitige Einspannung}
+Die gemessene Durchbiegung $D(x)$ des Stabes wird durch die Gleichung \eqref{einseitige Einspannung} beschrieben.
+Alle in ihr vorkommende Größen, bis auf das Elaatizitästmodul sind bekannt. Das Flächenträgheitsmoment wurde im vorherigen Abschnitt als \eqref{I_R} bestimmt und die herabziehende Kraft $F$ ist aus der Masse des Probekörpers zu berechnen
+\begin{equation}
+  F = m \cdot g = \SI{0.7476}{\kilo\gram} \cdot \SI{9.81}{\metre\per\second\squared} = \SI{7.3339}{\newton} \quad .
+\end{equation}
+Nun lässt sich das Elastizitäsmodul $E$ druch eine lineare Regression der Form
+\begin{equation}
+  D(x) = \frac{F}{2\cdot E I}\left(Lx^2-\frac{x^3}{3}\right) = \frac{1}{E} \cdot A +b
+\end{equation}
+bestimmen, indem $D(x)$ über $A$ ausgetragen wird (siehe Abbildung \ref{fig:Regression_runder_Stab}). $E$ entspricht dem Kehrwert der Steigung der Regressionsgeraden. Unter Verwendung der Formeln aus Kapitel~\ref{sec:regression} ergibt die Steigung mit Abweichung
+\begin{equation}
+  \frac{1}{E}= \SI{188.9(15)e-13}{\metre\squared\per\newton}
+\end{equation}
+und der $y$-Achsenabschnitt mit Abweichung
+\begin{equation}
+  b = \SI{14.33(36)e-05}{\metre} \quad.
+\end{equation}
+Das hier bestimmte Elastizitästmodul für den runden Stab ist folglich
+\begin{equation}
+  E = \SI{5.29(4)e+10}{\newton\per\metre\squared} \quad.
+\end{equation}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Regression_runder_Stab.pdf}
+\caption{Regressionsgerade des runden Stabes bei einseitiger Einspannung}
+\label{fig:Regression_runder_Stab}
+\end{figure}
+
+
+
+\subsubsection{Eckiger Stab -- einseitige Einspannung}
+Hier ist der Vorgehensweise genau so, wie bei dem runden Stab. Es muss lediglich ein anderes Flächenträgheitsmoment \ref{I_E} und eine andere Kraft
+\begin{equation}
+  F = m \cdot g = \SI{0.7676}{\kilo\gram} \cdot \SI{9.81}{\metre\per\second\squared} = \SI{7.5302}{\newton}
+\end{equation}
+eingesetzt werden.
+Dies führt auf eine Steigung mit Abweichung von
+\begin{equation}
+  \frac{1}{E}= \SI{135.6(9)e-13}{\metre\squared\per\newton}
+\end{equation}
+und den $y$-Achsenabschnitt mit Abweichung
+\begin{equation}
+  b = \SI{6.28(217)e-05}{\metre} \quad.
+\end{equation}
+Das hier bestimmte Elastizitästmodul für den eckigen Stab ist folglich
+\begin{equation}
+  E = \SI{7.37(5)e+10}{\newton\per\metre\squared} \quad.
+\end{equation}
+Die Werte wurden in Abbildung~\ref{fig:Regression_eckiger_Stab} aufgetragen.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{Regression_eckiger_Stab.pdf}
+\caption{Regressionsgerade des eckigen Stabes bei einseitiger Einspannung}
+\label{fig:Regression_eckiger_Stab}
+\end{figure}
+
+
+
+
+
+
+
+\subsubsection{Eckiger Stab -- beidseitige Einspannung}
+Die Bestimmung des Elastizitätsmoduls bei beidseitiger Einspannung ist ähnlich zu der bei einsitiger und unterscheidet sich in der Ausführung im wesentlichen durch die minimal andere Formel \ref{}
 
 
 
