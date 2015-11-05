@@ -30,3 +30,6 @@ rho_rund = gewicht_rund / ( np.pi * (höhe_rund_gesamt / 2)**2 * länge_rund)
 
 print('Dichte des eckigen Stabes:', rho_eckig)
 print ('Dichte des runden Stabes:', rho_rund)
+
+print ('gewicht_rund', gewicht_rund)
+print ('gewicht_eckig', gewicht_eckig)
