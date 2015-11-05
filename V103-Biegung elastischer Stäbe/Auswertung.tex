@@ -1,10 +1,10 @@
-subsection{Bestimmung der Flächenträgheitsmomente}
-Das Flächenträgheitsmoment ist eine Größe, die im weiteren Verlauf wichtig ist, um das Elastizitätsmodul der Stäbe zu ermitteln.
-Es hängt von dem Querschnitt des Stabes, genauer der Abstände $y$ der Flächenelemente d$q$ zur neutralen Faser ab
+\subsection{Bestimmung der Flächenträgheitsmomente}
+Das Flächenträgheitsmoment ist eine Größe, die im weiteren Verlauf wichtig ist, um den Elastizitätsmodul der Stäbe zu ermitteln.
+Er hängt vom Querschnitt des Stabes, genauer vom Abstand $y$ der Flächenelemente d$q$ zur neutralen Faser, ab
 \begin{equation}
 I = \int_{Q} y ^2 \, \text{d}q \quad .
 \end{equation}
-Für den eckigen Stab benötigt man eine Formal für quadratische Quarschnitte. Die Kantenlänge sei $h$. Für $I_\text{E}$ gilt:
+Für den eckigen Stab benötigt man eine Formel für quadratische Querschnitte. Die Kantenlänge sei $h$. Für $I_\text{E}$ gilt:
 \begin{equation}
 I_\text{E} = \int_{-\frac{h}{2}}^{\frac{h}{2}} \int_{-\frac{h}{2}}^{\frac{h}{2}} y^2\,  \text{d}x \text{d}y = \frac{1}{12} \cdot h^4 \quad .
 \end{equation}
@@ -12,11 +12,11 @@ Um das Flächenträgheitsmoment für runde Querschnitte mit Radius $r$ zu berech
 \begin{equation}
 I_\text{R} = \int_{0}^{r}  \int_{0}^{2\pi} r^2 \cdot \sin^2(x) \cdot r  \, \text{d}\phi \text{d}r = \frac{1}{12}\cdot \pi \cdot r^4 \quad .
 \end{equation}
-Sowohl $h$ in wie auch der Durchmesser $2 \cdot r$ wurden sehr genau mit einer Schieblehre gemessen. Zu dem Fehler des Mittelwertes kommt allerdings eine Ableseungenauigkeit von \SI{0.05}{\milli\metre}  hinzu.
+Sowohl $h$ als auch der Durchmesser $2 \cdot r$ wurden sehr genau mit einer Schieblehre gemessen. Zum Fehler des Mittelwertes kommt ein Ablesefehler von \SI{0.05}{\milli\metre} dazu.
 
 \input{querschnitte.tex}
 
-Für den eckigen Stab folgt aus dem Mittelwert der Breite
+Für den eckigen Stab folgt mit dem Mittelwert der Breite
 \begin{align}
   h = \SI{0.01000 \pm 0.00005}{\metre}
 \end{align}
@@ -25,7 +25,7 @@ ein Flächenträgheitsmoment von
 I_\text{E}=\SI{3.88(17)e-10}{\metre\raiseto{4}} \quad .
 \end{align}
 
-Für den runden Stab folgt aus einem Radius von duschnittlich
+Für den runden Stab folgt mit einem Radius von
 \begin{equation}
   r = \SI{0.004975 \pm 0.000032}{\metre}
 \end{equation}
@@ -43,4 +43,4 @@ das Flächenträgheitsmoment
 
 
 \subsection{Bestimmung der Dichte}
-Zur Bestimmung der Dichte wurden beide Stäbe , der runde und der eckige, vermessen und gewogen. Das Gewicht und die Länge sind keine fehlerbehafteten Größen. Der Durchmesser hingegen wurde mit einer Schieblehre mehrfach gemessen. Ein Ablesefehler von \SI{0.05}{\milli\metre}  kommt zu dem Fehler des Mittelwertes hinzu.
+Zur Bestimmung der Dichte wurden beide Stäbe vermessen und gewogen. Das Gewicht und die Länge sind keine fehlerbehafteten Größen. Der Durchmesser hingegen wurde mit einer Schieblehre mehrfach gemessen. Ein Ablesefehler von \SI{0.05}{\milli\metre}  kommt zu dem Fehler des Mittelwertes hinzu.

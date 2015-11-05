@@ -21,3 +21,13 @@ der Form doch so nicht da stehen?
 
 
 Wir müssen uns mal was für die Gliederung der Auswertung einfallen lassen.
+
+
+
+
+Auswertung.tex
+	... wurden sehr genau ... gemessen
+	Angabe der Breite und des Radius mit Fehler: besser in cm oder mm statt m ?
+	
+	Den Absatz zu Bestimmung der Dichte versteh ich von der Sprache her nicht.
+	

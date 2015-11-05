@@ -1,10 +1,11 @@
 \select@language {german}
-\contentsline {section}{\numberline {1}Theorie}{1}
-\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{1}
-\contentsline {section}{\numberline {3}Auswertung}{1}
-\contentsline {subsection}{\numberline {3.1}Statistische Formeln}{1}
-\contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{1}
-\contentsline {subsubsection}{\numberline {3.1.2}Regression}{2}
-\contentsline {subsection}{\numberline {3.2}Auswertung der Messdaten}{2}
-\contentsline {subsection}{\numberline {3.3}Bestimmung der Dichte}{4}
-\contentsline {section}{\numberline {4}Diskussion}{4}
+\contentsline {section}{\numberline {1}Theorie}{3}
+\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{4}
+\contentsline {section}{\numberline {3}Auswertung}{5}
+\contentsline {subsection}{\numberline {3.1}Statistische Formeln}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{5}
+\contentsline {subsubsection}{\numberline {3.1.2}Regression}{5}
+\contentsline {subsection}{\numberline {3.2}Auswertung der Messdaten}{6}
+\contentsline {subsection}{\numberline {3.3}Bestimmung der Fl\IeC {\"a}chentr\IeC {\"a}gheitsmomente}{6}
+\contentsline {subsection}{\numberline {3.4}Bestimmung der Dichte}{7}
+\contentsline {section}{\numberline {4}Diskussion}{8}
