@@ -1,0 +1,14 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Theorie}{3}
+\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{4}
+\contentsline {section}{\numberline {3}Auswertung}{5}
+\contentsline {subsection}{\numberline {3.1}Statistische Formeln}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{5}
+\contentsline {subsubsection}{\numberline {3.1.2}Regression}{5}
+\contentsline {subsection}{\numberline {3.2}Bestimmung der Fl\IeC {\"a}chentr\IeC {\"a}gheitsmomente}{6}
+\contentsline {subsection}{\numberline {3.3}Bestimmung des Elastizit\IeC {\"a}tsmoduls durch lineare Regression}{7}
+\contentsline {subsubsection}{\numberline {3.3.1}Runder Stab -- einseitige Einspannung}{7}
+\contentsline {subsubsection}{\numberline {3.3.2}Eckiger Stab -- einseitige Einspannung}{8}
+\contentsline {subsubsection}{\numberline {3.3.3}Eckiger Stab -- beidseitige Einspannung}{8}
+\contentsline {subsection}{\numberline {3.4}Bestimmung der Dichte}{10}
+\contentsline {section}{\numberline {4}Diskussion}{11}

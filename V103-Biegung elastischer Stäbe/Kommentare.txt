@@ -1,33 +1,15 @@
-Die Formeln haben jetzt Label, weil guter Stil und weil Verweise dann einfacher sind.
+1) Wollen wir Tabelle(n) mit Messwerten D und x?
 
+2) Angabe der Breite und des Radius mit Fehler: besser in cm oder mm statt m ?
 
+3) Ich würde das alles über die Flächenträgheitsmomente bei 3.2 weglassen und effektiv nur die fertigen Werte reinschreiben.
 
+4) Ja, beide Grafiken nebeneinander ist zu klein.
 
-In Aufbau und Ablauf -> beidseitig eingespannter Stab, erzähl ich was von Abstand zum Gewicht, weil wir 
-das ja auch so gemessen haben.
-Ich würde jetzt entweder hier direkt "Abstand vom Rand" schreiben und dann bei den Messwerten im 
-Protokoll auch einfach den Abstand zum Rand angeben (also statt 3,75cm Abstand zum Gewicht, 27.75-3.75cm 
-vom Rand) oder wir lassen beides bei "Abstand vom Gewicht" und erklären dann in der Auswertung, was wir 
-machen.
+5) Diskussion:
+	Dichten mit Literaturwerten vergleichen
+	Elastizitätsmodul mit Literaturwerten vergleichen
 
+6) Ich fände größere Absätze zwischen den Unterkapiteln (speziell vor den subsections) schöner.
 
-
-
-Bei deiner Tabelle 1 steht oben "Breite h in 0.05mm" und "Durchmesser 2r in 0.05mm". Das 0.05 kann in 
-der Form doch so nicht da stehen?
-
-
-
-
-
-Wir müssen uns mal was für die Gliederung der Auswertung einfallen lassen.
-
-
-
-
-Auswertung.tex
-	... wurden sehr genau ... gemessen
-	Angabe der Breite und des Radius mit Fehler: besser in cm oder mm statt m ?
-	
-	Den Absatz zu Bestimmung der Dichte versteh ich von der Sprache her nicht.
-	
+7) \raiseto(4) bei den Werten zum Flächenträgheitsmoment funktioniert nicht.

@@ -16,7 +16,7 @@ Sowohl $h$ als auch der Durchmesser $2 \cdot r$ wurden sehr genau mit einer Schi
 
 \input{querschnitte.tex}
 
-Für den eckigen Stab folgt mit dem Mittelwert der Breite
+Für den eckigen Stab folgt mit der Breite
 \begin{align}
   h = \SI{0.01000 \pm 0.00005}{\metre}
 \end{align}
@@ -37,26 +37,26 @@ das Flächenträgheitsmoment
 \end{equation}
 
 
-\subsection{Bestimmung des Elastizitätsmodul durch lineare Regression}
+\subsection{Bestimmung des Elastizitätsmoduls durch lineare Regression}
 \subsubsection{Runder Stab -- einseitige Einspannung}
-Die gemessene Durchbiegung $D(x)$ des Stabes wird durch die Gleichung \eqref{einseitige Einspannung} beschrieben.
-Alle in ihr vorkommende Größen, bis auf das Elaatizitästmodul sind bekannt. Das Flächenträgheitsmoment wurde im vorherigen Abschnitt als \eqref{I_R} bestimmt und die herabziehende Kraft $F$ ist aus der Masse des Probekörpers zu berechnen
+Die gemessene Durchbiegung $D(x)$ des Stabes wird durch Gleichung \eqref{einseitige Einspannung} beschrieben.
+Alle in ihr vorkommende Größen, bis auf den Elastizitätsmodul sind bekannt. Das Flächenträgheitsmoment wurde im vorherigen Abschnitt in \eqref{I_R} bestimmt und die herabziehende Kraft $F$ ist aus der Masse des Probekörpers zu berechnen
 \begin{equation}
   F = m \cdot g = \SI{0.7476}{\kilo\gram} \cdot \SI{9.81}{\metre\per\second\squared} = \SI{7.3339}{\newton} \quad .
 \end{equation}
-Nun lässt sich das Elastizitäsmodul $E$ druch eine lineare Regression der Form
+Nun lässt sich der Elastizitätsmodul $E$ durch eine lineare Regression der Form
 \begin{equation}
-  D(x) = \frac{F}{2\cdot E I}\left(Lx^2-\frac{x^3}{3}\right) = \frac{1}{E} \cdot A +b
+  D(x) = \frac{F}{2\cdot E I}\left(Lx^2-\frac{x^3}{3}\right) = \frac{1}{E} \cdot A(x) +b
 \end{equation}
-bestimmen, indem $D(x)$ über $A$ ausgetragen wird (siehe Abbildung \ref{fig:Regression_runder_Stab}). $E$ entspricht dem Kehrwert der Steigung der Regressionsgeraden. Unter Verwendung der Formeln aus Kapitel~\ref{sec:regression} ergibt die Steigung mit Abweichung
+bestimmen, indem $D(x)$ über $A(x)$ aufgetragen wird (siehe Abbildung \ref{fig:Regression_runder_Stab}). $E$ entspricht dann dem Kehrwert der Steigung der Regressionsgeraden. Unter Verwendung der Formeln aus Kapitel~\ref{sec:regression} ergeben sich die Steigung
 \begin{equation}
   \frac{1}{E}= \SI{188.9(15)e-13}{\metre\squared\per\newton}
 \end{equation}
-und der $y$-Achsenabschnitt mit Abweichung
+und der $y$-Achsenabschnitt
 \begin{equation}
   b = \SI{14.33(36)e-05}{\metre} \quad.
 \end{equation}
-Das hier bestimmte Elastizitästmodul für den runden Stab ist folglich
+Der gemessene Elastizitätsmodul für den runden Stab ist folglich
 \begin{equation}
   E = \SI{5.29(4)e+10}{\newton\per\metre\squared} \quad.
 \end{equation}
@@ -71,20 +71,20 @@ Das hier bestimmte Elastizitästmodul für den runden Stab ist folglich
 
 
 \subsubsection{Eckiger Stab -- einseitige Einspannung}
-Hier ist der Vorgehensweise genau so, wie bei dem runden Stab. Es muss lediglich ein anderes Flächenträgheitsmoment \ref{I_E} und eine andere Kraft
+Hier ist der Vorgehensweise dieselbe, wie beim runden Stab. Es muss lediglich das Flächenträgheitsmoment aus \eqref{I_E} verwendet und die nach unten wirkende Kraft
 \begin{equation}
   F = m \cdot g = \SI{0.7676}{\kilo\gram} \cdot \SI{9.81}{\metre\per\second\squared} = \SI{7.5302}{\newton}
 \end{equation}
-eingesetzt werden.
-Dies führt auf eine Steigung mit Abweichung von
+angepasst werden.
+Dies führt zu einer Steigung von
 \begin{equation}
   \frac{1}{E}= \SI{135.6(9)e-13}{\metre\squared\per\newton}
 \end{equation}
-und den $y$-Achsenabschnitt mit Abweichung
+und einem $y$-Achsenabschnitt
 \begin{equation}
   b = \SI{6.28(217)e-05}{\metre} \quad.
 \end{equation}
-Das hier bestimmte Elastizitästmodul für den eckigen Stab ist folglich
+Das hier bestimmte Elastizitästmodul für den eckigen Stab ist demnach
 \begin{equation}
   E = \SI{7.37(5)e+10}{\newton\per\metre\squared} \quad.
 \end{equation}
@@ -104,20 +104,25 @@ Die Werte wurden in Abbildung~\ref{fig:Regression_eckiger_Stab} aufgetragen.
 
 
 \subsubsection{Eckiger Stab -- beidseitige Einspannung}
-Die Bestimmung des Elastizitätsmoduls bei beidseitiger Einspannung ist ähnlich zu der bei einseitiger. Sie unterscheidet sich in der Ausführung im Wesentlichen durch die minimal andere Formel \ref{beidseitige Einspannung}, eine andere Kraft, da ein schwereres Gewicht verwendet wurde
+Die Bestimmung des Elastizitätsmoduls bei beidseitiger Einspannung funktioniert analog. Es werden Formel \eqref{beidseitige Einspannung}
+\begin{equation*}
+	D(x) = \frac{F}{48\cdot E I}\left(3L^2x-4x^3\right) = \frac{1}{E}C(x)+b
+\end{equation*}
+und die eine herunterziehende Kraft von
 \begin{equation}
   F = m \cdot g = \SI{4.7004}{\kilo\gram} \cdot \SI{9.81}{\metre\per\second\squared} = \SI{46.1109}{\newton}
 \end{equation}
-und die Tatsache, dass links und rechts von dem in der Mitte eingehängten Gewicht die Verbiegung des Stabes gemessen wurde. Es gibt zwei Regressiongeraden: Eine für die Werte links vom Stab und die andere für die rechte Seite. \\
-Zunächst soll die Regressionsgerade der linken Seite betrachtet werden. Sie hat eine Steigung mit Abweichung von
+verwendet. \\
+Da die Verbiegung des Stabes links und rechts der Mitte gemessen wurde, gibt es zwei Regressionsgeraden. \\
+Zunächst soll die Regressionsgerade für die Werte der linken Seite betrachtet werden. Sie hat eine Steigung von
 \begin{equation}
   \frac{1}{E}= \SI{55.45(188)e-13}{\metre\squared\per\newton}
 \end{equation}
-und den $y$-Achsenabschnitt mit Abweichung von
+und einen $y$-Achsenabschnitt von
 \begin{equation}
   b = \SI{44.5(23)e-05}{\metre} \quad.
 \end{equation}
-Daraus folg das Elastizitätsmodul
+Daraus folgt der Elastizitätsmodul
 \begin{equation}
   E = \SI{18.0(6)e+10}{\newton\per\metre\squared} \quad.
 \end{equation}
@@ -150,10 +155,8 @@ Für die rechte Seite ergeben sich Werte von
 
 
 \subsection{Bestimmung der Dichte}
-<<<<<<< HEAD
-Zur Bestimmung der Dichte wurden beide Stäbe , der runde und der eckige, vermessen und gewogen. Das Gewicht und die Länge sind keine fehlerbehafteten Größen. Der Durchmesser hingegen wurde mit einer Schieblehre mehrfach gemessen. Ein Ablesefehler von \SI{0.05}{\milli\metre}  kommt zu dem Fehler des Mittelwertes hinzu.
-Zur genaueren Festlegung, aus welchen Metallen die Stäbe bestehen können, ist die Dichte wichtig. Zur Berechnung der Dichte sind die Ausmaße der Stäbe und ihr Gewicht wichtig.
-Der Querschnitt bzw. Radius der Stäbe wurde (Werte in Tabelle \ref{tab:querschnitte}) bereits als fehlerbehaftete Größe bestimmt. In Länge und das Gewicht haben keine angegebenen Ungenauigkeiten. \\
+Mit der Dichte kann bestimmt werden, aus welchen Metallen die Stäbe bestehen. Um sie bestimmen zu können, wurden beide Stäbe vermessen und gewogen. Das Gewicht und die Länge sind keine fehlerbehafteten Größen. Der Durchmesser hingegen wurde mit einer Schieblehre mehrfach gemessen. Ein Ablesefehler von \SI{0.05}{\milli\metre}  kommt zum Fehler des Mittelwertes hinzu.
+Der Querschnitt bzw. Radius der Stäbe wurde (Werte in Tabelle \ref{tab:querschnitte}) bereits als fehlerbehaftete Größe bestimmt. \\
 Die Dichte ist jeweils
 \begin{equation}
   \rho = \frac{\text{Gewicht}}{\text{Querschnittsfläche} \cdot \text{Länge}} \quad.
