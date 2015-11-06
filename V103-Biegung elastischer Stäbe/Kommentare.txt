@@ -9,6 +9,7 @@
 5) Diskussion:
 	Dichten mit Literaturwerten vergleichen
 	Elastizitätsmodul mit Literaturwerten vergleichen
+	Vielleicht ist die Differenz von OHNE-MIT bei rechts kleiner, weil wir immer erst links gelesen haben? Da konnte sich die Stange mehr entspannen (und je weniger die Durchbiegung, desto höher die Zahl auf der Messuhr).
 
 6) Ich fände größere Absätze zwischen den Unterkapiteln (speziell vor den subsections) schöner.
 
