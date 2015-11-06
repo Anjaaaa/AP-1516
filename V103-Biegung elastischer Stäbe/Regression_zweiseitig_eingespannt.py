@@ -25,12 +25,12 @@ L = 0.555   # Länge des Stabes beim Einspannen
 gewicht = 4.7004   # Gewicht des Gewichts, nicht des Stabes
 
 
-F = gewicht * 9.81
+F = gewicht * 9.81 / 2
 
 
 # x-Werte definieren
 
-x_links = 0.50 - (0.2775 + x)   # Abstand zur linken Einspannung
+x_links = 0.555 - (0.2775 + x)   # Abstand zur linken Einspannung
 x_rechts = 0.2775 - x
 
 X_links = F/(48*I)*(3*L**2*x_links-4*x_links**3)
