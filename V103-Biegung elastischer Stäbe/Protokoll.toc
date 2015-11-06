@@ -11,4 +11,4 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Eckiger Stab -- einseitige Einspannung}{8}
 \contentsline {subsubsection}{\numberline {3.3.3}Eckiger Stab -- beidseitige Einspannung}{8}
 \contentsline {subsection}{\numberline {3.4}Bestimmung der Dichte}{10}
-\contentsline {section}{\numberline {4}Diskussion}{11}
+\contentsline {section}{\numberline {4}Diskussion}{12}
