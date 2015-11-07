@@ -8,36 +8,41 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amsthm, amssymb}
 
-\usepackage{caption}
 
+\usepackage{caption}
 \usepackage{graphicx}
 \usepackage{subcaption} %z.B. in figure umgebungen um einzelne bilder zu benennen
 
+
 \usepackage[
-locale=DE,
-separate-uncertainty=true, % Immer Fehler mit ±
-per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
-% alternativ:
-% per-mode=reciprocal,
-% m s^{-1}
-output-decimal-marker=., % . statt , für Dezimalzahlen
-]{siunitx}
+	locale=DE,
+	separate-uncertainty=true, % Immer Fehler mit ±
+	per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
+	% alternativ:
+	% per-mode=reciprocal,
+	% m s^{-1}
+	output-decimal-marker=., % . statt , für Dezimalzahlen
+	]{siunitx}
+
+
+\usepackage{fancyhdr}	%Kopf- und Fußzeile gestalten
+	\pagestyle{fancy}
+	\fancyhead{}				%Default-Einstellungen im Header löschen
+	\fancyhead[R]{\leftmark}
+% \leftmark sind die Sections \rightmark sind dei Subsections
 
 
 
-
-\title{Biegung elastischer Stäbe}
-\author{Clara Rittmann \\ Anja Beck}
-\date{Durchführung: 03.11.15}
 
 \begin{document}
-	\maketitle
-	\date{}
+\input{Titlepage.tex}
+
+
 \newpage
 	\tableofcontents
 \newpage
 
-	\section{Theorie}\footnote{nach: Anleitung zu V103: Biegung elastischer Stäbe, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V103.pdf}
+	\section[Theorie]{Theorie\footnote{nach: Anleitung zu V103: Biegung elastischer Stäbe, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V103.pdf}}
 	\input{Theorie.tex}
 \newpage
 
