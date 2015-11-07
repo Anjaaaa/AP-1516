@@ -1,3 +1,22 @@
+Die Kenntnis der Dichte lässt zu die Materialien, aus denen die Stäbe bestehen, zu bestimmen.
+Bei dem Runden, golden glänzenden Stab, handelt es sich wahrscheinlich um einen Messingstab. Der eckige Stab, der matt silbern wirkt, scheint aus Aluminuim zu sein. Die Dichten wurden mit großer Genauigkeit berechnet und stimmen mit den Literaturwerten der Dicht von Messing und Alumium stark überein (siehe Tabelle \ref{tab:vergleich_dichte}).
+
+\begin{center}
+	\captionof{table}{Vergleich mit Literaturwerte der Dichten}
+\begin{tabular}{c|c|c|c}
+	Art & Literatur & Berechnet & Abweichung \\
+	Rund -- Messing & \SI{8455.90(10902)}{\kilo\gram\per\cubic\metre} & & \\
+	Eckig -- Aluminium & \SI{2785.00(2785)}{\kilo\gram\per\cubic\metre} & & \\
+\end{tabular}
+\label{tab:vergleich_dichte}
+\end{center}
+
+Die Literaturwerte für die Elastizitätsmoduln von Messing und Aluminium können nun mit den von uns gemessenen Werten verglichen werden (siehe Tabelle \ref{tab:vergleich_elastizitatsmodul}). Zwar gibt es geringe Abweichungen von den Literaturwerten, doch stimmen zumindest die Größenordnungen. (Hier genauer, wenn ich die WErte habe!!).
+Die Messungen scheinen trotzdem recht genau und aussagekräftig zu sein, da alle drei Wege, den Elastizitätsmodul des eckigen Stabes zu bestimmen, zu sehr ähnlichen ERgebnissen geführt haben. \\
+Ein systematischer Fehler könnten zu kurze Wartezeiten vor den Messungen sein. Sowohl Durchbiegung wie auch Entspannung der Stäbe erfolgen zeitverzögert.
+
+\begin{center}
+\captionof{table}{Verglich mit Literaturwertwerte der Elastizitätsmoduln}
 \begin{tabular}{c | c | c | c}
 	Art & Literatur & Berechnet & Abweichung \\
 	\hline
@@ -5,34 +24,6 @@
 	Eckig & \SI{7e+10}{\newton\per\metre\squared} &\SI{7.37(5)e+10}{\newton\per\metre\squared} & +5.3\%\\
 	Beidseitig links & \SI{7e+10}{\newton\per\metre\squared} & \SI{18.0(6)e+10}{\newton\per\metre\squared} & +157.1\% \\
 	Beidseitig rechts & \SI{7e+10}{\newton\per\metre\squared} & \SI{13.8(6)e+10}{\newton\per\metre\squared} & +97.1\% \\
-\end{tabular} \\
-Für Messing stand auf Wikipedia $(78-123)\cdot\SI{e+9}{\newton\per\metre\squared}$. \\
-Für Aluminium $\SI{70e+9}{\newton\per\metre\squared}$.
-
-\ \\
-\ \\
-
-\input{Biegung_beidseitig.tex}
-\ \\
-\ \\
-Die mittlere Biegung des Stabes ohne Gewicht
-\begin{align*}
-	D_\text{links} &= \SI{7.669(33)e-3}{\metre} \\
-	D_\text{rechts} &= \SI{8.385(13)e-3}{\metre}
-\end{align*}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{Werte_ohne.png}
-	\caption{Messwerte für D und x ohne Gewicht}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{Werte_mit.png}
-	\caption{Messwerte für D und x mit Gewicht}
-\end{figure}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=\textwidth]{Wertedifferenz.png}
-	\caption{Wirkliches D und x}
-\end{figure}
+\end{tabular}
+\label{tab:vergleich_elastizitatsmodul})
+\end{center}
