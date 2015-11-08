@@ -31,5 +31,11 @@ rho_rund = gewicht_rund / ( np.pi * (höhe_rund_gesamt / 2)**2 * länge_rund)
 print('Dichte des eckigen Stabes:', rho_eckig)
 print ('Dichte des runden Stabes:', rho_rund)
 
+literaturwert_rho_eckig = 2700
+literaturwert_rho_rund = 8500
+
+print ('Abweichung vom Literaturwert (Aluminium), eckiger Stab:',rho_eckig / literaturwert_rho_eckig)
+print ('Abweichung vom Literaturwert (Messing), runder Stab:', rho_rund / literaturwert_rho_rund)
+
 print ('gewicht_rund', gewicht_rund)
 print ('gewicht_eckig', gewicht_eckig)
