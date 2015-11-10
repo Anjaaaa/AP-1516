@@ -1,0 +1,2 @@
+#graphit blei_1 blei_2 blei_3 blei_4_alles in J/(K*g)
+1.5000328 0.21866 0.21449 0.1837 0.17723
