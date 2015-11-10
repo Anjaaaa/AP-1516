@@ -25,7 +25,7 @@ L = 0.555   # Länge des Stabes beim Einspannen
 gewicht = 4.7004   # Gewicht des Gewichts, nicht des Stabes
 
 
-F = gewicht * 9.81 / 2
+F = gewicht * 9.81
 
 
 # x-Werte definieren
