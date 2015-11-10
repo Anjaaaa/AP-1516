@@ -6,6 +6,7 @@
 \setlength\parindent{0pt}
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{textcomp}    % für ° Zeichen
 \usepackage{amsmath, amsthm, amssymb}
 
 
@@ -42,7 +43,7 @@
 \newpage
 
 
-\section{Theorie}\footnote{nach: Anleitung zu V201: Das Dulong-Petitsche Gesetz, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V201.pdf}
+\section{Theorie}
 \input{Theorie.tex}
 \newpage
 
@@ -53,13 +54,15 @@
 
 
 \section{Auswertung}
-\subsection{Statistische Formeln}
-\subsubsection{Fehlerrechnung}
+\subsection{Fehlerrechnung}
+%\subsubsection{Fehlerrechnung}
 \label{sec:Fehlerrechnung}
 \input{Fehlerrechnung.tex}
-\subsubsection{Regression}
-\label{sec:regression}
-\input{Regression.tex}
+\newpage
+%\subsubsection{Regression}
+%\label{sec:regression}
+%\input{Regression.tex}
+\subsection{Auswertung der Messdaten}
 \input{Auswertung.tex}
 \newpage
 
