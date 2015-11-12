@@ -1,25 +1,25 @@
 \subsubsection{Bestimmung der Wärmekapazität des Kalorimeters}
 	Die Masse des kalten Wassers betrug
-	\begin{equation}
+	\begin{equation*}
 		m_\text{x} = \SI{251.80}{\gram},
-	\end{equation}
+	\end{equation*}
 	die des warmen Wassers war
-	\begin{equation}
+	\begin{equation*}
 		m_\text{y} = \SI{317.80}{\g}.
-	\end{equation}
+	\end{equation*}
 	Zusammen mit der Temperatur des kalten Wassers
-	\begin{equation}
-		T_\text{x} = \SI{21.6}{\degree\celsius},
-	\end{equation}
+	\begin{equation*}
+		T_\text{x} = \SI{21.6}{\celsius},
+	\end{equation*}
 	der des warmen Wassers
-	\begin{equation}
-		T_\text{y} = \SI{99.7}{\degree\celsius}
-	\end{equation}
+	\begin{equation*}
+		T_\text{y} = \SI{99.7}{\celsius}
+	\end{equation*}
 	und der Endtemperatur
-	\begin{equation}
-		T_\text{m} = \SI{61.0}{\degree\celsius},
-	\end{equation}
-	eingesetzt in Formel VERWEIS kann die Wärmekapazität des Kalorimeters zu
+	\begin{equation*}
+		T_\text{m} = \SI{61.0}{\celsius},
+	\end{equation*}
+	eingesetzt in Formel \eqref{Warmekapazitat Kalorimeter} kann die Wärmekapazität des Kalorimeters zu
 	\begin{equation}
 		c_\text{g}m_\text{g} = \SI{252.279}{\joule\per\kelvin}
 	\end{equation}
@@ -29,33 +29,49 @@
 \subsubsection{Bestimmung der Wärmekapazität verschiedener Stoffe}
 \subsubsection*{Graphit}
 	Für den
-	\begin{equation}
+	\begin{equation*}
 		m_\text{G} = \SI{108.01}{\gram}
-	\end{equation}
+	\end{equation*}
 	schweren Graphitkörper, der mit einer Anfangstemperatur von
-	\begin{equation}
-		T_\text{k} = \SI{75.0}{\degree\celsius}
-	\end{equation}
+	\begin{equation*}
+		T_\text{k} = \SI{75.0}{\celsius}
+	\end{equation*}
 	solange in
-	\begin{equation}
-		T_\text{w, G} = \SI{23.0}{\degree\celsius}
-	\end{equation}
+	\begin{equation*}
+		T_\text{w, G} = \SI{23.0}{\celsius}
+	\end{equation*}
 	kaltes Wasser getaucht wurde bis Körper und Wasser die Mischtemperatur von
+	\begin{equation*}
+		T_\text{m, G} = \SI{26.0}{\celsius}
+	\end{equation*}
+	erreicht hatten, ergibt Formel \eqref{Warmekapazitat Stoff} eine spezifische Wärmekapazität
 	\begin{equation}
-		T_\text{m, G} = \SI{26.0}{\degree\celsius}
+		c_\text{G} = \SI{1.50}{\joule\per\gram\per\kelvin}.
 	\end{equation}
-	erreicht hatten, ergibt Formel VERWEIS eine spezifische Wärmekapazität
+	Das Produkt aus diesem Wert und der Molmasse von Graphit\footnote{$M_\text{G} = \SI{12.0}{\gram\per\mol}$, Versuchsanleitung zu V201, Anfängerpraktikum TU Dortmund} liefert die Molwärme von Graphit bei konstantem Druck
 	\begin{equation}
-		c_\text{G} = \SI{1.4997}{\joule\per\kelvin}.
+		C_\text{G,P} = \SI{18.04}{\joule\per\mol\per\kelvin}.
 	\end{equation}
+	Schlussendlich kann nun mit Gleichung \eqref{konstanter Druck -> konstantem Volumen} die Molwärme von Graphit bei konstantem Volumen
+	\begin{equation}
+		C_\text{G,V} = \SI{18.01}{\joule\per\mol\per\kelvin}
+	\end{equation}
+	berechnet werden\footnote{Konstanten siehe Tabelle \ref{Konstanten}}.
 \subsubsection*{Blei}
 	\input{Messung.tex}
 	Die Messung erfolgte mit einem
-	\begin{equation}
+	\begin{equation*}
 		m_\text{B} = \SI{544.59}{\gram}
-	\end{equation}
-	schweren Bleikörper. Der Mittelwert der, für jede Messung einzeln mit Zusammenhang VERWEIS berechneten, Werte ist
+	\end{equation*}
+	schweren Bleikörper. Der Mittelwert der Werte für die spezifische Wärmekapazität ist
 	\begin{equation} 
-		c_\text{B} = \SI{0.199(9)}{\joule\per\kelvin}.
+		c_\text{B} = \SI{0.199(9)}{\joule\per\gram\per\kelvin}.
 	\end{equation}
-
+	Auch dieser Wert wird mit der Molmasse von Blei\footnote{$M_\text{B}=\SI{207.2}{\gram\per\mol}$, Versuchsanleitung zu V201, Anfängerpraktikum TU Dortmund} multipliziert, um auf die Molwärme von Blei bei konstantem Druck
+	\begin{equation}
+		C_\text{B,P} = \SI{41.2(19)}{\joule\per\mol\per\kelvin}
+	\end{equation}
+	zu kommen. Eingesetzt in Gleichung \eqref{konstanter Druck -> konstantem Volumen} ist die gemittelte Molwärme von Blei bei konstantem Volumen
+	\begin{equation}
+		C_\text{B,V} = \SI{39.5(19)}{\joule\per\mol\per\kelvin}\quad\footnotemark[2]{}.
+	\end{equation}
