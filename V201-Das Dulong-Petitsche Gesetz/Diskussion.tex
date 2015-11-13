@@ -1,15 +1,45 @@
-Ablesefehler \\
-Wärmeverlust beim Warten \\
-Messfehler bei den Temperaturen der Körper (Körper wird rausgeholt, kühlt schon aus, während das Thermometer noch steigt) \\
+\subsection{Fehleranalyse}
+Bei der Diskussion der Versuchsergebnisse sind mehrere systematische Fehler zu beachten. \\
+Der vermutlich gravierendste tritt bei der Temperaturmessung der Körper auf. Um ihre Temperatur im kochenden Wasser zu messen, mussten sie etwas herausgezogen werden. Vor allem beim Graphit, aber auch beim Blei, verringerte sich während diesen wenigen Sekunden schon merklich die Temperatur. Das Thermometer hatte außerdem eine Einstellzeit von einigen Sekunden, was eine schnelle Messung der Temperatur zusätzlich erschwerte. Des Weiteren kann nicht sichergestellt werden, dass ausschließlich die Temperatur des Körpers, sonder auch die des Wasser(dampf)s  gemessen wurde. \\
+Zudem gab es zu jedem Zeitpunkt unregistrierte Wärmeverluste, beim Tragen des Körpers vom kochenden Wasser zum Kalorimeter und während die Mischtemperatur sich eingestellt hat. \\
+
+
+Werden nun die Messwerte mit den Literaturwerten\footnote{W. Walcher: \glqq Praktikum der Physik\grqq, Tabellen-Anhang} (Tabelle \ref{spez. Warmekap. Literatur}) verglichen, ergibt sich ein Widerspruch. Die oben diskutierten Fehler führen zu realen Körpertemperaturen $T_\text{k, real}<T_\text{k, gem.}$, da die Wärme des Wasserdampfs herausgerechnet werden muss. Auch sollte gelten $T_\text{m, real}>T_\text{m, gem.}$, da die verlorene Wärme im Kalorimeter beachtet werden muss. Nach \eqref{Warmekapazitat Stoff} müsste also $c_\text{k, real}>c_\text{k, gem.}$ sein. Die Abweichung vom Literaturwert, wenn die systematischen Fehler mit eingerechnet werden, wäre demnach noch größer. \\
 
 \begin{table}[h]
-\begin{center}
-\begin{tabular}{c | c | c}
-	Graphit & Blei & Dulon-Petit \\
-	\hline
-	18.01 & 39.5 & 24.94
-\end{tabular}
-\end{center}
-\caption{Molwärme}
+	\begin{center}
+		\begin{tabular}{c | c | c | c}
+			& spez. Wärmekap. gem. & spez. Wärmekap. Lit. & Abweichung \\
+			\hline
+			Graphit & \SI{1.50}{\joule\per\gram\per\kelvin} & \SI{0.708}{\joule\per\gram\per\kelvin} & +111.9\% \\
+			Blei & \SI{0.199}{\joule\per\gram\per\kelvin} & \SI{0.129}{\joule\per\gram\per\kelvin} & +54.3\%
+		\end{tabular}
+		\caption{Vergleich der gemessenen spezifischen Wärmekapazität mit Literaturwerten}
+		\label{spez. Warmekap. Literatur}
+	\end{center}
 \end{table}
+
+Es müssen demnach weitere relevante, aber unbekannte systematische Fehler gemacht worden sein.
+
+
+\newpage
+\subsection{Dulong-Petitsches Gesetz}
+Ziel des Versuchs war die Verifikation oder Widerlegung des Dulong-Petitschen Gesetztes \eqref{Dulon-Petit}, wonach die Molwärme eines beliebigen Stoffes bei konstantem Volumen
+\begin{equation}
+	C_\text{V} = \SI{24.94}{\joule\per\mol\per\kelvin}
+\end{equation}
+ist.
+Der Vergleich mit den gemessenen Werten ist schwer, da die schon die Werte für die spezifische Wärmekapazität sehr von den Literaturwerten abweichen, wie das vorige Kapitel erklärt.
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{c | c | c}
+			& Gemessen	& Literaturwert\tablefootnote{Berechnet als Produkt aus dem Literaturwert für die spezifische Wärmekapazität und der Molmasse (siehe Tabelle \ref{Konstanten} im Anhang)} \\
+			\hline
+			Graphit & 18.01 & 8.50 \\
+			Blei & 39.5 & 26.72
+		\end{tabular}
+		\caption{Molwärmen bei konstantem Volumen in \si{\joule\per\mol\per\kelvin}}
+	\end{center}
+\end{table}
+Werden allerdings die Literaturwerte, also die \glqq wahren\grqq\ Wärmekapazitäten, mit dem Dulon-Petitschen Gesetz verglichen liegt der Schluss nahe, dass das Gesetz auf keinen Fall für alle Stoffe gilt, wobei es für die schweren eher zutrifft, als für die leichten.
 
