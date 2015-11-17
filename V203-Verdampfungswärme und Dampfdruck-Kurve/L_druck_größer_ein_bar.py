@@ -11,6 +11,7 @@ P = (7.03 - P)*10**5
 
 print (T, P)
 
+
 fit = np.polyfit(T, P, 3)
 fit_fn = np.poly1d(fit)
 
@@ -60,5 +61,5 @@ plt.plot (T, L, 'rx', label ='Datenpunkte')
 plt.xlabel(r'$T \ /\  \mathrm{K}$')
 plt.ylabel(r'$L \ /\  (\mathrm{J/mol})$')
 plt.legend(loc = 'best')
-plt.savefig('L_großer_druck_temperaturabhängig.pdf')
+plt.savefig('L_groser_druck_temperaturabhangig.pdf')
 plt.show()
