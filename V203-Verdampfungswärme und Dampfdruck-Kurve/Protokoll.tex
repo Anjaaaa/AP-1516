@@ -4,7 +4,7 @@
 \usepackage{multicol}
 
 \setlength\parindent{0pt}
-\usepackage[ngerman]{babel}
+\usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amsthm, amssymb}
 
@@ -12,8 +12,6 @@
 \usepackage{caption}
 \usepackage{graphicx}
 \usepackage{subcaption} %z.B. in figure umgebungen um einzelne bilder zu benennen
-
-\usepackage{longtable} %tabellen, in denen footnotes erlaubt sind
 
 
 \usepackage[
@@ -40,30 +38,33 @@
 \input{Titlepage.tex}
 
 
-\newpage
-	\tableofcontents
-\newpage
-
-	\section[Theorie]{Theorie\footnote{nach: Anleitung zu V103: Biegung elastischer Stäbe, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V103.pdf}}
-	\input{Theorie.tex}
+\tableofcontents
 \newpage
 
-	\section{Aufbau und Ablauf des Experiments}
-	\input{Aufbau_Ablauf.tex}
+
+\section{Theorie}\footnote{nach: Anleitung zu V103: Biegung elastischer Stäbe, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V103.pdf}
+\input{Theorie.tex}
 \newpage
 
-	\section{Auswertung}
-	\subsection{Statistische Formeln}
-	\subsubsection{Fehlerrechnung}
-	\input{Fehlerrechnung.tex}
-	\subsubsection{Regression}
-	\label{sec:regression}
-	\input{Regression.tex}
-	\vspace{1cm}
-	\input{Auswertung.tex}
 
-\pagebreak
-	\section{Diskussion}
-	\input{Diskussion.tex}
+\section{Aufbau und Ablauf des Experiments}
+\input{Aufbau_Ablauf.tex}
+\newpage
+
+
+\section{Auswertung}
+\subsection{Statistische Formeln}
+\subsubsection{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+\input{Fehlerrechnung.tex}
+\subsubsection{Regression}
+\label{sec:regression}
+\input{Regression.tex}
+\input{Auswertung.tex}
+\newpage
+
+
+\section{Diskussion}
+\input{Diskussion.tex}
 
 \end{document}
