@@ -29,9 +29,10 @@ print (L)
 
 #tabelle mit aufgetragenen daten
 tabelle = np.array([T, P])
+headers = ["Reziproke absolute Temperatur", "Logarithmus des Druckes"]
 
 f = open('testtabelle.txt', 'w')
-f.write(tabulate(tabelle.T, tablefmt="latex"))
+f.write(tabulate(tabelle.T, headers, tablefmt="latex"))
 
 #f = open('tabelle.txt', 'w')
 #f.write(tabulate(table, tablefmt="latex"))
@@ -44,7 +45,3 @@ plt.ylabel(r'$log(P)$')
 plt.legend(loc='best')
 plt.savefig('L_kleiner_Druck.pdf')
 plt.show()
-
-x = np.array([T, P])
-print (x)
-print (x.T)
