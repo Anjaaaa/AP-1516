@@ -1,2 +1,14 @@
 Fehlerrechnung.tex: Heißt das wirklich
 \Delta_x oder sollte es \Delta x heißen?
+
+
+3.2
+	Die ln(P) Formel gehört vor den Satz mit den Wertepaaren oder? Und ich würde auf die Formel in der Theorie zusätzlich verweisen.
+	Ja, hässliche Einheiten würde ich hinschreiben :P
+
+3.3
+	"... ist bei einer Temperatur von 373 K ... (Rechnung) ..." Da würde ich denke ich noch das Stichwort "Ideales Gasgesetz" oder so fallen lassen.
+	Wir müssen L_i noch in eV umrechnen.
+
+3.4
+	Beim fertigen L(T) könnte man die gesamte Funktion nochmal hinschreiben.
