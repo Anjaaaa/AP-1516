@@ -19,12 +19,14 @@ fit_fn = np.poly1d(fit)
 def f(T, a, b):
     return a*T +b
 
+
 parameters, popt = curve_fit(f, T, P)
 
 a_gesamt = ufloat(parameters[0], np.sqrt(popt[0,0]))
+print('Steigung:', a_gesamt)
 R = 8.314 #gaskonstante
 L = - a_gesamt * R
-print (L)
+print ('Verdampfungswärme:', L)
 
 
 #tabelle mit aufgetragenen daten
@@ -45,3 +47,10 @@ plt.ylabel(r'$log(P)$')
 plt.legend(loc='best')
 plt.savefig('L_kleiner_Druck.pdf')
 plt.show()
+
+#vergleich innerer und äußerer verdampfungswärme
+L_a = R * 373
+L_i = L-L_a
+print ('Innere Verdampfungswärme:', L_i)
+print ('Äußere Verdampfungswärme:', L_a)
+print ('Gesamtverpampfungswärme:', L)
