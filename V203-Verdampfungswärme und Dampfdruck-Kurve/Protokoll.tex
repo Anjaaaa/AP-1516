@@ -2,6 +2,11 @@
 \usepackage{geometry}
 \geometry{a4paper, top=30mm, left=35mm, right=35mm, bottom=30mm}
 \usepackage{multicol}
+\usepackage[hyphens]{url}  % trennt Internetadressen in Fußnoten automatisch
+\usepackage{biblatex}
+\addbibresource{Literatur.bib}
+
+
 
 \setlength\parindent{0pt}
 \usepackage[german]{babel}
@@ -39,17 +44,17 @@
 
 
 \tableofcontents
-\newpage
+\clearpage
 
 
 \section{Theorie}
 \input{Theorie.tex}
-\newpage
+\clearpage
 
 
 \section{Aufbau und Ablauf des Experiments}
 \input{Aufbau_Ablauf.tex}
-\newpage
+\clearpage
 
 
 \section{Auswertung}
@@ -60,11 +65,13 @@
 \subsubsection{Regression}
 \label{sec:regression}
 \input{Regression.tex}
+\clearpage
 \input{Auswertung.tex}
-\newpage
+\clearpage
 
 
 \section{Diskussion}
 \input{Diskussion.tex}
-
+\clearpage
+\printbibliography
 \end{document}
