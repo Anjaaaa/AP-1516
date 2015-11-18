@@ -1,0 +1,2 @@
+Fehlerrechnung.tex: Heißt das wirklich
+\Delta_x oder sollte es \Delta x heißen?
