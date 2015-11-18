@@ -4,3 +4,10 @@
 *.idx
 *.synctex.gz
 *.toc
+*.bbl
+*.bcf
+*.bfc.blg
+*.blg
+*.run.xml
+*.tex.blg
+*.xcf
