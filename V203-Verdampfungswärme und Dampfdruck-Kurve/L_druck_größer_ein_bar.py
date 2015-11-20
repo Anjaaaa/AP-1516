@@ -2,6 +2,7 @@ import numpy as np
 from uncertainties import ufloat
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
+from tabulate import tabulate
 
 
 T, P = np.genfromtxt('Messreihe2.txt', unpack=True)
@@ -43,6 +44,22 @@ a = 0.9 #Koeffizient siehe Protokoll
 V_plus = (R * T + np.sqrt(R**2 * T**2 - 4 * a * P)) / (2 * P)
 V_minus = (R * T - np.sqrt(R**2 * T**2 - 4 * a * P)) / (2 * P)
 
+plt.plot(T, V_plus)
+plt.xlabel(r'$T \ /\  (\mathrm{K})$')
+plt.ylabel(r'$V_m \ /\  (\mathrm{m^3/mol})$')
+plt.savefig('Volumen+.pdf')
+plt.show()
+
+plt.plot(T, V_minus)
+plt.xlabel(r'$T \ /\  (\mathrm{K})$')
+plt.ylabel(r'$V_m \ /\  (\mathrm{m^3/mol})$')
+plt.legend(loc='best')
+plt.savefig('Volumen-.pdf')
+plt.show()
+
+
+
+
 V = V_plus #diese Werte sind realistischer!!
 
 T_1 = parameters[0] * 3 * T**2 + parameters[1] * 2 * T + parameters[2] # Ableitung zu T
@@ -54,6 +71,12 @@ t = np.linspace(T[0], T[len(T)-1])
 V_t = (R * t + np.sqrt(R**2 * t**2 - 4 * a *fit_fn(t))) / (2 * fit_fn(t))
 P_1_t = parameters[0] * 3 * t**2 + parameters[1] * 2 * t + parameters[2]
 L_t = V_t * t * P_1_t
+
+tabelle = np.array([T, L])
+headers = ["Temperatur in $\si{\kelvin}$", "Verdampfungswärme in $\si{\joule\per\mol}$"]
+
+f = open('testtabelle2.txt', 'w')
+f.write(tabulate(tabelle.T, headers, tablefmt="latex"))
 
 
 plt.plot(t, L_t, 'g-', label= 'Regressionsfunktion')

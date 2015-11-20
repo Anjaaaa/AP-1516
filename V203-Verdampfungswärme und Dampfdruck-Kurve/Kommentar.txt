@@ -12,3 +12,15 @@ Fehlerrechnung.tex: Heißt das wirklich
 
 3.4
 	Beim fertigen L(T) könnte man die gesamte Funktion nochmal hinschreiben.
+
+
+Liebe Anja,
+
+könntest du nochmals nach einer "verlässlicheren" Quelle für die Diskussion schauen.
+
+Sonst wie besprochen Kleinigkeiten korrigieren, die es leider gleube ich teil in sich haben
+1) Bei dem eine Graphen die x-Achse richtig rücken.
+2) Bei den Polynomkoeffizienten die Einheiten wirden unterschiedlich dargestellt. Es stör mich, aber wie man's ändert kann ich auch nicht herausfinden
+3) In der Diskussion bei dem [TU Graz] ist ein Zeilenumbruch sehr ungünstig 
+
+Danke :)

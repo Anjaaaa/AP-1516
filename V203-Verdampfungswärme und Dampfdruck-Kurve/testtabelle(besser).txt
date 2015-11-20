@@ -1,5 +1,4 @@
 \begin{tabular}{c|c}
-\hline
    Reziproke absolute Temperatur &   Logarithmus des Druckes \\
 \hline
                       0.00309454 &                   9.53242 \\
@@ -13,5 +12,4 @@
                       0.00275368 &                  11.1548  \\
                       0.00271628 &                  11.3266  \\
                       0.00267989 &                  11.5229  \\
-\hline
 \end{tabular}

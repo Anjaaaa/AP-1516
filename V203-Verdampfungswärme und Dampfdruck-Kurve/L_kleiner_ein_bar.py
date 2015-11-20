@@ -42,8 +42,8 @@ f.write(tabulate(tabelle.T, headers, tablefmt="latex"))
 
 plt.plot(T, P, 'rx', label = 'Datenpunkte')
 plt.plot(T, fit_fn(T), 'g-', label='Regressionsfunktion')
-plt.xlabel(r'$1/T \ /\  (\mathrm{1/K})$')
-plt.ylabel(r'$log(P)$')
+plt.xlabel(r'$1/T \ /\  (\mathrm{K^{-1}})$')
+plt.ylabel(r'$\ln(P)\ /\  \ln(\mathrm{Pa})$')
 plt.legend(loc='best')
 plt.savefig('L_kleiner_Druck.pdf')
 plt.show()
@@ -54,3 +54,6 @@ L_i = L-L_a
 print ('Innere Verdampfungswärme:', L_i)
 print ('Äußere Verdampfungswärme:', L_a)
 print ('Gesamtverpampfungswärme:', L)
+
+print('L_i in eV/mol:', L_i *6.242e18)
+print('Normaldruck?:', np.exp(parameters[1]))
