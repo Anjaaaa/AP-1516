@@ -40,10 +40,12 @@ f.write(tabulate(tabelle.T, headers, tablefmt="latex"))
 #f.write(tabulate(table, tablefmt="latex"))
 
 
-plt.plot(T, P, 'rx', label = 'Datenpunkte')
-plt.plot(T, fit_fn(T), 'g-', label='Regressionsfunktion')
-plt.xlabel(r'$1/T \ /\  (\mathrm{K^{-1}})$')
+plt.plot(T*1000, P, 'rx', label = 'Datenpunkte')
+plt.plot(T*1000, fit_fn(T), 'g-', label='Regressionsfunktion')
+plt.xlabel(r'$\mathrm{T^{-1}} \ /\  \mathrm{K^{-1}}10^{-3}$')
 plt.ylabel(r'$\ln(P)\ /\  \ln(\mathrm{Pa})$')
+#plt.locator_params(nbins=10)	# Anzahl der Striche an der x-Achse
+
 plt.legend(loc='best')
 plt.savefig('L_kleiner_Druck.pdf')
 plt.show()
