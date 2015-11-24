@@ -44,7 +44,7 @@ plt.plot(T*1000, P, 'rx', label = 'Datenpunkte')
 plt.plot(T*1000, fit_fn(T), 'g-', label='Regressionsfunktion')
 plt.xlabel(r'$\mathrm{T^{-1}} \ /\  \mathrm{K^{-1}}10^{-3}$')
 plt.ylabel(r'$\ln(P)\ /\  \ln(\mathrm{Pa})$')
-#plt.locator_params(nbins=10)	# Anzahl der Striche an der x-Achse
+plt.locator_params(nbins=10)	# Anzahl der Striche an der x-Achse
 
 plt.legend(loc='best')
 plt.savefig('L_kleiner_Druck.pdf')
