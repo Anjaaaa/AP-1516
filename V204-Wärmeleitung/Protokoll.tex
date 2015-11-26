@@ -7,7 +7,7 @@
 \usepackage[german]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath, amsthm, amssymb}
-
+\usepackage{physics}
 
 \usepackage{caption}
 \usepackage{graphicx}
@@ -42,13 +42,13 @@
 \newpage
 
 
-\section{Theorie}\footnote{nach: Anleitung zu V204: Wärmeleitung, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V204.pdf}
+\section[Theorie]{Theorie\footnote{nach: Anleitung zu V204: Wärmeleitung, Anfängerpraktikum TU Dortmund WS 2015/16, http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V204.pdf}}
 \input{Theorie.tex}
-
+\clearpage
 
 \section{Aufbau und Ablauf des Experiments}
 \input{Aufbau_Ablauf.tex}
-\newpage
+\clearpage
 
 
 \section{Auswertung}
@@ -59,8 +59,9 @@
 \subsubsection{Regression}
 \label{sec:regression}
 \input{Regression.tex}
+\clearpage
 \input{Auswertung.tex}
-\newpage
+\clearpage
 
 
 \section{Diskussion}
