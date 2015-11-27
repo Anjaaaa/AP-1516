@@ -5,4 +5,7 @@
 \contentsline {subsection}{\numberline {3.1}Statistische Formeln}{4}
 \contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{4}
 \contentsline {subsubsection}{\numberline {3.1.2}Regression}{4}
-\contentsline {section}{\numberline {4}Diskussion}{6}
+\contentsline {subsection}{\numberline {3.2}Bestimmung des W\IeC {\"a}rmestroms in Messing}{6}
+\contentsline {subsection}{\numberline {3.3}Bestimmung der W\IeC {\"a}rmeleitf\IeC {\"a}higkeit}{7}
+\contentsline {subsection}{\numberline {3.4}Vergleich der Temperaturverl\IeC {\"a}ufe}{9}
+\contentsline {section}{\numberline {4}Diskussion}{10}
