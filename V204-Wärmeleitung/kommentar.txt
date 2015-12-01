@@ -1,4 +1,0 @@
-1) wie ist das mit den datenschutzrechten von abbildungen aus dem internet? ich kenne es so, dass eigentlich nur abbildungen aus wikipedia copyright frei sind.
-spielt das für unseren verwendungszweck überhaupt eine rolle?
-
-2) wie hast du es letztes mal hinbekommen die fußnoten an der \caption{Theorie} richtig zu setzen?

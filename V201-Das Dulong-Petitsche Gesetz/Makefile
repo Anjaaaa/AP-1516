@@ -2,7 +2,7 @@
 
 NAME=Protokoll
 
-all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Fehlerrechnung.tex Regression.tex Theorie.tex $(NAME).tex Messung.tex Konstanten.tex
+all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Fehlerrechnung.tex Regression.tex Theorie.tex $(NAME).tex
 	pdflatex $(NAME).tex
 	pdflatex $(NAME).tex
 	pdflatex $(NAME).tex
