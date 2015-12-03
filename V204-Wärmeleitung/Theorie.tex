@@ -9,7 +9,7 @@ Die eindimensionale Wärmeleitungsgleichung beschreibt die räumliche und zeitli
 \end{equation}
 die von den Materialeigenschaften Wärmeleitfähigkeit $\kappa$, Dichte $\rho$ und spezifische Wärme $c$ abhängt.  Der Faktor $\frac{\kappa}{\rho \cdot c}$ stellt dar, wie schnell die Temperaturausbreitung erfolgt und wird auch Temperaturleitfähigkeit genannt. \\
 Die Lösung der eindimensionalen Wärmeleitungsgleichung ist abhängig von der Form des Stabes und den Anfangsbedingungen d.h. der Art der Wärmezufuhr. Wird der Stab an einem Ende periodisch erwärmt und abgekühlt, entsteht eine Temperaturwelle $T(x,t)$ entlang des Stabes 
-\begin{equation}
+\begin{equation}\label{Welle}
 T(x,t) = T_\text{max} \cdot \exp\left( - \sqrt{\frac{\omega \rho c}{2 \kappa}}x\right) \cdot \cos \left(\omega t - \sqrt{\frac{\omega \rho c}{2 \kappa}}x\right) \quad.
 \end{equation}
 Die Wärmeleitfähigkeit kann aus dem Amplitudenverhältnis einer näher an der Wärmequelle gelegenen Messung $A_\text{nah}$ und einer um $\Delta x$ weiter entfernten Messung $A_\text{fern}$ bestimmt werden
@@ -21,7 +21,7 @@ Zum Erwärmen der Stäbe wurde ein \textbf{Peltier-Element} verwendet. Das Pelti
 \begin{figure}
 	\centering
 \includegraphics[width=0.75\textwidth]{peltier-element.png}		
-\caption{Peltier-Element\footnotemark}
+\caption[Peltier-Element]{Peltier-Element\footnotemark}
 \end{figure}
 \footnotetext{Quelle: \url{https://www.energie-lexikon.info/img/peltier-element.png}}
 
