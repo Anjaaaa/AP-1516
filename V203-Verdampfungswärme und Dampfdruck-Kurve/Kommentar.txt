@@ -1,0 +1,30 @@
+Liebe Anja,
+
+könntest du nochmals nach einer "verlässlicheren" Quelle für die Diskussion schauen.
+
+Sonst wie besprochen Kleinigkeiten korrigieren, die es leider gleube ich teil in sich haben
+1) Bei dem eine Graphen die x-Achse richtig rücken.
+2) Bei den Polynomkoeffizienten die Einheiten wirden unterschiedlich dargestellt. Es stör mich, aber wie man's ändert kann ich auch nicht herausfinden
+3) In der Diskussion bei dem [TU Graz] ist ein Zeilenumbruch sehr ungünstig 
+
+Danke :)
+
+
+
+
+
+
+Hallo Clara,
+
+
+1) Bei dem dem Plot mit dem kleinen Druck habe ich es mir, nachdem das Internet mir nicht helfen wollte, 
+leicht gemacht. Ich habe einfach beim Plotten gesagt:
+	plt.plot(T*1000, P, 'rx', label = 'Datenpunkte')
+	plt.plot(T*1000, fit_fn(T), 'g-', label='Regressionsfunktion')
+er macht also die Stinknormale Regression, aber er plottet die Wertepaare (T*1000, p(T)) und dann habe 
+ich die Skalierung noch händisch geändert.
+2) Konnte ich lösen, indem ich statt ^3 \cubed und statt ^2 \squared geschrieben habe. Scheint ein 
+allgemeines Problem bei dem SI Packet zu sein.
+3) Da weiß ich jetzt nicht genau, was du meinst.
+
+
