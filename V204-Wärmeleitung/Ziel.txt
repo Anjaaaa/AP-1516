@@ -1,0 +1,1 @@
+Ziel dieses Versuches ist es die Wärmeleitung in verschiedenen Metallen und Edelstahl mit Hilfe einer dynamischen und einer statischen Methode zu untersuchen. Zudem wurde die Abhängigkeit der Wärmeleitung vom Querschnitt der Stäbe gezeigt.
