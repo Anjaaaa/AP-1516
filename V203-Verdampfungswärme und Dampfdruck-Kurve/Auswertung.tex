@@ -12,7 +12,7 @@ Die Wertepaare sind in Tabelle \ref{tab:druck-temperatur} dargestellt.
 \captionof{table}{Wertepaare für die lineare Regression}	
 	\centering
 \begin{tabular}{c|c}
-	Reziproke absolute Temperatur in \si{\kelvin}&   Logarithmus des Druckes in $\ln{(\text{(Pa)}}$ \\
+	Reziproke absolute Temperatur in \si{\kelvin}&   Logarithmus des Druckes ($\ln{(P/P_0)}$) \\
 	\hline
 	0.003095 &                   9.532 \\
 	0.003047 &                   9.687 \\
@@ -32,7 +32,7 @@ Die Wertepaare sind in Tabelle \ref{tab:druck-temperatur} dargestellt.
 
 Lineare Regression nach Formeln aus Kapitel (\ref{sec:regression}) mittels Python liefert
 \begin{equation}
-a= \num{-4910(60)} \,\ln{\text{(Pa)}}\, \text{T}
+a= \num{-4910(60)} \, \si{\kelvin}
 \end{equation}
 und damit eine Verdampfungswärme des Wassers von
 \begin{equation}
@@ -75,11 +75,13 @@ Zunächst wird der Druck als Funktion der Temperatur dargestellt. Mit Hilfe von 
 p(T) = a \cdot T ^3 + b \cdot T^2 +c \cdot T + d
 \end{equation}
 \begin{align}
-a &=\SI{0.626}{\pascal\per\kelvin\cubed}  \\
-b &= \SI[per-mode = fraction]{642}{\pascal\per\kelvin\squared}  \\
-c &= \SI{221564}{\pascal\per\kelvin} \\
-d  &= \SI{25769772}{\pascal}
+a &=\SI{0.63(33)}{\pascal\per\kelvin\cubed}  \\
+b &= \SI[per-mode = fraction]{640(370)}{\pascal\per\kelvin\squared}  \\
+c &= \SI{221000(146000)}{\pascal\per\kelvin} \\
+d  &= \SI{25800000(1870000)}{\pascal}
 \end{align}
+
+
 Die Ableitung des Druckes nach der Zeit ist
 \begin{equation}
 \frac{\text{d} p}{\text{d} T} = 3 \cdot a \cdot T^2 + 2 \cdot b \cdot T + c
