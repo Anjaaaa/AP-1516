@@ -41,7 +41,9 @@ f.write(tabulate(tabelle.T, headers, tablefmt="latex"))
 
 
 plt.plot(T*1000, P, 'rx', label = 'Datenpunkte')
-plt.plot(T*1000, fit_fn(T), 'g-', label='Regressionsfunktion')
+x=np.linspace(0.00265, 0.0031)
+plt.xlim(2.65, 3.1)
+plt.plot(x*1000, fit_fn(x), 'g-', label='Regressionsfunktion')
 plt.xlabel(r'$\mathrm{T^{-1}} \ /\  \mathrm{K^{-1}}10^{-3}$')
 plt.ylabel(r'$\ln(P)\ /\  \ln(\mathrm{Pa})$')
 plt.locator_params(nbins=10)	# Anzahl der Striche an der x-Achse
@@ -58,4 +60,5 @@ print ('Äußere Verdampfungswärme:', L_a)
 print ('Gesamtverpampfungswärme:', L)
 
 print('L_i in eV/mol:', L_i *6.242e18)
+print('L_i in eV/Molekül:', L_i *6.242e18 / 6.022e23)
 print('Normaldruck?:', np.exp(parameters[1]))
