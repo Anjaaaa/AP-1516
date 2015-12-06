@@ -23,7 +23,8 @@ parameters, popt = curve_fit(f, T, P)
 
 
 plt.plot(T, P/1000, 'rx', label = 'Datenpunkte')
-plt.plot(T, fit_fn(T)/1000, 'g-', label='Regressionsfunktion')
+x = np.linspace(365, 405)
+plt.plot(x, fit_fn(x)/1000, 'g-', label='Regressionsfunktion')
 plt.xlabel(r'$T \ /\  \mathrm{K}$')
 plt.ylabel(r'$P \ /\  \mathrm{Pa}\ 10^3$')
 plt.legend(loc='best')
@@ -44,13 +45,16 @@ a = 0.9 #Koeffizient siehe Protokoll
 V_plus = (R * T + np.sqrt(R**2 * T**2 - 4 * a * P)) / (2 * P)
 V_minus = (R * T - np.sqrt(R**2 * T**2 - 4 * a * P)) / (2 * P)
 
+
 plt.plot(T, V_plus)
+plt.xlim(min(T), max(T))
 plt.xlabel(r'$T \ /\  (\mathrm{K})$')
 plt.ylabel(r'$V_m \ /\  (\mathrm{m^3/mol})$')
 plt.savefig('Volumen+.pdf')
 plt.show()
 
 plt.plot(T, V_minus*1000)
+plt.xlim(min(T), max(T))
 plt.xlabel(r'$T \ /\  (\mathrm{K})$')
 plt.ylabel(r'$V_m \ /\  (\mathrm{m^3/mol})\ 10^{-3}$')
 plt.legend(loc='best')
@@ -66,7 +70,7 @@ T_1 = parameters[0] * 3 * T**2 + parameters[1] * 2 * T + parameters[2] # Ableitu
 
 L = V * T * T_1
 
-t = np.linspace(T[0], T[len(T)-1])
+t = np.linspace(365, 405)
 
 V_t = (R * t + np.sqrt(R**2 * t**2 - 4 * a *fit_fn(t))) / (2 * fit_fn(t))
 P_1_t = parameters[0] * 3 * t**2 + parameters[1] * 2 * t + parameters[2]
