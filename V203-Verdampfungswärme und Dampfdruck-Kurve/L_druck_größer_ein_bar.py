@@ -31,11 +31,11 @@ plt.savefig('Regerssionspolynom_P(t).pdf')
 plt.show()
 
 
-print('a:', parameters[0])
-print('b:', parameters[1])
-print('c:', parameters[2])
-print('d:', parameters[3])
-print (popt)
+print('a:', parameters[0], np.sqrt(popt[0,0]))
+print('b:', parameters[1], np.sqrt(popt[1,1]))
+print('c:', parameters[2], np.sqrt(popt[2,2]))
+print('d:', parameters[3], np.sqrt(popt[3,3]))
+print(popt)
 
 
 #Volumen berechnen
