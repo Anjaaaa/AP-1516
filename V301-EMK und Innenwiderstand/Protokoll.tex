@@ -9,11 +9,23 @@
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{url}
 \usepackage{physics}
-
+\usepackage{enumitem}
 
 \usepackage{caption}
 \usepackage{graphicx}
 \usepackage{subcaption} %z.B. in figure umgebungen um einzelne bilder zu benennen
+
+
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usetikzlibrary{circuits.ee.IEC}
+%Volt- und Amperemeter festlegen:
+\tikzset{circuit declare symbol = ammeter}
+\tikzset{set ammeter graphic ={draw,generic circle IEC, minimum size=5mm,info=center:A}}
+\tikzset{circuit declare symbol = voltmeter}
+\tikzset{set voltmeter graphic ={draw,generic circle IEC, minimum size=5mm,info=center:V}}
+
+
 
 
 \usepackage[
@@ -44,7 +56,8 @@
 \newpage
 
 
-\section{Theorie\footnote{nach: Anleitung zu V301: Leerlaufspannung und Innenwiderstand von Spannungsquellen, Anfängerpraktikum TU Dortmund WS 2015/16, \url{http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V301.pdf}}}
+\section{Theorie}
+\footnote{nach: Anleitung zu V301: Leerlaufspannung und Innenwiderstand von Spannungsquellen, Anfängerpraktikum TU Dortmund WS 2015/16, \url{http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V301.pdf}}
 \input{Theorie.tex}
 \newpage
 
