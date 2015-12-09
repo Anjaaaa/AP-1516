@@ -1,0 +1,34 @@
+Wird in der Elektrotechnik ein Stromkreis betrachtet, so gilt das 2. Kirchhoffsche Gesetz
+\begin{equation}
+	\sum_n U_i = \sum_n I_iZ_i \quad.
+\end{equation}
+Die Summe der angelegten Spannungen $U_i$ ist also gleich der Summe der Widerstände $Z_i$ multipliziert mit dem Strom $I_i$, der durch sie hindurch fließt. Für einen Stromkreis mit einer Spannungsquelle $U$ und einem Lastwiderstand $R_a$ gilt dann
+\[U = IR_a \quad.\]
+Betrachtet man einen solchen Stromkreis im Experiment gilt diese Gleichung nicht für eine angelegte Spannung $U_0$. Das liegt daran, dass eine reale Spannungsquelle immer einen Innenwiderstand hat, der den Stromfluss beeinflusst. Der Innenwiderstand wie ein zusätzlicher Widerstand $R_i$ hinter einer idealen Spannungsquelle betrachtet werden (siehe Abbildung VERWEIS). Dann gilt wie gewohnt
+\begin{equation}\label{Ersatzschaltung}
+	U_0 = IR_i+IR_a \quad.
+\end{equation}
+Die im Schaltbild als $U_k$ bezeichnete Klemmspannung, ist die Spannung, die dann am eigentlichen Stromkreis anliegt. Sie kann wieder über die Maschenregel
+\begin{equation}
+	U_k = IR_a = U_0-IR_i
+\end{equation}
+berechnet werden. Eine ideale Spannungsquelle müsste demnach einen Innenwiderstand von $R_i = 0$ haben, sodass $U_k = U_0$ gilt und die abgegebene Spannung unabhängig vom Stromkreis ist. Es ist zu beachten, dass es bei Generatoren zu Rückkopplungseffekten kommen kann, sodass für den Innenwiderstand gilt
+\begin{equation}
+	R_i = \dv{U_k}{I} \quad.
+\end{equation}
+\\
+\ \\
+\ \\
+Die Leistung $N$, die an einen Widerstand $R$ abgegeben wird ist definiert als
+\begin{equation}
+	N = IU_R = I^2R \quad.
+\end{equation}
+Wird weiterhin der Stromkreis mit nur einem Lastwiderstand betrachtet, gilt für den Strom nach \eqref{Ersatzschaltung}
+\begin{equation}
+	I = \frac{U_0}{R_i + R_a},
+\end{equation}
+sodass die Leistung am Lastwiderstand
+\begin{equation}
+	N(R_a) = \left(\frac{U_0}{R_i + R_a}\right)^2R_a
+\end{equation}
+ist. Könnte der Innenwiderstand $R_i$ Null sein, wäre es mit $R_a\rightarrow 0$ möglich beliebig eine hohe Leistung zu erreichen. Die Maximierung der Leistung durch entsprechende Wahl von $R_a$ wird Leistungsanpassung genannt.
