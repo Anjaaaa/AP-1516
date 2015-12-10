@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  9 DEC 2015 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  10 DEC 2015 12:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1757,59 +1757,54 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-matrix.code.tex
-File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
-)
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/circuits/ti
-kzlibrarycircuits.ee.IEC.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/circuits/ti
-kzlibrarycircuits.ee.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/circuits/ti
-kzlibrarycircuits.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-decorations.markings.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-decorations.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen273
-\pgfdecoratedremainingdistance=\dimen274
-\pgfdecoratedinputsegmentcompleteddistance=\dimen275
-\pgfdecoratedinputsegmentremainingdistance=\dimen276
-\pgf@decorate@distancetomove=\dimen277
-\pgf@decorate@repeatstate=\count164
-\pgfdecorationsegmentamplitude=\dimen278
-\pgfdecorationsegmentlength=\dimen279
-)
-\tikz@lib@dec@box=\box81
-)
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorati
-ons.markings.code.tex))
+))) (/usr/share/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2015/05/15 The CircuiTikz circuit drawing package version 0
+.4
+
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 calc.code.tex
 File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 )
-\tikz@lib@circ@count=\count165
-\tikzcircuitssizeunit=\dimen280
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen273
 )
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshap
-es.gates.ee.code.tex))
+(/usr/share/texmf-dist/tex/generic/circuitikz/circuitikz.code.tex
+\pgf@circ@Rlen=\dimen274
+
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircmath.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircnpoles.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
+(/usr/share/texmf-dist/tex/generic/circuitikz/pgfcircinputarrows.tex))
+(/usr/share/texmf-dist/tex/generic/circuitikz/circuitikz1.code.tex
+\pgf@circ@res@up=\dimen275
+\pgf@circ@res@down=\dimen276
+\pgf@circ@res@zero=\dimen277
+\pgf@circ@res@left=\dimen278
+\pgf@circ@res@right=\dimen279
+\pgf@circ@res@other=\dimen280
+\pgf@circ@res@step=\dimen281
+\pgf@circ@res@temp=\dimen282
+\pgfstartlinewidth=\dimen283
+))
 (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
 arrows.code.tex
 File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
-File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen281
-))
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/circuits/pgflibraryshap
-es.gates.ee.IEC.code.tex)) (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
+) (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2015/10/15 v2.6m A comprehensive (SI) units package
+
 (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen282
-\extrarowheight=\dimen283
+\col@sep=\dimen284
+\extrarowheight=\dimen285
 \NC@list=\toks42
 \extratabsurround=\skip58
 \backup@length=\skip59
@@ -1817,44 +1812,44 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2015/11/04 v6224 LaTeX2e option processing using LaTeX3 keys
 )
-\l__siunitx_tmp_box=\box82
-\l__siunitx_tmp_dim=\dimen284
-\l__siunitx_tmp_int=\count166
-\l__siunitx_number_mantissa_length_int=\count167
-\l__siunitx_number_uncert_length_int=\count168
-\l__siunitx_round_int=\count169
-\l__siunitx_process_decimal_int=\count170
-\l__siunitx_process_uncertainty_int=\count171
-\l__siunitx_process_fixed_int=\count172
-\l__siunitx_process_integer_min_int=\count173
-\l__siunitx_process_precision_int=\count174
-\l__siunitx_group_min_int=\count175
-\l__siunitx_angle_marker_box=\box83
-\l__siunitx_angle_unit_box=\box84
-\l__siunitx_angle_marker_dim=\dimen285
-\l__siunitx_angle_unit_dim=\dimen286
-\l__siunitx_unit_int=\count176
-\l__siunitx_unit_denominator_int=\count177
-\l__siunitx_unit_numerator_int=\count178
-\l__siunitx_unit_prefix_int=\count179
-\l__siunitx_unit_prefix_base_int=\count180
-\l__siunitx_unit_prefix_gram_int=\count181
-\l__siunitx_number_product_int=\count182
+\l__siunitx_tmp_box=\box81
+\l__siunitx_tmp_dim=\dimen286
+\l__siunitx_tmp_int=\count164
+\l__siunitx_number_mantissa_length_int=\count165
+\l__siunitx_number_uncert_length_int=\count166
+\l__siunitx_round_int=\count167
+\l__siunitx_process_decimal_int=\count168
+\l__siunitx_process_uncertainty_int=\count169
+\l__siunitx_process_fixed_int=\count170
+\l__siunitx_process_integer_min_int=\count171
+\l__siunitx_process_precision_int=\count172
+\l__siunitx_group_min_int=\count173
+\l__siunitx_angle_marker_box=\box82
+\l__siunitx_angle_unit_box=\box83
+\l__siunitx_angle_marker_dim=\dimen287
+\l__siunitx_angle_unit_dim=\dimen288
+\l__siunitx_unit_int=\count174
+\l__siunitx_unit_denominator_int=\count175
+\l__siunitx_unit_numerator_int=\count176
+\l__siunitx_unit_prefix_int=\count177
+\l__siunitx_unit_prefix_base_int=\count178
+\l__siunitx_unit_prefix_gram_int=\count179
+\l__siunitx_number_product_int=\count180
 \c__siunitx_one_fill_skip=\skip60
 \l__siunitx_table_unit_align_skip=\skip61
-\l__siunitx_table_exponent_dim=\dimen287
-\l__siunitx_table_integer_dim=\dimen288
-\l__siunitx_table_mantissa_dim=\dimen289
-\l__siunitx_table_marker_dim=\dimen290
-\l__siunitx_table_result_dim=\dimen291
-\l__siunitx_table_uncert_dim=\dimen292
-\l__siunitx_table_fill_pre_dim=\dimen293
-\l__siunitx_table_fill_post_dim=\dimen294
-\l__siunitx_table_fill_mid_dim=\dimen295
-\l__siunitx_table_pre_box=\box85
-\l__siunitx_table_post_box=\box86
-\l__siunitx_table_mantissa_box=\box87
-\l__siunitx_table_result_box=\box88
+\l__siunitx_table_exponent_dim=\dimen289
+\l__siunitx_table_integer_dim=\dimen290
+\l__siunitx_table_mantissa_dim=\dimen291
+\l__siunitx_table_marker_dim=\dimen292
+\l__siunitx_table_result_dim=\dimen293
+\l__siunitx_table_uncert_dim=\dimen294
+\l__siunitx_table_fill_pre_dim=\dimen295
+\l__siunitx_table_fill_post_dim=\dimen296
+\l__siunitx_table_fill_mid_dim=\dimen297
+\l__siunitx_table_pre_box=\box84
+\l__siunitx_table_post_box=\box85
+\l__siunitx_table_mantissa_box=\box86
+\l__siunitx_table_result_box=\box87
 \l__siunitx_table_number_align_skip=\skip62
 \l__siunitx_table_text_align_skip=\skip63
 .................................................
@@ -1998,18 +1993,18 @@ LaTeX Warning: Unused global option(s):
 (./Protokoll.aux)
 \openout1 = `Protokoll.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2049,16 +2044,16 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count183
-\scratchdimen=\dimen296
-\scratchbox=\box89
-\nofMPsegments=\count184
-\nofMParguments=\count185
+\scratchcounter=\count181
+\scratchdimen=\dimen298
+\scratchbox=\box88
+\nofMPsegments=\count182
+\nofMParguments=\count183
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count186
-\MPscratchDim=\dimen297
-\MPnumerator=\count187
-\makeMPintoPDFobject=\count188
+\MPscratchCnt=\count184
+\MPscratchDim=\dimen299
+\MPnumerator=\count185
+\makeMPintoPDFobject=\count186
 \everyMPtoPDFconversion=\toks44
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -2187,18 +2182,18 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2015/10/15 v2.6m siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count189
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+\c__siunitx_mathsf_int=\count187
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count190
+\c__siunitx_mathtt_int=\count188
  (./Titlepage.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
@@ -2235,44 +2230,33 @@ Overfull \hbox (3.3467pt too wide) in paragraph at lines 10--12
 12 wird auch Leer-lauf-span-nung ge-nannt. Die im Schalt-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--24
+(./Stromkreis.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
-) [2] [3] (./Aufbau_Ablauf.tex
-Overfull \hbox (16.82156pt too wide) in paragraph at lines 8--9
-\OT1/cmr/m/n/12 nung ei-ner Wech-sel-span-nungs-quel-le. Zun[]achst wird der []
-[]-Rechteckausgang
+[2]) [3] (./Aufbau_Ablauf.tex (./Klemmspannung.tex
+Overfull \hbox (3.78612pt too wide) in paragraph at lines 19--20
+ [] 
  []
 
-(./Tikz.tex
 
-! Package pgfkeys Error: I do not know the key '/tikz/show background rectangle
-' and I am going to ignore it. Perhaps you misspelled it.
+Overfull \hbox (18.548pt too wide) in paragraph at lines 2--42
+[]$[]$ $[]$ 
+ []
 
-See the pgfkeys package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ]
-     
-This error message was generated by an \errmessage
-command, so I can't give any explicit help.
-Pretend that you're Hercule Poirot: Examine all clues,
-and deduce the truth by order and method.
+)) [4] (./Fehlerrechnung.tex) (./Regression.tex [5
 
-Missing character: There is no ; in font nullfont!
-)) [4] (./Fehlerrechnung.tex) (./Regression.tex [5]) (./Auswertung.tex)
+]) (./Auswertung.tex)
 [6] (./Diskussion.tex) [7] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 27291 strings out of 493054
- 563624 string characters out of 6140585
- 573341 words of memory out of 5000000
- 30383 multiletter control sequences out of 15000+600000
- 23367 words of font info for 92 fonts, out of 8000000 for 9000
+ 31583 strings out of 493054
+ 689998 string characters out of 6140585
+ 778927 words of memory out of 5000000
+ 34655 multiletter control sequences out of 15000+600000
+ 24597 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 58i,14n,98p,10406b,1291s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,10406b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
@@ -2281,15 +2265,13 @@ re/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb
->
-Output written on Protokoll.pdf (8 pages, 175207 bytes).
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmtt10.pfb>
+Output written on Protokoll.pdf (8 pages, 163128 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

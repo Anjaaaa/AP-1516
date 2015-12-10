@@ -1,0 +1,43 @@
+\begin{figure}[h!]
+\begin{subfigure}{0.52\textwidth}
+\begin{center}
+\begin{circuitikz}
+	\draw (0,0)
+	to[battery1=$U_0$] (0,3)
+	to[short, -*] (1.5,3)
+	to[ammeter] (4,3)
+	to[short, *-] (5,3)
+	(4,3) to[short, *-] (4,2.5)
+	(4,0) to[short, *-] (4,0.5)
+	(0,0) to[short, -*] (1.5,0)
+	to[short] (5,0)
+	to[vR, l_=$R_a$] (5,3)
+	(1.5,3) to[voltmeter, color=white, name=Voltmeter] (1.5,0); % The voltage source
+	\mymeter{Voltmeter}{0}
+	\draw (4,2.3) node{H}
+	(4,0.7) node{G};
+\end{circuitikz}
+\caption{direkt}
+\label{Klemmspannung}
+\end{center}
+\end{subfigure}
+\begin{subfigure}{0.52\textwidth}
+\begin{center}
+	\begin{circuitikz}
+		\draw (0,0)
+		to[battery1=$U_0$] (0,3)
+		to[short, -*] (1.5,3)
+		to[ammeter] (4.5,3)
+		(4.5,0) to[dcvsource=$U_\text{gegen}$] (4.5,1.5)
+		to[vR, l_=$R_a$] (4.5,3)
+		(1.5,3) to[voltmeter, color=white, name=Voltmeter] (1.5,0) % The voltage source
+		(0,0) to[short, -*] (1.5,0)
+		to[short] (4.5,0);
+		\mymeter{Voltmeter}{0}
+	\end{circuitikz}
+	\caption{mittels Gegenspannung}
+	\label{Klemmspannung_Gegenspannung}
+\end{center}
+\end{subfigure}
+\caption{Messung der Klemmspannung}
+\end{figure}

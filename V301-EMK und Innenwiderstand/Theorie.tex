@@ -4,7 +4,7 @@ Wird in der Elektrotechnik ein Stromkreis betrachtet, so gilt das 2. Kirchhoffsc
 \end{equation}
 Wobei die $U_i$ die angelegten Spannungen, $Z_i$ die Impedanzen und $I_i$ der Strom, der durch $Z_i$ fließt ist. Für einen Stromkreis mit einer Spannungsquelle $U$ und einem Lastwiderstand $R_a$ gilt dann
 \[U = IR_a \quad.\]
-Wird ein solcher Stromkreis, an dem die Spannung $U_0$ anliegt, im Experiment betrachtet gilt diese Gleichung nicht für $U = U_0$. Das liegt daran, dass eine reale Spannungsquelle immer einen Innenwiderstand $R_i$ hat, der den Stromfluss beeinflusst. Im Schaltbild und in der Rechnung kann eine solche reale Spannungsquelle wie eine ideale Spannungsquelle betrachtet werden, hinter der ein Widerstand der Größe $R_i$ geschaltet ist (siehe Abbildung VERWEIS). Dann gilt wie gewohnt \eqref{Maschenregel}:
+Wird ein solcher Stromkreis, an dem die Spannung $U_0$ anliegt, im Experiment betrachtet gilt diese Gleichung nicht für $U = U_0$. Das liegt daran, dass eine reale Spannungsquelle immer einen Innenwiderstand $R_i$ hat, der den Stromfluss beeinflusst. Im Schaltbild und in der Rechnung kann eine solche reale Spannungsquelle wie eine ideale Spannungsquelle betrachtet werden, hinter der ein Widerstand der Größe $R_i$ geschaltet ist (siehe Abbildung \ref{Stromkreis}). Dann gilt wie gewohnt \eqref{Maschenregel}:
 \begin{equation}\label{Ersatzschaltung}
 	U_0 = IR_i+IR_a \quad.
 \end{equation}
@@ -12,14 +12,14 @@ Die angelegte Spannung $U_0$ wird auch Leerlaufspannung genannt. Die im Schaltbi
 \begin{equation}
 	U_k = IR_a = U_0-IR_i
 \end{equation}
-berechnet werden. Eine ideale Spannungsquelle müsste demnach einen Innenwiderstand von $R_i = 0$ haben, sodass $U_k = U_0$ gilt. Es ist zu beachten, dass es bei Generatoren zu Rückkopplungseffekten kommen kann, sodass für ihren Innenwiderstand ein differentieller Zusammenhang
+berechnet werden. 
+\input{Stromkreis.tex}
+Eine ideale Spannungsquelle müsste demnach einen Innenwiderstand von $R_i = 0$ haben, sodass $U_k = U_0$ gilt. Es ist zu beachten, dass es bei Generatoren zu Rückkopplungseffekten kommen kann, sodass für ihren Innenwiderstand ein differentieller Zusammenhang
 \begin{equation}
 	R_i = \dv{U_k}{I}
 \end{equation}
 gilt. \\
 \ \\
-BILD BILD BILD BILD BILD BILD BILD BILD BILD BILD BILD BILD
-BILD BILD BILD BILD BILD BILD BILD BILD BILD BILD BILD BILD
 Die Leistung $N$, die an einen Widerstand $R$ abgegeben wird ist definiert als
 \begin{equation}
 	N = IU_R = I^2R \quad.
