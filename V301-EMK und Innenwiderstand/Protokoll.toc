@@ -5,4 +5,7 @@
 \contentsline {subsection}{\numberline {3.1}Statistische Formeln}{5}
 \contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{5}
 \contentsline {subsubsection}{\numberline {3.1.2}Regression}{5}
-\contentsline {section}{\numberline {4}Diskussion}{7}
+\contentsline {subsection}{\numberline {3.2}Leerlaufspannung und Innenwiderstand f\IeC {\"u}r drei Spannungsquellen berechnen}{6}
+\contentsline {subsection}{\numberline {3.3}Systematischer Fehler -- endlicher Widerstand des Voltmeters}{9}
+\contentsline {subsection}{\numberline {3.4}Das Maximum der umgesetzten Leistung}{10}
+\contentsline {section}{\numberline {4}Diskussion}{11}

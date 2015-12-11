@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  11 DEC 2015 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  11 DEC 2015 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2015,7 +2015,23 @@ mappings.tex))) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(./Protokoll.aux)
+(./Protokoll.aux
+
+LaTeX Warning: Label `Klemmspannung' multiply defined.
+
+
+LaTeX Warning: Label `fig:L_kleiner_Druck' multiply defined.
+
+
+LaTeX Warning: Label `fig:L_kleiner_Druck' multiply defined.
+
+
+LaTeX Warning: Label `fig:L_kleiner_Druck' multiply defined.
+
+
+LaTeX Warning: Label `fig:L_kleiner_Druck' multiply defined.
+
+)
 \openout1 = `Protokoll.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
@@ -2256,7 +2272,7 @@ Overfull \hbox (3.3467pt too wide) in paragraph at lines 10--12
  []
 
 (./Stromkreis.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 20--24
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
@@ -2288,32 +2304,109 @@ Overfull \hbox (18.548pt too wide) in paragraph at lines 2--42
 
 )) [4] (./Fehlerrechnung.tex) (./Regression.tex [5
 
-]) (./Auswertung.tex)
-[6] (./Diskussion.tex) [7] (./Protokoll.aux) ) 
+]) (./Auswertung.tex
+Overfull \hbox (14.03258pt too wide) in paragraph at lines 1--1
+[]\OT1/cmr/bx/n/14.4 Leerlaufspannung und In-nen-wi-der-stand f[]ur drei Span-
+ []
+
+<Spannung_Messung_b.pdf, id=40, 578.16pt x 433.62pt>
+File: Spannung_Messung_b.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_b.pdf>
+Package pdftex.def Info: Spannung_Messung_b.pdf used on input line 11.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+ [6 <./Spannung_Messung_b.pdf>]
+<Spannung_Messung_c.pdf, id=86, 578.16pt x 433.62pt>
+File: Spannung_Messung_c.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_c.pdf>
+Package pdftex.def Info: Spannung_Messung_c.pdf used on input line 28.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+<Spannung_Messung_d.pdf, id=87, 578.16pt x 433.62pt>
+File: Spannung_Messung_d.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_d.pdf>
+Package pdftex.def Info: Spannung_Messung_d.pdf used on input line 53.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Spannung_Messung_e.pdf, id=88, 578.16pt x 433.62pt>
+File: Spannung_Messung_e.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_e.pdf>
+Package pdftex.def Info: Spannung_Messung_e.pdf used on input line 60.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7 <./Spannung_Messung_c.pdf>] [8 <./Spannung_Messung_d.pdf> <./Spannung_Messun
+g_e.pdf
+
+pdfTeX warning: pdflatex (file ./Spannung_Messung_e.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>] [9
+
+] (./tabelle_besser.tex)
+<Leistungskurve.pdf, id=214, 578.16pt x 433.62pt>
+File: Leistungskurve.pdf Graphic file (type pdf)
+ <use Leistungskurve.pdf>
+Package pdftex.def Info: Leistungskurve.pdf used on input line 97.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+)
+[10
+
+ <./Leistungskurve.pdf>] (./Diskussion.tex
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 16--91
+
+ []
+
+[11] (./Protokoll.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 29539 strings out of 493105
- 653957 string characters out of 6137071
- 716845 words of memory out of 5000000
- 32549 multiletter control sequences out of 15000+600000
- 24597 words of font info for 96 fonts, out of 8000000 for 9000
+ 29576 strings out of 493105
+ 654765 string characters out of 6137071
+ 715919 words of memory out of 5000000
+ 32576 multiletter control sequences out of 15000+600000
+ 25215 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,12n,56p,10406b,1284s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Protokoll.pdf (8 pages, 162178 bytes).
+ 55i,18n,56p,10406b,1284s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Protokoll.pdf (12 pages, 242548 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 308 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
