@@ -1,11 +1,11 @@
 \select@language {german}
 \contentsline {section}{\numberline {1}Theorie}{2}
 \contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{4}
-\contentsline {section}{\numberline {3}Auswertung}{5}
-\contentsline {subsection}{\numberline {3.1}Statistische Formeln}{5}
-\contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{5}
-\contentsline {subsubsection}{\numberline {3.1.2}Regression}{5}
-\contentsline {subsection}{\numberline {3.2}Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands f\IeC {\"u}r drei Spannungsquellen}{6}
-\contentsline {subsection}{\numberline {3.3}Systematischer Fehler -- endlicher Widerstand des Voltmeters}{9}
-\contentsline {subsection}{\numberline {3.4}Das Maximum der umgesetzten Leistung}{10}
-\contentsline {section}{\numberline {4}Diskussion}{11}
+\contentsline {section}{\numberline {3}Statistische Formeln}{5}
+\contentsline {subsection}{\numberline {3.1}Fehlerrechnung}{5}
+\contentsline {subsection}{\numberline {3.2}Regression}{5}
+\contentsline {section}{\numberline {4}Auswertung}{6}
+\contentsline {subsection}{\numberline {4.1}Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands f\IeC {\"u}r drei Spannungsquellen}{6}
+\contentsline {subsection}{\numberline {4.2}Systematischer Fehler -- endlicher Widerstand des Voltmeters}{9}
+\contentsline {subsection}{\numberline {4.3}Das Maximum der umgesetzten Leistung}{10}
+\contentsline {section}{\numberline {5}Diskussion}{11}

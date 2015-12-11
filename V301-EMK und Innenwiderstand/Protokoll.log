@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  11 DEC 2015 23:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  11 DEC 2015 23:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2245,18 +2245,15 @@ Overfull \hbox (18.548pt too wide) in paragraph at lines 2--42
 []$[]$ $[]$ 
  []
 
-)) [4] (./Fehlerrechnung.tex) (./Regression.tex [5
+)) [4] (./Fehlerrechnung.tex) (./Regression.tex) (./Auswertung.tex [5
 
-]) (./Auswertung.tex
+]
 <Spannung_Messung_b.pdf, id=40, 578.16pt x 433.62pt>
 File: Spannung_Messung_b.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_b.pdf>
 Package pdftex.def Info: Spannung_Messung_b.pdf used on input line 10.
 (pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Spannung_Messung_c.pdf, id=41, 578.16pt x 433.62pt>
 File: Spannung_Messung_c.pdf Graphic file (type pdf)
@@ -2268,7 +2265,8 @@ Package pdftex.def Info: Spannung_Messung_c.pdf used on input line 27.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Spannung_Messung_d.pdf, id=42, 578.16pt x 433.62pt>
+[6 <./Spannung_Messung_b.pdf>]
+<Spannung_Messung_d.pdf, id=87, 578.16pt x 433.62pt>
 File: Spannung_Messung_d.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_d.pdf>
@@ -2278,7 +2276,7 @@ Package pdftex.def Info: Spannung_Messung_d.pdf used on input line 52.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Spannung_Messung_e.pdf, id=43, 578.16pt x 433.62pt>
+<Spannung_Messung_e.pdf, id=88, 578.16pt x 433.62pt>
 File: Spannung_Messung_e.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_e.pdf>
@@ -2288,18 +2286,15 @@ Package pdftex.def Info: Spannung_Messung_e.pdf used on input line 59.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] [7 <./Spannung_Messung_b.pdf> <./Spannung_Messung_c.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./Spannung_Messung_c.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->] [8 <./Spannung_Messung_d.pdf> <./Spannung_Messung_e.pdf
+[7 <./Spannung_Messung_c.pdf>] [8 <./Spannung_Messung_d.pdf> <./Spannung_Messun
+g_e.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./Spannung_Messung_e.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >] [9
 
 ] (./tabelle_besser.tex)
-<Leistungskurve.pdf, id=213, 578.16pt x 433.62pt>
+<Leistungskurve.pdf, id=214, 578.16pt x 433.62pt>
 File: Leistungskurve.pdf Graphic file (type pdf)
  <use Leistungskurve.pdf>
 Package pdftex.def Info: Leistungskurve.pdf used on input line 97.
@@ -2316,7 +2311,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--21
 Here is how much of TeX's memory you used:
  31625 strings out of 493054
  690933 string characters out of 6140585
- 779013 words of memory out of 5000000
+ 779009 words of memory out of 5000000
  34687 multiletter control sequences out of 15000+600000
  25215 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2332,10 +2327,10 @@ sfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Protokoll.pdf (12 pages, 245360 bytes).
+Output written on Protokoll.pdf (12 pages, 245491 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 308 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
