@@ -1,24 +1,23 @@
-\subsection{Leerlaufspannung und Innenwiderstand für drei Spannungsquellen berechnen}
-Es werden drei verschiedene Spannungsquellen in verschiedenen jeweils  Stromkreisen mit zwei analogen Multimetern vermessen. Die Ableseungenauigkeit der Stommessung beträgt $2 \% $ und die der Spannungsmessung $3 \% $. In den folgenden Diagrammen sind diese Fehler durch Fehlerbalgen gekennzeichnet.
-Für die Monozelle folgt nach Formel \eqref{Klemmspannung} mit der Leerlaufspannung $U_0$ und den Innenwiderstand $R_i$ und einer linearen Regression mittels Python:
-\begin{align}
-&U_0 = \SI{1.471(14)}{\volt}  \ ,  \\
-&R_i = \SI{5.46(14)}{\ohm}  \ .
-\label{Innenwiderstand_Monozelle}
-\end{align}
+\subsection{Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands für drei Spannungsquellen}
+Die Ableseungenauigkeit der Stommessung beträgt $2 \% $ und die der Spannungsmessung $3 \% $. In den folgenden Diagrammen sind diese Fehler durch Fehlerbalken gekennzeichnet. \\
+Mit einer linearen Regression mittels Python nach Formel \eqref{Klemmspannung}, folgen für die Monozelle die Leerlaufspannung
+\[U_0 = \SI{1.471(14)}{\volt}\]
+und der Innenwiderstand
+\[\label{Innenwiderstand_Monozelle}
+R_i = \SI{5.46(14)}{\ohm} \ .\]
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Spannung_Messung_b.pdf}
 	\caption{Lineare Regression zur Monozelle}
-	\label{fig:L_kleiner_Druck}
+	\label{fig:Regression_Monozelle}
 \end{figure}
 
 
-Beim Anlegen einer Gegenspannung fließt der Strom in die entgegengesetzte Richtung und Formel \eqref{Klemmspannung} wird zu
+Beim Anlegen der Gegenspannung (Abbildung \ref{Klemmspannung_Gegenspannung}) fließt der Strom in die entgegengesetzte Richtung, wodurch Formel \eqref{Klemmspannung} zu
 \begin{equation}
-U_k = IR_a = U_0+IR_i  \  .
+U_k = IR_a = U_0+IR_i
 \end{equation}
-Die lineare Regression liefert :
+wird. Die lineare Regression liefert in diesem Fall :
 \begin{align}
 &U_0 = \SI{1.383(33)}{\volt} \ , \\
 &R_i = \SI{5.91(24)}{\ohm}  \ .
@@ -27,11 +26,11 @@ Die lineare Regression liefert :
 	\centering
 	\includegraphics[width=0.95\textwidth]{Spannung_Messung_c.pdf}
 	\caption{Lineare Regression zur Gegenspannung}
-	\label{fig:L_kleiner_Druck}
+	\label{fig:Regression_Gegenspannung}
 \end{figure}
 
 
-Für den RC-Generator wird der gleiche Aufbau wie bei der Monozelle verwendet. Hier gibt es zwei Messreihen. Für die Rechteckspannung folgt
+Für den RC-Generator wird der gleiche Aufbau (siehe Abbildung \ref{Klemmspannung_Bild}) wie bei der Monozelle verwendet. Die Regression ergibt für die Rechteckspannung
 \begin{align}
 &U_0 = \SI{0.555(6)}{\volt} \ , \\
 &R_i = \SI{61.4(19)}{\ohm} 
@@ -52,26 +51,27 @@ und für die Sinusspannung
 	\centering
 	\includegraphics[width=0.95\textwidth]{Spannung_Messung_d.pdf}
 	\caption{Lineare Regression zum RC-Generator (Rechteckspannung)}
-	\label{fig:L_kleiner_Druck}
+	\label{fig:Regression_Rechteck}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Spannung_Messung_e.pdf}
 	\caption{Lineare Regression zum RC-Generator (Sinusspannung)}
-	\label{fig:L_kleiner_Druck}
+	\label{fig:Regression_Sinus}
 \end{figure}
 
 \clearpage
 
 \subsection{Systematischer Fehler -- endlicher Widerstand des Voltmeters}
-Der Endliche Widerstand des Voltmeters führt zu einem systematischen Fehler. Der Widerstand des Messgerätes müsste unendlich groß sein, um den Stromkreis und -fluss nicht zu beeinflussen. Um den Fehler  auszurechnen wird direkt die Leerlaufspannung der Monozelle gemessen
+Der endliche Widerstand des Voltmeters führt zu einem systematischen Fehler. Der Widerstand des Messgerätes müsste unendlich groß sein, um den Stromkreis und -fluss nicht zu beeinflussen. Um den dadurch verursachten Fehler auszurechnen wird die Leerlaufspannung der Monozelle
 \begin{equation}
-U_k = \SI{1.5}{\volt} \ .
-\end{equation} 
-Der Innenwiderstand der Monozelle(siehe  \eqref{Innenwiderstand_Monozelle}) wird aus einer anderen Messreihe übernommen. Durch umstellen der Formel \eqref{Klemmspannung} nach $U_0$ und einsetzen vereinfacht sich der absolute Fehler zu 
+U_k = \SI{1.5}{\volt}
+\end{equation}
+direkt gemessen.
+Der Innenwiderstand der Monozelle (siehe \eqref{Innenwiderstand_Monozelle}) wird aus einer anderen Messreihe übernommen. Durch Umstellen der Formel \eqref{Klemmspannung} nach $U_0$ vereinfacht sich der absolute Fehler zu 
 \begin{equation}
-\Delta U = U_0 - U_k = U_k * \frac{R_i}{R_v} = \SI{8.191e-7}{\volt}
+\Delta U = U_0 - U_k = I\cdot R_i = U_k \cdot \frac{R_i}{R_v} = \SI{8.191e-7}{\volt}
 \end{equation}
 und der relative Fehler wird 
 \begin{equation}
@@ -82,7 +82,7 @@ Dieser Fehler ist vernachlässigbar klein.
 \clearpage 
  
 \subsection{Das Maximum der umgesetzten Leistung}
-Wie bereits in der Theorie erklärt ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Die Leistung $N_\text{Mess} = U_k \cdot I $ wird über den Belastungswiderstand $R_a = U_k / I$ aufgetragen. Ein Fehler entsteht durch die Ableseungenauigkeit der Messgeräte.
+Wie bereits in der Theorie erklärt, ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Die Leistung $N_\text{Mess} = U_k \cdot I $ wird über den Belastungswiderstand $R_a = U_k / I$ aufgetragen. Ein Fehler entsteht durch die Ableseungenauigkeit der Messgeräte.
 
 \begin{center}
 	\captionof{table}{Belastungswiderstand und Leistung mit Fehlern}
@@ -90,20 +90,19 @@ Wie bereits in der Theorie erklärt ist die umgesetzte Leistung abhängig vom La
 \label{Werte_Leistung}
 \end{center}
 
-Die erwartete Leistung nach Formel \eqref{Leistung} wird in einem Diagramm zusammen mit den in Tabelle \ref{Werte_Leistung} dargestellten Werten dargestellt.
+Abbildung \ref{fig:Werte_Leistung} zeigt die theoretische Abhängigkeit der Leistung vom Widerstand (siehe \eqref{Leistung}) und die Werte aus Tabelle \ref{Werte_Leistung}.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Leistungskurve.pdf}
-	\caption{Lineare Regression zum RC-Generator (Rechteckspannung)}
-	\label{fig:L_kleiner_Druck}
+	\caption{Leistung $N(R_a)$ am Lastwiderstand}
+	\label{fig:Werte_Leistung}
 \end{figure}
 
 
 
 
 
-
-
+% R_v????
 
 
