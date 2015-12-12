@@ -1,25 +1,27 @@
-Wieso liegt der Wert der Leerlaufspannung der Monozelle aus Messung b nicht genau auf 1.5 und die Gegenspannung nicht genau 2V? \\
---- Sollte die Gegenspannung nicht 2V größer, als die Leerlaufspannung der Monozelle sein? Und die Gegenspannung wird doch nirgends berechnet? \\
-- Voltmeter kann es nicht sein nach Auswertung \\
---- Wieso nicht? Dass das Voltmeter keinen unendlich großen Widerstand hat, wäre eine gute Erklärung. \\
-- Amperemeter keinen unendlich kleinen Widerstand \\
-- Rückkopplungseffekte
-
-RC-Generator: \\
-- woher kommen die großen Unterschiede zwischen Rechteck und Sinusspannung? \\
---- Bei der Rechteckspannung ist der Effektivwert höher und das wurde gemessen? \\
-Der errechnete Innenwiederstand des RC-Generators für die Rechteckspannung stimmt mit dem Literaturwert\footnote{Elektronikpraktikum, H. Pfeiffer, S. 55} von circa \SI{50}{\ohm} überein, zumal dieser Wert vom Gerät abhängig ist. Wieso der Innenwiderstand des Generators beim Erzeugen einer Sinusspannung so viel höher ist können wir nur vermuten. Das Rechtecksignal wird in ein Dreiecksignal umgewandelt und diese beiden zusammen ergeben die Sinusspannung. Anscheinend ist der große Innenwiderstand darauf zurückzuführen. \\
---- Ich könnte mir vorstellen, dass das was damit zu tun hat, dass der Innenwiderstand hier eine differentielle Größe ist. Und bei der Rechteckspannung wird das sehr klein, weil es ja eigentlich keine Steigung, sonder nur konstante Stücke gibt und bei der Sinus- (bzw. dem Dreiecksanteil der) Spannung ist die Steigung nicht null.
-
-
-
-% Link dazu: https://books.google.de/books?id=T9_PBgAAQBAJ&pg=PA54&lpg=PA54&dq=rc+generator+innenwiderstand&source=bl&ots=pYmou0fpgV&sig=GJPhSBjWjCqLw_08xIqD878BgYs&hl=de&sa=X&ved=0ahUKEwidsq61m9TJAhXGYQ8KHQwZAREQ6AEILDAC#v=onepage&q=rc%20generator%20innenwiderstand&f=false
-
-Leistung: \\
--die Werte sind bis auf einen recht gut! \\
--Maximum händisch bestimmen \\
+In diesem Versuch gibt es drei Hauptfehlerquellen: Die Messgeräte werden als ideale Messgeräte angenommen. Das bedeutet, dass das Voltmeter einen unendlich hohen und das Ampèremeter einen unendlich kleinen Widerstand hat, um den Stromfluss nicht zu verändern. \\ Des weiteren gibt es eine Ableseungenauigkeit der Messgeräte. Diese wurden in den Rechnungen größtenteils berücksichtigt. \\ Auch vernachlässigt werden sogenannte Rückkopplungseffekte.  Ändert sich der Belastungsstrom, so beeinflusst das eigentlich den Innenwiderstand und die Leerlaufspannung der Quelle. \\
+\begin{center}
+	\captionof{table}{Messergebnisse Leerlaufspannung Monozelle und Gegenspannung}
+\begin{tabular}{c|c|c|c}
+	& Gemessener Wert & Erwarteter Wert & Abweichung \\
+	\hline
+	Monozelle & \SI{1.471}{\volt} & \SI{1.5}{\volt} & - 2.0 \% \\
+	Gegenspannung & \SI{1.383}{\volt} & \SI{2}{\volt}  & - 44.6 \%
+\end{tabular}
+\end{center}
+Wie in Kapitel \ref{systhematischer_fehler} gezeigt ist, kann die Abweichung nicht am Voltmeter liegen. Wahrscheinlich sind die Rückkopplungseffekte der entscheidende Faktor. \\
+Die Messung mit dem RC-Generator als Stromquelle liefert niedrigere Leerlaufspannungen und höhere Innenwiderstände.
+Der errechnete Innenwiederstand für die Rechteckspannung
+\begin{equation}
+R_{i, \text{Rechteck}} = \SI{61.4}{\ohm}
+\end{equation} 
+stimmt mit dem Literaturwert\footnote{Elektronikpraktikum, H. Pfeiffer, S. 55} von circa \SI{50}{\ohm} überein, zumal dieser Wert noch vom Gerät abhängig ist. Wieso der Innenwiderstand des Generators beim Erzeugen einer Sinusspannung so viel höher ist 
+\begin{equation}
+R_{i,\text{Sinus}} = \SI{675.6}{\ohm}
+\end{equation}
+können wir nur vermuten. Das Rechtecksignal wird in ein Dreiecksignal umgewandelt und diese beiden zusammen ergeben die Sinusspannung. Vielleicht werden hierzu große Widerstände benötigt. Oder der Innenwiderstand hängt von der Steigung des abgegebenen Signals ab, die bei der Rechteckspannung null ist und bei der Sinusspannung zwischen null und eins liegt. \\
+Die Werte, die für die Leitung berechnet wurden sind sehr gut. Lediglich ein Wertepaar liegt mit seinen Fehlerbalken nicht auf der erwarteten Funktion. Ein Leistungsmaximum wird für $R_a = R_i$ erreicht, da gilt:
 \begin{align*}
-	\dv{N(R_a)}{R_a} &= \dv{}{R_a}\left(\left(\frac{U_0}{R_i+R_a}\right)^2R_a\right) \\
-	&= \frac{U_0^2(R_i-R_a)}{(R_i+R_a)^3} \\
-	&\overset{!}{=} 0 \quad \Rightarrow R_a = R_i
+	\dv{N(R_a)}{R_a} &= \dv{}{R_a}\left(\left(\frac{U_0}{R_i+R_a}\right)^2R_a\right) = \frac{U_0^2(R_i-R_a)}{(R_i+R_a)^3}
+	\overset{!}{=} 0 \quad  \\
+	&\Rightarrow R_a = R_i \ .
 \end{align*}
