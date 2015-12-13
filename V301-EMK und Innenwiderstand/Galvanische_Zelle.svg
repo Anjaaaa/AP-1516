@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="381.01932"
+   height="404.7189"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.1 "
+   sodipodi:docname="Galvanische_Zelle_2009-02-08.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <metadata
+     id="metadata41">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="746"
+     inkscape:window-width="1236"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base"
+     showgrid="false"
+     inkscape:zoom="1.1514164"
+     inkscape:cx="190.50966"
+     inkscape:cy="202.35945"
+     inkscape:window-x="278"
+     inkscape:window-y="29"
+     inkscape:current-layer="svg2"
+     inkscape:window-maximized="0" />
+  <defs
+     id="defs5">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 202.35945 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="381.01932 : 202.35945 : 1"
+       inkscape:persp3d-origin="190.50966 : 134.9063 : 1"
+       id="perspective43" />
+  </defs>
+  <rect
+     width="381.01932"
+     height="404.7189"
+     x="0"
+     y="0"
+     id="rect3198"
+     style="opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: nonzero; stroke: none; stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+  <g
+     transform="matrix(-1, 0, 0, 1, 377.812, 4.28112)"
+     id="g3270">
+    <path
+       d="M 190.75,73.011845 L 190.75,27.336205"
+       id="path3244"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+    <path
+       d="M 191.3889,72.534108 L 242.49409,42.134931"
+       id="path3250"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2.34904; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+    <path
+       d="M 191.02714,72.738578 L 219.34296,31.64013"
+       id="path3252"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2.18535; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+    <path
+       d="M 190.54927,73.435566 L 156.6159,34.277898"
+       id="path3266"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2.26883; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+    <path
+       d="M 190.55705,73.780659 L 136.4449,50.11341"
+       id="path3268"
+       style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2.58613; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+  </g>
+  <path
+     d="M 337.84506,147.77674 L 337.84506,77.561931 L 43.617004,77.561931 L 43.617004,147.77674"
+     id="path3218"
+     style="fill: none; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 2.01638; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+  <rect
+     width="34.510151"
+     height="208.87721"
+     ry="0"
+     x="-61.172962"
+     y="144.75772"
+     transform="scale(-1, 1)"
+     id="rect3196"
+     style="opacity: 1; fill: rgb(117, 117, 117); fill-opacity: 1; stroke: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <rect
+     width="34.510151"
+     height="208.87721"
+     ry="0"
+     x="-355.41107"
+     y="144.4039"
+     transform="scale(-1, 1)"
+     id="rect3194"
+     style="opacity: 1; fill: rgb(235, 111, 0); fill-opacity: 1; stroke: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <path
+     d="M 267.65612,164.48858 C 282.40249,164.48858 294.28112,176.46602 294.28112,191.33507 L 294.28112,283.28112 L 276.40612,283.28112 L 276.40612,211.43842 C 276.40612,196.55457 264.51093,184.56042 249.74987,184.56042 L 130.31237,184.56042 C 115.5513,184.56042 103.65612,196.55457 103.65612,211.43842 L 103.65612,283.28112 L 85.812366,283.28112 L 85.812366,191.33507 C 85.812366,176.46602 97.659756,164.48858 112.40612,164.48858 L 267.65612,164.48858 z"
+     id="rect3160"
+     style="opacity: 1; fill: rgb(164, 191, 202); fill-opacity: 1; stroke: none; stroke-width: 2.45095; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <text
+     x="-121.584"
+     y="176.382"
+     id="text3164"
+     xml:space="preserve"
+     style="font-size: 15px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"><tspan
+       x="-121.584"
+       y="176.382"
+       id="tspan3166" /></text>
+  <text
+     x="192.836"
+     y="178.281"
+     id="text3172"
+     xml:space="preserve"
+     style="font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"><tspan
+       x="192.836"
+       y="178.281"
+       id="tspan3174">Ionenbrücke</tspan></text>
+  <path
+     d="M 376.65612,249.78112 L 376.90612,373.99987 C 376.90612,388.76924 365.01925,400.65613 350.24987,400.65612 L 249.56237,400.65612 C 234.793,400.65612 222.87487,388.76925 222.87487,373.99987 L 223.12487,249.78112 L 376.65612,249.78112 z"
+     id="path3192"
+     style="opacity: 0.5; fill: rgb(64, 199, 255); fill-opacity: 1; stroke: none; stroke-width: 2.10829; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <path
+     d="M 376.65612,203.78112 L 376.90612,373.99987 C 376.90612,388.76924 365.01925,400.65613 350.24987,400.65612 L 249.56237,400.65612 C 234.793,400.65612 222.87487,388.76925 222.87487,373.99987 L 223.12487,203.78112"
+     id="path3222"
+     style="fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 2.10829; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <path
+     d="M 158.93737,249.78112 L 159.18737,373.99987 C 159.18737,388.76924 147.3005,400.65613 132.53112,400.65612 L 31.843616,400.65612 C 17.074236,400.65612 5.187366,388.76925 5.187366,373.99987 L 5.406116,249.78112 L 158.93737,249.78112 z"
+     id="path3188"
+     style="opacity: 0.5; fill: rgb(210, 210, 210); fill-opacity: 1; stroke: none; stroke-width: 2.10829; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <path
+     d="M 158.93737,203.78112 L 159.18737,373.99987 C 159.18737,388.76924 147.3005,400.65613 132.53112,400.65612 L 31.843616,400.65612 C 17.074236,400.65612 5.187366,388.76925 5.187366,373.99987 L 5.406116,203.78112"
+     id="rect2384"
+     style="fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 2.10829; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <text
+     x="239.281"
+     y="343.281"
+     id="text3198"
+     xml:space="preserve"
+     style="font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"><tspan
+       x="239.281"
+       y="343.281"
+       id="tspan3202">Ionen der</tspan><tspan
+       x="239.281"
+       y="360.781"
+       id="tspan3184">edleren</tspan><tspan
+       x="239.281"
+       y="378.281"
+       id="tspan3186">Elektrode in Lösung</tspan></text>
+  <text
+     x="-286.904"
+     y="342.448"
+     transform="matrix(0, -1, 1, 0, 0, 0)"
+     id="text3210"
+     xml:space="preserve"
+     style="font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"><tspan
+       x="-286.904"
+       y="342.448"
+       id="tspan3212">edlere Elektrode</tspan></text>
+  <text
+     x="-276.022"
+     y="47.207699"
+     transform="matrix(0,-1,1,0,0,0)"
+     id="text3214"
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeSans"><tspan
+       x="-276.022"
+       y="47.207699"
+       id="tspan3216">unedlere Elektrode</tspan></text>
+  <path
+     d="M 186.78533,77.948319 L 207.6673,19.188062"
+     id="path3246"
+     style="fill: none; fill-rule: evenodd; stroke: rgb(255, 0, 0); stroke-width: 2; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;" />
+  <path
+     d="M 260.78112,4.906116 L 261.03112,83.124866 L 113.09362,83.124866 L 113.28112,4.906116 L 260.78112,4.906116 z M 253.06237,11.562366 L 121.03112,11.562366 L 120.84362,76.468616 L 127.12487,76.468616 C 127.12465,76.426914 127.12487,76.385349 127.12487,76.343616 C 127.12487,55.288793 153.97622,38.187366 187.06237,38.187366 C 220.14852,38.187366 246.99987,55.288793 246.99987,76.343616 C 246.99987,76.385297 247.00008,76.426966 246.99987,76.468616 L 253.28112,76.468616 L 253.06237,11.562366 z"
+     id="path3224"
+     style="opacity: 1; fill: rgb(210, 210, 210); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <text
+     x="185.976"
+     y="70.6624"
+     id="text3238"
+     xml:space="preserve"
+     style="font-size: 14px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: center; text-anchor: middle; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: FreeSans;"><tspan
+       x="185.976"
+       y="70.6624"
+       id="tspan3240">Voltmeter</tspan></text>
+  <path
+     d="M 276.40612,282.30108 L 276.40612,211.05108 C 276.40612,196.29002 264.51093,184.39483 249.74987,184.39483 L 130.31237,184.39483 C 115.5513,184.39483 103.65612,196.29002 103.65612,211.05108 L 103.65612,282.30108 M 85.812366,282.30108 L 85.812366,191.11358 C 85.812366,176.36721 97.659756,164.48858 112.40612,164.48858 L 267.65612,164.48858 C 282.40249,164.48858 294.28112,176.36721 294.28112,191.11358 L 294.28112,282.30108"
+     id="path2410"
+     style="opacity: 1; fill: none; fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 2; stroke-linecap: square; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;" />
+  <text
+     x="143.48"
+     y="343.28101"
+     id="text3188"
+     xml:space="preserve"
+     style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:FreeSans"><tspan
+       x="143.48"
+       y="343.28101"
+       id="tspan3190">Ionen der</tspan><tspan
+       x="143.48"
+       y="360.78101"
+       id="tspan3192">unedleren</tspan><tspan
+       x="143.48"
+       y="378.28101"
+       id="tspan3194">Elektrode in Lösung</tspan></text>
+</svg>

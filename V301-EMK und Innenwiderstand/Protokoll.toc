@@ -9,3 +9,9 @@
 \contentsline {subsection}{\numberline {4.2}Systematischer Fehler -- endlicher Widerstand des Voltmeters}{9}
 \contentsline {subsection}{\numberline {4.3}Das Maximum der umgesetzten Leistung}{10}
 \contentsline {section}{\numberline {5}Diskussion}{11}
+\contentsline {section}{\numberline {6}Ger\IeC {\"a}te}{12}
+\contentsline {subsection}{\numberline {6.1}Spannungsquellen}{12}
+\contentsline {subsubsection}{\numberline {6.1.1}Monozelle}{12}
+\contentsline {subsubsection}{\numberline {6.1.2}RC-Generator}{13}
+\contentsline {subsection}{\numberline {6.2}Messinstrumente}{13}
+\contentsline {subsection}{\numberline {6.3}Widerst\IeC {\"a}nde}{13}
