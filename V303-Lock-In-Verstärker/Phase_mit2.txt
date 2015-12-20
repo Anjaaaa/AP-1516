@@ -1,0 +1,9 @@
+# Phase Integral
+# in_Grad uber_1_Sekunde
+
+
+315 6.4
+270 1.5
+180 -8.0
+90 -1.6
+0 7.8

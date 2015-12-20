@@ -1,0 +1,2 @@
+Bei den zweiten 5 Messungen der Phase und des Integrals muss die Phase kaputt gegangen sein. Ist jetzt auf -195 (bzw. + 165).
+Es gibt nach wie vor eine Phasenverschiebung, was aber wegdiskutiert werden kann, durch das kaputte Gerät.
