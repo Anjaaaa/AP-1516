@@ -1,0 +1,12 @@
+\select@language {german}
+\contentsline {section}{\numberline {1}Theorie}{2}
+\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{3}
+\contentsline {section}{\numberline {3}Auswertung}{5}
+\contentsline {subsection}{\numberline {3.1}Statistische Formeln}{5}
+\contentsline {subsubsection}{\numberline {3.1.1}Fehlerrechnung}{5}
+\contentsline {subsubsection}{\numberline {3.1.2}Regression}{5}
+\contentsline {subsection}{\numberline {3.2}Das Ausgangssignal}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}... nach dem Mischen durch den Detector}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}... nach dem Integrieren am Tiefpass}{8}
+\contentsline {subsection}{\numberline {3.3}Die Rauschunterdr\IeC {\"u}ckung}{11}
+\contentsline {section}{\numberline {4}Diskussion}{13}

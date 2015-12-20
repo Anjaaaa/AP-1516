@@ -1,0 +1,75 @@
+\subsection{Das Ausgangssignal}
+\subsubsection{... nach dem Mischen durch den Detector}
+Als erstes wird ein Signal mit einer Frequenz $f_\text{sig} = \SI{1}{\kilo\hertz}$ und einer Amplitude $U_{0,\text{sig}} = \SI{10}{\milli\volt}$ mit einer Referenz-Spannung gleicher Frequenz und der Amplitude $U_{0,\text{ref}} = \SI{30}{\volt}$ am Detector (bzw. Mischer) überlagert. Die resultierende und am Oszilloskop zu beobachtende Spannung ist in den Abbildungen \ref{Verschiebung_0} bis \ref{Verschiebung_315} dargestellt. \\
+\input{Oszilloskop.tex}
+\clearpage
+
+\subsubsection{... nach dem Integrieren am Tiefpass}
+In einem Lock-In-Verstärker wird die im vorigen Abschnitt beschriebene \glqq Misch-Spannung\grqq\ noch über einen Tiefpass integriert. Als Zeitperiode wird dafür $T = \SI{1}{\second}$ gewählt. Der Wert dieses Integrals wird für verschiedene Phasenverschiebungen abgelesen und ist in Tabelle \ref{Integral_ohne} bzw. \ref{Integral_mit} eingetragen. \\
+\ \\
+\ \\
+\ \\
+\textbf{Das Signal ohne Rauschen} \\
+Es wird im Folgenden zunächst das Signal ohne Rauschen betrachtet. Der Off-Set wird abgezogen und die Winkel zum Bogenmaß überführt. Dann kann die Funktion
+\[f(\phi) = A\cos(w\phi+\phi_0)\]
+auf die Messwerte gefittet werden. Mit Hilfe von Python ergeben sich so die Parameter
+\begin{align}
+	A_\text{ohne} &= \SI{2.04(011)}{\milli\volt} \\
+	w_\text{ohne} &= \SI{1.00(004)}{} \\
+	\phi_{0,\text{ohne}} &= \SI{-0.008(53)}{\pi}
+\end{align}
+Die dadurch beschriebene Kurve ist in Abbildung \ref{Fit_ohne} zusammen mit den Messwerten und der theoretisch mit \eqref{Ausgangssignal} zu erwartenden Kurve dargestellt. \\
+\input{Integral_ohne.tex}
+\begin{figure}[h!]
+	\includegraphics[width = \textwidth]{Phase_mit.png}
+	\caption{Messwerte, gefittete Kurve und theoretisch erwartete Kurve bei einer Spannung ohne Rauschen}
+	\label{Fit_ohne}
+\end{figure} \\
+\ \\
+\ \\
+\ \\
+\ \\
+\ \\
+\textbf{Das Signal mit Rauschen} \\
+Dieser Fit wird nun auch mit den Werten des verrauschten Signals gemacht. Die Parameter hierbei sind
+\begin{align}
+	A_\text{mit} &= \SI{2.036(0085)}{\milli\volt} \\
+	w_\text{mit} &= \SI{0.993(0029)}{} \\
+	\phi_{0,\text{mit}} &= \SI{0.036(0036)}{\pi}
+\end{align}
+\input{Integral_mit.tex} \\
+Auch dieser Fit wird zusammen mit der zu erwartenden Kurve und den Messwerten geplottet (Abbildung \ref{Fit_mit}).
+\begin{figure}[h!]
+	\includegraphics[width = \textwidth]{Phase_ohne.png}
+	\caption{Messwerte, gefittete Kurve und theoretisch erwartete Kurve bei einer Spannung mit Rauschen}
+	\label{Fit_mit}
+\end{figure}
+\clearpage
+\subsection{Die Rauschunterdrückung}
+Beim Versuchsaufbau mit der LED wird bei verschiedenen Abständen die Ausgangsspannung nach dem Tiefpass aufgenommen. Nach Abzug der Verstärkungs-Multiplikatoren (Gains) ergeben sich die Werte aus Tabelle \ref{Tabelle_Lampe}.
+\input{Werte_Lampe.tex}
+Durch eine Regression der Form
+\begin{equation}\label{Regression_Gleichung}
+	\ln U = \alpha\ln r +\beta
+\end{equation}
+lässt sich der lineare Zusammenhang zwischen $\ln r$ und $\ln U$ (siehe Abbildung \ref{Regression}) erkennen.
+\begin{figure}[h!]
+	\includegraphics[width = 0.95\textwidth]{Regression.png}
+	\caption{Regressionsgerade}
+	\label{Regression}
+\end{figure}
+Die mit Python errechneten Parameter sind
+\begin{align}
+	\alpha &= \SI{-2.598(0065)}{\ln\left(\volt\per\metre\right)} \\
+	\beta &= \SI{-9.155(0045)}{\ln\volt}\ .
+\end{align}
+Durch Umstellen von Gleichung \eqref{Regression_Gleichung} ergibt sich die Funktion
+\begin{equation}
+	U(r) = \exp(\beta) r^\alpha\ ,
+\end{equation}
+welche in Abbildung \ref{U(r)} zu sehen ist.
+\begin{figure}[h!]
+	\includegraphics[width = 0.95\textwidth]{U(r).png}
+	\caption{Zusammenhang zwischen $U$ und $r$}
+	\label{U(r)}
+\end{figure}
