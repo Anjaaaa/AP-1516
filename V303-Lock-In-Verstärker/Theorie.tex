@@ -1,5 +1,5 @@
-Der Lock-In-Verstärker  hilft beim Messen stark verrauschter Signale. Er besteht aus den Bauteilen:
- Bandpassfilter, Phasenverschieber, Signalmischer und ein Tiefpass, der als Integrierglied verwendet wird. Durch die richtige Anordnung der Bauteile kann eine Konfiguration erzielt werden, die eine viel höhere Güte hat als ein einfacher Bandpassfilter d.h. die Frequenzen werden genauer heraus gefiltert. \\
+Der Lock-In-Verstärker  hilft beim Messen stark verrauschter Signale mit bekannter Frequenz. Er besteht aus den Bauteilen:
+ Bandpassfilter, Phasenverschieber, Signalmischer und ein Tiefpass. Durch die richtige Anordnung der Bauteile kann eine Konfiguration erzielt werden, die eine viel höhere Güte hat als ein einfacher Bandpassfilter d.h. die Frequenzen werden genauer heraus gefiltert. \\
  Das verrauschte Messsignal $U_{sig}$ setzt sich aus vielen verschiedenen Schwingungen unterschiedlicher Frequenz zusammen. In einem Bandpassfilter werden die Anteile der Rauschfrequenz herausgenommen, die weit von der Frequenz des Signals abweichen. \\
  Danach wird eine Rechteckspannung gleicher Frequenz als Referenzsignal $U_{ref}$ erzeugt und mit dem Signal gemischt, genauer multipliziert. Das Rechtecksignal wird im Folgenden durch seine Fourierreihe dargestellt. Sind die beiden gemischten Signale
  \begin{align}
@@ -10,12 +10,12 @@ Der Lock-In-Verstärker  hilft beim Messen stark verrauschter Signale. Er besteh
  \begin{equation}
  U_{out} = \frac{2}{\pi}  U_0 \left( 1- \frac{2}{3} \cos{(2 \omega t)} - \frac{2}{15} \cos{(4 \omega t)} - \frac{2}{35} \cos{(6 \omega t)} \right) \quad.
  \end{equation}
- Über einen Tiefpass erhält man eine Gleichspannung mit der selben Spannung 
+Ein Tiefpass filtert alle Schwingungsanteile heraus und übrig bleibt die konstante Gleichspannung
  \begin{equation}
  U_{out} = \frac{2}{\pi} \quad .
  \end{equation}
  Sind das Mess- und das Referenzsignal zueinander  um den Winkel $\phi$ phasenverschoben, wird die Gleichspannung geringer und errechnet sich nach:
  \begin{equation}\label{Ausgangssignal}
- U_out = \frac{2}{\pi} U_0 \cos{(\phi)} \quad.
+ U_{out} = \frac{2}{\pi} U_0 \cos{(\phi)} \quad.
  \end{equation}
  	
