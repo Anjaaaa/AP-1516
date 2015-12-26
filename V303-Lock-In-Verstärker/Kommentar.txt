@@ -1,0 +1,13 @@
+Hallo Anja,
+
+tolle Auswertung mit richtig vielen Abbildungen. Das muss wirklich viel Arbeit gewesen sein.
+
+Hast du schon einen Plan, was in die Diskussion gehört? Ich fände es schon spannend, warum unsere Werte einen schönen Sinus ergeben, aber so gar nicht den Erwartungswerten entsprechen.
+Lag das einfach nur am Gerät? Vermutlich...
+
+Was ich jetzt verstanden habe ist folgendes:
+Der Tiefpass wird gar nicht als Integrierglied verwendet, sondern als stinknormaler Tiefpass. Durch die Multiplikation des Signales mit einer Recheck- oder Sinusspannung (die Rechnung in der Anleitung stimmt meiner Ansicht nach), bekommt man eine Verschiebung entlang der y-Achse. Der Tiefpass entfernt alle Schwingungsanteile und die Konstante bleibt über.
+
+Wie konntest du mein \footnotemark Problem lösen? Ich bilde mir ein, dass ich so etwas zwischenzeitlich schon stehen hatte. War im Header was verkehrt?
+
+Viele Grüße!
