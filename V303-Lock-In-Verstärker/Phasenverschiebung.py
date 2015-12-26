@@ -9,7 +9,7 @@ phi_ohne, int_ohne = np.genfromtxt('Phase_Int_ohne.txt', unpack = True)
 phi_mit, int_mit = np.genfromtxt('Phase_Int_mit.txt', unpack = True)
 
 
-# Gain
+# Gain 20*20*10
 int_ohne = int_ohne / 4000
 int_mit = int_mit / 4000
 

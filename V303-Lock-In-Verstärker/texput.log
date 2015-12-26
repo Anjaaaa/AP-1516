@@ -1,18 +1,18 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  20 DEC 2015 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  26 DEC 2015 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Hinweise.tex
+**Kommentar.tex
 
 ! Emergency stop.
-<*> Hinweise.tex
-                
+<*> Kommentar.tex
+                 
 *** (job aborted, file error in nonstop mode)
 
  
 Here is how much of TeX's memory you used:
  3 strings out of 493054
- 114 string characters out of 6140585
+ 115 string characters out of 6140585
  53374 words of memory out of 5000000
  3628 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000

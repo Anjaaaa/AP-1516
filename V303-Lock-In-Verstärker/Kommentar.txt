@@ -1,13 +1,25 @@
-Hallo Anja,
+Hallo Clara,
 
 tolle Auswertung mit richtig vielen Abbildungen. Das muss wirklich viel Arbeit gewesen sein.
+-- Bilder machen doch immer Spaß ;)
+
+
 
 Hast du schon einen Plan, was in die Diskussion gehört? Ich fände es schon spannend, warum unsere Werte einen schönen Sinus ergeben, aber so gar nicht den Erwartungswerten entsprechen.
 Lag das einfach nur am Gerät? Vermutlich...
+-- Ich finde das auch höchst komisch. Zuerst hat die Amplitude auch gepasst, aber da hatte ich die Gains falsch, und dann wurde das so... Ich denke das liegt einerseits an dem schlechten Gerät (als wir das im Praktikum überschlagen hatte, stimmte der Wert ja auch schon hinten und vorne nicht). Aber wir könnten das auch auf Widerstandsverluste schieben, also dass durch Widerstände in den Drähten im Gerät soviel verloren geht, dass die Amplitude kleiner ist. Oder auch, dass ein Gain von 20 bei so einem alten Gerät evtl. auch ein Gain von 19 sein könnte, sodass das auch die Werte kaputt macht.
+-- Auch tun wir ja in der Theorie so, als wäre die Amplitude des Referenzsignals 1V, aber wir haben sie ja zu 30V bestimmt. Das heißt ja eigentlich, dass unsere Messwerte 30 mal so groß wie die Theorie sein sollten, aber da sind wir ja auch meilenweit weg... Das Gerät war halt doof.
+
+
 
 Was ich jetzt verstanden habe ist folgendes:
-Der Tiefpass wird gar nicht als Integrierglied verwendet, sondern als stinknormaler Tiefpass. Durch die Multiplikation des Signales mit einer Recheck- oder Sinusspannung (die Rechnung in der Anleitung stimmt meiner Ansicht nach), bekommt man eine Verschiebung entlang der y-Achse. Der Tiefpass entfernt alle Schwingungsanteile und die Konstante bleibt über.
+Der Tiefpass wird gar nicht als Integrierglied verwendet, sondern als stinknormaler Tiefpass. Durch die Multiplikation des Signales mit einer Rechteck- oder Sinusspannung (die Rechnung in der Anleitung stimmt meiner Ansicht nach), bekommt man eine Verschiebung entlang der y-Achse. Der Tiefpass entfernt alle Schwingungsanteile und die Konstante bleibt über.
+-- Die Multiplikation verschiebt doch nichts in y-Richtung? Oder wie meinst du das? Das mit dem Tiefpass hatte ich jetzt so verstanden: Der integriert von t_0 bis t_0 + T und multipliziert dann mit 1/T. Das ist dann eine Art Mittelwert oder eine "Konstante ohne Schwingungsanteile". Die Rechnung, die ich dazu gefunden habe steht in der Diskussion.
+
+
 
 Wie konntest du mein \footnotemark Problem lösen? Ich bilde mir ein, dass ich so etwas zwischenzeitlich schon stehen hatte. War im Header was verkehrt?
+-- Ich glaube das war ein Problem beim kompilieren. Ich habe erst \footnotemark und \footnotetext{} auskommentiert und kompiliert. Hat alles geklappt. Dann hab ich \footnotemark wieder reingepackt. Nochmal kompiliert. Alles hat funktioniert. Und erst dann hab ich den \footnotetext{} wieder eingefügt. Dann gings. Der Compiler kriegt das wohl nicht alles auf einmal hin. Ich hatte dieses Problem bei Captions oder ähnlichem schon häufiger. Und so gings dann immer wieder?
 
-Viele Grüße!
+
+Guten Rutsch!

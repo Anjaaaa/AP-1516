@@ -1,1 +1,10 @@
 \[U_\text{out, theoretisch} = \frac{2}{\pi}\cdot\SI{10}{\milli\volt}\cdot \cos\phi\]
+
+\begin{align}
+	U_\text{out}(t) &= \frac{1}{T}\int_{t_0}^{t_0+T}\underbrace{U_\text{ref}(t')\cdot U_\text{in}(t')}_{Mischer}\ dt' \\
+	&= \frac{1}{T}\int_{t_0}^{t_0+T}\underbrace{U_{0,\text{ref}}}_{theor.\ = 1}\sin(wt'+\Delta\varphi)\cdot U_{0,\text{in}}\sin(wt')\ dt' \\
+	&= \frac{1}{T}U_{0,\text{in}}\left[\frac{t}{2}\cos(t)-\frac{\sin(2wt+\Delta\varphi)}{4w}\right]_{t_0}^{t_0+T} \\
+	&= \underbrace{\frac{U_{0,\text{in}}}{4Tw}\left[-\sin(2wt_0+2wT+\varphi)+\sin(2t_0w+\varphi)\right]}_{\overset{T\rightarrow\infty}{\longrightarrow} 0}+\frac{U_{0,\text{in}}}{2}\cos(\varphi) \\
+	&= \frac{U_{0,\text{in}}}{2}\cos(\varphi)
+\end{align}
+Das $\frac{4}{\pi}$ kommt dann meiner Meinung nach durch die Rechteckspannung, aber das Integral über die Reihe konnte Wolframalpha für mich nicht lösen.
