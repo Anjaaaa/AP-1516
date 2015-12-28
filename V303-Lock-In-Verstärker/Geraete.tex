@@ -1,0 +1,94 @@
+\subsection{Hoch- und Tiefpassfilter}
+Zur technischen Umsetzung eines einfachen Tiefpassfilters benötigt man einen Kondensator oder eine Spule in Verbindung mit einem ohmschen Widerstand $R$.
+Die Impedanzen des Kondensators und der Spule sind frequenzabhängig
+\begin{align}
+&X_C = \frac{1}{i \omega C} \\
+&X_L = i \omega L
+\end{align}
+mit der Kapazität $C$ und der Induktivität $L$.
+Das Verhältnis von Eingangs- und Ausgangsspannung $\frac{U_2}{U_1}$ kann mit Hilfe der 2. Kirchhoffschen Regel (Maschenregel) berechnet werden.
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.4\textwidth}
+		\input{RC-Hochpass.tex}
+		\caption{RC-Hochpass}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.4\textwidth}
+		\input{RC-Tiefpass.tex}
+		\caption{RC-Tiefpass}
+		\label{RC-Tiefpass}
+	\end{minipage}
+\end{figure}		
+
+
+Für den RC-Hochpass ergibt sich ein Verhältnis von
+\begin{align}
+&\frac{U_1}{U_2} = \frac{R}{R + X_C} = \frac{R}{R+\frac{1}{i \omega C}} \\
+& \bigr| \frac{U_1}{U_2} \bigl| = \frac{1}{\sqrt{1 + \left(\frac{1}{\omega C}\right)^2}}\ .
+\end{align}
+
+Und für den RC-Tiefpass
+\begin{align}
+&\frac{U_1}{U_2} = \frac{X_C}{R + X_C} = \frac{\frac{1}{i \omega C}}{R+\frac{1}{i \omega C}} \\
+& \bigr| \frac{U_1}{U_2} \bigl| = \frac{1}{\sqrt{1 + (\omega R C)^2}} \ .
+\end{align}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}{0.4\textwidth}
+		\input{LC-Hochpass.tex}
+		\caption{LC-Hochpass}
+	\end{minipage}
+	\hspace{1cm}
+	\begin{minipage}{0.4\textwidth}
+		\input{LC-Tiefpass.tex}
+		\caption{LC-Tiefpass}
+	\end{minipage}
+\end{figure}		
+
+
+
+Bei einem LC-Hochpass ist das Verhältnis von Ausgangs- zu Eingangsspannung
+\begin{align}
+&\frac{U_1}{U_2} = \frac{X_L}{X_L + X_C} = \frac{i \omega L}{i \omega L+\frac{1}{i \omega C}} \\
+& \bigr| \frac{U_1}{U_2} \bigl| = \frac{1}{|1-\frac{1}{ \omega^2 L C}|}\ .
+\end{align}
+Und für eine LC-Tiefpass:
+\begin{align}
+&\frac{U_1}{U_2} = \frac{X_C}{X_L + X_C} = \frac{\frac{1}{i \omega C}}{i \omega L+\frac{1}{i \omega C}} \\
+& \bigr| \frac{U_1}{U_2} \bigl| = \frac{1}{|1- \omega^2 L C|}\ .
+\end{align}
+
+Im Normalfall sind Filter komplexer und unterscheiden sich vor allem durch ihre Güte d.h. wie stark die Flanke des Spannungsverhältnisses steigt. Die Güte wird auch als Trennschärfe bezeichnet.
+
+\subsection{RC-Tiefpass als Integrierglied}
+Der RC-Tiefpass, wie er in Abbildung \ref{RC-Tiefpass} dargestellt ist, kann als sogenanntes Integrierglied eingesetzt werden. Das bedeutet, dass das Ausgangssignal das Integral zum Eingangssignal bildet. Dazu muss folgendes gelten
+\begin{equation}
+R \gg \frac{1}{\omega C} \quad \Leftrightarrow \quad  \omega R C \gg 1 \ .
+\end{equation}
+Die Impedanz verschiebt das Eingangssignal um deine bestimmte Phase $\delta$
+\begin{equation}
+\tan \delta = \frac{\Im \left(\frac{U_2}{U_1}\right)}{\Re \left(\frac{U_2}{U_1}\right)} = - \omega R C \ .
+\end{equation}
+Ist das Eingangssignal nun eine Sinusfunktion
+\begin{equation}
+U_1 = U_0 \sin(\omega t)
+\end{equation}
+so wir das Ausgangssignal ein
+\begin{equation}
+U_2 = \frac{U_0}{\sqrt{1 + (\omega R C)^2}} \sin(\omega t + \delta) = - \frac{\cos{(\omega t)}}{\omega R C} \ .
+\end{equation}
+Ebenso können Rechtecksignale in der Fourierdarstellung als Summe von Sinus- und Cosinusfunktionen gesehen und integriert werden.
+
+Wo kommt des Vorfaktor her?!
+
+\subsection{Phasenwandler}
+Geht aus dem anderen hervor...
+
+
+		
+		

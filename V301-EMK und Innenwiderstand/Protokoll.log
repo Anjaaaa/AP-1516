@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  28 DEC 2015 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  28 DEC 2015 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,6 +419,10 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
 Package: physics 
 
@@ -472,12 +476,12 @@ L3 Module: l3skip 2014/08/23 v5354 L3 Dimensions and skips
 \l_tmpb_skip=\skip54
 \g_tmpa_skip=\skip55
 \g_tmpb_skip=\skip56
-\c_zero_muskip=\muskip11
-\c_max_muskip=\muskip12
-\l_tmpa_muskip=\muskip13
-\l_tmpb_muskip=\muskip14
-\g_tmpa_muskip=\muskip15
-\g_tmpb_muskip=\muskip16
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2014/08/23 v5354 L3 Key-value interfaces
 \g__keyval_level_int=\count124
 \l_keys_choice_int=\count125
@@ -1428,21 +1432,29 @@ Package: xparse 2014/09/15 v5423 L3 Experimental document command parser
 . Defining command \homework with sig. '' on line 764.
 .................................................
 )
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip57
+\enit@outerparindent=\dimen161
+\enit@toks=\toks29
+\enit@inbox=\box69
+\enitdp@description=\count141
+)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen161
-\captionmargin@=\dimen162
-\captionwidth=\dimen163
-\caption@tempdima=\dimen164
-\caption@indent=\dimen165
-\caption@parindent=\dimen166
-\caption@hangindent=\dimen167
+\captionmargin=\dimen162
+\captionmargin@=\dimen163
+\captionwidth=\dimen164
+\caption@tempdima=\dimen165
+\caption@indent=\dimen166
+\caption@parindent=\dimen167
+\caption@hangindent=\dimen168
 )
-\c@ContinuedFloat=\count141
+\c@ContinuedFloat=\count142
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
@@ -1467,27 +1479,87 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count142
+\Gread@gobject=\count143
 ))
-\Gin@req@height=\dimen168
-\Gin@req@width=\dimen169
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-\c@subfigure=\count143
-\c@subtable=\count144
+\c@subfigure=\count144
+\c@subtable=\count145
 )
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/mhchem/mhchem.sty
+Package: mhchem 2014/03/27 v3.17 for typesetting chemical formulae
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count146
+\calc@Bcount=\count147
+\calc@Adimen=\dimen171
+\calc@Bdimen=\dimen172
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count148
+\calc@Cskip=\skip60
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/twoopt.sty
+Package: twoopt 2008/08/11 v1.5 Definitions with two optional arguments (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+\mhchem@ce@result=\toks30
+\mhchem@ce@part=\toks31
+\mhchem@arrow@deployType=\toks32
+\mhchem@arrow@params=\toks33
+\mhchem@arrowlength@pgf=\skip61
+\mhchem@bondwidth=\skip62
+\mhchem@bondheight=\skip63
+\mhchem@smallbondwidth@tmpA=\skip64
+\mhchem@smallbondwidth@tmpB=\skip65
+\mhchem@smallbondwidth=\skip66
+\__mhchem_option_version_int=\count149
+\mhchem@prepostscript@tmp@i=\skip67
+\mhchem@prepostscript@tmp@ii=\skip68
+\mhchem@mathbox@tmp@i=\skip69
+\mhchem@mathbox@tmp@ii=\skip70
+\mhchem@minispace@tmp=\skip71
+\mhchem@option@minussidebearingleft=\skip72
+\mhchem@option@minussidebearingright=\skip73
+
+
+Package mhchem Warning: You are using version 3.xx of mhchem. You entered
+(mhchem)                the parameter version=4. This means, you are using
+(mhchem)                some beta features of mhchem that are subject
+(mhchem)                to change without notice.
+
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks29
-\pgfutil@tempdima=\dimen170
-\pgfutil@tempdimb=\dimen171
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen173
+\pgfutil@tempdimb=\dimen174
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box69
+\pgfutil@abb=\box70
 (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -1502,30 +1574,30 @@ Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
 Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks30
-\pgfkeys@temptoks=\toks31
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
 ex
-\pgfkeys@tmptoks=\toks32
+\pgfkeys@tmptoks=\toks37
 ))
-\pgf@x=\dimen172
-\pgf@y=\dimen173
-\pgf@xa=\dimen174
-\pgf@ya=\dimen175
-\pgf@xb=\dimen176
-\pgf@yb=\dimen177
-\pgf@xc=\dimen178
-\pgf@yc=\dimen179
+\pgf@x=\dimen175
+\pgf@y=\dimen176
+\pgf@xa=\dimen177
+\pgf@ya=\dimen178
+\pgf@xb=\dimen179
+\pgf@yb=\dimen180
+\pgf@xc=\dimen181
+\pgf@yc=\dimen182
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count145
-\c@pgf@countb=\count146
-\c@pgf@countc=\count147
-\c@pgf@countd=\count148
-\t@pgf@toka=\toks33
-\t@pgf@tokb=\toks34
-\t@pgf@tokc=\toks35
+\c@pgf@counta=\count150
+\c@pgf@countb=\count151
+\c@pgf@countc=\count152
+\c@pgf@countd=\count153
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -1541,8 +1613,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count149
-\pgfsyssoftpath@bigbuffer@items=\count150
+\pgfsyssoftpath@smallbuffer@items=\count154
+\pgfsyssoftpath@bigbuffer@items=\count155
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -1571,12 +1643,12 @@ Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen180
-\pgfmath@count=\count151
-\pgfmath@box=\box70
-\pgfmath@toks=\toks36
-\pgfmath@stack@operand=\toks37
-\pgfmath@stack@operation=\toks38
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count156
+\pgfmath@box=\box71
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
@@ -1596,58 +1668,58 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count152
+\c@pgfmathroundto@lastzeros=\count157
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen181
-\pgf@picmaxx=\dimen182
-\pgf@picminy=\dimen183
-\pgf@picmaxy=\dimen184
-\pgf@pathminx=\dimen185
-\pgf@pathmaxx=\dimen186
-\pgf@pathminy=\dimen187
-\pgf@pathmaxy=\dimen188
-\pgf@xx=\dimen189
-\pgf@xy=\dimen190
-\pgf@yx=\dimen191
-\pgf@yy=\dimen192
-\pgf@zx=\dimen193
-\pgf@zy=\dimen194
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen195
-\pgf@path@lasty=\dimen196
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
-\pgf@shorten@end@additional=\dimen197
-\pgf@shorten@start@additional=\dimen198
+\pgf@shorten@end@additional=\dimen200
+\pgf@shorten@start@additional=\dimen201
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
 File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
-\pgfpic=\box71
-\pgf@hbox=\box72
-\pgf@layerbox@main=\box73
-\pgf@picture@serial@count=\count153
+\pgfpic=\box72
+\pgf@hbox=\box73
+\pgf@layerbox@main=\box74
+\pgf@picture@serial@count=\count158
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
-\pgflinewidth=\dimen199
+Normal \dimen register pool exhausted, switching to extended pool.
+\pgflinewidth=\dimen256
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
-\pgf@pt@x=\dimen200
-\pgf@pt@y=\dimen201
-Normal \dimen register pool exhausted, switching to extended pool.
-\pgf@pt@temp=\dimen256
+\pgf@pt@x=\dimen257
+\pgf@pt@y=\dimen258
+\pgf@pt@temp=\dimen259
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1663,12 +1735,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
-\pgfarrowsep=\dimen257
+\pgfarrowsep=\dimen260
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen258
-\pgf@sys@shading@range@num=\count154
+\pgf@max=\dimen261
+\pgf@sys@shading@range@num=\count159
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1676,7 +1748,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
 tex
 File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
-\pgfexternal@startupbox=\box74
+\pgfexternal@startupbox=\box75
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
 x
@@ -1692,15 +1764,15 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
-\pgfnodeparttextbox=\box75
+\pgfnodeparttextbox=\box76
 ) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen259
-\pgf@nodesepend=\dimen260
+\pgf@nodesepstart=\dimen262
+\pgf@nodesepend=\dimen263
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1714,10 +1786,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen261
-\pgffor@skip=\dimen262
-\pgffor@stack=\toks39
-\pgffor@toks=\toks40
+\pgffor@iter=\dimen264
+\pgffor@skip=\dimen265
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
@@ -1725,31 +1797,31 @@ Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
-\pgf@plot@mark@count=\count155
-\pgfplotmarksize=\dimen263
+\pgf@plot@mark@count=\count160
+\pgfplotmarksize=\dimen266
 )
-\tikz@lastx=\dimen264
-\tikz@lasty=\dimen265
-\tikz@lastxsaved=\dimen266
-\tikz@lastysaved=\dimen267
-\tikzleveldistance=\dimen268
-\tikzsiblingdistance=\dimen269
-\tikz@figbox=\box76
-\tikz@figbox@bg=\box77
-\tikz@tempbox=\box78
-\tikz@tempbox@bg=\box79
-\tikztreelevel=\count156
-\tikznumberofchildren=\count157
-\tikznumberofcurrentchild=\count158
-\tikz@fig@count=\count159
+\tikz@lastx=\dimen267
+\tikz@lasty=\dimen268
+\tikz@lastxsaved=\dimen269
+\tikz@lastysaved=\dimen270
+\tikzleveldistance=\dimen271
+\tikzsiblingdistance=\dimen272
+\tikz@figbox=\box77
+\tikz@figbox@bg=\box78
+\tikz@tempbox=\box79
+\tikz@tempbox@bg=\box80
+\tikztreelevel=\count161
+\tikznumberofchildren=\count162
+\tikznumberofcurrentchild=\count163
+\tikz@fig@count=\count164
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count160
-\pgfmatrixcurrentcolumn=\count161
-\pgf@matrix@numberofcolumns=\count162
+\pgfmatrixcurrentrow=\count165
+\pgfmatrixcurrentcolumn=\count166
+\pgf@matrix@numberofcolumns=\count167
 )
-\tikz@expandcount=\count163
+\tikz@expandcount=\count168
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1767,21 +1839,21 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.0 (rcs-revision 1.9)
 decorations.pathmorphing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen270
-\pgfdecoratedremainingdistance=\dimen271
-\pgfdecoratedinputsegmentcompleteddistance=\dimen272
-\pgfdecoratedinputsegmentremainingdistance=\dimen273
-\pgf@decorate@distancetomove=\dimen274
-\pgf@decorate@repeatstate=\count164
-\pgfdecorationsegmentamplitude=\dimen275
-\pgfdecorationsegmentlength=\dimen276
+\pgfdecoratedcompleteddistance=\dimen273
+\pgfdecoratedremainingdistance=\dimen274
+\pgfdecoratedinputsegmentcompleteddistance=\dimen275
+\pgfdecoratedinputsegmentremainingdistance=\dimen276
+\pgf@decorate@distancetomove=\dimen277
+\pgf@decorate@repeatstate=\count169
+\pgfdecorationsegmentamplitude=\dimen278
+\pgfdecorationsegmentlength=\dimen279
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
-\arrowsize=\dimen277
+\arrowsize=\dimen280
 ) (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.code.tex
-\pgf@circ@Rlen=\dimen278
+\pgf@circ@Rlen=\dimen281
 
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/pgfcircutils.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/pgfcircmath.sty)
@@ -1794,73 +1866,77 @@ File: pgflibraryarrows.code.tex 2013/09/23 v3.0.0 (rcs-revision 1.16)
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/pgfcircvoltage.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/pgfcirccurrent.sty))
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz1.code.tex
-\pgf@circ@res@up=\dimen279
-\pgf@circ@res@down=\dimen280
-\pgf@circ@res@zero=\dimen281
-\pgf@circ@res@left=\dimen282
-\pgf@circ@res@right=\dimen283
-\pgf@circ@res@other=\dimen284
-\pgf@circ@res@step=\dimen285
-\pgfstartlinewidth=\dimen286
+\pgf@circ@res@up=\dimen282
+\pgf@circ@res@down=\dimen283
+\pgf@circ@res@zero=\dimen284
+\pgf@circ@res@left=\dimen285
+\pgf@circ@res@right=\dimen286
+\pgf@circ@res@other=\dimen287
+\pgf@circ@res@step=\dimen288
+\pgfstartlinewidth=\dimen289
 ))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+)
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2014/10/01 v2.6c A comprehensive (SI) units package
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen287
-\extrarowheight=\dimen288
-\NC@list=\toks41
-\extratabsurround=\skip57
-\backup@length=\skip58
+\col@sep=\dimen290
+\extrarowheight=\dimen291
+\NC@list=\toks46
+\extratabsurround=\skip74
+\backup@length=\skip75
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2014/09/15 v5423 LaTeX2e option processing using LaTeX3 keys
 )
 Variant \tl_if_blank:VTF already defined; not changing it on line 50
-\l__siunitx_tmp_box=\box80
-\l__siunitx_tmp_dim=\dimen289
-\l__siunitx_tmp_int=\count165
+\l__siunitx_tmp_box=\box81
+\l__siunitx_tmp_dim=\dimen292
+\l__siunitx_tmp_int=\count170
 Variant \prop_get:NVNT already defined; not changing it on line 372
 Variant \prop_get:NVNF already defined; not changing it on line 373
 Variant \prop_get:NVNTF already defined; not changing it on line 374
-\l__siunitx_number_mantissa_length_int=\count166
-\l__siunitx_number_uncert_length_int=\count167
-\l__siunitx_round_int=\count168
-\l__siunitx_process_decimal_int=\count169
-\l__siunitx_process_uncertainty_int=\count170
-\l__siunitx_process_fixed_int=\count171
-\l__siunitx_process_integer_min_int=\count172
-\l__siunitx_process_precision_int=\count173
-\l__siunitx_group_min_int=\count174
-\l__siunitx_angle_marker_box=\box81
-\l__siunitx_angle_unit_box=\box82
-\l__siunitx_angle_marker_dim=\dimen290
-\l__siunitx_angle_unit_dim=\dimen291
-\l__siunitx_unit_int=\count175
-\l__siunitx_unit_denominator_int=\count176
-\l__siunitx_unit_numerator_int=\count177
-\l__siunitx_unit_prefix_int=\count178
-\l__siunitx_unit_prefix_base_int=\count179
-\l__siunitx_unit_prefix_gram_int=\count180
-\l__siunitx_number_product_int=\count181
-\c__siunitx_one_fill_skip=\skip59
-\l__siunitx_table_unit_align_skip=\skip60
-\l__siunitx_table_exponent_dim=\dimen292
-\l__siunitx_table_integer_dim=\dimen293
-\l__siunitx_table_mantissa_dim=\dimen294
-\l__siunitx_table_marker_dim=\dimen295
-\l__siunitx_table_result_dim=\dimen296
-\l__siunitx_table_uncert_dim=\dimen297
-\l__siunitx_table_fill_pre_dim=\dimen298
-\l__siunitx_table_fill_post_dim=\dimen299
-\l__siunitx_table_fill_mid_dim=\dimen300
-\l__siunitx_table_pre_box=\box83
-\l__siunitx_table_post_box=\box84
-\l__siunitx_table_mantissa_box=\box85
-\l__siunitx_table_result_box=\box86
-\l__siunitx_table_number_align_skip=\skip61
-\l__siunitx_table_text_align_skip=\skip62
+\l__siunitx_number_mantissa_length_int=\count171
+\l__siunitx_number_uncert_length_int=\count172
+\l__siunitx_round_int=\count173
+\l__siunitx_process_decimal_int=\count174
+\l__siunitx_process_uncertainty_int=\count175
+\l__siunitx_process_fixed_int=\count176
+\l__siunitx_process_integer_min_int=\count177
+\l__siunitx_process_precision_int=\count178
+\l__siunitx_group_min_int=\count179
+\l__siunitx_angle_marker_box=\box82
+\l__siunitx_angle_unit_box=\box83
+\l__siunitx_angle_marker_dim=\dimen293
+\l__siunitx_angle_unit_dim=\dimen294
+\l__siunitx_unit_int=\count180
+\l__siunitx_unit_denominator_int=\count181
+\l__siunitx_unit_numerator_int=\count182
+\l__siunitx_unit_prefix_int=\count183
+\l__siunitx_unit_prefix_base_int=\count184
+\l__siunitx_unit_prefix_gram_int=\count185
+\l__siunitx_number_product_int=\count186
+\c__siunitx_one_fill_skip=\skip76
+\l__siunitx_table_unit_align_skip=\skip77
+\l__siunitx_table_exponent_dim=\dimen295
+\l__siunitx_table_integer_dim=\dimen296
+\l__siunitx_table_mantissa_dim=\dimen297
+\l__siunitx_table_marker_dim=\dimen298
+\l__siunitx_table_result_dim=\dimen299
+\l__siunitx_table_uncert_dim=\dimen300
+\l__siunitx_table_fill_pre_dim=\dimen301
+\l__siunitx_table_fill_post_dim=\dimen302
+\l__siunitx_table_fill_mid_dim=\dimen303
+\l__siunitx_table_pre_box=\box84
+\l__siunitx_table_post_box=\box85
+\l__siunitx_table_mantissa_box=\box86
+\l__siunitx_table_result_box=\box87
+\l__siunitx_table_number_align_skip=\skip78
+\l__siunitx_table_text_align_skip=\skip79
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1985,36 +2061,35 @@ Package: translator 2010/06/12 ver 1.10
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/translator-language-
 mappings.tex))) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip63
-\f@ncyO@elh=\skip64
-\f@ncyO@erh=\skip65
-\f@ncyO@olh=\skip66
-\f@ncyO@orh=\skip67
-\f@ncyO@elf=\skip68
-\f@ncyO@erf=\skip69
-\f@ncyO@olf=\skip70
-\f@ncyO@orf=\skip71
+\fancy@headwidth=\skip80
+\f@ncyO@elh=\skip81
+\f@ncyO@erh=\skip82
+\f@ncyO@olh=\skip83
+\f@ncyO@orh=\skip84
+\f@ncyO@elf=\skip85
+\f@ncyO@erf=\skip86
+\f@ncyO@olf=\skip87
+\f@ncyO@orf=\skip88
 )
 
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(./Protokoll.aux)
+No file Protokoll.aux.
 \openout1 = `Protokoll.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -2024,14 +2099,14 @@ LaTeX Font Info:    ... okay on input line 41.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(99.58464pt, 398.3386pt, 99.58464pt)
-* v-part:(T,H,B)=(113.81102pt, 631.65118pt, 99.58464pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=398.3386pt
-* \textheight=631.65118pt
+* \textheight=674.33032pt
 * \oddsidemargin=27.31465pt
 * \evensidemargin=27.31465pt
-* \topmargin=4.54103pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -2053,31 +2128,18 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count182
-\scratchdimen=\dimen301
-\scratchbox=\box87
-\nofMPsegments=\count183
-\nofMParguments=\count184
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count185
-\MPscratchDim=\dimen302
-\MPnumerator=\count186
-\makeMPintoPDFobject=\count187
-\everyMPtoPDFconversion=\toks43
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+\scratchcounter=\count187
+\scratchdimen=\dimen304
+\scratchbox=\box88
+\nofMPsegments=\count188
+\nofMParguments=\count189
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count190
+\MPscratchDim=\dimen305
+\MPnumerator=\count191
+\makeMPintoPDFobject=\count192
+\everyMPtoPDFconversion=\toks48
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -2191,18 +2253,18 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2014/10/01 v2.6c siunitx: Abbreviated units
 )
-\c__siunitx_mathsf_int=\count188
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+\c__siunitx_mathsf_int=\count193
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-\c__siunitx_mathtt_int=\count189
+\c__siunitx_mathtt_int=\count194
  (./Titlepage.tex
 Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
@@ -2222,10 +2284,10 @@ Package pdftex.def Info: Logo-Physik.png used on input line 7.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Logo-TUDo.png> <./Logo-P
-hysik.png>]) (./Protokoll.toc)
+hysik.png>])
+No file Protokoll.toc.
 \tf@toc=\write4
 \openout4 = `Protokoll.toc'.
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2233,299 +2295,266 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1] (./Theorie.tex) [2] (./Aufbau_Ablauf.tex
-<Versuch.png, id=30, 733.99219pt x 257.46187pt>
-File: Versuch.png Graphic file (type png)
- <use Versuch.png>
-Package pdftex.def Info: Versuch.png used on input line 2.
-(pdftex.def)             Requested size: 398.3386pt x 139.72661pt.
+[1] (./Theorie.tex
 
-<Lampe.png, id=31, 674.52pt x 223.58531pt>
-File: Lampe.png Graphic file (type png)
- <use Lampe.png>
-Package pdftex.def Info: Lampe.png used on input line 13.
-(pdftex.def)             Requested size: 398.3386pt x 132.0404pt.
+LaTeX Warning: Reference `Stromkreis' on page 2 undefined on input line 7.
 
-Overfull \hbox (6.33221pt too wide) in paragraph at lines 8--18
-\OT1/cmr/m/n/12 Im zwei-ten Ver-suchs-teil wird das Aus-gangs-si-gnal von ei-ne
-m Rau-schen []uberlagert
+
+LaTeX Warning: Reference `Maschenregel' on page 2 undefined on input line 7.
+
+
+LaTeX Warning: Reference `Maschenregel' on page 2 undefined on input line 11.
+
+
+Overfull \hbox (3.3467pt too wide) in paragraph at lines 10--12
+\OT1/cmr/m/n/12 Die an-ge-leg-te Span-nung $\OML/cmm/m/it/12 U[]$ \OT1/cmr/m/n/
+12 wird auch Leer-lauf-span-nung ge-nannt. Die im Schalt-
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [3 <./Versuch.png>] [4 <./Lampe.png>] (./Fehlerrechnung.tex)
-(./Regression.tex) [5
-
-] (./Auswertung.tex (./Oszilloskop.tex
-<Oszilloskop-Bilder/ohne_345.JPG, id=41, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/ohne_345.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/ohne_345.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/ohne_345.JPG used on input line 3.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-<Oszilloskop-Bilder/mit_345.JPG, id=42, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/mit_345.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/mit_345.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/mit_345.JPG used on input line 7.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 2--10
-[]$[]$ $[]$ 
- []
-
-<Oszilloskop-Bilder/ohne_30.JPG, id=43, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/ohne_30.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/ohne_30.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/ohne_30.JPG used on input line 16.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-<Oszilloskop-Bilder/mit_30.JPG, id=44, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/mit_30.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/mit_30.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/mit_30.JPG used on input line 20.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 15--23
-[]$[]$ $[]$ 
- []
-
-<Oszilloskop-Bilder/ohne_150.JPG, id=45, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/ohne_150.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/ohne_150.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/ohne_150.JPG used on input line 28.
-
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-<Oszilloskop-Bilder/mit_150.JPG, id=46, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/mit_150.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/mit_150.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/mit_150.JPG used on input line 32.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 27--35
-[]$[]$ $[]$ 
- []
-
-<Oszilloskop-Bilder/ohne_210.JPG, id=47, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/ohne_210.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/ohne_210.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/ohne_210.JPG used on input line 40.
-
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-<Oszilloskop-Bilder/mit_210.JPG, id=48, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/mit_210.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/mit_210.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/mit_210.JPG used on input line 44.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 39--47
-[]$[]$ $[]$ 
- []
-
-<Oszilloskop-Bilder/ohne_300.JPG, id=49, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/ohne_300.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/ohne_300.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/ohne_300.JPG used on input line 52.
-
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-<Oszilloskop-Bilder/mit_300.JPG, id=50, 642.4pt x 481.8pt>
-File: Oszilloskop-Bilder/mit_300.JPG Graphic file (type jpg)
-
-<use Oszilloskop-Bilder/mit_300.JPG>
-Package pdftex.def Info: Oszilloskop-Bilder/mit_300.JPG used on input line 56.
-(pdftex.def)             Requested size: 199.1693pt x 149.37851pt.
-
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 51--59
-[]$[]$ $[]$ 
- []
-
-) [6
-
- <./Oszilloskop-Bilder/ohne_345.JPG> <./Oszilloskop-Bilder/mit_345.JPG> <./Oszi
-lloskop-Bilder/ohne_30.JPG> <./Oszilloskop-Bilder/mit_30.JPG>] [7 <./Oszillosko
-p-Bilder/ohne_150.JPG> <./Oszilloskop-Bilder/mit_150.JPG> <./Oszilloskop-Bilder
-/ohne_210.JPG> <./Oszilloskop-Bilder/mit_210.JPG> <./Oszilloskop-Bilder/ohne_30
-0.JPG> <./Oszilloskop-Bilder/mit_300.JPG>]
-Overfull \hbox (5.00537pt too wide) in paragraph at lines 8--14
-\OT1/cmr/m/n/12 In ei-nem Lock-In-Verst[]arker wird die im vo-ri-gen Ab-schnitt
- be-schrie-be-ne []Misch-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
+(./Stromkreis.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
-
- []
-
-(./Integral_ohne.tex) <Phase_mit.png, id=59, 578.16pt x 433.62pt>
-File: Phase_mit.png Graphic file (type png)
-
-<use Phase_mit.png>
-Package pdftex.def Info: Phase_mit.png used on input line 24.
-(pdftex.def)             Requested size: 398.3386pt x 298.75482pt.
-
-Overfull \hbox (4.24335pt too wide) in paragraph at lines 20--35
-\OT1/cmr/m/n/12 Die da-durch be-schrie-be-ne Kur-ve ist in Ab-bil-dung 8[] zu-s
-am-men mit den Messwer-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--35
-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8
-
-] (./Integral_mit.tex) <Phase_ohne.png, id=63, 578.16pt x 433.62pt>
-File: Phase_ohne.png Graphic file (type png)
-
-<use Phase_ohne.png>
-Package pdftex.def Info: Phase_ohne.png used on input line 43.
-(pdftex.def)             Requested size: 398.3386pt x 298.75482pt.
-
-Overfull \hbox (6.13638pt too wide) in paragraph at lines 39--47
-\OT1/cmr/m/n/12 Auch die-ser Fit wird zu-sam-men mit der zu er-war-ten-den Kur-
-ve und den Messwer-
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[9 <./Phase_mit.png>] [10 <./Phase_ohne.png>] (./Werte_Lampe.tex)
-Overfull \hbox (8.07193pt too wide) in paragraph at lines 49--52
-\OT1/cmr/m/n/12 gangs-span-nung nach dem Tief-pass auf-ge-nom-men. Nach Ab-zug 
-der Verst[]arkungs-
- []
-
-<Regression.png, id=72, 578.16pt x 433.62pt>
-File: Regression.png Graphic file (type png)
- <use Regression.png>
-Package pdftex.def Info: Regression.png used on input line 57.
-(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<U(r).png, id=73, 578.16pt x 433.62pt>
-File: U(r).png Graphic file (type png)
- <use U(r).png>
-Package pdftex.def Info: U(r).png used on input line 72.
-(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11
-
-] [12 <./Regression.png> <./U(r).png>] (./Diskussion.tex) (./Geraete.tex
-[13
-
-] (./RC-Hochpass.tex) (./RC-Tiefpass.tex) (./LC-Hochpass.tex
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-)
-(./LC-Tiefpass.tex
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 6 in font nullfont!
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
- Make it at least 14.87502pt.
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
-Overfull \hbox (0.33507pt too wide) in paragraph at lines 84--86
-\OT1/cmr/m/n/12 Ebenso k[]onnen Recht-eck-si-gna-le in der Fou-rier-dar-stel-lu
-ng als Sum-me von Sinus-
+[2]
+
+LaTeX Warning: Reference `Ersatzschaltung' on page 3 undefined on input line 28
+.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3] (./Aufbau_Ablauf.tex
+
+LaTeX Warning: Reference `Klemmspannung_Bild' on page 4 undefined on input line
+ 5.
+
+
+LaTeX Warning: Reference `Klemmspannung_Gegenspannung' on page 4 undefined on i
+nput line 6.
+
+(./Klemmspannung.tex
+Overfull \hbox (3.78612pt too wide) in paragraph at lines 19--20
+ [] 
  []
 
-) [15] [16] (./Protokoll.aux) ) 
+
+! Package pgfkeys Error: I do not know the key '/tikz/dcvsource', to which you 
+passed '$U_\text {gegen}$', and I am going to ignore it. Perhaps you misspelled
+ it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 ...) to[dcvsource=$U_\text{gegen}$] (4.5,1.5)
+                                                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+Overfull \hbox (18.548pt too wide) in paragraph at lines 2--42
+[]$[]$ $[]$ 
+ []
+
+)
+
+LaTeX Warning: Reference `Klemmspannung_Bild' on page 4 undefined on input line
+ 9.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] (./Fehlerrechnung.tex) (./Regression.tex) (./Auswertung.tex
+
+LaTeX Warning: Reference `Klemmspannung' on page 5 undefined on input line 3.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5
+
+] <Spannung_Messung_b.pdf, id=40, 578.16pt x 433.62pt>
+File: Spannung_Messung_b.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_b.pdf>
+Package pdftex.def Info: Spannung_Messung_b.pdf used on input line 10.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+
+LaTeX Warning: Reference `Klemmspannung_Gegenspannung' on page 6 undefined on i
+nput line 16.
+
+
+LaTeX Warning: Reference `Klemmspannung' on page 6 undefined on input line 16.
+
+<Spannung_Messung_c.pdf, id=41, 578.16pt x 433.62pt>
+File: Spannung_Messung_c.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_c.pdf>
+Package pdftex.def Info: Spannung_Messung_c.pdf used on input line 27.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `Klemmspannung_Bild' on page 6 undefined on input line
+ 33.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6 <./Spannung_Messung_b.pdf>]
+<Spannung_Messung_d.pdf, id=97, 578.16pt x 433.62pt>
+File: Spannung_Messung_d.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_d.pdf>
+Package pdftex.def Info: Spannung_Messung_d.pdf used on input line 52.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Spannung_Messung_e.pdf, id=98, 578.16pt x 433.62pt>
+File: Spannung_Messung_e.pdf Graphic file (type pdf)
+
+<use Spannung_Messung_e.pdf>
+Package pdftex.def Info: Spannung_Messung_e.pdf used on input line 59.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <./Spannung_Messung_c.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <./Spannung_Messung_d.pdf> <./Spannung_Messung_e.pdf
+
+pdfTeX warning: pdflatex (file ./Spannung_Messung_e.pdf): PDF inclusion: multip
+le pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Reference `Innenwiderstand_Monozelle' on page 9 undefined on inp
+ut line 73.
+
+
+LaTeX Warning: Reference `Klemmspannung' on page 9 undefined on input line 73.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9
+
+] (./tabelle_besser.tex)
+
+LaTeX Warning: Reference `fig:Werte_Leistung' on page 10 undefined on input lin
+e 94.
+
+
+LaTeX Warning: Reference `Leistung' on page 10 undefined on input line 94.
+
+
+LaTeX Warning: Reference `Werte_Leistung' on page 10 undefined on input line 94
+.
+
+<Leistungskurve.pdf, id=254, 578.16pt x 433.62pt>
+File: Leistungskurve.pdf Graphic file (type pdf)
+ <use Leistungskurve.pdf>
+Package pdftex.def Info: Leistungskurve.pdf used on input line 98.
+(pdftex.def)             Requested size: 378.42044pt x 283.81476pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10
+
+ <./Leistungskurve.pdf>] (./Diskussion.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+
+LaTeX Warning: Reference `systhematischer_fehler' on page 11 undefined on input
+ line 11.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11] (./Protokoll.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 29223 strings out of 493105
- 649693 string characters out of 6137071
- 722007 words of memory out of 5000000
- 32209 multiletter control sequences out of 15000+600000
- 23667 words of font info for 93 fonts, out of 8000000 for 9000
+ 29963 strings out of 493105
+ 662771 string characters out of 6137071
+ 732756 words of memory out of 5000000
+ 32954 multiletter control sequences out of 15000+600000
+ 25215 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,62p,10385b,1033s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb>
-Output written on Protokoll.pdf (17 pages, 1175481 bytes).
+ 55i,18n,56p,10406b,1294s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Protokoll.pdf (12 pages, 253679 bytes).
 PDF statistics:
- 146 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 355 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
