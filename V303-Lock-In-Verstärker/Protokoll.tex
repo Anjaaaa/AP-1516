@@ -2,6 +2,13 @@
 \usepackage{geometry}
 \geometry{a4paper, top=40mm, left=35mm, right=35mm, bottom=35mm}
 \usepackage{multicol}
+\usepackage[
+	colorinlistoftodos,
+	linecolor=yellow,
+	backgroundcolor=yellow,
+	textwidth=0.2\textwidth,
+	textsize=9pt]{todonotes}
+
 
 \setlength\parindent{0pt}
 \usepackage[german]{babel}
@@ -72,7 +79,11 @@
 \section{Diskussion}
 \input{Diskussion.tex}
 
+\input{Integrierer.tex}
 \section{Geräte}
 \input{Geraete.tex}
-
+\todototoc
+\listoftodos
+Mit den Farben hier kann man angeben um welche Art von Kommentar es sich handelt. Ich weiß nicht ganz, ob das Sinn macht, aber es geht ;) \\
+Hier habe ich zum Ausprobieren Fragen rot, Kommentare gelb und Antworten grün gemacht.
 \end{document}

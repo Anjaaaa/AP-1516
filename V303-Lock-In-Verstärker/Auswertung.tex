@@ -4,14 +4,14 @@ Als erstes wird ein Signal mit einer Frequenz $f_\text{sig} = \SI{1}{\kilo\hertz
 \input{Oszilloskop.tex}
 \clearpage
 
-\subsubsection{... nach dem Integrieren am Tiefpass}
+\subsubsection{... nach dem Integrieren am Tiefpass}\label{nach_Tiefpass}
 In einem Lock-In-Verstärker wird die im vorigen Abschnitt beschriebene \glqq Misch-Spannung\grqq\ noch über einen Tiefpass integriert. Als Zeitperiode wird dafür $T = \SI{1}{\second}$ gewählt. Der Wert dieses Integrals wird für verschiedene Phasenverschiebungen abgelesen und ist in Tabelle \ref{Integral_ohne} bzw. \ref{Integral_mit} eingetragen. \\
 \ \\
 \ \\
 \ \\
 \textbf{Das Signal ohne Rauschen} \\
 Es wird im Folgenden zunächst das Signal ohne Rauschen betrachtet. Der Off-Set wird abgezogen und die Winkel zum Bogenmaß überführt. Dann kann die Funktion
-\[f(\phi) = A\cos(w\phi+\phi_0)\]
+\[U(\phi) = A\cos(w\phi+\phi_0)\]
 auf die Messwerte gefittet werden. Mit Hilfe von Python ergeben sich so die Parameter
 \begin{align}
 	A_\text{ohne} &= \SI{2.04(011)}{\milli\volt} \\
@@ -45,8 +45,8 @@ Auch dieser Fit wird zusammen mit der zu erwartenden Kurve und den Messwerten ge
 	\label{Fit_mit}
 \end{figure}
 \clearpage
-\subsection{Die Rauschunterdrückung}
-Beim Versuchsaufbau mit der LED wird bei verschiedenen Abständen die Ausgangsspannung nach dem Tiefpass aufgenommen. Nach Abzug der Verstärkungs-Multiplikatoren (Gains) ergeben sich die Werte aus Tabelle \ref{Tabelle_Lampe}.
+\subsection{Die Rauschunterdrückung}\label{Rauschunterdruckung}
+Beim Versuchsaufbau mit der LED wird bei verschiedenen Abständen die Ausgangsspannung nach dem Tiefpass aufgenommen. Nach Abzug der Verstärkungs-Multiplikatoren (Gains) ergeben sich die Werte aus Tabelle \ref{Tabelle_Lampe}. \todo{Diesen Satz finde ich ganz grausam und unnötig, aber es steht ausdrücklich in der Anleitung, dass das erwähnt werden soll...} Zu Beginn wurde außerdem eine Nullspannung $U_0=\SI{0}{\volt}$ gemessen, weshalb keine weitere Verschiebung beachtet werden muss. 
 \input{Werte_Lampe.tex}
 Durch eine Regression der Form
 \begin{equation}\label{Regression_Gleichung}

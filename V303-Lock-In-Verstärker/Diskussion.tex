@@ -1,29 +1,9 @@
-\[U_\text{out, theoretisch} = \frac{2}{\pi}\cdot\SI{10}{\milli\volt}\cdot \cos\phi\]
+\textbf{Zu \ref{nach_Tiefpass}:} \\
+Beide Fits ergeben den zu erwartenden Sinus \glqq ohne\grqq\ Phasenverschiebung. Nur die Amplitude ist jeweils um einen Faktor drei zu klein. Dass die Amplitude nicht passt fiel auch schon während der Messung auf. Die Vermutung liegt nahe, dass diese Abweichung durch das Alter des Geräts verursacht wurde. Es wäre möglich, dass das Gerät enorme Wärmeverluste hat. Auch könnte es sein, dass die letzte Eichung schon länger her ist, sodass ein Gain von 20 eigentlich eher einem Gain von 19 entspricht, was die Werte wieder näher an den Theoriewert bringen würde. \\
 
-\begin{align}
-	U_\text{out}(t) &= \frac{1}{T}\int_{t_0}^{t_0+T}\underbrace{U_\text{ref}(t')\cdot U_\text{in}(t')}_{Mischer}\ dt' \\
-	&= \frac{1}{T}\int_{t_0}^{t_0+T}\underbrace{U_{0,\text{ref}}}_{theor.\ = 1}\sin(wt'+\Delta\varphi)\cdot U_{0,\text{in}}\sin(wt')\ dt' \\
-	&= \frac{1}{T}U_{0,\text{in}}\left[\frac{t}{2}\cos(t)-\frac{\sin(2wt+\Delta\varphi)}{4w}\right]_{t_0}^{t_0+T} \\
-	&= \underbrace{\frac{U_{0,\text{in}}}{4Tw}\left[-\sin(2wt_0+2wT+\varphi)+\sin(2t_0w+\varphi)\right]}_{\overset{T\rightarrow\infty}{\longrightarrow} 0}+\frac{U_{0,\text{in}}}{2}\cos(\varphi) \\
-	&= \frac{U_{0,\text{in}}}{2}\cos(\varphi)
-\end{align}
-Das $\frac{4}{\pi}$ kommt dann meiner Meinung nach durch die Rechteckspannung, aber das Integral über die Reihe konnte Wolframalpha für mich nicht lösen. \\
-Claras Rechnung ohne Integration:
-Ich benötige das Additionstheorem
-\begin{equation}
-	\sin(x+y) \cdot \sin(x-y)  = \sin^2 - \sin^2 y \ .
-\end{equation}
-Was sich durch $\sin^2(x) = \frac{1}{2}(1-\cos(2\cdot x)$ umschreiben lässt
-\begin{equation}
-\sin(x+y) \cdot \sin(x-y)  = \frac{1}{2} \left(\cos(2x)-\cos(2y) \right) \ .
-\end{equation}
-Im Mischer werden zwei Signale multipliziert (hier nehme mich ein Sinussignal an)
-\begin{equation}
-U_{out}(t)=U_0 \cdot \sin(\omega t + \phi) \cdot \sin(\omega t)
-\end{equation}
-Durch die Substitutionen $x= \omega t + \frac{1}{2} \phi$ und $y=\frac{1}{2} \phi$ und Anwendung des Additionstheorems erhält man:
-\begin{equation}
-U_{out}=\frac{U_0}{2}\cdot(\cos{\phi}-\cos{(2\omega t + \phi)}) \ .
-\end{equation}
-Das $\frac{U_0}{2}\cos \phi$ meinte ich mit der Verschiebung entlang der y-Achse. Die Schwingung $-\frac{U_0}{2}\cos{(2\omega t + \phi)}$ ist nicht mehr um $y=0$. Dieter hat es mir nun so erklärt, dass der Tiefpass alle Schwingungsanteile herausfiltert und nur die Verschiebung entlang der y-Achse übrig bleibt. Der Tiefpass ist an dieser Stelle also wirklich ein normaler Tiefpass. Was der Kevin von einem Integrierglied meinte, war - behaupte ich - nicht korrekt.
-	
+\textbf{Zu \ref{Rauschunterdruckung}:} \\
+Die berechnete Funktion $U(r)$ zeigt, dass das Signal der LED noch bei einem Abstand von \SI{0.5}{\meter} eindeutig gemessen werden kann, auch mit dem Hintergrundrauschen, das durch die Raumbeleuchtung verursacht wurde.
+
+\todo[inline, color=red]{Zu \ref{Rauschunterdruckung} wollte ich eigentlich schreiben, dass nach x metern halt nur noch zum Beispiel 0.001 von der Ausgangsspannung messbar war und man deshalb bis dahin ein ganz gutes Ergebnis bekommt. Dann ist mir aufgefallen, dass wir keine verwertbare Ausgangsspannung haben. Wie geht das? Oder übersehe ich hier etwas?}
+
+\clearpage

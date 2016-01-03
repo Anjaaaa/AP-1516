@@ -49,3 +49,5 @@ plt.legend(loc='best')
 plt.savefig("U(r).png")
 plt.show()
 
+U_0 = np.exp(parameters[1]) * (10**(-10))**parameters[0]
+print('U_0:', U_0)
