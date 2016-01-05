@@ -36,14 +36,12 @@ Für den RC-Generator wird der gleiche Aufbau (siehe Abbildung \ref{Klemmspannun
 &R_i = \SI{61(2)}{\ohm} 
 \end{align}
 und für die Sinusspannung (Abbildung \ref{fig:Regression_Sinus})
-\todo[color = red]{Habe ich das mit den Fehlern immer noch nicht richtig verstanden oder muss ich einfach hinnehmen, dass \SI{675.6(125)}{\volt} eigentlich \SI{0.68(1)}{\kilo\volt} sind? Das ist ja schon ein großer Unterschied...}
 
+\todo[color = lightgray]{Wird \SI{675.6(125)}{\volt} wirklich zu \SI{0.68(1)}{\kilo\volt}? Das ist ja schon ein großer Unterschied.}
 \begin{align}
 &U_0 = \SI{0.233(2)}{\volt} \ , \\
 &R_i = \SI{0.68(1)}{\kilo\ohm} \ .
 \end{align}
-\todo[inline, color = green]{Nach seiner Logik, sehe ich das schon so, aber ich persönlich würde es bei so großen Werten einfach lassen. Vielleicht sollten wir ihm eine kommentierte Fassung schicken, da ich - wie du - noch weiteres Unklar finde}
-
 
 
 
@@ -73,37 +71,38 @@ U_k = \SI{1.5}{\volt}
 \end{equation}
 direkt gemessen.
 Der Innenwiderstand der Monozelle (siehe \eqref{Innenwiderstand_Monozelle}) wird aus einer anderen Messreihe übernommen. Durch Umstellen der Formel \eqref{Klemmspannung} nach $U_0$ vereinfacht sich der absolute Fehler zu 
+\todo[color = lightgray]{Wir haben das hier jetzt einfach auch mal gerundet? Ist das falsch? Wieso hast Du das hier nicht angestrichen?}
 \begin{equation}
-\Delta U = U_0 - U_k = I\cdot R_i = U_k \cdot \frac{R_i}{R_v} = \SI{8.191e-7}{\volt}
+\Delta U = U_0 - U_k = I\cdot R_i = U_k \cdot \frac{R_i}{R_v} = \SI{8e-7}{\volt}
 \end{equation}
 und der relative Fehler wird 
 \begin{equation}
-\frac{\Delta U}{U_k} = \frac{R_i}{R_v} = \SI{5.461e-7}{} \ .
+\frac{\Delta U}{U_k} = \frac{R_i}{R_v} = \SI{5e-7}{} \ .
 \end{equation}
 Dieser Fehler ist vernachlässigbar klein.
-\todo[color = red, inline]{Wieso hat er sich hier eigentlich nicht über die signifikanten Stellen beschwert?}
-\todo[color=green, inline]{KA, irgendwie wollte er sich wohl wichtig machen mit seinem DIN-Norm getue und falscher Korrigiererei ;-)}
+
 \clearpage 
  
 \subsection{Das Maximum der umgesetzten Leistung}
 Wie bereits in der Theorie erklärt, ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Die Leistung $N_\text{Mess} = U_k \cdot I $ wird über den Belastungswiderstand $R_a = U_k / I$ aufgetragen. Ein Fehler entsteht durch die Ableseungenauigkeit der Messgeräte.
 
-\todo[inline]{Bei der Tabelle wollte er Formeln für die Fehlerfortpflanzung... Aber das sind Messfehler. Da pflanzt sich nichts fort.}
-\todo[color = green]{Ups, da hat er richtig gefailt}
-\todo[inline]{In unserem ganzen Protokoll sind das neben den Fehlern der Regression die einzigen. Und die Fehler der Regression berechnen sich anders, nicht mit Gauß. Daher: Keine Gaußformel.}
-\todo[inline, color = red]{Rundet man die Gerätefehler so wie andere Fehler auch? Dann wären bei der Leistung die kleinen Werte ja alle gleich?}
-\todo[color = green]{Das würde ich schon denke, vielleicht hilft hier die DIN-Norm mit den einsen und zweien? Bis auf die ersten Werte, kann man das ja anwenden.}
+\todo[color = lightgray]{Bei der Tabelle wolltest Du die Formeln für die Fehlerfortpflanzung wissen. Aber das sind die Gerätefehler (siehe erster Satz in Abschnitt 3). Was soll sich da fortpflanzen? \\
+Im gesamten Protokoll gibt es nur diese Fehler und Fehler, die aus der Regression kommen und die Fehler werden anders berechnet (bzw. leiten sich doch nicht mal aus berechneten Größen ab). Daher keine Fehlerfortpflanzung.}
+
 \begin{center}
 	\captionof{table}{Belastungswiderstand und Leistung mit Fehlern}
 \input{tabelle_besser.tex}
 \label{Werte_Leistung}
 \end{center}
 
+\todo[inline, color = lightgray]{Wenn man \glqq industriell\grqq\ runden will, was passiert dann mit 0.978? Wird das zu 1? oder zu 1.0?}
+\todo[inline, color = lightgray]{Was passiert mit dem ehemals ersten Wert $0.36\pm0.013$, wenn man \glqq industriell\grqq\ runden will? Schummelt man dann eine Null hinten hin, damit man auch wieder drei Nachkomma-Stellen hat?}
+
 Abbildung \ref{fig:Werte_Leistung} zeigt die theoretische Abhängigkeit der Leistung vom Widerstand (siehe \eqref{Leistung}) und die Werte aus Tabelle \ref{Werte_Leistung}.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Leistungskurve.pdf}
+	\includegraphics[width=0.6\textwidth]{Leistungskurve.pdf}
 	\caption{Leistung $N(R_a)$ am Lastwiderstand}
 	\label{fig:Werte_Leistung}
 \end{figure}

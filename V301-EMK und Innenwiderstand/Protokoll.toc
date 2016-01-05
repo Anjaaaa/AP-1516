@@ -5,5 +5,4 @@
 \contentsline {subsection}{\numberline {3.1}Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands f\IeC {\"u}r drei Spannungsquellen}{5}
 \contentsline {subsection}{\numberline {3.2}Systematischer Fehler -- endlicher Widerstand des Voltmeters}{8}
 \contentsline {subsection}{\numberline {3.3}Das Maximum der umgesetzten Leistung}{9}
-\contentsline {section}{\numberline {4}Diskussion}{11}
-\contentsline {section}{Todo list}{11}
+\contentsline {section}{\numberline {4}Diskussion}{10}

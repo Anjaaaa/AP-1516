@@ -1,7 +1,8 @@
 \documentclass[a4,12pt]{article}
 \usepackage{geometry}
-\geometry{a4paper, top=30mm, left=35mm, right=35mm, bottom=30mm}
+\geometry{a4paper, top=30mm, left=23mm, right=48mm, bottom=30mm}
 \usepackage{multicol}
+\usepackage{color}
 
 \setlength\parindent{0pt}
 \usepackage[german]{babel}
@@ -34,11 +35,11 @@
 	\end{scope}
 }
 \usepackage[
-colorinlistoftodos,
-linecolor=yellow,
-backgroundcolor=yellow,
-textwidth=0.2\textwidth,
-textsize=9pt]{todonotes}
+	colorinlistoftodos,
+	linecolor=yellow,
+	backgroundcolor=yellow,
+	textwidth=0.25\textwidth,
+	textsize=footnotesize]{todonotes}
 
 \usepackage[
 	locale=DE,
@@ -65,8 +66,11 @@ textsize=9pt]{todonotes}
 
 
 \tableofcontents
-\newpage
+\ \\
+[3cm]
 
+\todo[inline, color = lightgray]{Bei der Korrektur war uns einiges unklar. Erklärungen, warum wir manches bewusst nicht korrigiert haben bzw. Fragen sind in solchen grauen Kästen im oder neben dem Text.}
+\clearpage
 
 \section{Theorie}
 \footnote{nach: Anleitung zu V301: Leerlaufspannung und Innenwiderstand von Spannungsquellen, Anfängerpraktikum TU Dortmund WS 2015/16, \url{http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V301.pdf}}
@@ -78,7 +82,6 @@ textsize=9pt]{todonotes}
 \input{Aufbau_Ablauf.tex}
 \clearpage
 
-\todo[inline]{Ich habe das Fehlerkapitel ganz rausgelassen, weil wir a) an keiner Stelle einen Mittelwert ausrechenen und b) die Regression bei Python ja scheinbar sowieso anders läuft.}
 %\section{Statistische Formeln}
 %\subsection{Fehlerrechnung}
 %\label{sec:Fehlerrechnung}
@@ -98,6 +101,4 @@ textsize=9pt]{todonotes}
 %
 %\section{Geräte}
 %\input{Geraete.tex}
-\todototoc
-\listoftodos
 \end{document}
