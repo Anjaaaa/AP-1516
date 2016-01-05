@@ -37,11 +37,12 @@ Für den RC-Generator wird der gleiche Aufbau (siehe Abbildung \ref{Klemmspannun
 \end{align}
 und für die Sinusspannung (Abbildung \ref{fig:Regression_Sinus})
 \todo[color = red]{Habe ich das mit den Fehlern immer noch nicht richtig verstanden oder muss ich einfach hinnehmen, dass \SI{675.6(125)}{\volt} eigentlich \SI{0.68(1)}{\kilo\volt} sind? Das ist ja schon ein großer Unterschied...}
+
 \begin{align}
 &U_0 = \SI{0.233(2)}{\volt} \ , \\
 &R_i = \SI{0.68(1)}{\kilo\ohm} \ .
 \end{align}
-
+\todo[inline, color = green]{Nach seiner Logik, sehe ich das schon so, aber ich persönlich würde es bei so großen Werten einfach lassen. Vielleicht sollten wir ihm eine kommentierte Fassung schicken, da ich - wie du - noch weiteres Unklar finde}
 
 
 
@@ -81,14 +82,17 @@ und der relative Fehler wird
 \end{equation}
 Dieser Fehler ist vernachlässigbar klein.
 \todo[color = red, inline]{Wieso hat er sich hier eigentlich nicht über die signifikanten Stellen beschwert?}
+\todo[color=green, inline]{KA, irgendwie wollte er sich wohl wichtig machen mit seinem DIN-Norm getue und falscher Korrigiererei ;-)}
 \clearpage 
  
 \subsection{Das Maximum der umgesetzten Leistung}
 Wie bereits in der Theorie erklärt, ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Die Leistung $N_\text{Mess} = U_k \cdot I $ wird über den Belastungswiderstand $R_a = U_k / I$ aufgetragen. Ein Fehler entsteht durch die Ableseungenauigkeit der Messgeräte.
 
 \todo[inline]{Bei der Tabelle wollte er Formeln für die Fehlerfortpflanzung... Aber das sind Messfehler. Da pflanzt sich nichts fort.}
+\todo[color = green]{Ups, da hat er richtig gefailt}
 \todo[inline]{In unserem ganzen Protokoll sind das neben den Fehlern der Regression die einzigen. Und die Fehler der Regression berechnen sich anders, nicht mit Gauß. Daher: Keine Gaußformel.}
 \todo[inline, color = red]{Rundet man die Gerätefehler so wie andere Fehler auch? Dann wären bei der Leistung die kleinen Werte ja alle gleich?}
+\todo[color = green]{Das würde ich schon denke, vielleicht hilft hier die DIN-Norm mit den einsen und zweien? Bis auf die ersten Werte, kann man das ja anwenden.}
 \begin{center}
 	\captionof{table}{Belastungswiderstand und Leistung mit Fehlern}
 \input{tabelle_besser.tex}
