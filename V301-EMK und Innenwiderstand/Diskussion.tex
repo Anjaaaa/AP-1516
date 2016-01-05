@@ -5,18 +5,18 @@ In diesem Versuch gibt es drei Hauptfehlerquellen: Die Messgeräte werden als id
 	& Gemessener Wert & Erwarteter Wert & Abweichung \\
 	\hline
 	Monozelle & \SI{1.471}{\volt} & \SI{1.5}{\volt} & - 2.0 \% \\
-	Gegenspannung & \SI{1.383}{\volt} & \SI{2}{\volt}  & - 44.6 \%
+	Gegenspannung & \SI{1.383}{\volt} & \SI{1.5}{\volt}  & - 7.8 \%
 \end{tabular}
 \end{center}
 Wie in Kapitel \ref{systhematischer_fehler} gezeigt ist, kann die Abweichung nicht am Voltmeter liegen. Wahrscheinlich sind die Rückkopplungseffekte der entscheidende Faktor. \\
 Die Messung mit dem RC-Generator als Stromquelle liefert niedrigere Leerlaufspannungen und höhere Innenwiderstände.
 Der errechnete Innenwiederstand für die Rechteckspannung
 \begin{equation}
-R_{i, \text{Rechteck}} = \SI{61.4}{\ohm}
+R_{i, \text{Rechteck}} = \SI{61}{\ohm}
 \end{equation} 
 stimmt mit dem Literaturwert\footnote{Elektronikpraktikum, H. Pfeiffer, S. 55} von circa \SI{50}{\ohm} überein, zumal dieser Wert noch vom Gerät abhängig ist. Wieso der Innenwiderstand des Generators beim Erzeugen einer Sinusspannung so viel höher ist 
 \begin{equation}
-R_{i,\text{Sinus}} = \SI{675.6}{\ohm}
+R_{i,\text{Sinus}} = \SI{0.68}{\kilo\ohm}
 \end{equation}
 können wir nur vermuten. Das Rechtecksignal wird in ein Dreiecksignal umgewandelt und diese beiden zusammen ergeben die Sinusspannung. Vielleicht werden hierzu große Widerstände benötigt. Oder der Innenwiderstand hängt von der Steigung des abgegebenen Signals ab, die bei der Rechteckspannung null ist und bei der Sinusspannung zwischen null und eins liegt. \\
 Die Werte, die für die Leitung berechnet wurden sind sehr gut. Lediglich ein Wertepaar liegt mit seinen Fehlerbalken nicht auf der erwarteten Funktion. Ein Leistungsmaximum wird für $R_a = R_i$ erreicht, da gilt:

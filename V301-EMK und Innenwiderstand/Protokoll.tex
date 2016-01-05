@@ -33,7 +33,12 @@
 		\draw[rotate=45,-latex] (#1)  +(-17pt,0) --+(17pt,0);
 	\end{scope}
 }
-
+\usepackage[
+colorinlistoftodos,
+linecolor=yellow,
+backgroundcolor=yellow,
+textwidth=0.2\textwidth,
+textsize=9pt]{todonotes}
 
 \usepackage[
 	locale=DE,
@@ -73,17 +78,18 @@
 \input{Aufbau_Ablauf.tex}
 \clearpage
 
-\section{Statistische Formeln}
-\subsection{Fehlerrechnung}
-\label{sec:Fehlerrechnung}
-\input{Fehlerrechnung.tex}
-\subsection{Regression}
-\label{sec:regression}
-\input{Regression.tex}
+\todo[inline]{Ich habe das Fehlerkapitel ganz rausgelassen, weil wir a) an keiner Stelle einen Mittelwert ausrechenen und b) die Regression bei Python ja scheinbar sowieso anders läuft.}
+%\section{Statistische Formeln}
+%\subsection{Fehlerrechnung}
+%\label{sec:Fehlerrechnung}
+%\input{Fehlerrechnung.tex}
+%\subsection{Regression}
+%\label{sec:regression}
+%\input{Regression.tex}
 
 \section{Auswertung}
 \input{Auswertung.tex}
-\newpage
+\clearpage
 
 
 \section{Diskussion}
@@ -92,5 +98,6 @@
 %
 %\section{Geräte}
 %\input{Geraete.tex}
-
+\todototoc
+\listoftodos
 \end{document}

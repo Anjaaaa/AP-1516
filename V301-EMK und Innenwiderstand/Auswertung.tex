@@ -1,10 +1,11 @@
 \subsection{Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands für drei Spannungsquellen}
 Die Ableseungenauigkeit der Stommessung beträgt $2 \% $ und die der Spannungsmessung $3 \% $. In den folgenden Diagrammen sind diese Fehler durch Fehlerbalken gekennzeichnet. \\
 Mit einer linearen Regression mittels Python nach Formel \eqref{Klemmspannung}, folgen für die Monozelle die Leerlaufspannung
-\[U_0 = \SI{1.471(14)}{\volt}\]
+\[U_0 = \SI{1.47(1)}{\volt}\]
 und der Innenwiderstand
 \[\label{Innenwiderstand_Monozelle}
-R_i = \SI{5.46(14)}{\ohm} \ .\]
+R_i = \SI{5.5(1)}{\ohm} \ .\]
+Abbildung \ref{fig:Regression_Monozelle} zeigt die Regressionsgerade mit den Datenpunkten.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.95\textwidth]{Spannung_Messung_b.pdf}
@@ -12,15 +13,14 @@ R_i = \SI{5.46(14)}{\ohm} \ .\]
 	\label{fig:Regression_Monozelle}
 \end{figure}
 
-
 Beim Anlegen der Gegenspannung (Abbildung \ref{Klemmspannung_Gegenspannung}) fließt der Strom in die entgegengesetzte Richtung, wodurch Formel \eqref{Klemmspannung} zu
 \begin{equation}
 U_k = IR_a = U_0+IR_i
 \end{equation}
-wird. Die lineare Regression liefert in diesem Fall :
+wird. Die lineare Regression (Graph siehe Abbildung \ref{fig:Regression_Gegenspannung}) liefert in diesem Fall :
 \begin{align}
-&U_0 = \SI{1.383(33)}{\volt} \ , \\
-&R_i = \SI{5.91(24)}{\ohm}  \ .
+&U_0 = \SI{1.38(3)}{\volt} \ , \\
+&R_i = \SI{5.9(2)}{\ohm}  \ .
 \end{align}
 \begin{figure}[h!]
 	\centering
@@ -30,15 +30,16 @@ wird. Die lineare Regression liefert in diesem Fall :
 \end{figure}
 
 
-Für den RC-Generator wird der gleiche Aufbau (siehe Abbildung \ref{Klemmspannung_Bild}) wie bei der Monozelle verwendet. Die Regression ergibt für die Rechteckspannung
+Für den RC-Generator wird der gleiche Aufbau (siehe Abbildung \ref{Klemmspannung_Bild}) wie bei der Monozelle verwendet. Die Regression ergibt für die Rechteckspannung (Abbildung \ref{fig:Regression_Rechteck})
 \begin{align}
 &U_0 = \SI{0.555(6)}{\volt} \ , \\
-&R_i = \SI{61.4(19)}{\ohm} 
+&R_i = \SI{61(2)}{\ohm} 
 \end{align}
-und für die Sinusspannung
+und für die Sinusspannung (Abbildung \ref{fig:Regression_Sinus})
+\todo[color = red]{Habe ich das mit den Fehlern immer noch nicht richtig verstanden oder muss ich einfach hinnehmen, dass \SI{675.6(125)}{\volt} eigentlich \SI{0.68(1)}{\kilo\volt} sind? Das ist ja schon ein großer Unterschied...}
 \begin{align}
-&U_0 = \SI{0.2332(15)}{\volt} \ , \\
-&R_i = \SI{675.6(125)}{\ohm} \ .
+&U_0 = \SI{0.233(2)}{\volt} \ , \\
+&R_i = \SI{0.68(1)}{\kilo\ohm} \ .
 \end{align}
 
 
@@ -76,15 +77,18 @@ Der Innenwiderstand der Monozelle (siehe \eqref{Innenwiderstand_Monozelle}) wird
 \end{equation}
 und der relative Fehler wird 
 \begin{equation}
-\frac{\Delta U}{U_k} = \frac{R_i}{R_v} = \SI{5.461e-7}{\%} \ .
+\frac{\Delta U}{U_k} = \frac{R_i}{R_v} = \SI{5.461e-7}{} \ .
 \end{equation}
 Dieser Fehler ist vernachlässigbar klein.
- 
+\todo[color = red, inline]{Wieso hat er sich hier eigentlich nicht über die signifikanten Stellen beschwert?}
 \clearpage 
  
 \subsection{Das Maximum der umgesetzten Leistung}
 Wie bereits in der Theorie erklärt, ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Die Leistung $N_\text{Mess} = U_k \cdot I $ wird über den Belastungswiderstand $R_a = U_k / I$ aufgetragen. Ein Fehler entsteht durch die Ableseungenauigkeit der Messgeräte.
 
+\todo[inline]{Bei der Tabelle wollte er Formeln für die Fehlerfortpflanzung... Aber das sind Messfehler. Da pflanzt sich nichts fort.}
+\todo[inline]{In unserem ganzen Protokoll sind das neben den Fehlern der Regression die einzigen. Und die Fehler der Regression berechnen sich anders, nicht mit Gauß. Daher: Keine Gaußformel.}
+\todo[inline, color = red]{Rundet man die Gerätefehler so wie andere Fehler auch? Dann wären bei der Leistung die kleinen Werte ja alle gleich?}
 \begin{center}
 	\captionof{table}{Belastungswiderstand und Leistung mit Fehlern}
 \input{tabelle_besser.tex}
