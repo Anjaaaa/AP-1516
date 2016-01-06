@@ -2,5 +2,7 @@
 \contentsline {section}{\numberline {1}Theorie \let \reserved@d =[\def \par }{2}
 \contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{4}
 \contentsline {section}{\numberline {3}Auswertung}{5}
-\contentsline {section}{\numberline {4}Diskussion}{6}
-\contentsline {section}{Todo list}{6}
+\contentsline {subsection}{\numberline {3.1}Fouriersynthese}{5}
+\contentsline {subsection}{\numberline {3.2}Fourieranalyse}{7}
+\contentsline {section}{\numberline {4}Diskussion}{11}
+\contentsline {section}{Todo list}{11}
