@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  5 JAN 2016 22:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  6 JAN 2016 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 79 languages loaded.
 (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -2198,23 +2198,23 @@ LaTeX Font Info:    ... okay on input line 64.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(65.44133pt, 395.49332pt, 136.57323pt)
-* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=395.49332pt
-* \textheight=674.33032pt
-* \oddsidemargin=-6.82866pt
-* \evensidemargin=-6.82866pt
+* \textwidth=426.79135pt
+* \textheight=702.78308pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
 * \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
+* \marginparwidth=59.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -2415,18 +2415,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--71
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1] (./Theorie.tex (./Stromkreis.tex)
+[1]
+Underfull \hbox (badness 6364) in paragraph at lines 76--76
+[][]\OT1/cmr/m/n/9 nach: An-lei-tung zu V301: Leer-lauf-span-nung und In-nen-wi
+-der-stand von Span-nungs-quel-len,
+ []
+
+(./Theorie.tex (./Stromkreis.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -2435,100 +2441,81 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [3] (./Aufbau_Ablauf.tex (./Klemmspannung.tex
-Overfull \hbox (5.26567pt too wide) in paragraph at lines 19--20
- [] 
- []
-
-
-Overfull \hbox (18.43417pt too wide) in paragraph at lines 2--42
+Overfull \hbox (19.50862pt too wide) in paragraph at lines 2--42
 []$[]$ $[]$ 
  []
 
-)
-Overfull \hbox (0.95674pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/12 sich auch zur Be-stim-mung der Klemm-span-nung ei-ner Wech-sel-
-span-nungs-
- []
-
-)
+))
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (./Auswertung.tex
-Overfull \hbox (2.25288pt too wide) in paragraph at lines 1--1
-[]\OT1/cmr/bx/n/14.4 Bestimmung der Leer-lauf-span-nung und Be-rech-nung
- []
-
-<Spannung_Messung_b.pdf, id=37, 578.16pt x 433.62pt>
+[4] (./Auswertung.tex <Spannung_Messung_b.pdf, id=39, 578.16pt x 433.62pt>
 File: Spannung_Messung_b.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_b.pdf>
 Package pdftex.def Info: Spannung_Messung_b.pdf used on input line 11.
-(pdftex.def)             Requested size: 375.71744pt x 281.7835pt.
+(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
 
-<Spannung_Messung_c.pdf, id=38, 578.16pt x 433.62pt>
+<Spannung_Messung_c.pdf, id=40, 578.16pt x 433.62pt>
 File: Spannung_Messung_c.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_c.pdf>
 Package pdftex.def Info: Spannung_Messung_c.pdf used on input line 27.
-(pdftex.def)             Requested size: 375.71744pt x 281.7835pt.
+(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [5
 
  <./Spannung_Messung_b.pdf>]
-Overfull \hbox (54.37332pt too wide) in paragraph at lines 40--40
-[][][] 
- []
-
-
-Overfull \hbox (54.37332pt too wide) in paragraph at lines 40--40
-[][][] 
- []
-
-<Spannung_Messung_d.pdf, id=93, 578.16pt x 433.62pt>
+<Spannung_Messung_d.pdf, id=95, 578.16pt x 433.62pt>
 File: Spannung_Messung_d.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_d.pdf>
-Package pdftex.def Info: Spannung_Messung_d.pdf used on input line 52.
-(pdftex.def)             Requested size: 375.71744pt x 281.7835pt.
+Package pdftex.def Info: Spannung_Messung_d.pdf used on input line 49.
+(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Spannung_Messung_e.pdf, id=94, 578.16pt x 433.62pt>
+<Spannung_Messung_e.pdf, id=96, 578.16pt x 433.62pt>
 File: Spannung_Messung_e.pdf Graphic file (type pdf)
 
 <use Spannung_Messung_e.pdf>
-Package pdftex.def Info: Spannung_Messung_e.pdf used on input line 59.
-(pdftex.def)             Requested size: 375.71744pt x 281.7835pt.
+Package pdftex.def Info: Spannung_Messung_e.pdf used on input line 56.
+(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [6 <./Spannung_Messung_c.pdf>]
 
+LaTeX Warning: Text page 7 contains only floats.
+
+
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -2537,43 +2524,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning: /usr/bin/pdflatex (file ./Spannung_Messung_e.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-Overfull \hbox (54.37332pt too wide) in paragraph at lines 74--74
-[][][] 
- []
-
-
-Overfull \hbox (54.37332pt too wide) in paragraph at lines 74--74
-[][][] 
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [8
 
 ]
-Overfull \hbox (54.37332pt too wide) in paragraph at lines 90--90
+Overfull \hbox (4.51608pt too wide) in paragraph at lines 92--92
 [][][] 
  []
 
 
-Overfull \hbox (54.37332pt too wide) in paragraph at lines 90--90
+Overfull \hbox (4.51608pt too wide) in paragraph at lines 92--92
 [][][] 
  []
 
-(./tabelle_besser.tex) <Leistungskurve.pdf, id=252, 578.16pt x 433.62pt>
+(./tabelle_besser.tex) <Leistungskurve.pdf, id=255, 578.16pt x 433.62pt>
 File: Leistungskurve.pdf Graphic file (type pdf)
 
 <use Leistungskurve.pdf>
-Package pdftex.def Info: Leistungskurve.pdf used on input line 105.
-(pdftex.def)             Requested size: 237.2984pt x 177.97061pt.
+Package pdftex.def Info: Leistungskurve.pdf used on input line 102.
+(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
 )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -2587,7 +2565,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
 )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -2595,29 +2573,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 33958 strings out of 493054
- 742618 string characters out of 6140585
- 849787 words of memory out of 5000000
- 36974 multiletter control sequences out of 15000+600000
- 25215 words of font info for 98 fonts, out of 8000000 for 9000
+ 33944 strings out of 493054
+ 742212 string characters out of 6140585
+ 849265 words of memory out of 5000000
+ 36954 multiletter control sequences out of 15000+600000
+ 24927 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,80p,10406b,1412s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,18n,80p,10406b,1333s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Protokoll.pdf (11 pages, 260256 bytes).
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+tt9.pfb>
+Output written on Protokoll.pdf (11 pages, 293187 bytes).
 PDF statistics:
- 356 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
+ 368 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 

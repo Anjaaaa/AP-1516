@@ -1,5 +1,5 @@
 \subsection{Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands für drei Spannungsquellen}
-Die Ableseungenauigkeit der Stommessung beträgt $2 \% $ und die der Spannungsmessung $3 \% $. In den folgenden Diagrammen sind diese Fehler durch Fehlerbalken gekennzeichnet. \\
+In den folgenden Diagrammen sind diese Fehler durch Fehlerbalken gekennzeichnet. Die, durch die Geräte verursachten Messfehler, betragen bei der Spannungsmessung \SI{3}{\%} und bei der Strommessung \SI{2}{\%}, der jeweiligen Skala. \\
 Mit einer linearen Regression mittels Python nach Formel \eqref{Klemmspannung}, folgen für die Monozelle die Leerlaufspannung
 \[U_0 = \SI{1.47(1)}{\volt}\]
 und der Innenwiderstand
@@ -37,14 +37,11 @@ Für den RC-Generator wird der gleiche Aufbau (siehe Abbildung \ref{Klemmspannun
 \end{align}
 und für die Sinusspannung (Abbildung \ref{fig:Regression_Sinus})
 
-\todo[color = lightgray]{Wird \SI{675.6(125)}{\volt} wirklich zu \SI{0.68(1)}{\kilo\volt}? Das ist ja schon ein großer Unterschied.}
+\todo[inline, color = lightgray]{Wird \SI{675.6(125)}{} wirklich zu \SI{0.68(1)e3}{}?}
 \begin{align}
 &U_0 = \SI{0.233(2)}{\volt} \ , \\
 &R_i = \SI{0.68(1)}{\kilo\ohm} \ .
 \end{align}
-
-
-
 
 
 \begin{figure}[h!]
@@ -71,7 +68,6 @@ U_k = \SI{1.5}{\volt}
 \end{equation}
 direkt gemessen.
 Der Innenwiderstand der Monozelle (siehe \eqref{Innenwiderstand_Monozelle}) wird aus einer anderen Messreihe übernommen. Durch Umstellen der Formel \eqref{Klemmspannung} nach $U_0$ vereinfacht sich der absolute Fehler zu 
-\todo[color = lightgray]{Wir haben das hier jetzt einfach auch mal gerundet? Ist das falsch? Wieso hast Du das hier nicht angestrichen?}
 \begin{equation}
 \Delta U = U_0 - U_k = I\cdot R_i = U_k \cdot \frac{R_i}{R_v} = \SI{8e-7}{\volt}
 \end{equation}
@@ -84,28 +80,30 @@ Dieser Fehler ist vernachlässigbar klein.
 \clearpage 
  
 \subsection{Das Maximum der umgesetzten Leistung}
-Wie bereits in der Theorie erklärt, ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Die Leistung $N_\text{Mess} = U_k \cdot I $ wird über den Belastungswiderstand $R_a = U_k / I$ aufgetragen. Ein Fehler entsteht durch die Ableseungenauigkeit der Messgeräte.
+Wie bereits in der Theorie erklärt, ist die umgesetzte Leistung abhängig vom Lastwiderstand $R_a$ und nimmt sogar ein lokales Maximum ein. Hier werden die Messreihen der Monozelle betrachtet. Aus diesen Daten errechnen sich die Leistung \[ N_\text{Mess} = U_k \cdot I \] und der Lastwiderstand \[ R_a = \frac{U_k}{I} \ . \]
+Die angegebenen Fehler berechnen sich dabei wie folgt:
+\begin{align*}
+	\Delta N &= \sqrt{\left(I\cdot\Delta U_k\right)^2+\left(U_k\cdot\Delta I\right)^2}\ , \\
+	\Delta R_a &= \sqrt{\left(\frac{1}{I}\cdot\Delta U_k\right)^2+\left(-\frac{U_k}{I^2}\cdot\Delta I\right)^2}\ .
+\end{align*}
 
-\todo[color = lightgray]{Bei der Tabelle wolltest Du die Formeln für die Fehlerfortpflanzung wissen. Aber das sind die Gerätefehler (siehe erster Satz in Abschnitt 3). Was soll sich da fortpflanzen? \\
-Im gesamten Protokoll gibt es nur diese Fehler und Fehler, die aus der Regression kommen und die Fehler werden anders berechnet (bzw. leiten sich doch nicht mal aus berechneten Größen ab). Daher keine Fehlerfortpflanzung.}
+\todo[color = lightgray]{\glqq Industrielles\grqq\ Runden: \\
+	1) Was passiert mit dem Fehler 0.978? Wird das zu 1 oder zu 1.0? \\
+	2) Was passiert mit $10\pm0.2$? Schummelt man dann eine Null hinten hin, damit man auch wieder drei Nachkomma-Stellen hat?}
 
 \begin{center}
 	\captionof{table}{Belastungswiderstand und Leistung mit Fehlern}
 \input{tabelle_besser.tex}
 \label{Werte_Leistung}
 \end{center}
-
-\todo[inline, color = lightgray]{Wenn man \glqq industriell\grqq\ runden will, was passiert dann mit 0.978? Wird das zu 1? oder zu 1.0?}
-\todo[inline, color = lightgray]{Was passiert mit dem ehemals ersten Wert $0.36\pm0.013$, wenn man \glqq industriell\grqq\ runden will? Schummelt man dann eine Null hinten hin, damit man auch wieder drei Nachkomma-Stellen hat?}
-
 Abbildung \ref{fig:Werte_Leistung} zeigt die theoretische Abhängigkeit der Leistung vom Widerstand (siehe \eqref{Leistung}) und die Werte aus Tabelle \ref{Werte_Leistung}.
-
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{Leistungskurve.pdf}
 	\caption{Leistung $N(R_a)$ am Lastwiderstand}
 	\label{fig:Werte_Leistung}
 \end{figure}
+
 
 
 
