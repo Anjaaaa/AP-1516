@@ -1,0 +1,17 @@
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c|c|c}
+	Form & Funktion & Fourier-Reihe \\
+\hline
+	Rechteck & $ f_{\text{Rechteck}}(t) =
+	\begin{cases}
+	u, & 0\leq t < \frac{T}{2} \\
+	-u, & -\frac{T}{2}\leq t < 0
+	\end{cases} $ & $ f_{\text{R}}(t) = 	\sum_{n=1}^\infty \frac{4u}{(2n-1)\pi}\sin((2n-1)\omega t) $ \\
+	Sägezahn & $ f_{\text{Sägezahn}}(t) = \frac{2u}{T}t - u \qquad 0\leq t < T $ & $ f_{\text{S}}(t) = \sum_{n=1}^\infty -\frac{Tu}{n\pi}\sin(n\omega t) $ \\
+	Dreieck & $ f_{\text{Dreieck}} $ & $ f_{\text{D}} $
+\end{tabular}
+\end{center}
+\captionof{table}{Fourier-Reihen verschiedener periodischer, nicht-differenzierbarer Funktionen}
+\label{fig:Fourier_Beispiele}
+\end{table}
