@@ -4,5 +4,8 @@
 \contentsline {section}{\numberline {3}Auswertung}{5}
 \contentsline {subsection}{\numberline {3.1}Fouriersynthese}{5}
 \contentsline {subsection}{\numberline {3.2}Fourieranalyse}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}Dreiecksignal - Fourieranalyse}{8}
+\contentsline {subsubsection}{\numberline {3.2.2}Rechtecksignal - Fourieranalyse}{9}
+\contentsline {subsubsection}{\numberline {3.2.3}S\IeC {\"a}gezahnsignal - Fourieranalyse}{10}
 \contentsline {section}{\numberline {4}Diskussion}{11}
 \contentsline {section}{Todo list}{11}

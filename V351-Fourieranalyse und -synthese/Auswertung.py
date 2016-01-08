@@ -1,4 +1,4 @@
-import numpy as np
+﻿import numpy as np
 import matplotlib.pyplot as plt
 from tabulate import tabulate
 
@@ -93,10 +93,25 @@ Synthese_D = a_D(u_D2, x)
 Synthese_R = a_R(u_R2, x)
 Synthese_S = a_S(u_S2, x)
 
-Koeffizienten = np.array(([Synthese_D], [Synthese_R], [Synthese_S])
 
-#f = open('Synthese_Koeffizienten.txt', 'w')
-#f.write(tabulate(table.T, tablefmt="latex"))
+
+Koeffizienten = np.array([Synthese_D, Synthese_R, Synthese_S])
+
+f = open('Synthese_Koeffizienten.txt', 'w')
+f.write(tabulate(Koeffizienten.T, tablefmt="latex"))
+
+tabelle_Dreieck = np.array([n_D, Dreieck, a_D(u_D,n_D), 1 - a_D(u_D,n_D)/Dreieck])
+f= open('tabelle1.tex', 'w')
+f.write(tabulate(tabelle_Dreieck.T, tablefmt="latex"))
+
+tabelle_Rechteck = np.array([n_R, Rechteck, a_R(u_R,n_R), 1 - a_R(u_R,n_R)/Rechteck])
+f= open('tabelle2.tex', 'w')
+f.write(tabulate(tabelle_Rechteck.T, tablefmt="latex"))
+
+tabelle_Saege = np.array([n_S, Saegezahn, a_S(u_S,n_S), 1 - a_S(u_S,n_S)/Saegezahn])
+f= open('tabelle3.tex', 'w')
+f.write(tabulate(tabelle_Saege.T, tablefmt="latex"))
+
 
 
     

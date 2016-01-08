@@ -1,79 +1,178 @@
 \subsection{Fouriersynthese}
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Fourier-Koeffizienten}
+	\begin{tabular}{c|ccc}
+		& Dreieck & Rechteck & Sägezahn \\
+		\hline
+		k=1 & 628.84    & 631.02  & -627.10  \\
+		k=2 & 0    & 0  & -313.60  \\
+		k= 3 & 69.87  & 210.34  & -209.03  \\
+		k= 4 & 0  & 0  & -156.78  \\
+		k=5 & 25.15  & 126.20  & -125.42   \\
+		k= 6 & 0  & 0  & -104.52  \\
+		k = 7 & 12.83  &  90.1454 &  -89.59  \\
+		k = 8 & 0 &  0 &  -78.39 \\
+		k = 9 & 7.76 &  70.11 &  -69.68 \\
+	\end{tabular}
+	\label{tab:Koeffizienten}
+\end{figure}
+Die Fourierkoeffizienten $a_k$ wurden für die Signale ausgerechnet.
+\begin{align}
+&\text{Dreieck:} \quad  a_k = \frac{8u}{(\pi k)^2}  \quad , k \in 2n + 1, n \in Z  \\
+&\text{Rechteck:} \quad  a_k = \frac{4u}{k \pi} \quad , k \in 2n + 1, n \in Z \\
+&\text{Sägezahn:} \quad a_k = - \frac{Tu}{kn \pi}
+\end{align}
+Wobei die Amplitude $u$ und die Periode $T$ der Funktionen konstant sind. Die ausgerechneten Koeffizienten stehen in Tabelle \ref{tab:Koeffizienten} und die Abbildungen der daraus generierten Signalverläufe \ref{Synthese_Dreieck}, \ref{Synthese_Rechteck}, \ref{Synthese_Saege} folgen darauf.
+
+
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Synthese_Dreieck.png}
-	\caption{Ann�herung an ein Dreiecksignal}
+	\includegraphics[width=0.9\textwidth]{Synthese_Dreieck.png}
+	\caption{Annäherung an ein Dreiecksignal}
 	\label{Synthese_Dreieck}
 \end{figure}
 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Synthese_Rechteck.png}
-	\caption{Ann�herung an ein Rechtecksignal}
+	\includegraphics[width=0.9\textwidth]{Synthese_Rechteck.png}
+	\caption{Annäherung an ein Rechtecksignal}
 	\label{Synthese_Rechteck}
 \end{figure}
 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Synthese_Saegezahn.png}
-	\caption{Ann�herung an ein S�gezahnsignal}
-	\label{Synthese_Rechteck}
+	\includegraphics[width=0.9\textwidth]{Synthese_Saegezahn.png}
+	\caption{Annäherung an ein Sägezahnsignal}
+	\label{Synthese_Saege}
 \end{figure}
+
+
+
+
+
 
 \clearpage
 \subsection{Fourieranalyse}
-Die Abweichung der gemessenen und abgelesenen Werte $a_\text{g}$ von den berechneten Werten $a_\text{b}$ wird hier wie folgt berechnet
+Für die Auswertung Dreieck-, Rechteck-, und Sägezahnsignal werden die Fourierkoeffizienten eines eingespeisten Signals analysiert. In Unterkapiteln für jedes einzelne Signal befinden sich die Abbildungen, die am Oszilloskop zu sehen sind \ref{Frequenz_Dreieck}, (Abbildung \ref{Frequenz_Rechteck}, \ref{Frequenz_Saege}), Tabellen mit den abgelesenen und ausgerechneten Fourierkoeffizienten (Tabelle: \ref{tab:Dreieck}, \ref{tab:Rechteck}, \ref{tab:Saege})  und eine Visualsierung selbiger (Abbildung: \ref{Fourier_Dreieck}, \ref{Fourier_Rechteck}, \ref{Fourier_Saege}).
+Die Abweichung $\delta a$ der einzelnen gemessenen Koeffizienten $a_\text{g}$ von den  errechneten $a_\text{b}$ ergibt sich nach
+\begin{equation}
+\delta a = 1 - \frac{a_\text{g}}{a_\text{b}}
+\end{equation}
+Die eingezeichneten Fehlerbalken beziehen sich auf die Gesamtabweichung von der erwarteten Funktion. Mehr dazu folgt in der Diskussion (Kapitel  \ref{sec:Diskussion}).
+Sie wurden hier wie folgt berechnet
 \begin{equation}
 \Delta a = \frac{1}{N-2} \sqrt{ \sum_{i=2}^{N} (a_\text{g} - a_\text{b})^2 } \ .
 \end{equation}
 Es ist wichtig, bei dem zweiten Wert zu beginnen, da der erste keine Abweichung haben kann. Deswegen wir auch durch $N-2$ geteilt, statt durch $N-1$.
+\clearpage
+
+\subsubsection{Dreiecksignal - Fourieranalyse}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Dreieck.png}
+	\includegraphics[width=0.6\textwidth]{Dreieck.png}
 	\caption{Frequenzspektrum Dreiecksignal}
-	\label{Synthese_Dreieck}
+	\label{Frequenz_Dreieck}
 \end{figure}
-
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Rechteck.png}
-	\caption{Frequenzspektrum Rechtecksignal}
-	\label{Synthese_Rechteck}
-\end{figure}
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Saegezahn.png}
-	\caption{Frequenzspektrum S�gezahnsignal}
-	\label{Synthese_Rechteck}
-\end{figure}
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.95\textwidth]{Dreieck_Fourier.pdf}
+	\includegraphics[width=0.6\textwidth]{Dreieck_Fourier.pdf}
 	\caption{Frequenzspektrum Dreiecksignal}
-	\label{Synthese_Dreieck}
+	\label{Fourier_Dreieck}
 \end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Fourier-Koeffizienten}
+	\begin{tabular}{c|ccc}
+		& gemessen in V & berechnet in V & Abweichung \\
+		\hline
+		k =	1 & 1.100   & 1.100      &  0 \%       \\
+		k =	3 & 0.110  & 0.122 & -0.11 \% \\
+		k =	5 & 0.033 & 0.044    & -0.33 \% \\
+	\end{tabular}
+	\label{tab:Dreieck}
+\end{figure}
+\clearpage
+
+
+
+\subsubsection{Rechtecksignal - Fourieranalyse}
 
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Rechteck_Fourier.pdf}
+	\includegraphics[width=0.6\textwidth]{Rechteck.png}
 	\caption{Frequenzspektrum Rechtecksignal}
-	\label{Synthese_Rechteck}
+	\label{Frequenz_Rechteck}
 \end{figure}
-
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.95\textwidth]{Saegezahn_Fourier.pdf}
-	\caption{Frequenzspektrum S�gezahnsignal}
-	\label{Synthese}
+	\includegraphics[width=0.6\textwidth]{Rechteck_Fourier.pdf}
+	\caption{Frequenzspektrum Rechtecksignal}
+	\label{Fourier_Rechteck}
 \end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Fourier-Koeffizienten}
+	\begin{tabular}{c|ccc}
+		& gemessen in V & berechnet in V & Abweichung \\
+		\hline
+		k = 1 & 1.400   & 1.400       &  0   \%      \\
+		k = 3 & 0.520  & 0.467 &  0.103 \%  \\
+		k = 5 & 0.320  & 0.280      &  0.125  \%    \\
+		k = 7 & 0.200   & 0.200       &  0  \%        \\
+		k = 9 & 0.130  & 0.156  & -0.197 \%  \\
+		k = 11 & 0.140  & 0.127  &  0.091 \% \\
+		k = 13 & 0.125 & 0.108  &  0.138 \%  \\
+		k = 15 & 0.110  & 0.093 &  0.152 \% \\
+		k = 17 & 0.070  & 0.082 & -0.176 \%  \\
+		k = 19 & 0.063 & 0.074 & -0.170 \% \\
+	\end{tabular}
+	\label{tab:Rechteck}
+\end{figure}
+
+
+
+
+\subsubsection{Sägezahnsignal - Fourieranalyse}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Saegezahn.png}
+	\caption{Frequenzspektrum Sägezahnsignal}
+	\label{Frequenz_Saege}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Saegezahn_Fourier.pdf}
+	\caption{Frequenzspektrum Sägezahnsignal}
+	\label{Fourier_Saege}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Fourier-Koeffizienten}
+	\begin{tabular}{c|ccc}
+		& gemessen in V & berechnet in V & Abweichung \\
+		\hline
+		 k = 1 & 0.700   & 0.700       &  0  \%       \\
+		 k = 2 & 0.400   & 0.350      &  0.125 \%     \\
+		 k = 3 & 0.227 & 0.233  & -0.028 \% \\
+		 k = 4 & 0.150  & 0.175     & -0.167 \%  \\
+		 k = 5 & 0.200   & 0.140      &  0.300 \%      \\
+		 k = 6 & 0.130  & 0.117  &  0.103 \%  \\
+		 k = 7 & 0.110  & 0.100       &  0.091 \% \\
+		 k = 8 & 0.110  & 0.086    &  0.205 \%  \\
+		 k = 9 & 0.065 & 0.078 & -0.197 \%  \\
+	\end{tabular}
+	\label{tab:Saege}
+\end{figure}
+\clearpage

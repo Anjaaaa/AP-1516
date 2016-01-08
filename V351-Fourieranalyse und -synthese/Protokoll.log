@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  6 JAN 2016 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  8 JAN 2016 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2105,40 +2105,21 @@ mappings.tex))) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(./Protokoll.aux
-
-LaTeX Warning: Label `Synthese_Rechteck' multiply defined.
-
-
-LaTeX Warning: Label `Synthese_Dreieck' multiply defined.
-
-
-LaTeX Warning: Label `Synthese_Rechteck' multiply defined.
-
-
-LaTeX Warning: Label `Synthese_Rechteck' multiply defined.
-
-
-LaTeX Warning: Label `Synthese_Dreieck' multiply defined.
-
-
-LaTeX Warning: Label `Synthese_Rechteck' multiply defined.
-
-)
+(./Protokoll.aux)
 \openout1 = `Protokoll.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -2305,12 +2286,12 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2014/10/01 v2.6c siunitx: Abbreviated units
 )
 \c__siunitx_mathsf_int=\count195
-LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2395,7 +2376,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 ! Argument of \@sect has an extra }.
 <inserted text> 
                 \par 
-l.12 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
+l.14 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -2410,7 +2391,7 @@ C.
 ! Paragraph ended before \@sect was complete.
 <to be read again> 
                    \par 
-l.12 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
+l.14 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2419,7 +2400,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Argument of \@sect has an extra }.
 <inserted text> 
                 \par 
-l.12 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
+l.14 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
                                                   
 I've run across a `}' that doesn't seem to match anything.
 For example, `\def\a#1{...}' and `\a}' would produce
@@ -2434,14 +2415,24 @@ C.
 ! Paragraph ended before \@sect was complete.
 <to be read again> 
                    \par 
-l.12 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
+l.14 ...nf√§ngerpraktikum TU Dortmund WS 2015/16}}
                                                   
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 (./Theorie.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--7
+Overfull \hbox (4.51608pt too wide) in paragraph at lines 2--2
+[][][] 
+ []
+
+
+Overfull \hbox (4.51608pt too wide) in paragraph at lines 2--2
+[][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
 
  []
 
@@ -2451,12 +2442,12 @@ Overfull \hbox (3.35368pt too wide) in paragraph at lines 3--14
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 15--22
+Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--22
+Underfull \hbox (badness 10000) in paragraph at lines 16--23
 
  []
 
@@ -2467,7 +2458,7 @@ Runaway argument?
 ! Paragraph ended before \foreignlanguage  was complete.
 <to be read again> 
                    \par 
-l.14 	\clearpage
+l.16 	\clearpage
                 
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2476,7 +2467,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Extra }, or forgotten \endgroup.
 <argument> ...eorie \let \reserved@d =[\def \par }
                                                   }
-l.14 	\clearpage
+l.16 	\clearpage
                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2487,7 +2478,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten \endgroup.
 <argument> ...orie \let \reserved@d =[\def \par }}
                                                   
-l.14 	\clearpage
+l.16 	\clearpage
                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2510,7 +2501,7 @@ Runaway argument?
 ! Paragraph ended before \foreignlanguage  was complete.
 <to be read again> 
                    \par 
-l.14 	\clearpage
+l.16 	\clearpage
                 
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
@@ -2519,7 +2510,7 @@ My plan is to forget the whole thing and hope for the best.
 ! Extra }, or forgotten \endgroup.
 <argument> ...eorie \let \reserved@d =[\def \par }
                                                   }
-l.14 	\clearpage
+l.16 	\clearpage
                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2530,7 +2521,7 @@ deleted material, e.g., by typing `I$}'.
 ! Extra }, or forgotten \endgroup.
 <argument> ...orie \let \reserved@d =[\def \par }}
                                                   
-l.14 	\clearpage
+l.16 	\clearpage
                 
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2557,125 +2548,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 File: Synthese_Dreieck.png Graphic file (type png)
 
 <use Synthese_Dreieck.png>
-Package pdftex.def Info: Synthese_Dreieck.png used on input line 5.
-(pdftex.def)             Requested size: 405.45047pt x 243.27838pt.
-
-
-! Package inputenc Error: Unicode char \u8:‰he not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 	\caption{Ann‰herung an ein Dreiecksignal}
-                                              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰he not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 	\caption{Ann‰herung an ein Dreiecksignal}
-                                              
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<Synthese_Rechteck.png, id=40, 321.2pt x 192.72pt>
+Package pdftex.def Info: Synthese_Dreieck.png used on input line 32.
+(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
+ <Synthese_Rechteck.png, id=40, 321.2pt x 192.72pt>
 File: Synthese_Rechteck.png Graphic file (type png)
- <use Synthese_Rechteck.png>
-Package pdftex.def Info: Synthese_Rechteck.png used on input line 13.
-(pdftex.def)             Requested size: 405.45047pt x 243.27838pt.
+
+<use Synthese_Rechteck.png>
+Package pdftex.def Info: Synthese_Rechteck.png used on input line 40.
+(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
 
 
-! Package inputenc Error: Unicode char \u8:‰he not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 	\caption{Ann‰herung an ein Rechtecksignal}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰he not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.14 	\caption{Ann‰herung an ein Rechtecksignal}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 <Synthese_Saegezahn.png, id=41, 321.2pt x 192.72pt>
 File: Synthese_Saegezahn.png Graphic file (type png)
 
 <use Synthese_Saegezahn.png>
-Package pdftex.def Info: Synthese_Saegezahn.png used on input line 21.
-(pdftex.def)             Requested size: 405.45047pt x 243.27838pt.
-
-
-! Package inputenc Error: Unicode char \u8:‰he not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 	\caption{Ann‰herung an ein S‰gezahnsignal}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰ge not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 	\caption{Ann‰herung an ein S‰gezahnsignal}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰he not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 	\caption{Ann‰herung an ein S‰gezahnsignal}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰ge not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 	\caption{Ann‰herung an ein S‰gezahnsignal}
-                                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Package pdftex.def Info: Synthese_Saegezahn.png used on input line 48.
+(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -2688,119 +2578,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5
 
- <./Synthese_Dreieck.png> <./Synthese_Rechteck.png>]
+ <./Synthese_Dreieck.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6 <./Synthese_Saegezahn.png>] <Dreieck.png, id=52, 321.2pt x 192.72pt>
-File: Dreieck.png Graphic file (type png)
-
-<use Dreieck.png>
-Package pdftex.def Info: Dreieck.png used on input line 36.
-(pdftex.def)             Requested size: 405.45047pt x 243.27838pt.
- <Rechteck.png, id=53, 322.49516pt x 193.4971pt>
-File: Rechteck.png Graphic file (type png)
-
-<use Rechteck.png>
-Package pdftex.def Info: Rechteck.png used on input line 44.
-(pdftex.def)             Requested size: 405.45047pt x 243.288pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Saegezahn.png, id=54, 320.94096pt x 192.72pt>
-File: Saegezahn.png Graphic file (type png)
- <use Saegezahn.png>
-Package pdftex.def Info: Saegezahn.png used on input line 52.
-(pdftex.def)             Requested size: 405.45047pt x 243.46658pt.
-
-
-! Package inputenc Error: Unicode char \u8:‰ge not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.53 	\caption{Frequenzspektrum S‰gezahnsignal}
-                                               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰ge not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.53 	\caption{Frequenzspektrum S‰gezahnsignal}
-                                               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Dreieck_Fourier.pdf, id=55, 578.16pt x 433.62pt>
-File: Dreieck_Fourier.pdf Graphic file (type pdf)
- <use Dreieck_Fourier.pdf>
-Package pdftex.def Info: Dreieck_Fourier.pdf used on input line 60.
-(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Rechteck_Fourier.pdf, id=56, 578.16pt x 433.62pt>
-File: Rechteck_Fourier.pdf Graphic file (type pdf)
- <use Rechteck_Fourier.pdf>
-Package pdftex.def Info: Rechteck_Fourier.pdf used on input line 68.
-(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Saegezahn_Fourier.pdf, id=57, 578.16pt x 433.62pt>
-File: Saegezahn_Fourier.pdf Graphic file (type pdf)
-
-<use Saegezahn_Fourier.pdf>
-Package pdftex.def Info: Saegezahn_Fourier.pdf used on input line 76.
-(pdftex.def)             Requested size: 405.45047pt x 304.0877pt.
-
-
-! Package inputenc Error: Unicode char \u8:‰ge not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 	\caption{Frequenzspektrum S‰gezahnsignal}
-                                               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! Package inputenc Error: Unicode char \u8:‰ge not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.77 	\caption{Frequenzspektrum S‰gezahnsignal}
-                                               
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-)
+[6 <./Synthese_Rechteck.png> <./Synthese_Saegezahn.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2809,32 +2594,69 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7
 
- <./Dreieck.png>]
+] <Dreieck.png, id=55, 321.2pt x 192.72pt>
+File: Dreieck.png Graphic file (type png)
+ <use Dreieck.png>
+Package pdftex.def Info: Dreieck.png used on input line 77.
+(pdftex.def)             Requested size: 256.07741pt x 153.64981pt.
+
+<Dreieck_Fourier.pdf, id=56, 578.16pt x 433.62pt>
+File: Dreieck_Fourier.pdf Graphic file (type pdf)
+ <use Dreieck_Fourier.pdf>
+Package pdftex.def Info: Dreieck_Fourier.pdf used on input line 84.
+(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./Rechteck.png> <./Saegezahn.png>]
+[8
+
+ <./Dreieck.png> <./Dreieck_Fourier.pdf>]
+<Rechteck.png, id=95, 322.49516pt x 193.4971pt>
+File: Rechteck.png Graphic file (type png)
+ <use Rechteck.png>
+Package pdftex.def Info: Rechteck.png used on input line 110.
+(pdftex.def)             Requested size: 256.07741pt x 153.65822pt.
+
+<Rechteck_Fourier.pdf, id=96, 578.16pt x 433.62pt>
+File: Rechteck_Fourier.pdf Graphic file (type pdf)
+ <use Rechteck_Fourier.pdf>
+Package pdftex.def Info: Rechteck_Fourier.pdf used on input line 117.
+(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
+
+<Saegezahn.png, id=97, 320.94096pt x 192.72pt>
+File: Saegezahn.png Graphic file (type png)
+ <use Saegezahn.png>
+Package pdftex.def Info: Saegezahn.png used on input line 148.
+(pdftex.def)             Requested size: 256.07741pt x 153.77039pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./Dreieck_Fourier.pdf> <./Rechteck_Fourier.pdf
+[9
 
-pdfTeX warning: pdflatex (file ./Rechteck_Fourier.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
->]
+ <./Rechteck.png> <./Rechteck_Fourier.pdf>]
+<Saegezahn_Fourier.pdf, id=139, 578.16pt x 433.62pt>
+File: Saegezahn_Fourier.pdf Graphic file (type pdf)
+
+<use Saegezahn_Fourier.pdf>
+Package pdftex.def Info: Saegezahn_Fourier.pdf used on input line 155.
+(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10 <./Saegezahn_Fourier.pdf>] (./Diskussion.tex) (./Protokoll.tdo)
+[10 <./Saegezahn.png> <./Saegezahn_Fourier.pdf>]) (./Diskussion.tex)
+(./Protokoll.tdo)
 \tf@tdo=\write5
 \openout5 = `Protokoll.tdo'.
 
@@ -2847,36 +2669,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11
 
-] (./Protokoll.aux)
 
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 29763 strings out of 493105
- 656187 string characters out of 6137071
- 728122 words of memory out of 5000000
- 32727 multiletter control sequences out of 15000+600000
+ 29840 strings out of 493105
+ 657933 string characters out of 6137071
+ 731281 words of memory out of 5000000
+ 32804 multiletter control sequences out of 15000+600000
  27407 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,17n,75p,10425b,528s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Protokoll.pdf (12 pages, 292137 bytes).
+ 57i,17n,80p,10425b,689s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+12.pfb>
+Output written on Protokoll.pdf (12 pages, 290868 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
+ 229 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
