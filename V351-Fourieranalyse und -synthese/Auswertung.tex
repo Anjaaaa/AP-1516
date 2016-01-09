@@ -57,18 +57,20 @@ Wobei die Amplitude $u$ und die Periode $T$ der Funktionen konstant sind. Die au
 
 \clearpage
 \subsection{Fourieranalyse}
-Für die Auswertung Dreieck-, Rechteck-, und Sägezahnsignal werden die Fourierkoeffizienten eines eingespeisten Signals analysiert. In Unterkapiteln für jedes einzelne Signal befinden sich die Abbildungen, die am Oszilloskop zu sehen sind \ref{Frequenz_Dreieck}, (Abbildung \ref{Frequenz_Rechteck}, \ref{Frequenz_Saege}), Tabellen mit den abgelesenen und ausgerechneten Fourierkoeffizienten (Tabelle: \ref{tab:Dreieck}, \ref{tab:Rechteck}, \ref{tab:Saege})  und eine Visualsierung selbiger (Abbildung: \ref{Fourier_Dreieck}, \ref{Fourier_Rechteck}, \ref{Fourier_Saege}).
-Die Abweichung prozentuale $\delta a$ der einzelnen gemessenen Koeffizienten $a_\text{g}$ von den  errechneten $a_\text{b}$ ergibt sich nach
+Für die Auswertung Dreieck-, Rechteck-, und Sägezahnsignal werden die Fourierkoeffizienten eines eingespeisten Signals analysiert. In Unterkapiteln für jedes einzelne Signal befinden sich die Abbildungen, die am Oszilloskop zu sehen sind (Abbildung \ref{Frequenz_Dreieck}, \ref{Frequenz_Rechteck}, \ref{Frequenz_Saege}), Tabellen mit den abgelesenen und ausgerechneten Fourierkoeffizienten (Tabelle: \ref{tab:Dreieck}, \ref{tab:Rechteck}, \ref{tab:Saege})  und eine Visualsierung selbiger (Abbildung: \ref{Fourier_Dreieck}, \ref{Fourier_Rechteck}, \ref{Fourier_Saege}).
+Die przentuale Abweichung $\delta a$ der einzelnen gemessenen Koeffizienten $a_\text{gem.}$ von den errechneten $a_\text{ber.}$ ergibt sich nach
+\todo[]{Ich habe die Indizes etwas erweitert, nur g und b haben meinen Lesefluss unterbrochen.}
 \begin{equation}
-\delta a = \left(1 - \frac{a_\text{g}}{a_\text{b}}\right) \cdot 100 \%
+\delta a = \left(1 - \frac{a_\text{gem.}}{a_\text{ber.}}\right) \cdot 100 \%
 \end{equation}
 Die eingezeichneten Fehlerbalken beziehen sich auf die Gesamtabweichung von der erwarteten Funktion. Mehr dazu folgt in der Diskussion (Kapitel  \ref{sec:Diskussion}).
 Sie wurden hier wie folgt berechnet
 \begin{equation}
-\Delta a =\sqrt{ \frac{1}{N-2} \sum_{i=2}^{N} (a_\text{g} - a_\text{b})^2 } \ .
+\Delta a =\sqrt{ \frac{1}{N-2} \sum_{i=2}^{N} (a_\text{gem.} - a_\text{ber.})^2 } \ .
 \label{eq:Abweichung}
 \end{equation}
 Es ist wichtig, bei dem zweiten Wert zu beginnen, da der erste keine Abweichung haben kann. Deswegen wir auch durch $N-2$ geteilt, statt durch $N-1$.
+\todo[inline]{Ich habe da nochmal drüber nachgedacht und das mit dem N-2 ist eigentlich eine sehr pfiffige Idee. Ich weiß auch nicht ob das stimmt, aber ich finde das klingt auf jeden Fall logisch.}
 \clearpage
 
 \subsubsection{Dreiecksignal - Fourieranalyse}
