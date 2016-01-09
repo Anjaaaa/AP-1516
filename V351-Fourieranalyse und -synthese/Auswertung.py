@@ -33,18 +33,21 @@ Abweichung_S = 0
 for i in range(1, len(n_D)):
     Abweichung_D = Abweichung_D + (Dreieck[i] - a_D(u_D, n_D[i]))**2
 Abweichung_D = np.sqrt(Abweichung_D)/(len(n_D)-2)
-print('Die Abweichung bei der Dreieckspannung pro Wert:', Abweichung_D)    
+print('Die Abweichung bei der Dreieckspannung pro Wert:', Abweichung_D)   
+print('Die Streuung bei der Dreieckspannung:', Abweichung_D/np.average(Dreieck), '\n') 
+ 
 
-    
 for i in range(1, len(n_R)):
     Abweichung_R = Abweichung_R + (Rechteck[i] - a_R(u_R, n_R[i]))**2
 Abweichung_R =  np.sqrt(Abweichung_R)/(len(n_R)-2)   
-print('Die Abweichung bei der Rechteckspannung pro Wert:', Abweichung_R)    
+print('Die Abweichung bei der Rechteckspannung pro Wert:', Abweichung_R)  
+print('Die Streuung bei der Rechteckspannung:', Abweichung_R / np.average(Rechteck), '\n')
     
 for i in range(1, len(n_S)):
     Abweichung_S = Abweichung_S + (Saegezahn[i] - a_S(u_S, n_S[i]))**2
 Abweichung_S = np.sqrt(Abweichung_S)/(len(n_S)-2)
 print('Die Abweichung bei der Sägezahnspannung pro Wert:',(Abweichung_S)) 
+print('Die Steuung bei der Sägezahnspannung:',(Abweichung_S)/np.average(Saegezahn)) 
 
 
 

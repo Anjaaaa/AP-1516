@@ -58,14 +58,14 @@ Wobei die Amplitude $u$ und die Periode $T$ der Funktionen konstant sind. Die au
 \clearpage
 \subsection{Fourieranalyse}
 Für die Auswertung Dreieck-, Rechteck-, und Sägezahnsignal werden die Fourierkoeffizienten eines eingespeisten Signals analysiert. In Unterkapiteln für jedes einzelne Signal befinden sich die Abbildungen, die am Oszilloskop zu sehen sind \ref{Frequenz_Dreieck}, (Abbildung \ref{Frequenz_Rechteck}, \ref{Frequenz_Saege}), Tabellen mit den abgelesenen und ausgerechneten Fourierkoeffizienten (Tabelle: \ref{tab:Dreieck}, \ref{tab:Rechteck}, \ref{tab:Saege})  und eine Visualsierung selbiger (Abbildung: \ref{Fourier_Dreieck}, \ref{Fourier_Rechteck}, \ref{Fourier_Saege}).
-Die Abweichung $\delta a$ der einzelnen gemessenen Koeffizienten $a_\text{g}$ von den  errechneten $a_\text{b}$ ergibt sich nach
+Die Abweichung prozentuale $\delta a$ der einzelnen gemessenen Koeffizienten $a_\text{g}$ von den  errechneten $a_\text{b}$ ergibt sich nach
 \begin{equation}
-\delta a = 1 - \frac{a_\text{g}}{a_\text{b}}
+\delta a = \left(1 - \frac{a_\text{g}}{a_\text{b}}\right) \cdot 100 \%
 \end{equation}
 Die eingezeichneten Fehlerbalken beziehen sich auf die Gesamtabweichung von der erwarteten Funktion. Mehr dazu folgt in der Diskussion (Kapitel  \ref{sec:Diskussion}).
 Sie wurden hier wie folgt berechnet
 \begin{equation}
-\Delta a = \frac{1}{N-2} \sqrt{ \sum_{i=2}^{N} (a_\text{g} - a_\text{b})^2 } \ .
+\Delta a =\sqrt{ \frac{1}{N-2} \sum_{i=2}^{N} (a_\text{g} - a_\text{b})^2 } \ .
 \label{eq:Abweichung}
 \end{equation}
 Es ist wichtig, bei dem zweiten Wert zu beginnen, da der erste keine Abweichung haben kann. Deswegen wir auch durch $N-2$ geteilt, statt durch $N-1$.
@@ -90,12 +90,12 @@ Es ist wichtig, bei dem zweiten Wert zu beginnen, da der erste keine Abweichung 
 \begin{figure}[h!]
 	\centering
 	\captionof{table}{Fourier-Koeffizienten}
-	\begin{tabular}{c|ccc}
+	\begin{tabular}{c|ccr}
 		& gemessen in V & berechnet in V & Abweichung \\
 		\hline
 		k =	1 & 1.100   & 1.100      &  0 \%       \\
-		k =	3 & 0.110  & 0.122 & -0.11 \% \\
-		k =	5 & 0.033 & 0.044    & -0.33 \% \\
+		k =	3 & 0.110  & 0.122 & -11 \% \\
+		k =	5 & 0.033 & 0.044    & -33 \% \\
 	\end{tabular}
 	\label{tab:Dreieck}
 \end{figure}
@@ -123,19 +123,19 @@ Es ist wichtig, bei dem zweiten Wert zu beginnen, da der erste keine Abweichung 
 \begin{figure}[h!]
 	\centering
 	\captionof{table}{Fourier-Koeffizienten}
-	\begin{tabular}{c|ccc}
+	\begin{tabular}{c|ccr}
 		& gemessen in V & berechnet in V & Abweichung \\
 		\hline
 		k = 1 & 1.400   & 1.400       &  0   \%      \\
-		k = 3 & 0.520  & 0.467 &  0.103 \%  \\
-		k = 5 & 0.320  & 0.280      &  0.125  \%    \\
+		k = 3 & 0.520  & 0.467 &  10.3 \%  \\
+		k = 5 & 0.320  & 0.280      &  12.5  \%    \\
 		k = 7 & 0.200   & 0.200       &  0  \%        \\
-		k = 9 & 0.130  & 0.156  & -0.197 \%  \\
-		k = 11 & 0.140  & 0.127  &  0.091 \% \\
-		k = 13 & 0.125 & 0.108  &  0.138 \%  \\
-		k = 15 & 0.110  & 0.093 &  0.152 \% \\
-		k = 17 & 0.070  & 0.082 & -0.176 \%  \\
-		k = 19 & 0.063 & 0.074 & -0.170 \% \\
+		k = 9 & 0.130  & 0.156  & -19.7 \%  \\
+		k = 11 & 0.140  & 0.127  &  9.10 \% \\
+		k = 13 & 0.125 & 0.108  &  13.8 \%  \\
+		k = 15 & 0.110  & 0.093 &  15.2 \% \\
+		k = 17 & 0.070  & 0.082 & -17.6 \%  \\
+		k = 19 & 0.063 & 0.074 & -17.0 \% \\
 	\end{tabular}
 	\label{tab:Rechteck}
 \end{figure}
@@ -161,18 +161,18 @@ Es ist wichtig, bei dem zweiten Wert zu beginnen, da der erste keine Abweichung 
 \begin{figure}[h!]
 	\centering
 	\captionof{table}{Fourier-Koeffizienten}
-	\begin{tabular}{c|ccc}
+	\begin{tabular}{c|ccr}
 		& gemessen in V & berechnet in V & Abweichung \\
 		\hline
 		 k = 1 & 0.700   & 0.700       &  0  \%       \\
-		 k = 2 & 0.400   & 0.350      &  0.125 \%     \\
-		 k = 3 & 0.227 & 0.233  & -0.028 \% \\
-		 k = 4 & 0.150  & 0.175     & -0.167 \%  \\
-		 k = 5 & 0.200   & 0.140      &  0.300 \%      \\
-		 k = 6 & 0.130  & 0.117  &  0.103 \%  \\
-		 k = 7 & 0.110  & 0.100       &  0.091 \% \\
-		 k = 8 & 0.110  & 0.086    &  0.205 \%  \\
-		 k = 9 & 0.065 & 0.078 & -0.197 \%  \\
+		 k = 2 & 0.400   & 0.350      &  12.5 \%     \\
+		 k = 3 & 0.227 & 0.233  & -02.8 \% \\
+		 k = 4 & 0.150  & 0.175     & -16.7 \%  \\
+		 k = 5 & 0.200   & 0.140      &  30.0 \%      \\
+		 k = 6 & 0.130  & 0.117  &  10.3 \%  \\
+		 k = 7 & 0.110  & 0.100       &  9.10 \% \\
+		 k = 8 & 0.110  & 0.086    &  20.5 \%  \\
+		 k = 9 & 0.065 & 0.078 & -19.7 \%  \\
 	\end{tabular}
 	\label{tab:Saege}
 \end{figure}
