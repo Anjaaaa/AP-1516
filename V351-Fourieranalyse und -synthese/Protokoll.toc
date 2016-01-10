@@ -1,11 +1,11 @@
 \select@language {german}
-\contentsline {section}{\numberline {1}Theorie \let \reserved@d =[\def \par }{2}
-\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{4}
-\contentsline {section}{\numberline {3}Auswertung}{5}
-\contentsline {subsection}{\numberline {3.1}Fouriersynthese}{5}
-\contentsline {subsection}{\numberline {3.2}Fourieranalyse}{7}
-\contentsline {subsubsection}{\numberline {3.2.1}Dreiecksignal - Fourieranalyse}{8}
-\contentsline {subsubsection}{\numberline {3.2.2}Rechtecksignal - Fourieranalyse}{9}
-\contentsline {subsubsection}{\numberline {3.2.3}S\IeC {\"a}gezahnsignal - Fourieranalyse}{10}
-\contentsline {section}{\numberline {4}Diskussion}{11}
-\contentsline {section}{Todo list}{11}
+\contentsline {section}{\numberline {1}Theoretischer Hintergrund}{2}
+\contentsline {section}{\numberline {2}Experimenteller Aufbau}{3}
+\contentsline {section}{\numberline {3}Auswertung}{4}
+\contentsline {subsection}{\numberline {3.1}Fouriersynthese}{4}
+\contentsline {subsection}{\numberline {3.2}Fourieranalyse}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}Dreiecksignal - Fourieranalyse}{7}
+\contentsline {subsubsection}{\numberline {3.2.2}Rechtecksignal - Fourieranalyse}{8}
+\contentsline {subsubsection}{\numberline {3.2.3}S\IeC {\"a}gezahnsignal - Fourieranalyse}{9}
+\contentsline {section}{\numberline {4}Diskussion}{10}
+\contentsline {section}{Todo list}{10}
