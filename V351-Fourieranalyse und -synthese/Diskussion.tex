@@ -1,7 +1,12 @@
 Eine Fehleranalyse ist bei diesem Protokoll wenig zielführend. Es wird kein Maß dafür eingeführt, wie weit die durch die \textbf{Fouriersynthese} modellierte Funktion von der Zielfunktion abweicht. Allgemein zeigt sich, dass die hier modellierten Signale (Abbildung \ref{Synthese_Dreieck}, \ref{Synthese_Rechteck}, \ref{Synthese_Saege}) schon mit wenigen Oberschwingungen nahe am gewünschten Ergebnis liegen. Besonders fällt dies bei der Dreieckspannung auf, wo die Amplituden der k-ten Oberschwingung mit~$\sim \frac{1}{k^2}$ abfällt, was an der Stetigkeit der Funktion liegt. \\
 Auch das in der Theorie beschriebene Phänomen der Gibb'schen Überschwinger sind in Abbildung \ref{Synthese_Rechteck} und \ref{Synthese_Saege} gut erkennbar. \\
-Bei der \textbf{Fourieranalyse} kann eine Ungenauigkeit in der Messung der Koeffizienten mit Hilfe von Formel \eqref{eq:Abweichung} bestimmt werden. Die Steuung ergibt sich aus der Abweichung dividiert durch den Mittelwert der Messung. Bei diesen geringen Fehlern (siehe Tabelle \ref{tab:Fehler}) handelt es sich wahrscheinlich um Ableseungenauigkeiten.
+Bei der \textbf{Fourieranalyse} kann eine Ungenauigkeit in der Messung der Koeffizienten mit Hilfe von Formel \eqref{eq:Abweichung} bestimmt werden. Die Steuung ergibt sich aus der Abweichung dividiert durch den Mittelwert der Messung
+\begin{equation}
+M = \frac{1}{N}  \sum_{i=1}^{N}  a_{\text{gem},i}\ \quad.
+\end{equation} 
+Bei diesen geringen Fehlern (siehe Tabelle \ref{tab:Fehler}) handelt es sich wahrscheinlich um Ableseungenauigkeiten.
 \todo[color = red]{Ist der Mittelwert von dem du hier sprichst $\Delta a$?}
+\todo[color = green]{Es war zugegeben missverständlicherweise das arithmetische Mittel gemeint. Ist es so verständlich?}
 \begin{figure}[h!]
 	\centering
 		\captionof{table}{Abweichung der Fourierkoeffizienten}
