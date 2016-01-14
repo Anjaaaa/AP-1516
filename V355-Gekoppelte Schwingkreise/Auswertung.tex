@@ -1,0 +1,35 @@
+\subsection{Auswertung der Messdaten}
+Die Bestimmung der Fundamentalfrequenzen über die Phasenbeziehung ergibt die in Tabelle \ref{fig:Freq_Phase} aufgelisteten Messdaten.
+\input{Frequenzen_Phase.tex} \\
+Bei der \glqq dynamischen\grqq\ Messung der Fundamentalfrequenzen wird die am Schwingkreis angelegte Frequenz kontinuierlich erhöht. Die Zeitdifferenz zwischen dem Beginn der Frequenzsteigerung und dem erreichen der beiden Fundamentalfrequenzen wird am Oszilloskop bestimmt werden. Diese Zeiten sind in Tabelle \ref{fig:Zeiten} dargestellt.
+\input{Zeiten.tex}
+Über die Startfrequenz $\nu_{start} = \SI{11.16}{\kilo\hertz}$, die Endfrequenz $\nu_{end} = \SI{112.6}{\kilo\hertz}$ und das eingestellte Intervall $T = \SI{1}{\second}$ kann eine Funktion
+\[ \nu(t) = \frac{\nu_{end}-\nu_{start}}{T}t+\nu_{start} \]
+aufgestellt werden. Damit können nun die Fundamentalfrequenzen (siehe Tabelle \ref{fig:Freq_dyn}) berechnet werden. \\
+\input{Frequenzen_dynamisch.tex}
+\ \\
+\ \\
+Das Zählen der Schwingungen innerhalb einer Schwebungsperiode, also einem Schwingungsbauch hat nur teilweise funktioniert. Bei den kleineren Kapazitäten war dies nicht möglich.
+Die Resonanzfrequenz des Schwingkreises bei einer Phasenverschiebung von $\varphi=0$ ist $\nu^+=\SI{33.33}{\kilo\hertz}$. Damit kann auch $\nu^-$ berechnet werden. Die gezählten Schwingungen pro Schwingungsbuach und die berechneten Werte für $\nu^-$ stehen in Tabelle \ref{fig:Freq_Bauch}.
+\input{Frequenz_Bauch.tex} \\
+Über Beziehung \eqref{Bauch} kann auch die Anzahl an Schwingungen pro Schwebungsperiode bei bekannten Frequenzen berechnet werden. Ein Vergleich zwischen der gezählten Anzahl an Bäuchen, der für die Frequenzen aus dem ersten Versuchsteil berechneten und der theoretisch zu erwartenden befindet sich in Tabelle \ref{fig:Bauch}.
+
+\subsection{Theoretisch erwartete Werte}
+Die Induktivität der verwendeten Spulen ist
+\[ L = \SI{23.954}{\milli\henry} \ . \]
+Die Kondensatoren in den Schwingkreisen haben eine Kapazität von
+\[ C^* = \SI{0.7932}{\nano\farad} \ . \]
+Es gilt zu beachten, dass auch die Spulen eine Kapazität von
+\[ C_\text{Sp} = \SI{0.028}{\nano\farad} \]
+haben. Das erschwert die Rechnung kaum, da mit
+\[ C = C^* + C_\text{Sp} \]
+gerechnet werden kann. \\
+Die mit diesen Daten und den Formeln \eqref{Frequenz_p} und \eqref{Frequenz_m} theoretisch zu erwartenden Fundamentalfrequenzen finden sich in Tabelle VERWEIS. \\
+Aus \eqref{Schwebung} kann die theoretisch zu erwartende Anzahl an Schwingungen pro Schwebungsbauch berechnet werden. So schwingt das System $n$-mal
+\[ \pi(\nu^+ + \nu^-)T \overset{!}{=} 2\pi n \]
+während einer Schwebungsperiode (also einem Schwebungsbauch)
+\[ \pi(\nu^- - \nu^+)T \overset{!}{=} \pi \ . \]
+Zusammen ergibt sich
+\begin{align}\label{Bauch}
+	n = \frac{(\nu^+ + \nu^-)}{2(\nu^- - \nu^+)} \ .
+\end{align}
