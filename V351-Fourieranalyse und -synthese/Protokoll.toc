@@ -8,4 +8,3 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Rechtecksignal - Fourieranalyse}{8}
 \contentsline {subsubsection}{\numberline {3.2.3}S\IeC {\"a}gezahnsignal - Fourieranalyse}{9}
 \contentsline {section}{\numberline {4}Diskussion}{10}
-\contentsline {section}{Todo list}{10}

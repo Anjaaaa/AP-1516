@@ -11,6 +11,7 @@ all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Fehlerrechnung.tex Regress
 	rm -rf *.idx
 	rm -rf *.synctex.gz
 	rm -rf *.toc
+	rm -rf *.tdo
 
 clean:
 	rm -rf *.aux
@@ -18,6 +19,7 @@ clean:
 	rm -rf *.idx
 	rm -rf *.synctex.gz
 	rm -rf *.toc
+	rm -rf *.tdo
 
 clean-all:
 	rm -rf *.aux
@@ -26,3 +28,4 @@ clean-all:
 	rm -rf *.synctex.gz
 	rm -rf *.toc
 	rm -rf $(NAME).pdf
+	rm -rf *.tdo
