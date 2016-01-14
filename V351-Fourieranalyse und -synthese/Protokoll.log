@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  12 JAN 2016 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  14 JAN 2016 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2174,7 +2174,7 @@ Package: translator 2010/06/12 ver 1.10
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(./Protokoll.aux)
+No file Protokoll.aux.
 \openout1 = `Protokoll.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -2189,7 +2189,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -2404,10 +2403,10 @@ Package pdftex.def Info: Logo-Physik.png used on input line 7.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Logo-TUDo.png> <./Logo-P
-hysik.png>]) (./Protokoll.toc)
+hysik.png>])
+No file Protokoll.toc.
 \tf@toc=\write4
 \openout4 = `Protokoll.toc'.
-
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2419,6 +2418,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
+
+
+LaTeX Warning: Reference `fig:Fourier_Beispiele' on page 2 undefined on input l
+ine 16.
 
 (./Funktionen.tex
 Overfull \hbox (26.70773pt too wide) in paragraph at lines 3--17
@@ -2455,16 +2458,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] (./Auswertung.tex <Synthese_Dreieck.png, id=36, 321.2pt x 192.72pt>
-File: Synthese_Dreieck.png Graphic file (type png)
+[3] (./Auswertung.tex
 
-<use Synthese_Dreieck.png>
+LaTeX Warning: Reference `tab:Koeffizienten' on page 4 undefined on input line 
+26.
+
+
+LaTeX Warning: Reference `Synthese_Dreieck' on page 4 undefined on input line 2
+6.
+
+
+LaTeX Warning: Reference `Synthese_Rechteck' on page 4 undefined on input line 
+26.
+
+
+LaTeX Warning: Reference `Synthese_Saege' on page 4 undefined on input line 26.
+
+
+<Synthese_Dreieck.png, id=36, 321.2pt x 192.72pt>
+File: Synthese_Dreieck.png Graphic file (type png)
+ <use Synthese_Dreieck.png>
 Package pdftex.def Info: Synthese_Dreieck.png used on input line 32.
 (pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
- <Synthese_Rechteck.png, id=37, 321.2pt x 192.72pt>
-File: Synthese_Rechteck.png Graphic file (type png)
 
-<use Synthese_Rechteck.png>
+<Synthese_Rechteck.png, id=37, 321.2pt x 192.72pt>
+File: Synthese_Rechteck.png Graphic file (type png)
+ <use Synthese_Rechteck.png>
 Package pdftex.def Info: Synthese_Rechteck.png used on input line 40.
 (pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
 
@@ -2497,6 +2516,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [5 <./Synthese_Rechteck.png> <./Synthese_Saegezahn.png>]
+
+LaTeX Warning: Reference `Frequenz_Dreieck' on page 6 undefined on input line 6
+0.
+
+
+LaTeX Warning: Reference `Frequenz_Rechteck' on page 6 undefined on input line 
+60.
+
+
+LaTeX Warning: Reference `Frequenz_Saege' on page 6 undefined on input line 60.
+
+
+
+LaTeX Warning: Reference `tab:Dreieck' on page 6 undefined on input line 60.
+
+
+LaTeX Warning: Reference `tab:Rechteck' on page 6 undefined on input line 60.
+
+
+LaTeX Warning: Reference `tab:Saege' on page 6 undefined on input line 60.
+
+
+LaTeX Warning: Reference `Fourier_Dreieck' on page 6 undefined on input line 60
+.
+
+
+LaTeX Warning: Reference `Fourier_Rechteck' on page 6 undefined on input line 6
+0.
+
+
+LaTeX Warning: Reference `Fourier_Saege' on page 6 undefined on input line 60.
+
+
+LaTeX Warning: Reference `sec:Diskussion' on page 6 undefined on input line 65.
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2566,7 +2621,34 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./Saegezahn.png> <./Saegezahn_Fourier.pdf>]) (./Diskussion.tex)
+[9 <./Saegezahn.png> <./Saegezahn_Fourier.pdf>]) (./Diskussion.tex
+
+LaTeX Warning: Reference `Synthese_Dreieck' on page 10 undefined on input line 
+1.
+
+
+LaTeX Warning: Reference `Synthese_Rechteck' on page 10 undefined on input line
+ 1.
+
+
+LaTeX Warning: Reference `Synthese_Saege' on page 10 undefined on input line 1.
+
+
+
+LaTeX Warning: Reference `Synthese_Rechteck' on page 10 undefined on input line
+ 2.
+
+
+LaTeX Warning: Reference `Synthese_Saege' on page 10 undefined on input line 2.
+
+
+
+LaTeX Warning: Reference `eq:Abweichung' on page 10 undefined on input line 3.
+
+
+LaTeX Warning: Reference `tab:Fehler' on page 10 undefined on input line 7.
+
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2576,28 +2658,35 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [10
 
 
-] (./Protokoll.aux) ) 
+] (./Protokoll.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 33211 strings out of 493054
- 724113 string characters out of 6140585
- 828919 words of memory out of 5000000
+ 33207 strings out of 493054
+ 724057 string characters out of 6140585
+ 828780 words of memory out of 5000000
  36223 multiletter control sequences out of 15000+600000
  23689 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,17n,75p,10425b,951s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Protokoll.pdf (11 pages, 305809 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb>
+Output written on Protokoll.pdf (11 pages, 303669 bytes).
 PDF statistics:
  226 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream
