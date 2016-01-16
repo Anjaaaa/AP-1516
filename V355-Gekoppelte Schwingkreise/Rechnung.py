@@ -86,7 +86,7 @@ C = ( 0.7932 + 0.028 ) / 1000000000
 C_k /= 1000000000
 
 nu_p = 1 / (2*np.pi*np.sqrt(L*C))
-nu_m = 1 / (2*np.pi*np.sqrt(L / (1/C + 1/C_k)))
+nu_m = 1 / (2*np.pi*np.sqrt(L / (1/C + 2/C_k)))
 print('Erwartete Frequenz +:', nu_p)
 print('Erwartete Frequenz -:', nu_m)
 
