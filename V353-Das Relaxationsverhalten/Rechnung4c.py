@@ -42,10 +42,14 @@ theta = 2 * np.pi * r
 
 def A2(phi):
     return 1 / np.sqrt(1+np.tan(phi2)**2)
+    
+def A3(phi):
+	return np.cos(phi)    
 
 phi2 = np.linspace(0, np.pi /2)
 i = np.arange(0,len(phi), 2) #nur jeden zweiten wert plotten
 
 plt.polar(phi2, A2(phi2))
 plt.polar(phi[i], A[i]/U_0, 'rx')
+plt.polar(phi2, A3(phi2), 'g-')
 plt.show()
