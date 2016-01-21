@@ -1,5 +1,5 @@
 \usepackage{geometry}
-\geometry{a4paper, top=30mm, left=30mm, right=30mm, bottom=30mm}
+\geometry{a4paper, top=40mm, left=30mm, right=30mm, bottom=40mm}
 \usepackage{multicol}
 \usepackage{color}
 
@@ -53,8 +53,11 @@ output-decimal-marker=., % . statt , für Dezimalzahlen
 
 \usepackage{fancyhdr}	%Kopf- und Fußzeile gestalten
 \pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
 \fancyhead{}				%Default-Einstellungen im Header löschen
-\fancyhead[R]{\leftmark}
+\fancyhead[L]{\sc{Fourier-Analyse und -Synthese}}
+\fancyhead[R]{\sc{\rightmark}}
 % \leftmark sind die Sections \rightmark sind dei Subsections
 
 

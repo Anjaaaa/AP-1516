@@ -1,13 +1,13 @@
 Im nachfolgend beschriebenen Versuch werden periodische Signale untersucht. \\
 Eine Funktion wird (zeitlich) periodisch genannt, wenn für alle $t$ gilt, dass
 \[ f(t) = f(t+T) \ , \]
-wobei $T$ die Periode bezeichnet. Sie können meist durch Kombinationen von $\sin(\omega t)$ oder $\cos(\omega t)$ bzw. $e^{i\omega t}$ ausgedrückt werden. Für die Frequenz gilt hierbei $\omega = \frac{2\pi}{T} $. \\
+wobei $T$ die Periode bezeichnet. Sie können meist durch Kombinationen von $\sin(\omega t)$ oder $\cos(\omega t)$ bzw. $\mathrm{e}^{i\omega t}$ ausgedrückt werden. Für die Frequenz gilt hierbei $\omega = \frac{2\pi}{T} $. \\
 \ \\
 Das Fouriersche Theorem besagt, dass eine Reihe der Form
 \begin{align}
-	C + \sum_{n = 1}^{\infty} A_n\cos(n\omega t)+B_n\sin(n\omega t)
+	f(t) \sim \tilde{f}(t) =  C + \sum_{n = 1}^{\infty} A_n\cos(n\omega t)+B_n\sin(n\omega t)
 \end{align}
-wenn sie gleichmäßig konvergent ist immer eine periodische, abschnittsweise stetige Funktion darstellt. Eine solche Reiche wird auch Fourier-Reihe genannt. Die Koeffizienten $A_n$, $B_n$ und $C$ werden berechnet durch
+wenn sie gleichmäßig konvergent ist, immer eine periodische, abschnittsweise stetige Funktion $\tilde{f}$ darstellt. Eine solche Reihe wird auch Fourier-Reihe genannt. Die Koeffizienten $A_n$, $B_n$ und $C$ werden berechnet durch
 \begin{align}
 	A_n &= \frac{2}{T}\int_0^T f(t)\cos(n\omega t)\ dt \\
 	B_n &= \frac{2}{T}\int_0^T f(t)\sin(n\omega t)\ dt \\
@@ -15,13 +15,13 @@ wenn sie gleichmäßig konvergent ist immer eine periodische, abschnittsweise st
 \end{align}
 In Tabelle \ref{fig:Fourier_Beispiele} sind beispielhaft die Fourier-Reihen, der später betrachteten Signale dargestellt.
 \input{Funktionen.tex}
-Ist $f$ an einer Stelle $t_i$ unstetig, dann weicht die Fourier-Reihe an dieser Stelle von der Funktion ab. Diese Abweichung ist endlich und wird mit wachsendem $n$ nicht kleiner. Dieses \glqq Überschwingen\grqq\ wird Gibb'sches Phänomen genannt. \\
+Ist $f$ an einer Stelle $t_i$ unstetig, dann weicht die Fourier-Reihe $\tilde{f}$ an dieser Stelle von der Funktion ab. Diese Abweichung ist endlich und wird mit wachsendem $n$ nicht kleiner. Dieses \glqq Überschwingen\grqq\ wird Gibb'sches Phänomen genannt. \\
 \ \\
 \ \\
 Manchmal ist es hilfreich oder interessant, das Frequenz-Spektrum einer Funktion zu betrachten. Der Übergang
 \[ f(t)\rightarrow g(\omega) \]
 wird von der Fourier-Transformation
-\begin{align}
+\begin{align}\label{Transformation}
 	g(\omega) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}f(t)e^{i\omega t}\ dt
 \end{align}
 geleistet. \\
