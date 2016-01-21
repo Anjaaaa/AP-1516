@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  14 JAN 2016 20:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  20 JAN 2016 19:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -22,7 +22,7 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./Header.txt
+) (./Header.tex
 (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -2174,7 +2174,7 @@ Package: translator 2010/06/12 ver 1.10
 LaTeX Warning: Unused global option(s):
     [a4].
 
-No file Protokoll.aux.
+(./Protokoll.aux)
 \openout1 = `Protokoll.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -2189,6 +2189,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -2198,14 +2199,14 @@ LaTeX Font Info:    ... okay on input line 7.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
-* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* v-part:(T,H,B)=(113.81102pt, 617.4248pt, 113.81102pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=426.79135pt
-* \textheight=674.33032pt
+* \textheight=617.4248pt
 * \oddsidemargin=13.08827pt
 * \evensidemargin=13.08827pt
-* \topmargin=-23.91173pt
+* \topmargin=4.54103pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -2385,28 +2386,24 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count308
  (./Titlepage.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
-
- []
-
 <Logo-TUDo.png, id=4, 255.95625pt x 41.15375pt>
 File: Logo-TUDo.png Graphic file (type png)
  <use Logo-TUDo.png>
-Package pdftex.def Info: Logo-TUDo.png used on input line 5.
+Package pdftex.def Info: Logo-TUDo.png used on input line 3.
 (pdftex.def)             Requested size: 176.9654pt x 28.45274pt.
 
 <Logo-Physik.png, id=5, 67.912pt x 16.34247pt>
 File: Logo-Physik.png Graphic file (type png)
  <use Logo-Physik.png>
-Package pdftex.def Info: Logo-Physik.png used on input line 7.
+Package pdftex.def Info: Logo-Physik.png used on input line 5.
 (pdftex.def)             Requested size: 118.24051pt x 28.45274pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Logo-TUDo.png> <./Logo-P
-hysik.png>])
-No file Protokoll.toc.
+hysik.png>]) (./Protokoll.toc)
 \tf@toc=\write4
 \openout4 = `Protokoll.toc'.
+
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2418,10 +2415,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Underfull \hbox (badness 10000) in paragraph at lines 3--7
 
  []
-
-
-LaTeX Warning: Reference `fig:Fourier_Beispiele' on page 2 undefined on input l
-ine 16.
 
 (./Funktionen.tex
 Overfull \hbox (26.70773pt too wide) in paragraph at lines 3--17
@@ -2438,11 +2431,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--22
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 26--17
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2451,7 +2439,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] (./Aufbau_Ablauf.tex)
+])
+Underfull \hbox (badness 10000) in paragraph at lines 26--17
+
+ []
+
+(./Aufbau_Ablauf.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2460,47 +2453,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3] (./Auswertung.tex
 
-LaTeX Warning: Reference `tab:Koeffizienten' on page 4 undefined on input line 
-26.
-
-
-LaTeX Warning: Reference `Synthese_Dreieck' on page 4 undefined on input line 2
-6.
-
-
-LaTeX Warning: Reference `Synthese_Rechteck' on page 4 undefined on input line 
-26.
-
-
-LaTeX Warning: Reference `Synthese_Saege' on page 4 undefined on input line 26.
-
-
-<Synthese_Dreieck.png, id=36, 321.2pt x 192.72pt>
-File: Synthese_Dreieck.png Graphic file (type png)
- <use Synthese_Dreieck.png>
-Package pdftex.def Info: Synthese_Dreieck.png used on input line 32.
-(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
-
-<Synthese_Rechteck.png, id=37, 321.2pt x 192.72pt>
-File: Synthese_Rechteck.png Graphic file (type png)
- <use Synthese_Rechteck.png>
-Package pdftex.def Info: Synthese_Rechteck.png used on input line 40.
-(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Synthese_Saegezahn.png, id=38, 321.2pt x 192.72pt>
-File: Synthese_Saegezahn.png Graphic file (type png)
-
-<use Synthese_Saegezahn.png>
-Package pdftex.def Info: Synthese_Saegezahn.png used on input line 48.
-(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
@@ -2508,50 +2460,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4
 
- <./Synthese_Dreieck.png>]
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./Synthese_Rechteck.png> <./Synthese_Saegezahn.png>]
+[5
 
-LaTeX Warning: Reference `Frequenz_Dreieck' on page 6 undefined on input line 6
-0.
-
-
-LaTeX Warning: Reference `Frequenz_Rechteck' on page 6 undefined on input line 
-60.
-
-
-LaTeX Warning: Reference `Frequenz_Saege' on page 6 undefined on input line 60.
-
-
-
-LaTeX Warning: Reference `tab:Dreieck' on page 6 undefined on input line 60.
-
-
-LaTeX Warning: Reference `tab:Rechteck' on page 6 undefined on input line 60.
-
-
-LaTeX Warning: Reference `tab:Saege' on page 6 undefined on input line 60.
-
-
-LaTeX Warning: Reference `Fourier_Dreieck' on page 6 undefined on input line 60
-.
-
-
-LaTeX Warning: Reference `Fourier_Rechteck' on page 6 undefined on input line 6
-0.
-
-
-LaTeX Warning: Reference `Fourier_Saege' on page 6 undefined on input line 60.
-
-
-LaTeX Warning: Reference `sec:Diskussion' on page 6 undefined on input line 65.
-
-
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2560,17 +2478,18 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6
 
-] <Dreieck.png, id=52, 321.2pt x 192.72pt>
-File: Dreieck.png Graphic file (type png)
- <use Dreieck.png>
-Package pdftex.def Info: Dreieck.png used on input line 78.
-(pdftex.def)             Requested size: 256.07741pt x 153.64981pt.
+] <Saegezahn_Fourier.pdf, id=47, 578.16pt x 433.62pt>
+File: Saegezahn_Fourier.pdf Graphic file (type pdf)
 
-<Dreieck_Fourier.pdf, id=53, 578.16pt x 433.62pt>
-File: Dreieck_Fourier.pdf Graphic file (type pdf)
- <use Dreieck_Fourier.pdf>
-Package pdftex.def Info: Dreieck_Fourier.pdf used on input line 85.
+<use Saegezahn_Fourier.pdf>
+Package pdftex.def Info: Saegezahn_Fourier.pdf used on input line 156.
 (pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2580,116 +2499,49 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7
 
- <./Dreieck.png> <./Dreieck_Fourier.pdf>]
-<Rechteck.png, id=92, 322.49516pt x 193.4971pt>
-File: Rechteck.png Graphic file (type png)
- <use Rechteck.png>
-Package pdftex.def Info: Rechteck.png used on input line 111.
-(pdftex.def)             Requested size: 256.07741pt x 153.65822pt.
-
-<Rechteck_Fourier.pdf, id=93, 578.16pt x 433.62pt>
-File: Rechteck_Fourier.pdf Graphic file (type pdf)
- <use Rechteck_Fourier.pdf>
-Package pdftex.def Info: Rechteck_Fourier.pdf used on input line 118.
-(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
-
-<Saegezahn.png, id=94, 320.94096pt x 192.72pt>
-File: Saegezahn.png Graphic file (type png)
- <use Saegezahn.png>
-Package pdftex.def Info: Saegezahn.png used on input line 149.
-(pdftex.def)             Requested size: 256.07741pt x 153.77039pt.
-
+]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8
-
- <./Rechteck.png> <./Rechteck_Fourier.pdf>]
-<Saegezahn_Fourier.pdf, id=136, 578.16pt x 433.62pt>
-File: Saegezahn_Fourier.pdf Graphic file (type pdf)
-
-<use Saegezahn_Fourier.pdf>
-Package pdftex.def Info: Saegezahn_Fourier.pdf used on input line 156.
-(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
-
+[8 <./Saegezahn_Fourier.pdf>]) (./Diskussion.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9 <./Saegezahn.png> <./Saegezahn_Fourier.pdf>]) (./Diskussion.tex
-
-LaTeX Warning: Reference `Synthese_Dreieck' on page 10 undefined on input line 
-1.
+[9
 
 
-LaTeX Warning: Reference `Synthese_Rechteck' on page 10 undefined on input line
- 1.
-
-
-LaTeX Warning: Reference `Synthese_Saege' on page 10 undefined on input line 1.
-
-
-
-LaTeX Warning: Reference `Synthese_Rechteck' on page 10 undefined on input line
- 2.
-
-
-LaTeX Warning: Reference `Synthese_Saege' on page 10 undefined on input line 2.
-
-
-
-LaTeX Warning: Reference `eq:Abweichung' on page 10 undefined on input line 3.
-
-
-LaTeX Warning: Reference `tab:Fehler' on page 10 undefined on input line 7.
-
-)
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[10
-
-
-] (./Protokoll.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 33207 strings out of 493054
- 724057 string characters out of 6140585
- 828780 words of memory out of 5000000
- 36223 multiletter control sequences out of 15000+600000
+ 33171 strings out of 493054
+ 723283 string characters out of 6140585
+ 828963 words of memory out of 5000000
+ 36192 multiletter control sequences out of 15000+600000
  23689 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,17n,75p,10425b,951s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on Protokoll.pdf (11 pages, 303669 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
+b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Protokoll.pdf (10 pages, 206226 bytes).
 PDF statistics:
- 226 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
