@@ -1,6 +1,7 @@
 \subsection{Relaxationsphänomene allgemein}
 \todo[inline]{Hier bin ich noch überhaupt nicht zufrieden mit den Variablennamen.}
-Der Vorgang, dass ein System aus seinem Ausgangszustand ausgelenkt wird und dann ohne Oszillation zu eben diesem zurückkehrt, wird Relaxation genannt. Je weiter die veränderte Größe $A$ dabei von ihrem Ausgangs- bzw. Endzustand $A_0$ entfernt ist, desto schneller ändert sie sich. Häufig ist dieser Zusammenhang sogar direkt proportional
+Der Vorgang, dass ein System aus seinem Ausgangszustand ausgelenkt wird und dann ohne Oszillation zu eben diesem zurückkehrt, wird Relaxation genannt. Je weiter die veränderte Größe $A$ dabei von ihrem Ausgangs- bzw. Endzustand $A_0$
+\todo[color=red]{Zum Lesen finde ich es angenehmer, wenn der Endzustand $A_\infty $ heißt} entfernt ist, desto schneller ändert sie sich. Häufig ist dieser Zusammenhang sogar direkt proportional
 \begin{align}\label{Rel_allgemein_DGL}
 	\dv{A}{t} (t) = b\left(A(t)-A_0\right) \ .
 \end{align}
@@ -20,6 +21,7 @@ Die zweite Gleichung ist äquivalent zu \eqref{Rel_allgemein_DGL}. Die Lösung e
 \begin{align}
 	Q(t) = CU_0 + \left( Q(0) - CU_0 \right)\mathrm{e}^{-\frac{t}{RC}} \ .
 \end{align}
+\todo[color=red]{Die Zeitkonstante ist nur RC, nicht der Bruch}
 Der als Zeitkonstante bezeichnete Term $\frac{1}{RC}$ ist ein Maß dafür, wie stark das System danach strebt in seine Endposition zu gelangen. Je kleiner die Zeitkonstante ist, desto schneller konvergiert $Q(t)$ gegen seinen Endwert. \glqq Konvergenz\grqq\ ist hier ein wichtiges Stichwort, denn theoretisch ist es unmöglich den Endwert zu erreichen. \\
 \ \\
 Wird nun ein \textbf{Aufladevorgang} betrachtet, so ist $U_0 \not= 0$, da sonst keine Ladungen auf den Kondensator fließen könnten, und $Q(0) = 0$, der Kondensator soll also ungeladen sein. Daraus folgt, dass die Aufladung durch
@@ -44,6 +46,7 @@ gilt für die Spannung am Kondensator
 	U(t) \simeq U_\text{C}(t) \ .
 \end{align}
 Da die Auf- bzw. Entladung des Kondensators aber nicht beliebig schnell stattfindet, sondern durch die Zeitkonstante festgelegt ist, verursacht eine steigende Erregerfrequenz $\omega$ eine Phasenverschiebung zwischen $U(t)$ und $U_\text{C}(t)$. Außerdem sorgt sie dafür, dass der Kondensator sich nicht mehr vollständig aufladen kann, sodass auch die Amplitude $U_{\text{C}0}$ abnimmt. Für die Kondensatorspannung gilt also
+\todo[color=red]{Können wir die Amplitude A nennen? Das hatte ich gestern in der Auswertung so gemacht und jetzt ist es in meinem Kopf drin...}
 \begin{align}
 	U_\text{C} = U_{\text{C}0}(\omega)\cos(\omega t + \varphi(\omega)) \ .
 \end{align}
