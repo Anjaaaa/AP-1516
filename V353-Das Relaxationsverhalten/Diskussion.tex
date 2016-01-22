@@ -1,0 +1,20 @@
+In diesem Versuch werden auf drei verschiedene arten die Zeitkonstanten bestimmt (siehe Tabelle \ref{tab:vergleich}) .\\
+Insgesamt war nur ein einzelner Messwert auffällig. Der erste Wert in der Messreihe der Phasendifferenz ist zu hoch. Aufgrund der Anzahl der Messwerte ist das Endergebnis dadurch jedoch nicht stark verfälscht. \\
+Systematische Fehler können sein, dass die Kabel wie Impedanzen wirken. Als Folge ist am Oszilloskop zu sehen, dass  der Funktionsgenerator für sehr hohe und sehr niedrige Frequenzen keine Dreieck- oder Rechteckspannung erzeugen kann. Auch der Innenwiderstand des Funktionsgenerators kann zu Problemen führen. Zudem treten Rückkopplungseffekte auf, die dazu führen, dass die Amplitude des Signals, das der Funktionsgenerator zu Verfügung stellt nicht -- wir hier angenommen -- konstant ist. \\
+Trotz all dieser potentiellen Fehlerquellen, die sich auch von Methode zu Methode unterschieden bzw. unterschiedlich stark ins Gewicht fallen, können offensichtlich sehr ähnliche Zeitkonstanten erzielt werden. \\
+Die Funktion des RC-Gliedes als Integrator wird durch den letzten Versuchsteil bestätigt.
+
+
+
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Zeitkonstanten durch verschiedene Methoden}
+	\begin{tabular}{l|c}
+		Methode & Zeitkonstante $RC$ \\
+		\hline
+		Aufladekurve des Kondensators & \SI{0.775(9)e-3}{\second} \\
+		Frequenzabhängigkeit der Amplitude & \SI{0,807(9)e-3}{\second} \\
+		Frequenzabhängigkeit der Phasendifferenz &\SI{-0.782(14)e-3}{\second} 
+	\end{tabular}
+	\label{tab:vergleich}
+\end{figure}
