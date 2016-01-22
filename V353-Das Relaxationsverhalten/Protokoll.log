@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  21 JAN 2016 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  22 JAN 2016 09:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2113,29 +2113,7 @@ mappings.tex))) (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(./Protokoll.aux
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 <
-      <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Label `Aufladung' multiply defined.
-
-
-LaTeX Warning: Label `sec:Diskussion' multiply defined.
-
-
-LaTeX Warning: Label `sec:Diskussion' multiply defined.
-
-)
+(./Protokoll.aux)
 \openout1 = `Protokoll.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -2186,22 +2164,6 @@ LaTeX Font Info:    ... okay on input line 6.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-Overfull \hbox (2.0601pt too wide) in paragraph at lines 27--13
-\OT1/cmr/m/n/10.95 28fdc20b31cf6ccfef3636d3b57bdb8f72da99ba               <<<<<
-<< HEAD                    |||||||
- []
-
-
-Overfull \hbox (35.42107pt too wide) in paragraph at lines 27--13
-\OT1/cmr/m/n/10.95 mer-ged com-mon an-ce-stors      =======      >>>>>>> 28fdc2
-0b31cf6ccfef3636d3b57bdb8f72da99ba
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--13
-
- []
-
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count189
 \scratchdimen=\dimen304
@@ -2344,27 +2306,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count196
  (./Titlepage.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
-
-]
-<Logo-TUDo.png, id=11, 255.95625pt x 41.15375pt>
+<Logo-TUDo.png, id=4, 255.95625pt x 41.15375pt>
 File: Logo-TUDo.png Graphic file (type png)
  <use Logo-TUDo.png>
 Package pdftex.def Info: Logo-TUDo.png used on input line 3.
 (pdftex.def)             Requested size: 176.9654pt x 28.45274pt.
 
-<Logo-Physik.png, id=12, 67.912pt x 16.34247pt>
+<Logo-Physik.png, id=5, 67.912pt x 16.34247pt>
 File: Logo-Physik.png Graphic file (type png)
  <use Logo-Physik.png>
 Package pdftex.def Info: Logo-Physik.png used on input line 5.
 (pdftex.def)             Requested size: 118.24051pt x 28.45274pt.
- [1 <./Logo-TUDo.png> <./Logo-Physik.png>]) (./Protokoll.toc)
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Logo-TUDo.png> <./Logo-P
+hysik.png>]) (./Protokoll.toc)
 \tf@toc=\write4
 \openout4 = `Protokoll.toc'.
 
@@ -2483,7 +2439,7 @@ Overfull \hbox (4.51608pt too wide) in paragraph at lines 1--1
 [][][] 
  []
 
-<aufladekurve.png, id=51, 320.94096pt x 192.72pt>
+<aufladekurve.png, id=47, 320.94096pt x 192.72pt>
 File: aufladekurve.png Graphic file (type png)
  <use aufladekurve.png>
 Package pdftex.def Info: aufladekurve.png used on input line 34.
@@ -2492,7 +2448,7 @@ Package pdftex.def Info: aufladekurve.png used on input line 34.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Spannung1.png, id=52, 578.16pt x 433.62pt>
+<Spannung1.png, id=48, 578.16pt x 433.62pt>
 File: Spannung1.png Graphic file (type png)
  <use Spannung1.png>
 Package pdftex.def Info: Spannung1.png used on input line 41.
@@ -2501,7 +2457,7 @@ Package pdftex.def Info: Spannung1.png used on input line 41.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Spannung2.png, id=53, 578.16pt x 433.62pt>
+<Spannung2.png, id=49, 578.16pt x 433.62pt>
 File: Spannung2.png Graphic file (type png)
  <use Spannung2.png>
 Package pdftex.def Info: Spannung2.png used on input line 48.
@@ -2535,7 +2491,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./Spannung2.png>] <Amplitude.png, id=66, 578.16pt x 433.62pt>
+[8 <./Spannung2.png>] <Amplitude.png, id=63, 578.16pt x 433.62pt>
 File: Amplitude.png Graphic file (type png)
 
 <use Amplitude.png>
@@ -2569,41 +2525,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [10
 
-] (./Protokoll.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 29920 strings out of 493105
- 658912 string characters out of 6137071
- 742147 words of memory out of 5000000
- 32879 multiletter control sequences out of 15000+600000
+ 29919 strings out of 493105
+ 658901 string characters out of 6137071
+ 742069 words of memory out of 5000000
+ 32878 multiletter control sequences out of 15000+600000
  31054 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,15n,80p,10425b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Protokoll.pdf (12 pages, 323785 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Protokoll.pdf (11 pages, 322929 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 131 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
