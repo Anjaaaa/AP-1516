@@ -7,7 +7,7 @@ from tabulate import tabulate
 
 t, U = np.genfromtxt('4a.txt', unpack=True)
 t = t*10**-6 #Mikrosekunden in Sekunden
-U_0 = 20.0
+U_0 = 19.4
 
 plt.plot(t,U_0-U, 'rx', label='Spannung ($U_0-U$) \ Volt')
 plt.ylabel('Spannung ($U_0-U$) / V')

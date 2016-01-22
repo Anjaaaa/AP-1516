@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
+from tabulate import tabulate
 
 f, A, a = np.genfromtxt('4bc.txt', unpack = True)
 a = a * 10**(-6) #mikrosekunde in sekunde
-U_0 = 20
+U_0 = 19.4
 
 
 #Pasenverschiebung
@@ -36,6 +37,12 @@ plt.yticks([0, np.pi/8 , np.pi / 4, 3*np.pi /8, np.pi / 2],[r"$0$", r"$\frac{1}{
 plt.savefig('Phasenverschub1.png')
 plt.show()
 
+
+tabelle = np.array([f , a*10**3, phi])
+tabelle = np.around(tabelle, decimals=2)
+f = open('tabelle3.tex', 'w')
+f.write(tabulate(tabelle.T, tablefmt="latex"))
+
 #Aufgabe 4d:
 r = np.linspace(0, 10, 500)
 theta = 2 * np.pi * r
@@ -52,4 +59,5 @@ i = np.arange(0,len(phi), 2) #nur jeden zweiten wert plotten
 plt.polar(phi2, A2(phi2))
 plt.polar(phi[i], A[i]/U_0, 'rx')
 plt.polar(phi2, A3(phi2), 'g-')
+plt.savefig('Phasenverschub2.png')
 plt.show()

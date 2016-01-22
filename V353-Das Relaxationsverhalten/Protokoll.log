@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  22 JAN 2016 09:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.11.17)  21 JAN 2016 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2342,20 +2342,17 @@ Overfull \hbox (4.51608pt too wide) in paragraph at lines 4--4
  []
 
 
-Overfull \hbox (4.51608pt too wide) in paragraph at lines 5--5
+Overfull \hbox (4.51608pt too wide) in paragraph at lines 24--24
 [][][] 
  []
 
 
-Overfull \hbox (4.51608pt too wide) in paragraph at lines 5--5
+Overfull \hbox (4.51608pt too wide) in paragraph at lines 24--24
 [][][] 
  []
 
 
-LaTeX Warning: Marginpar on page 2 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--28
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
 
  []
 
@@ -2390,26 +2387,13 @@ Overfull \hbox (4.51608pt too wide) in paragraph at lines 50--50
  []
 
 
-Overfull \hbox (4.51608pt too wide) in paragraph at lines 51--51
-[][][] 
- []
-
-
-Overfull \hbox (4.51608pt too wide) in paragraph at lines 51--51
-[][][] 
- []
-
-
-LaTeX Warning: Marginpar on page 3 moved.
-
-
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 75--78
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
  []
 
@@ -2439,28 +2423,25 @@ Overfull \hbox (4.51608pt too wide) in paragraph at lines 1--1
 [][][] 
  []
 
-<aufladekurve.png, id=47, 320.94096pt x 192.72pt>
+<aufladekurve.png, id=48, 320.94096pt x 192.72pt>
 File: aufladekurve.png Graphic file (type png)
  <use aufladekurve.png>
-Package pdftex.def Info: aufladekurve.png used on input line 34.
+Package pdftex.def Info: aufladekurve.png used on input line 33.
 (pdftex.def)             Requested size: 298.75264pt x 179.39534pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Spannung1.png, id=48, 578.16pt x 433.62pt>
+<Spannung1.png, id=49, 578.16pt x 433.62pt>
 File: Spannung1.png Graphic file (type png)
  <use Spannung1.png>
-Package pdftex.def Info: Spannung1.png used on input line 41.
+Package pdftex.def Info: Spannung1.png used on input line 40.
 (pdftex.def)             Requested size: 298.75264pt x 224.06114pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Spannung2.png, id=49, 578.16pt x 433.62pt>
+<Spannung2.png, id=50, 578.16pt x 433.62pt>
 File: Spannung2.png Graphic file (type png)
  <use Spannung2.png>
-Package pdftex.def Info: Spannung2.png used on input line 48.
+Package pdftex.def Info: Spannung2.png used on input line 47.
 (pdftex.def)             Requested size: 298.75264pt x 224.06114pt.
 
 
@@ -2477,37 +2458,29 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6
 
-]
+ <./aufladekurve.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./aufladekurve.png> <./Spannung1.png>]
+[7 <./Spannung1.png> <./Spannung2.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./Spannung2.png>] <Amplitude.png, id=63, 578.16pt x 433.62pt>
+[8] <Amplitude.png, id=64, 578.16pt x 433.62pt>
 File: Amplitude.png Graphic file (type png)
-
-<use Amplitude.png>
-Package pdftex.def Info: Amplitude.png used on input line 91.
+ <use Amplitude.png>
+Package pdftex.def Info: Amplitude.png used on input line 90.
 (pdftex.def)             Requested size: 298.75264pt x 224.06114pt.
 
-Overfull \hbox (4.51608pt too wide) in paragraph at lines 96--96
-[][][] 
- []
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Overfull \hbox (4.51608pt too wide) in paragraph at lines 96--96
-[][][] 
- []
-
-)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2516,46 +2489,140 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9
 
- <./Amplitude.png>] (./Diskussion.tex)
+ <./Amplitude.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10
+[10] <Phasenverschub1.png, id=72, 578.16pt x 433.62pt>
+File: Phasenverschub1.png Graphic file (type png)
+
+<use Phasenverschub1.png>
+Package pdftex.def Info: Phasenverschub1.png used on input line 165.
+(pdftex.def)             Requested size: 298.75264pt x 224.06114pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11
+
+ <./Phasenverschub1.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+Overfull \hbox (16.99855pt too wide) in paragraph at lines 210--211
+\OT1/cmr/m/n/10.95 Unter Ber[]ucksichtigung der Be-zie-hung $[][](\OML/cmm/m/it
+/10.95 ^^^\OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 ![]R[]C[]$ \OT1/cmr/m/n/10
+.95 kann die Am-pli-tu-de in Abh[]angigkeit
+ []
+
+<Phasenverschub2.png, id=81, 578.16pt x 433.62pt>
+File: Phasenverschub2.png Graphic file (type png)
+ <use Phasenverschub2.png>
+Package pdftex.def Info: Phasenverschub2.png used on input line 218.
+(pdftex.def)             Requested size: 298.75264pt x 224.06114pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13
+
+ <./Phasenverschub2.png>] <MAP002.png, id=86, 321.3606pt x 192.72pt>
+File: MAP002.png Graphic file (type png)
+
+<use MAP002.png>
+Package pdftex.def Info: MAP002.png used on input line 256.
+(pdftex.def)             Requested size: 298.75264pt x 179.16891pt.
+ <MAP003.png, id=87, 320.94096pt x 192.72pt>
+File: MAP003.png Graphic file (type png)
+ <use MAP003.png>
+Package pdftex.def Info: MAP003.png used on input line 263.
+(pdftex.def)             Requested size: 298.75264pt x 179.39534pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<MAP004.png, id=88, 321.8424pt x 193.2018pt>
+File: MAP004.png Graphic file (type png)
+ <use MAP004.png>
+Package pdftex.def Info: MAP004.png used on input line 270.
+(pdftex.def)             Requested size: 298.75264pt x 179.35446pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14
+
+ <./MAP002.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <./MAP003.png> <./MAP004.png>] (./Diskussion.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16
 
 ] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 29919 strings out of 493105
- 658901 string characters out of 6137071
- 742069 words of memory out of 5000000
- 32878 multiletter control sequences out of 15000+600000
+ 29939 strings out of 493105
+ 659121 string characters out of 6137071
+ 738916 words of memory out of 5000000
+ 32893 multiletter control sequences out of 15000+600000
  31054 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,15n,80p,10425b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,19n,80p,10425b,949s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Protokoll.pdf (11 pages, 322929 bytes).
+bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on Protokoll.pdf (17 pages, 545405 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 165 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
