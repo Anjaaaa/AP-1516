@@ -9,6 +9,8 @@ from tabulate import tabulate
 f, A, a = np.genfromtxt('4bc.txt', unpack = True)
 a = a * 10**(-6) #mikrosekunde in sekunde
 A = A/2 #Peak to Peak Amplitude gemessen
+A_err = 0.01
+f_err = 1
 
 
 def  g(f, b, c, d):
@@ -33,7 +35,8 @@ print(popt)
 
 
 x = np.linspace(0,1400)
-plt.plot(f, A, 'rx')
+plt.errorbar(f, A, xerr=f_err, yerr=A_err, fmt='r.')
+#plt.plot(f, A, 'rx')
 plt.plot(x, g(x, *parameter), 'b-')
 plt.ylabel('Amplitude / V')
 plt.xlabel('Frequenz / Hz')

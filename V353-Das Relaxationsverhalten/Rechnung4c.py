@@ -9,6 +9,11 @@ f, A, a = np.genfromtxt('4bc.txt', unpack = True)
 a = a * 10**(-6) #mikrosekunde in sekunde
 U_0 = 19.4
 
+f_gesamt = unp.uarray(f, 1)
+a_gesamt = unp.uarray(a, 8*10**-6)
+phi_gesamt = 2 * np.pi * f_gesamt * a_gesamt
+print(phi_gesamt)
+
 
 #Pasenverschiebung
 phi = 2 * np.pi * a * f
@@ -28,7 +33,8 @@ print('Zeitkonstante', c)
 print(popt)
 
 x = np.linspace(0, 1400)
-plt.plot(f, phi, 'rx')
+#plt.plot(f, phi, 'rx')
+plt.errorbar(f, phi, xerr=1, yerr=unp.std_devs(phi_gesamt), fmt='r.')
 plt.plot(x, g(x, *parameters), 'b-')
 plt.ylabel('Winkel in Bogenmaß')
 plt.xlabel('Frequenz / Hz')
@@ -38,9 +44,10 @@ plt.savefig('Phasenverschub1.png')
 plt.show()
 
 
-tabelle = np.array([f , a*10**3, phi])
+tabelle = np.array([f , a*10**3, phi, unp.std_devs(phi_gesamt)*100])
 tabelle = np.around(tabelle, decimals=2)
 f = open('tabelle3.tex', 'w')
+print(tabulate(tabelle.T, tablefmt="latex"))
 f.write(tabulate(tabelle.T, tablefmt="latex"))
 
 #Aufgabe 4d:
