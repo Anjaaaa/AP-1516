@@ -5,16 +5,20 @@ Trotz all dieser potentiellen Fehlerquellen, die sich von Methode zu Methode unt
 
 \begin{figure}[h!]
 	\centering
-	\captionof{table}{Zeitkonstanten durch verschiedene Methoden}
-	\begin{tabular}{l|c}
-		Methode & Zeitkonstante $RC$ \\
+	\captionof{table}{Zeitkonstanten und Abweichung vom arithmetischen Mittel}
+	\begin{tabular}{l|c|c}
+		Methode & Zeitkonstante $RC$ & Abweichung  \\
 		\hline
-		Aufladekurve des Kondensators & \SI{0.775(9)e-3}{\second} \\
-		Frequenzabhängigkeit der Amplitude & \SI{0,807(9)e-3}{\second} \\
-		Frequenzabhängigkeit der Phasendifferenz &\SI{-0.782(14)e-3}{\second} 
+		Aufladekurve des Kondensators & \SI{0.775(9)e-3}{\second} & -1.69 \%\\
+		Frequenzabhängigkeit der Amplitude & \SI{0,807(9)e-3}{\second} & 2.37 \%\\
+		Frequenzabhängigkeit der Phasendifferenz &\SI{-0.782(14)e-3}{\second} & -0.68 \% \\
+		\hline
+		Arthmetisches Mittel & \SI{0.788e-3}{\second} & 
 	\end{tabular}
 	\label{tab:vergleich}
 \end{figure}
+
+
 		
 Innerhalb der einzelnen Regressionen kann an manchen Fitparametern \eqref{eq:u_reg}, \eqref{eq:b} und \eqref{eq:d} und  erkannt werden, ob ein Fehler vorliegt. Diese Parameter sind in Tabelle \ref{tab:fitparameter} im Vergleich zu den erwarteten Werten dargestellt. \\
 Die Funktion des RC-Gliedes als Integrator wird durch den letzten Versuchsteil bestätigt.
