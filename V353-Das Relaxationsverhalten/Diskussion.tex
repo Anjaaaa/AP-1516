@@ -1,10 +1,7 @@
-In diesem Versuch werden auf drei verschiedene arten die Zeitkonstanten bestimmt (siehe Tabelle \ref{tab:vergleich}) .\\
-Insgesamt war nur ein einzelner Messwert auffällig. Der erste Wert in der Messreihe der Phasendifferenz ist zu hoch. Aufgrund der Anzahl der Messwerte ist das Endergebnis dadurch jedoch nicht stark verfälscht. \\
-Systematische Fehler können sein, dass die Kabel wie Impedanzen wirken. Als Folge ist am Oszilloskop zu sehen, dass  der Funktionsgenerator für sehr hohe und sehr niedrige Frequenzen keine Dreieck- oder Rechteckspannung erzeugen kann. Auch der Innenwiderstand des Funktionsgenerators kann zu Problemen führen. Zudem treten Rückkopplungseffekte auf, die dazu führen, dass die Amplitude des Signals, das der Funktionsgenerator zu Verfügung stellt nicht -- wir hier angenommen -- konstant ist. \\
-Trotz all dieser potentiellen Fehlerquellen, die sich auch von Methode zu Methode unterschieden bzw. unterschiedlich stark ins Gewicht fallen, können offensichtlich sehr ähnliche Zeitkonstanten erzielt werden. \\
-Die Funktion des RC-Gliedes als Integrator wird durch den letzten Versuchsteil bestätigt.
-
-
+In diesem Versuch werden auf drei verschiedene Arten die Zeitkonstanten bestimmt (siehe Tabelle \ref{tab:vergleich}) .\\
+Insgesamt weicht nur ein einzelner gemessener Wert auffällig von den anderen ab. Der erste Wert in der Messreihe der Phasendifferenz ist zu hoch. Aufgrund der Anzahl der Messwerte ist das Endergebnis dadurch jedoch wahrscheinlich nicht verfälscht. \\
+\textbf{Systematische Fehler} können sein, dass  der Funktionsgenerator für sehr hohe und sehr niedrige Frequenzen keine Dreieck- oder Rechteckspannung erzeugen kann, was am Oszilloskop beobachtet werden kann. Auch der Innenwiderstand des Funktionsgenerators kann zu Problemen führen. Zudem treten Rückkopplungseffekte zwischen Stromkreis und Funktionsgenerator auf, die bewirken, dass die Amplitude des Signals, das der Funktionsgenerator zu Verfügung stellt nicht -- wir hier angenommen -- konstant ist. \\
+Trotz all dieser potentiellen Fehlerquellen, die sich von Methode zu Methode unterscheiden bzw. unterschiedlich stark ins Gewicht fallen, können offensichtlich sehr ähnliche Zeitkonstanten bestimmt werden. \\
 
 \begin{figure}[h!]
 	\centering
@@ -17,4 +14,24 @@ Die Funktion des RC-Gliedes als Integrator wird durch den letzten Versuchsteil b
 		Frequenzabhängigkeit der Phasendifferenz &\SI{-0.782(14)e-3}{\second} 
 	\end{tabular}
 	\label{tab:vergleich}
+\end{figure}
+		
+Innerhalb der einzelnen Regressionen kann an manchen Fitparametern \eqref{eq:u_reg}, \eqref{eq:b} und \eqref{eq:d} und  erkannt werden, ob ein Fehler vorliegt. Diese Parameter sind in Tabelle \ref{tab:fitparameter} im Vergleich zu den erwarteten Werten dargestellt. \\
+Die Funktion des RC-Gliedes als Integrator wird durch den letzten Versuchsteil bestätigt.
+
+
+
+
+
+\begin{figure}[h!]
+\centering
+\captionof{table}{Abweichung der Fitparametern von erwarteten Werten}
+\begin{tabular}{c|c|c|c}
+	Parameter & Verweis & erwartet & berechnet \\
+	\hline
+	$U_\text{reg}$ & \eqref{eq:u_reg}  & $U_0 = \SI{19.4}{\volt} & \SI{20,3(5)}{\volt} \\
+	$b$ & \eqref{eq:b} & $\frac{1}{2} U_0 = 9.7 &  \SI{9,28(4)}{\volt} \\
+	$d$ & \eqref{eq:d} & \SI{0}{\volt} (kein Offset) &  \SI{0.27(3)}{\volt}
+\end{tabular}
+\label{tab:fitparameter}
 \end{figure}

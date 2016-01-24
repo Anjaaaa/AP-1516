@@ -18,7 +18,7 @@ In Abbildung \ref{fig:spannung1} ist die Differenz der angelegten Spannung und d
 	&m = \SI{-1290.4(150)}{\second} \\
 	&b = \num{3.011(25)} \\
 	&\text{Zeitkonstante:} \quad RC = - \frac{1}{m} = \SI{0.775(9)e-3}{\second} \\
-	&\text{Berechnete Ausgangsspannung:} \quad U_{0\text{reg}} = e ^b \, \si{\volt} = \SI{20,3(5)}{\volt}
+	&\text{Berechnete Ausgangsspannung:} \quad U_{\text{reg}} = e ^b \, \si{\volt} = \SI{20,3(5)}{\volt} \label{eq:u_reg}
 \end{align}
 
 
@@ -75,7 +75,7 @@ In Abbildung \ref{fig:spannung1} ist die Differenz der angelegten Spannung und d
 		2.2 &  0.18 &  1.67 \\
 		2.5 & -0.22 &  2.50  \\
 		2.8 & -0.51 &  3.33 \\
-		3.1 & -0.92 &  5 .00   \\
+		3.1 & -0.92 &  5.00   \\
 		3.4 & -1.61 & 10.00    \\
 	\end{tabular}
 	\label{tab:aufladekurve}
@@ -104,9 +104,9 @@ A(\nu) = \frac{b}{\sqrt{1+(2\pi \nu)^2 e)}} + d
 Wobei $b$ der Amplitude der angelegten Sinusfunktion sein sollte, $e$ die Wurzel der Zeitkonstante und d einen Offstets des Gerätes angeben würde, falls es einen gibt.
 Die Werte aus Tabelle \ref{tab:amplitude} liefern folgende Fit-Parameter:
 \begin{align}
-	b &=  \SI{9,28(4)}{\volt}\\
+	b &=  \SI{9,28(4)}{\volt} \label{eq:b} \\
 	c &=  \SI{6.51(14)e-7}{\second\squared} \\
-	d &=  \SI{0.27(3)}{\volt} \\
+	d &=  \SI{0.27(3)}{\volt} \label{eq:d}\\
 	RC &= \SI{0,807(9)e-3}{\second}
 \end{align}
 
@@ -157,7 +157,7 @@ Die Werte aus Tabelle \ref{tab:amplitude} liefern folgende Fit-Parameter:
 
 \clearpage
 \subsubsection{... durch die frequenzabhängige Phasenverschiebung}
-Auch in diesem Abschnitt wird durch eine nichtlineare Regression die Zeitkonstante Bestimmt. Die Phasendifferenz zwischen Eingangs- und Ausgangssignal bei einer Sinusspannung sind nach Formel (VERWEIS) Frequenzabhängig. Die Phasendifferenz wird mit Oszilloskop ermittelt, indem der Abstand $a$ zweier Kurven bei bekannter Frequenz $\nu$ gemessen wird
+Auch in diesem Abschnitt wird durch eine nichtlineare Regression die Zeitkonstante Bestimmt. Die Phasendifferenz zwischen Eingangs- und Ausgangssignal bei einer Sinusspannung sind nach Formel \eqref{eq:phase} Frequenzabhängig. Die Phasendifferenz wird mit Oszilloskop ermittelt, indem der Abstand $a$ zweier Kurven bei bekannter Frequenz $\nu$ gemessen wird
 \begin{equation}
 \phi = 2 \pi a \nu \quad .
 \end{equation}
