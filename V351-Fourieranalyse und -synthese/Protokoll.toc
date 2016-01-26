@@ -3,8 +3,8 @@
 \contentsline {section}{\numberline {2}Experimenteller Aufbau}{3}
 \contentsline {section}{\numberline {3}Auswertung}{4}
 \contentsline {subsection}{\numberline {3.1}Fouriersynthese}{4}
-\contentsline {subsection}{\numberline {3.2}Fourieranalyse}{5}
-\contentsline {subsubsection}{\numberline {3.2.1}Dreiecksignal}{6}
-\contentsline {subsubsection}{\numberline {3.2.2}Rechtecksignal}{7}
-\contentsline {subsubsection}{\numberline {3.2.3}S\IeC {\"a}gezahnsignal}{7}
-\contentsline {section}{\numberline {4}Diskussion}{9}
+\contentsline {subsection}{\numberline {3.2}Fourieranalyse}{7}
+\contentsline {subsubsection}{\numberline {3.2.1}Dreiecksignal}{8}
+\contentsline {subsubsection}{\numberline {3.2.2}Rechtecksignal}{9}
+\contentsline {subsubsection}{\numberline {3.2.3}S\IeC {\"a}gezahnsignal}{9}
+\contentsline {section}{\numberline {4}Diskussion}{12}
