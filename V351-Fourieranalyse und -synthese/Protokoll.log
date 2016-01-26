@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  20 JAN 2016 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2015.11.20)  26 JAN 2016 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2444,14 +2444,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--17
 
  []
 
-(./Aufbau_Ablauf.tex)
+(./Aufbau_Ablauf.tex <Lissajous.pdf, id=34, 122.1363pt x 67.2111pt>
+File: Lissajous.pdf Graphic file (type pdf)
+
+<use Lissajous.pdf>
+Package pdftex.def Info: Lissajous.pdf used on input line 5.
+(pdftex.def)             Requested size: 106.69783pt x 58.71623pt.
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3] (./Auswertung.tex
+[3 <./Lissajous.pdf>] (./Auswertung.tex
+<Synthese_Dreieck.png, id=45, 321.2pt x 192.72pt>
+File: Synthese_Dreieck.png Graphic file (type png)
+ <use Synthese_Dreieck.png>
+Package pdftex.def Info: Synthese_Dreieck.png used on input line 32.
+(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Synthese_Rechteck.png, id=46, 321.2pt x 192.72pt>
+File: Synthese_Rechteck.png Graphic file (type png)
+ <use Synthese_Rechteck.png>
+Package pdftex.def Info: Synthese_Rechteck.png used on input line 40.
+(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Synthese_Saegezahn.png, id=47, 321.2pt x 192.72pt>
+File: Synthese_Saegezahn.png Graphic file (type png)
+
+<use Synthese_Saegezahn.png>
+Package pdftex.def Info: Synthese_Saegezahn.png used on input line 48.
+(pdftex.def)             Requested size: 384.1096pt x 230.47179pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2467,18 +2501,63 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5
-
-]
+[5 <./Synthese_Dreieck.png> <./Synthese_Rechteck.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6
+[6 <./Synthese_Saegezahn.png>]
 
-] <Saegezahn_Fourier.pdf, id=47, 578.16pt x 433.62pt>
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7
+
+] <Dreieck_Fourier.pdf, id=64, 578.16pt x 433.62pt>
+File: Dreieck_Fourier.pdf Graphic file (type pdf)
+
+<use Dreieck_Fourier.pdf>
+Package pdftex.def Info: Dreieck_Fourier.pdf used on input line 85.
+(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8
+
+ <./Dreieck_Fourier.pdf>] <Rechteck.png, id=103, 322.49516pt x 193.4971pt>
+File: Rechteck.png Graphic file (type png)
+
+<use Rechteck.png>
+Package pdftex.def Info: Rechteck.png used on input line 111.
+(pdftex.def)             Requested size: 256.07741pt x 153.65822pt.
+ <Rechteck_Fourier.pdf, id=104, 578.16pt x 433.62pt>
+File: Rechteck_Fourier.pdf Graphic file (type pdf)
+
+<use Rechteck_Fourier.pdf>
+Package pdftex.def Info: Rechteck_Fourier.pdf used on input line 118.
+(pdftex.def)             Requested size: 256.07741pt x 192.05714pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Saegezahn.png, id=105, 320.94096pt x 192.72pt>
+File: Saegezahn.png Graphic file (type png)
+ <use Saegezahn.png>
+Package pdftex.def Info: Saegezahn.png used on input line 149.
+(pdftex.def)             Requested size: 256.07741pt x 153.77039pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Saegezahn_Fourier.pdf, id=106, 578.16pt x 433.62pt>
 File: Saegezahn_Fourier.pdf Graphic file (type pdf)
 
 <use Saegezahn_Fourier.pdf>
@@ -2497,31 +2576,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7
-
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[8 <./Saegezahn_Fourier.pdf>]) (./Diskussion.tex)
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 [9
+
+ <./Rechteck.png> <./Rechteck_Fourier.pdf>]
+
+LaTeX Warning: Text page 10 contains only floats.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <./Saegezahn.png> <./Saegezahn_Fourier.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]) (./Diskussion.tex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12
 
 
 ] (./Protokoll.aux) ) 
 Here is how much of TeX's memory you used:
- 33171 strings out of 493054
- 723283 string characters out of 6140585
- 828963 words of memory out of 5000000
- 36192 multiletter control sequences out of 15000+600000
+ 33212 strings out of 493054
+ 724150 string characters out of 6140585
+ 828978 words of memory out of 5000000
+ 36225 multiletter control sequences out of 15000+600000
  23689 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,17n,75p,10425b,951s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2538,10 +2627,10 @@ fonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pf
 b></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Protokoll.pdf (10 pages, 206226 bytes).
+Output written on Protokoll.pdf (13 pages, 309004 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 245 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

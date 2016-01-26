@@ -82,13 +82,17 @@ print('nu_minus berechnet aus den Schwingungen pro Bauch:', nu_min)
 # Theoretische Werte
 
 L = 23.954 / 1000
-C = ( 0.7932 + 0.028 ) / 1000000000
+C_p = ( 0.7932 + 0.028 ) / 1000000000
 C_k /= 1000000000
+C_m = (C_k * 0.7932/1000000000)/  (2*0.7932/1000000000+C_k)   + 0.028/1000000000
 
-nu_p = 1 / (2*np.pi*np.sqrt(L*C))
-nu_m = 1 / (2*np.pi*np.sqrt(L / (1/C + 2/C_k)))
+print('C:', C_m)
+nu_p = 1 / (2*np.pi*np.sqrt(L*C_p))
 print('Erwartete Frequenz +:', nu_p)
+
+nu_m = 1 / (2*np.pi*np.sqrt(L * C_m))
 print('Erwartete Frequenz -:', nu_m)
+
 
 n_e = n(nu_p,nu_m)
 
