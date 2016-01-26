@@ -1,6 +1,7 @@
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{}
+	\caption{}
 	\label{fig:}
 \end{figure}
 
