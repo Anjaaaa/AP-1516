@@ -8,64 +8,94 @@ from uncertainties.umath import *
 
 
 
-t_klein, t_groß = np.genfromtxt('Daten_Zeit.txt', unpack = True)
-T, t_T = np.genfromtxt('Daten_Temperatur.txt', unpack = True)
-d_groß, d_klein = np.genfromtxt('Daten_Kugel.txt', unpack = True)
+zeitKlein, zeitGroß = np.genfromtxt('Daten_Zeit.txt', unpack = True)
+temp, zeitTemp1, zeitTemp2 = np.genfromtxt('Daten_Temperatur.txt', unpack = True)
+dickeGroß, dickeKlein = np.genfromtxt('Daten_Kugel.txt', unpack = True)
 
 
-t_klein = ufloat(np.mean(t_klein), np.std(t_klein)/np.sqrt(len(t_klein)))
-t_groß = ufloat(np.mean(t_groß), np.std(t_groß)/np.sqrt(len(t_groß)))
-d_groß = ufloat(np.mean(d_groß), np.std(d_groß)/np.sqrt(len(d_groß))) / 1000
-d_klein = ufloat(np.mean(d_klein), np.std(d_klein)/np.sqrt(len(d_klein))) / 1000
+zeitKlein = ufloat(np.mean(zeitKlein), np.std(zeitKlein)/np.sqrt(len(zeitKlein)))
+zeitGroß = ufloat(np.mean(zeitGroß), np.std(zeitGroß)/np.sqrt(len(zeitGroß)))
 
-m_klein = 4.44 / 1000
-m_groß = 4.63 / 1000
+print('Zeit klein:', zeitKlein)
+print('Zeit groß:', zeitGroß)
 
 
-S = 0.10      # Fallweite
+temp = temp + 273.15
+zeitTempMittel = (zeitTemp1 + zeitTemp2) / 2
+zeitTempStd = np.sqrt((zeitTempMittel-zeitTemp1)**2 + (zeitTempMittel-zeitTemp2)**2)
+zeitTemp = unp.uarray(np.zeros(len(zeitTempMittel)), np.zeros(len(zeitTempMittel)))
+for i in range(0, len(zeitTempMittel)):
+     zeitTemp[i] = ufloat(zeitTempMittel[i], zeitTempStd[i]/np.sqrt(2))
+
+print('ZEIT:', zeitTemp)
+
+
+dickeGroß = ufloat(np.mean(dickeGroß), np.std(dickeGroß)/np.sqrt(len(dickeGroß))) / 1000
+dickeKlein = ufloat(np.mean(dickeKlein), np.std(dickeKlein)/np.sqrt(len(dickeKlein))) / 1000
+
+print('Durchmesser Groß:', dickeGroß)
+print('Durchmesser Klein:', dickeKlein)
+print('Volumen Groß:', 4/3*np.pi*(dickeGroß/2)**3)
+print('Volumen Klein:', 4/3*np.pi*(dickeKlein/2)**3)
+
+masseKlein = 4.44 / 1000
+masseGroß = 4.63 / 1000
+
+
+dichteWasser = 1000
+fallweite = 0.10
 K_klein = 0.07640 / 1000
 
+dichteKlein = masseKlein / ( 4/3*np.pi*(dickeKlein/2)**3 )
+dichteGroß = masseGroß / ( 4/3*np.pi*(dickeGroß/2)**3 )
 
-dichte_klein = m_klein / ( 4/3*np.pi*(d_klein/2)**3 )
-dichte_groß = m_groß / ( 4/3*np.pi*(d_groß/2)**3 )
-
-print('Dichte der kleinen Kugel:', dichte_klein)
-print('Dichte der großen Kugel:', dichte_groß)
+print('Dichte der kleinen Kugel:', dichteKlein)
+print('Dichte der großen Kugel:', dichteGroß)
 
 
-visk_20 = K_klein * (dichte_klein - 1) * t_klein
-K_groß = visk_20 / (dichte_groß - 1) / t_groß
+visk20 = K_klein * (dichteKlein - dichteWasser) * zeitKlein
+K_groß = visk20 / (dichteGroß - dichteWasser) / zeitGroß
 
-print('Viskosität bei 20 Grad:', visk_20)
+print('Viskosität bei 20 Grad:', visk20)
 print('Apparatekonstante große Kugel:', K_groß)
 
-visk = (K_groß * (dichte_groß - 1)) * t_T
+viskTemp = K_groß * (dichteGroß - dichteWasser) * zeitTemp
 
+print('Viskosität Temp:', viskTemp)
 
 def  f(X, a, b):
     return a * X + b
 
-X = 1/T
-#Y = log(visk.n)
-for i in range(0,len(visk)):
-	print(visk[i].n)
+X = 1/temp
+Y = np.zeros(len(X))
 
-#parameters, popt = curve_fit(f, X, Y)
-#X = np.linspace(0, 0.07)
-#plt.plot(X, f(X, parameters[0], parameters[1]), 'b-')
-#plt.plot(X, Y, 'rx')
+print('X:', X)
+
+for i in range(0,len(X)):
+	Y[i] = log(viskTemp[i].n)
+
+print('Y:', Y)
+
+parameters, popt = curve_fit(f, X, Y)
+x = np.linspace((np.min(X)-0.00001), (np.max(X)+0.00001))
+plt.plot(x*1000, f(x, parameters[0], parameters[1]), 'b-', label = 'Regressionsgerade')
+plt.plot(X*1000, Y, 'rx', label = 'Werte')
+plt.legend(loc='best')
+
+plt.ylabel('$\ln(\eta)$')
+plt.xlabel('$\degree C/T \ 10^{-3}$')
+
+plt.savefig('Regression.png')
+plt.show()
 
 
-#plt.ylabel('$\ln(\eta)$')
-#plt.xlabel('1/T')
+print('Steigung:', parameters[0], '+/-', np.sqrt(popt[0,0]))
+print('y-Achsenabschnitt:', parameters[1], '+/-', np.sqrt(popt[1,1]))
+A = np.exp(parameters[1])
+AStd = np.exp(np.sqrt(popt[1,1]))
+print('A:', A, '+/-', AStd)
 
-#plt.savefig('')
-#plt.show()
-
-
-
-v = S / t_T
-
-R = v * d_groß / visk
-print(v)
-print(R)
+vFluid = fallweite / zeitTemp
+#reinold = (fallweite * dickeGroß * dichteWasser) / (zeitTemp**2 * K_groß * (dichteGroß - dichteWasser))
+reinold = vFluid * dickeGroß * dichteWasser / viskTemp
+print('Reinolds-Zahl:', reinold)

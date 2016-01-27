@@ -1,6 +1,7 @@
 In diesem Versuch geht es darum die Temperaturabhängigkeit der Viskosität von destilliertem Wasser zu bestimmen. \\
 Die \textbf{dynamische Viskosität} $\eta$ ist ein Maß für die Zähigkeit eines Materials, die auf innere Reibungen zurückzuführen ist. Wenn eine Kugel unter Einwirkung der Gravitationskraft durch eine Flüssigkeit fällt, ist sie in einem zäheren Medium d.h. einem Medium mit einer höheren dynamischen Viskosität langsamer. Die Fallzeit $t$ ist entsprechend größer. Die Viskosität ist des weiteren abhängig von der Geometrie des fallendem Körpers $K$ und dessen effektive Dichte $ (\rho_\text{K}-\rho_\text{Fl}) $.
 \begin{equation}
+\label{Visk}
 \eta = K \cdot (\rho_\text{K} - \rho_\text{Fl}) \cdot  t
 \end{equation}
 Als Innere Reibung wird die \textbf{Stokesche Reibung} abgenommen, die proportional zur Geschwindigkeit $v$ und dem Radius $r$ einer fallenden Kugel ist.
@@ -8,10 +9,14 @@ Als Innere Reibung wird die \textbf{Stokesche Reibung} abgenommen, die proportio
 F_\text{R} = 6\pi \eta v r
 \end{equation}
 Eine solche Strömung um die Kugel ist laminar und im Gegensatz zu turbulenten Strömungen wirbelfrei. Eine laminare Strömung in einem Zylinder liegt vor, wenn die charakteristische \textbf{Reynoldsche Zahl} sehr klein ist.\footnote{D. Getschke, Physikalisches Praktikum, Teubner Verlagsgesellschaft, 9.Auflage, 1992, S.86}
+\todo{Hier hattest du $r$ statt $d$ stehen. Das habe ich geändert.}
 \begin{equation}
-\text{RE} = \frac{\rho_\text{F} v r}{\eta}
+\label{Reynolds}
+\text{RE} = \frac{\rho_\text{F} v d}{\eta} \ ,
 \end{equation}
+$d$ ist der Durchmesser des Zylinders. \\
 Da die Innere Reibung destillierten Wassers vor allem auf Wasserstoffbrückenbindungen zurückzuführen ist, die bei höheren Temperaturen aufbrechen, sinkt die dynamische Viskosität bei zunehmender Temperatur.\footnote{R.Winter, Basiswissen Physikalische Chemie, Studium, 4. Auflage, 2010, S. 31} Dieses Verhalten beschreibt die \textbf{Andrasche Gleichung}
 \begin{equation}
-\eta(T) = A \exp \left(\frac{B}{T}}\right) \quad.
+\label{Andra}
+\eta(T) = A \exp \left(\frac{B}{T}\right) \quad.
 \end{equation}

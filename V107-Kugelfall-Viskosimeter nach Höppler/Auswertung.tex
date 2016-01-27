@@ -1,0 +1,98 @@
+\subsection{Berechnung von Kugelvolumen und -dichte}
+\input{Daten_Kugel.tex}
+Aus den Durchmessern der zwei Glaskugeln (siehe Tabelle \ref{fig:DatenKugel}) ergeben sich die Volumina
+\begin{align}
+	V_\text{kl} &= \SI{2.0074(2)e-6}{\metre\cubed} \quad \text{und} \\
+	V_\text{gr} &= \SI{2.0655(8)e-6}{\metre\cubed} \ .
+\end{align}
+Die kleinere Kugel wiegt
+\[ m_\text{kl} = \SI{4.44e-3}{\kilo\gram} \]
+und die größere
+\[ m_\text{gr} = \SI{4.63e-3}{\kilo\gram} \ , \]
+damit können auch die Dichten
+\begin{align}
+	\rho_\text{kl} &= \SI{2211.9(2)}{\kilo\gram\per\metre\cubed} \quad \text{und} \\
+	\rho_\text{gr} &= \SI{2241.6(8)}{\kilo\gram\per\metre\cubed}
+\end{align}
+berechnet werden. Die Fehler ergeben sich hierbei durch die Gaußsche Fehlerfortpflanzung
+\begin{align}
+	V(d) &= \frac{4}{3}\pi\left(\frac{d}{2}\right)^3: && \sigma_{V} = \left|\pdv{V}{d}\sigma_{d}\right| = 2\pi\left(\frac{d}{2}\right)^2\sigma_{d} \\
+	\rho(d) &= \frac{m}{\frac{4}{3}\pi\left(\frac{d}{2}\right)^3}: && \sigma_{\rho} = \left|\pdv{\rho}{d}\sigma_{d}\right| = \frac{9m}{2\pi\left(\frac{d}{2}\right)^4}\sigma_{d} \ .
+\end{align}
+\clearpage
+
+\subsection{Bestimmung der Apparatekonstante für die große Kugel}
+Die Messung der Fallzeit ergibt die Werte in Tabelle \ref{fig:DatenZeit}.
+\input{Daten_Zeit.tex}
+Da die Apparatekonstante für die kleinere Kugel
+\[ K_\text{kl} = \SI{0.07640e-6}{\metre\squared\per\second\squared} \]
+bekannt ist, kann die Viskosität für \SI{20}{\celsius} bzw. \SI{293.15}{\kelvin} warmes Wasser ($\rho_\text{W} = \SI{1000}{\kilo\gram\per\metre\cubed}$) mit Formel \eqref{Visk} berechnet werden:
+\begin{align}
+	\eta_{20} = \SI{1.186(3)}{\kilo\gram\per\metre\per\second} \ .
+\end{align}
+Durch Umstellen ebendieser Formel ergibt sich mit der Dichte und den Fallzeiten für die große Kugel die Apparatekonstante
+\begin{align}
+	K_\text{gr} = \frac{\eta_{20}}{(\rho_\text{gr}-\rho_\text{W})\cdot t_\text{gr}} = \SI{1.032(4)e-5}{\metre\squared\per\second\squared} \ .
+\end{align}
+Auch bei diesen beiden Werten ergibt sich der jeweilige Fehler durch die Gaußsche Fehlerfortpflanzung (aus Gründen der Übersichtlichkeit wird auf die Indizes verzichtet, $\rho_\text{Wasser}=\rho_\text{W}$)
+\begin{align}
+	\eta &= K(\rho-\rho_\text{W})t: && \sigma_{\eta} = \sqrt{\left(\pdv{\eta}{\rho}\sigma_{\rho}\right)^2 + \left(\pdv{\eta}{t}\sigma_{t}\right)^2} \\
+	& && \quad= \sqrt{\left(Kt\sigma_\rho\right)^2+\left(K(\rho-\rho_\text{W})t\sigma_t\right)^2} \\
+	K &= \frac{\eta}{(\rho-\rho_\text{W})t}: && \sigma_K = \sqrt{\left(\pdv{K}{\eta}\sigma_\eta\right)^2+\left(\pdv{K}{\rho}\sigma_\rho\right)^2+\left(\pdv{K}{t}\sigma_t\right)^2} \\
+	& && \quad\ = \sqrt{\left(\frac{\sigma_\eta}{(\rho-\rho_\text{W})t}\right)^2+\left(\frac{\eta\sigma_\rho}{(\rho-\rho_\text{W})^2t}\right)^2+\left(\frac{\eta\sigma_t}{(\rho-\rho_\text{W})t^2}\right)^2} \ .
+\end{align}
+\clearpage
+
+\subsection{Konstantenbestimmung der Andraschen Gleichung}
+Bei der Fallzeit-Messung mit ansteigender Wasser-Temperatur werden die Werte in Tabelle \ref{fig:DatenTemperatur} gemessen. Eingesetzt in Gleichung \eqref{Visk} kann so die Viskosität des Wassers in Abhängigkeit der Temperatur berechnet werden. Diese Werte finden sich in derselben Tabelle. Wieder berechnet sich der Fehler der Viskosität nach Gauß ($K$ und $\rho$ sind dabei die Werte der großen Kugel):
+\begin{align}
+	\eta = K(\rho-\rho_\text{W})t: \qquad \sigma_{\eta} &= \sqrt{\left(\pdv{\eta}{K}\sigma_K\right)^2+\left(\pdv{\eta}{\rho}\sigma_{\rho}\right)^2 + \left(\pdv{\eta}{t}\sigma_{t}\right)^2} \\
+	&= \sqrt{\left((\rho-\rho_\text{W})t\right)^2+\left(Kt\sigma_\rho\right)^2+\left(K(\rho-\rho_\text{W})t\sigma_t\right)^2} \ .
+\end{align}
+\input{Daten_Temperatur.tex}
+
+
+
+Wird nun Gleichung \eqref{Andra} auf beiden Seiten logarithmiert, ergibt sich
+\[ \ln\eta = \ln A + \frac{B}{T} \ , \]
+mit
+\[ X = \frac{1}{T} \quad \text{und} \quad Y = \ln\eta \]
+kann so eine lineare Ausgleichsrechung mit den Werten in Tabelle \ref{fig:DatenRegression} durchgeführt werden.
+\input{Daten_Regression.tex}
+Mit Hilfe von Python errechnen sich die Konstanten
+\begin{align}
+	B &= \SI{1804(52)}{\ln\second\squared\per\metre\squared} \\
+	\ln A = \SI{-5.965(164)}{\ln\metre\squared\per\second\squared} \quad \Rightarrow \quad A &= \SI{0.003(1178)}{\metre\squared\per\second\squared} \ .
+\end{align}
+Die Gerade ist mit den Regressionswerten in Abbildung \ref{fig:Regression} zu sehen.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.9\textwidth]{Regression.png}
+	\caption{Regressiongerade mit Regressionswerten nach \eqref{Andra}}
+	\label{fig:Regression}
+\end{figure}
+Die Andradsche Gleichung ist somit
+\begin{align}
+	\eta(T) = 0.003\exp\left(\frac{1804}{T}\right) \ .
+\end{align}
+\clearpage
+
+\subsection{Die Reynoldsche Zahl}
+Zuletzt soll die Reynoldsche Zahl berechnet werden. Dafür wird benötigt
+\begin{itemize}
+	\item die Dichte von Wasser, sie ist eigentlich von der Temperatur abhängig, schwankt aber kaum im betrachteten Temperaturbereich, sodass weiterhin \[ \rho_\text{W}=\SI{1000}{\kilo\gram\per\metre\cubed} \] angenommen wird;
+	\item die Fließgeschwindigkeit des Wassers, welche gleich der Fallgeschwindigkeit
+	\[ v = \frac{s}{t}, \quad s=\SI{0.10}{\metre} \] der Kugel ist;
+	\item der Durchmesser des Zylinders, welcher gleich dem Durchmesser der Kugel \[ d = \SI{15.801e-3}{\metre} \] angenommen werden kann; und
+	\item die temperaturabhängige Viskosität $\eta$.
+\end{itemize}
+Eingesetzt in \eqref{Reynolds} ergeben sich so Werte zwischen
+\begin{align}
+	\text{RE}_\text{min} &= \text{RE}_{\eta(\SI{28}{\celsius})} = \SI{0.019(1)}{} \quad \text{und} \\
+	\text{RE}_\text{max} &= \text{RE}_{\eta(\SI{65}{\celsius})} = \SI{0.070(2)}{} \ .
+\end{align}
+Und auch hier ergibt sich der Fehler wiederum mit Gauß:
+\begin{align}
+	\text{RE} = \frac{\rho_\text{W} s d}{\eta t}: \qquad \sigma_{\text{RE}} &= \sqrt{\left(\pdv{\text{RE}}{t}\sigma_t\right)^2+\left(\pdv{\text{RE}}{d}\sigma_d\right)^2+\left(\pdv{\text{RE}}{\eta}\sigma_\eta\right)^2} \\
+	&= \sqrt{\left(-\frac{\rho_\text{W}sd}{\eta t^2}\sigma_t\right)^2+\left(\frac{\rho_\text{W}s}{\eta t}\sigma_d\right)^2+\left(-\frac{\rho_\text{W}sd}{\eta^2 t}\sigma_\eta\right)^2} \ .
+\end{align}
