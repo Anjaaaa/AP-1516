@@ -1,0 +1,5 @@
+#Durchmesser_gros Durchmesser_klein
+#mm mm
+15.802 15.651
+15.796 15.652
+15.804 15.650
