@@ -15,6 +15,7 @@ damit können auch die Dichten
 	\rho_\text{gr} &= \SI{2241.6(8)}{\kilo\gram\per\metre\cubed}
 \end{align}
 berechnet werden. Die Fehler ergeben sich hierbei durch die Gaußsche Fehlerfortpflanzung
+\todo{Super! Mit Fehlerfortpflanzung :-)}
 \begin{align}
 	V(d) &= \frac{4}{3}\pi\left(\frac{d}{2}\right)^3: && \sigma_{V} = \left|\pdv{V}{d}\sigma_{d}\right| = 2\pi\left(\frac{d}{2}\right)^2\sigma_{d} \\
 	\rho(d) &= \frac{m}{\frac{4}{3}\pi\left(\frac{d}{2}\right)^3}: && \sigma_{\rho} = \left|\pdv{\rho}{d}\sigma_{d}\right| = \frac{9m}{2\pi\left(\frac{d}{2}\right)^4}\sigma_{d} \ .
@@ -22,6 +23,8 @@ berechnet werden. Die Fehler ergeben sich hierbei durch die Gaußsche Fehlerfort
 \clearpage
 
 \subsection{Bestimmung der Apparatekonstante für die große Kugel}
+\todo[color=red, inline]{Ich meine, Lena hätte gesagt, dass die Aperatkonstante überhaupt nicht mehr stimmt. Ich würde daher die Viskosität von Wasser bei 20 Grad nachschlagen  (\SI{1.005}{\mili\pascal\second}) und daraus die Konstante berechnen. Und die Viskosität gibt man standartmäßig in \si{\pascal\second} an. \\
+Abgesehen davon ist der Wert $\eta_{20}$ in der falschen Größenordnung. Als ich in gerade nachgerechnet habe, kam (\SI{1.79}{\mili\pascal\second} heraus. }
 Die Messung der Fallzeit ergibt die Werte in Tabelle \ref{fig:DatenZeit}.
 \input{Daten_Zeit.tex}
 Da die Apparatekonstante für die kleinere Kugel
