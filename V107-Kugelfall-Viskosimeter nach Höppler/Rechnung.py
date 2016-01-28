@@ -83,7 +83,7 @@ plt.plot(X*1000, Y, 'rx', label = 'Werte')
 plt.legend(loc='best')
 
 plt.ylabel('$\ln(\eta)$')
-plt.xlabel('$\degree C/T \ 10^{-3}$')
+plt.xlabel('$K / T \ 10^{-3}$')
 
 plt.savefig('Regression.png')
 plt.show()
@@ -92,7 +92,7 @@ plt.show()
 print('Steigung:', parameters[0], '+/-', np.sqrt(popt[0,0]))
 print('y-Achsenabschnitt:', parameters[1], '+/-', np.sqrt(popt[1,1]))
 A = np.exp(parameters[1])
-AStd = np.exp(np.sqrt(popt[1,1]))
+AStd = A*np.sqrt(popt[1,1])
 print('A:', A, '+/-', AStd)
 
 vFluid = fallweite / zeitTemp

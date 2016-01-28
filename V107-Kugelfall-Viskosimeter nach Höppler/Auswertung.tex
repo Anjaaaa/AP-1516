@@ -33,28 +33,29 @@ Mit der Viskosiät von Wasser bei \SI{20}{\celsius} bzw. \SI{293.15}{\kelvin}\fo
 \[ \eta_{20} = \SI{1.002e-3}{\kilo\gram\per\metre\per\second} \]
 und der Dichte von Wasser bei derselben Temperatur\footnotemark[3]
 \[ \rho_\text{W} = \SI{992.8}{\kilo\gram\per\metre\squared} \]
-können durch Umstellen und einsetzen in Formel \eqref{Visk} die Apparatekonstanten für die kleine
+können durch Umstellen und Einsetzen in Formel \eqref{Visk} die Apparatekonstanten für die kleine
 \begin{align}
 	K_\text{kl} = \frac{\eta_{20}}{(\rho_\text{kl}-\rho_\text{W})t_\text{kl}} = \SI{6.41(2)e-8}{\metre\squared\per\second\squared}
 \end{align}
 und die große Kugel
 \begin{align}
-	K_\text{gr} = \SI{8.67(2)e-9}{\metre\squared\per\second\squared} \ .
+	K_\text{gr} = \SI{8.67(2)e-9}{\metre\squared\per\second\squared}
 \end{align}
-Auch bei diesen beiden Werten ergibt sich der jeweilige Fehler durch die Gaußsche Fehlerfortpflanzung
+bestimmt werden.
+Auch bei diesen Werten ergibt sich der Fehler durch die Gaußsche Fehlerfortpflanzung
 \begin{align}
 	K &= \frac{\eta}{(\rho-\rho_\text{W})t}: && \sigma_K = \sqrt{\left(\pdv{K}{\rho}\sigma_\rho\right)^2+\left(\pdv{K}{t}\sigma_t\right)^2} \\
 	& && \quad\ = \sqrt{\left(\frac{\eta\sigma_\rho}{(\rho-\rho_\text{W})^2t}\right)^2+\left(\frac{\eta\sigma_t}{(\rho-\rho_\text{W})t^2}\right)^2} \ .
 \end{align}
 \clearpage
 
-\subsection{Konstantenbestimmung der Andraschen Gleichung}
+\subsection{Konstantenbestimmung der Andradeschen Gleichung}
 Bei der Fallzeit-Messung mit ansteigender Wasser-Temperatur werden die Werte in Tabelle \ref{fig:DatenTemperatur} gemessen. Eingesetzt in Gleichung \eqref{Visk} kann so die Viskosität des Wassers in Abhängigkeit der Temperatur berechnet werden. Diese Werte finden sich in derselben Tabelle. Wieder berechnet sich der Fehler der Viskosität nach Gauß ($K$ und $\rho$ sind dabei die Werte der großen Kugel):
 \begin{align}
 	\eta = K(\rho-\rho_\text{W})t: \qquad \sigma_{\eta} &= \sqrt{\left(\pdv{\eta}{K}\sigma_K\right)^2+\left(\pdv{\eta}{\rho}\sigma_{\rho}\right)^2 + \left(\pdv{\eta}{t}\sigma_{t}\right)^2} \\
 	&= \sqrt{\left((\rho-\rho_\text{W})t\right)^2+\left(Kt\sigma_\rho\right)^2+\left(K(\rho-\rho_\text{W})t\sigma_t\right)^2} \ .
 \end{align}
-\input{Daten_Temperatur.tex}
+\input{Daten_Temperatur.tex} \\
 Wird nun Gleichung \eqref{Andra} auf beiden Seiten logarithmiert, ergibt sich
 \[ \ln\eta = \ln A + \frac{B}{T} \ , \]
 mit
@@ -64,7 +65,7 @@ kann so eine lineare Ausgleichsrechung mit den Werten in Tabelle \ref{fig:DatenR
 Mit Hilfe von Python errechnen sich die Konstanten
 \begin{align}
 	B &= \SI{1775(42)}{\ln\second\squared\per\metre\squared} \\
-	\ln A = \SI{-13.0(1)}{\ln\metre\squared\per\second\squared} \quad \Rightarrow \quad A &= \SI{2.4(11)}{\metre\squared\per\second\squared} \ .
+	\ln A = \SI{-13.0(1)}{\ln\metre\squared\per\second\squared} \quad \Rightarrow \quad A &= \SI{2.4(3)e-6}{\metre\squared\per\second\squared} \ .
 \end{align}
 Die Gerade ist mit den Regressionswerten in Abbildung \ref{fig:Regression} zu sehen.
 \begin{figure}[h!]
@@ -73,9 +74,9 @@ Die Gerade ist mit den Regressionswerten in Abbildung \ref{fig:Regression} zu se
 	\caption{Regressiongerade mit Regressionswerten nach \eqref{Andra}}
 	\label{fig:Regression}
 \end{figure}
-Die Andradsche Gleichung ist somit
+Die Andradesche Gleichung ist somit
 \begin{align}
-	\eta(T) = 2.4\exp\left(\frac{1775}{T}\right) \ .
+	\eta(T) = \SI{2.4e-6}{}\exp\left(\frac{1775}{T}\right) \ .
 \end{align}
 \clearpage
 
@@ -88,7 +89,7 @@ Zuletzt soll die Reynoldsche Zahl berechnet werden. Dafür wird benötigt
 	\item der Durchmesser des Zylinders, welcher gleich dem Durchmesser der Kugel \[ d = \SI{15.801e-3}{\metre} \] angenommen werden kann; und
 	\item die temperaturabhängige Viskosität $\eta$.
 \end{itemize}
-Eingesetzt in \eqref{Reynolds} ergeben sich so die Werte in Tabelle \ref{fig:Reynolds}. Und auch hier ergibt sich der Fehler wiederum mit Gauß:
+Eingesetzt in \eqref{Reynolds} ergeben sich so die Werte in Tabelle \ref{fig:Reynolds}, die Fehler wiederum mit Gauß:
 \begin{align}
 	\text{RE} = \frac{\rho_\text{W} s d}{\eta t}: \qquad \sigma_{\text{RE}} &= \sqrt{\left(\pdv{\text{RE}}{t}\sigma_t\right)^2+\left(\pdv{\text{RE}}{d}\sigma_d\right)^2+\left(\pdv{\text{RE}}{\eta}\sigma_\eta\right)^2} \\
 	&= \sqrt{\left(-\frac{\rho_\text{W}sd}{\eta t^2}\sigma_t\right)^2+\left(\frac{\rho_\text{W}s}{\eta t}\sigma_d\right)^2+\left(-\frac{\rho_\text{W}sd}{\eta^2 t}\sigma_\eta\right)^2} \ .
