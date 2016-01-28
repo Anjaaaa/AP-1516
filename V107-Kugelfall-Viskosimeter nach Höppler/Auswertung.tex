@@ -23,26 +23,28 @@ berechnet werden. Die Fehler ergeben sich hierbei durch die Gaußsche Fehlerfort
 \clearpage
 
 \subsection{Bestimmung der Apparatekonstante für die große Kugel}
-\todo[color=red, inline]{Ich meine, Lena hätte gesagt, dass die Aperatkonstante überhaupt nicht mehr stimmt. Ich würde daher die Viskosität von Wasser bei 20 Grad nachschlagen  (\SI{1.005}{\mili\pascal\second}) und daraus die Konstante berechnen. Und die Viskosität gibt man standartmäßig in \si{\pascal\second} an. \\
-Abgesehen davon ist der Wert $\eta_{20}$ in der falschen Größenordnung. Als ich in gerade nachgerechnet habe, kam (\SI{1.79}{\mili\pascal\second} heraus. }
+\todo[color=red, inline]{Ich meine, Lena hätte gesagt, dass die Aperatkonstante überhaupt nicht mehr stimmt. Ich würde daher die Viskosität von Wasser bei 20 Grad nachschlagen  (\SI{1.005}{\milli\pascal\second}) und daraus die Konstante berechnen. Und die Viskosität gibt man standartmäßig in \si{\pascal\second} an. Abgesehen davon ist der Wert $\eta_{20}$ in der falschen Größenordnung. Als ich in gerade nachgerechnet habe, kam \SI{1.79}{\milli\pascal\second} heraus. }
+\todo[color = green, inline]{Ah ja, das mit der Apparatekonstante stimmt. Das hatte ich vergessen. \\
+Oh ja. Bei dem $\eta_{20}$ ist das milli verloren gegangen. \\
+Die Einheit würde ich gerne beibehalten, weil Pascal keine SI-Einheit ist.}
 Die Messung der Fallzeit ergibt die Werte in Tabelle \ref{fig:DatenZeit}.
-\input{Daten_Zeit.tex}
-Da die Apparatekonstante für die kleinere Kugel
-\[ K_\text{kl} = \SI{0.07640e-6}{\metre\squared\per\second\squared} \]
-bekannt ist, kann die Viskosität für \SI{20}{\celsius} bzw. \SI{293.15}{\kelvin} warmes Wasser ($\rho_\text{W} = \SI{1000}{\kilo\gram\per\metre\cubed}$) mit Formel \eqref{Visk} berechnet werden:
+\input{Daten_Zeit.tex} \\
+Mit der Viskosiät von Wasser bei \SI{20}{\celsius} bzw. \SI{293.15}{\kelvin}\footnote[3]{W. Walcher: Praktikum der Physik, Teubner Studienbücher, 1985, Tabellen-Anhang 1.7}
+\[ \eta_{20} = \SI{1.002e-3}{\kilo\gram\per\metre\per\second} \]
+und der Dichte von Wasser bei derselben Temperatur\footnotemark[3]
+\[ \rho_\text{W} = \SI{992.8}{\kilo\gram\per\metre\squared} \]
+können durch Umstellen und einsetzen in Formel \eqref{Visk} die Apparatekonstanten für die kleine
 \begin{align}
-	\eta_{20} = \SI{1.186(3)}{\kilo\gram\per\metre\per\second} \ .
+	K_\text{kl} = \frac{\eta_{20}}{(\rho_\text{kl}-\rho_\text{W})t_\text{kl}} = \SI{6.41(2)e-8}{\metre\squared\per\second\squared}
 \end{align}
-Durch Umstellen ebendieser Formel ergibt sich mit der Dichte und den Fallzeiten für die große Kugel die Apparatekonstante
+und die große Kugel
 \begin{align}
-	K_\text{gr} = \frac{\eta_{20}}{(\rho_\text{gr}-\rho_\text{W})\cdot t_\text{gr}} = \SI{1.032(4)e-5}{\metre\squared\per\second\squared} \ .
+	K_\text{gr} = \SI{8.67(2)e-9}{\metre\squared\per\second\squared} \ .
 \end{align}
-Auch bei diesen beiden Werten ergibt sich der jeweilige Fehler durch die Gaußsche Fehlerfortpflanzung (aus Gründen der Übersichtlichkeit wird auf die Indizes verzichtet, $\rho_\text{Wasser}=\rho_\text{W}$)
+Auch bei diesen beiden Werten ergibt sich der jeweilige Fehler durch die Gaußsche Fehlerfortpflanzung
 \begin{align}
-	\eta &= K(\rho-\rho_\text{W})t: && \sigma_{\eta} = \sqrt{\left(\pdv{\eta}{\rho}\sigma_{\rho}\right)^2 + \left(\pdv{\eta}{t}\sigma_{t}\right)^2} \\
-	& && \quad= \sqrt{\left(Kt\sigma_\rho\right)^2+\left(K(\rho-\rho_\text{W})t\sigma_t\right)^2} \\
-	K &= \frac{\eta}{(\rho-\rho_\text{W})t}: && \sigma_K = \sqrt{\left(\pdv{K}{\eta}\sigma_\eta\right)^2+\left(\pdv{K}{\rho}\sigma_\rho\right)^2+\left(\pdv{K}{t}\sigma_t\right)^2} \\
-	& && \quad\ = \sqrt{\left(\frac{\sigma_\eta}{(\rho-\rho_\text{W})t}\right)^2+\left(\frac{\eta\sigma_\rho}{(\rho-\rho_\text{W})^2t}\right)^2+\left(\frac{\eta\sigma_t}{(\rho-\rho_\text{W})t^2}\right)^2} \ .
+	K &= \frac{\eta}{(\rho-\rho_\text{W})t}: && \sigma_K = \sqrt{\left(\pdv{K}{\rho}\sigma_\rho\right)^2+\left(\pdv{K}{t}\sigma_t\right)^2} \\
+	& && \quad\ = \sqrt{\left(\frac{\eta\sigma_\rho}{(\rho-\rho_\text{W})^2t}\right)^2+\left(\frac{\eta\sigma_t}{(\rho-\rho_\text{W})t^2}\right)^2} \ .
 \end{align}
 \clearpage
 
@@ -53,9 +55,6 @@ Bei der Fallzeit-Messung mit ansteigender Wasser-Temperatur werden die Werte in 
 	&= \sqrt{\left((\rho-\rho_\text{W})t\right)^2+\left(Kt\sigma_\rho\right)^2+\left(K(\rho-\rho_\text{W})t\sigma_t\right)^2} \ .
 \end{align}
 \input{Daten_Temperatur.tex}
-
-
-
 Wird nun Gleichung \eqref{Andra} auf beiden Seiten logarithmiert, ergibt sich
 \[ \ln\eta = \ln A + \frac{B}{T} \ , \]
 mit
@@ -64,8 +63,8 @@ kann so eine lineare Ausgleichsrechung mit den Werten in Tabelle \ref{fig:DatenR
 \input{Daten_Regression.tex}
 Mit Hilfe von Python errechnen sich die Konstanten
 \begin{align}
-	B &= \SI{1804(52)}{\ln\second\squared\per\metre\squared} \\
-	\ln A = \SI{-5.965(164)}{\ln\metre\squared\per\second\squared} \quad \Rightarrow \quad A &= \SI{0.003(1178)}{\metre\squared\per\second\squared} \ .
+	B &= \SI{1775(42)}{\ln\second\squared\per\metre\squared} \\
+	\ln A = \SI{-13.0(1)}{\ln\metre\squared\per\second\squared} \quad \Rightarrow \quad A &= \SI{2.4(11)}{\metre\squared\per\second\squared} \ .
 \end{align}
 Die Gerade ist mit den Regressionswerten in Abbildung \ref{fig:Regression} zu sehen.
 \begin{figure}[h!]
@@ -76,26 +75,22 @@ Die Gerade ist mit den Regressionswerten in Abbildung \ref{fig:Regression} zu se
 \end{figure}
 Die Andradsche Gleichung ist somit
 \begin{align}
-	\eta(T) = 0.003\exp\left(\frac{1804}{T}\right) \ .
+	\eta(T) = 2.4\exp\left(\frac{1775}{T}\right) \ .
 \end{align}
 \clearpage
 
 \subsection{Die Reynoldsche Zahl}
 Zuletzt soll die Reynoldsche Zahl berechnet werden. Dafür wird benötigt
 \begin{itemize}
-	\item die Dichte von Wasser, sie ist eigentlich von der Temperatur abhängig, schwankt aber kaum im betrachteten Temperaturbereich, sodass weiterhin \[ \rho_\text{W}=\SI{1000}{\kilo\gram\per\metre\cubed} \] angenommen wird;
+	\item die Dichte von Wasser, sie ist eigentlich von der Temperatur abhängig, schwankt aber kaum im betrachteten Temperaturbereich, sodass weiterhin \[ \rho_\text{W}=\SI{992.8}{\kilo\gram\per\metre\cubed} \] angenommen wird;
 	\item die Fließgeschwindigkeit des Wassers, welche gleich der Fallgeschwindigkeit
 	\[ v = \frac{s}{t}, \quad s=\SI{0.10}{\metre} \] der Kugel ist;
 	\item der Durchmesser des Zylinders, welcher gleich dem Durchmesser der Kugel \[ d = \SI{15.801e-3}{\metre} \] angenommen werden kann; und
 	\item die temperaturabhängige Viskosität $\eta$.
 \end{itemize}
-Eingesetzt in \eqref{Reynolds} ergeben sich so Werte zwischen
-\begin{align}
-	\text{RE}_\text{min} &= \text{RE}_{\eta(\SI{28}{\celsius})} = \SI{0.019(1)}{} \quad \text{und} \\
-	\text{RE}_\text{max} &= \text{RE}_{\eta(\SI{65}{\celsius})} = \SI{0.070(2)}{} \ .
-\end{align}
-Und auch hier ergibt sich der Fehler wiederum mit Gauß:
+Eingesetzt in \eqref{Reynolds} ergeben sich so die Werte in Tabelle \ref{fig:Reynolds}. Und auch hier ergibt sich der Fehler wiederum mit Gauß:
 \begin{align}
 	\text{RE} = \frac{\rho_\text{W} s d}{\eta t}: \qquad \sigma_{\text{RE}} &= \sqrt{\left(\pdv{\text{RE}}{t}\sigma_t\right)^2+\left(\pdv{\text{RE}}{d}\sigma_d\right)^2+\left(\pdv{\text{RE}}{\eta}\sigma_\eta\right)^2} \\
 	&= \sqrt{\left(-\frac{\rho_\text{W}sd}{\eta t^2}\sigma_t\right)^2+\left(\frac{\rho_\text{W}s}{\eta t}\sigma_d\right)^2+\left(-\frac{\rho_\text{W}sd}{\eta^2 t}\sigma_\eta\right)^2} \ .
 \end{align}
+\input{Daten_Reynolds.tex}

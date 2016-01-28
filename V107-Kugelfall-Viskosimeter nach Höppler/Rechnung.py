@@ -42,9 +42,9 @@ masseKlein = 4.44 / 1000
 masseGroß = 4.63 / 1000
 
 
-dichteWasser = 1000
+dichteWasser = 992.8
 fallweite = 0.10
-K_klein = 0.07640 / 1000
+visk20 = 1.002 / 1000
 
 dichteKlein = masseKlein / ( 4/3*np.pi*(dickeKlein/2)**3 )
 dichteGroß = masseGroß / ( 4/3*np.pi*(dickeGroß/2)**3 )
@@ -53,10 +53,10 @@ print('Dichte der kleinen Kugel:', dichteKlein)
 print('Dichte der großen Kugel:', dichteGroß)
 
 
-visk20 = K_klein * (dichteKlein - dichteWasser) * zeitKlein
+K_klein = visk20 / (dichteKlein - dichteWasser) / zeitKlein
 K_groß = visk20 / (dichteGroß - dichteWasser) / zeitGroß
 
-print('Viskosität bei 20 Grad:', visk20)
+print('Apparatekonstante kleine Kugel:', K_klein)
 print('Apparatekonstante große Kugel:', K_groß)
 
 viskTemp = K_groß * (dichteGroß - dichteWasser) * zeitTemp
