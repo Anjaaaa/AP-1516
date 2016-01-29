@@ -84,12 +84,24 @@ Die Andradesche Gleichung ist somit
 
 \subsection{Die Reynoldsche Zahl}
 \todo[inline, color = red]{In meinem Buch (Fußnote oben) steht wirklich, dass der Kugelradius, nicht der Durchmesser relevant ist. In dem Altprotokoll von der Fachschaft nehmen die jedoch den Radius. Im Prinzip ist es ja auch egal. Ich finde nur, wir sollten eine Quelle zur Formel haben.}
+\todo[inline]{In allen Quellen (leider immer nur Internet), die ich gelesen habe, steht, das muss die Länge des Körpers in Strömungsrichtung sein. Bei uns also der Durchmesser der Kugel. \\
+Ich habe mir aber jetzt mal mehr Information gesucht und auch in den Geschke auf Google reingeschaut. Scheinbar ist das so: Ganz grundsätzlich kann man sich das hindefinieren, wie man will. Das ist ja keine physikalische Größe, sondern ein Vergleichswert. Häufig wird dann diese \glqq charakteristische Länge\grqq benutzt, weil das bei nicht kugelförmigen Gegenständen eine sehr einfach zu berechnende Größe ist. Zum Beispiel bei Flugzeugen ist das sehr gut vergleichbar, sodass auch die Reynoldszahlen gut vergleichbar sind. In so Beschreibungen für Praktikumsversuche, wo sowieso immer alles gerade und schön und vor allem rund ist, wird dann gerne der Radius der Kugel verwendet, da das halt die Standard-Kugel-Größe ist. \\
+Ich habe noch ne nette Umformung dazu gefunden ($A$ ist die Grundfläche, $V$ das Volumen und $m$ die Masse):}
+\begin{align*}
+	\text{RE} &= \frac{\rho vl}{\eta} \\
+	&= \frac{m v V}{V \eta A} \\
+	&= \frac{m v^2}{\eta A v} \\
+	&= \frac{2 E_\text{kin}}{\eta A v} \\
+	&= \frac{2 E_\text{kin}}{W_\text{Reibung}}
+\end{align*}
+\todo[inline]{Wenn man statt der charakteristischen Länge, lieber den Radius nehmen möchte, dann kommt halt $\frac{E_\text{kin}}{W_\text{Reibung}}$ raus. \\
+Unterm Strich: Lass uns den Radius nehmen, wenn du dazu ne Buchquelle hast, ich passe die Auswertung dann an.}
 Zuletzt soll die Reynoldsche Zahl berechnet werden. Dafür wird benötigt
 \begin{itemize}
 	\item die Dichte von Wasser, sie ist eigentlich von der Temperatur abhängig, schwankt aber kaum im betrachteten Temperaturbereich, sodass weiterhin \[ \rho_\text{W}=\SI{992.8}{\kilo\gram\per\metre\cubed} \] angenommen wird;
 	\item die Fließgeschwindigkeit des Wassers, welche gleich der Fallgeschwindigkeit
 	\[ v = \frac{s}{t}, \quad s=\SI{0.10}{\metre} \] der Kugel ist;
-	\item der Durchmesser des Zylinders, welcher gleich dem Durchmesser der Kugel \[ d = \SI{15.801e-3}{\metre} \] angenommen werden kann; und
+	\item einer \glqq charakteristischen Länge\grqq der Kugel, das kann beispielsweise der Durchmesser sein, hier wird der Radius der Kugel \[ d/2 = \SI{15.801e-3}{\metre}/2 \] verwendet; und
 	\item die temperaturabhängige Viskosität $\eta$.
 \end{itemize}
 Eingesetzt in \eqref{Reynolds} ergeben sich so die Werte in Tabelle \ref{fig:Reynolds}, die Fehler wiederum mit Gauß:
