@@ -77,7 +77,8 @@ for i in range(0,len(X)):
 print('Y:', Y)
 
 parameters, popt = curve_fit(f, X, Y)
-x = np.linspace((np.min(X)-0.00001), (np.max(X)+0.00001))
+x = np.linspace(np.min(X)-0.000055, np.max(X)+0.000051)
+#plt.xlim((np.min(X)-0.00001), (np.max(X)+0.00001))
 plt.plot(x*1000, f(x, parameters[0], parameters[1]), 'b-', label = 'Regressionsgerade')
 plt.plot(X*1000, Y, 'rx', label = 'Werte')
 plt.legend(loc='best')
@@ -97,5 +98,23 @@ print('A:', A, '+/-', AStd)
 
 vFluid = fallweite / zeitTemp
 #reinold = (fallweite * dickeGroß * dichteWasser) / (zeitTemp**2 * K_groß * (dichteGroß - dichteWasser))
-reinold = vFluid * dickeGroß * dichteWasser / viskTemp
+reinold = vFluid * dickeGroß/2 * dichteWasser / viskTemp
 print('Reinolds-Zahl:', reinold)
+print(dickeGroß/2)
+
+
+
+
+def f(temp, A, B):
+     return A * np.exp(B/temp)
+
+V = np.zeros(len(X))
+for i in range(0,len(X)):
+        V[i] = viskTemp[i].n
+popt, pcov = curve_fit(f, temp, V)
+
+#x = np.linspace(15, 65, 100)
+#y = f(x, popt[0], popt[1])
+print(viskTemp)
+print('A:', popt[0])
+print('B:', popt[1])

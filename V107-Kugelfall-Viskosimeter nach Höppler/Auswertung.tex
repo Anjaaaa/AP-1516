@@ -15,26 +15,25 @@ damit können auch die Dichten
 	\rho_\text{gr} &= \SI{2241.6(8)}{\kilo\gram\per\metre\cubed}
 \end{align}
 berechnet werden. Die Fehler ergeben sich hierbei durch die Gaußsche Fehlerfortpflanzung
-\todo{Super! Mit Fehlerfortpflanzung :-)}
 \begin{align}
 	V(d) &= \frac{4}{3}\pi\left(\frac{d}{2}\right)^3: && \sigma_{V} = \left|\pdv{V}{d}\sigma_{d}\right| = 2\pi\left(\frac{d}{2}\right)^2\sigma_{d} \\
 	\rho(d) &= \frac{m}{\frac{4}{3}\pi\left(\frac{d}{2}\right)^3}: && \sigma_{\rho} = \left|\pdv{\rho}{d}\sigma_{d}\right| = \frac{9m}{2\pi\left(\frac{d}{2}\right)^4}\sigma_{d} \ .
 \end{align}
 \clearpage
 
-\subsection{Bestimmung der Apparatekonstante für die große Kugel}
+\subsection{Bestimmung der Apparatekonstanten}
 \todo[color=red, inline]{Ich meine, Lena hätte gesagt, dass die Aperatkonstante überhaupt nicht mehr stimmt. Ich würde daher die Viskosität von Wasser bei 20 Grad nachschlagen  (\SI{1.005}{\milli\pascal\second}) und daraus die Konstante berechnen. Und die Viskosität gibt man standartmäßig in \si{\pascal\second} an. Abgesehen davon ist der Wert $\eta_{20}$ in der falschen Größenordnung. Als ich in gerade nachgerechnet habe, kam \SI{1.79}{\milli\pascal\second} heraus. }
 \todo[color = green, inline]{Ah ja, das mit der Apparatekonstante stimmt. Das hatte ich vergessen. \\
 Oh ja. Bei dem $\eta_{20}$ ist das milli verloren gegangen. \\
 Die Einheit würde ich gerne beibehalten, weil Pascal keine SI-Einheit ist.}
 \todo[color=green, inline]{Gegenargument: Newton ist auch keine SI-Einheit und ich würde trotzdem nicht \si{\kilo\gram\meter\per\second\squared} schreiben. Ich glaube Einheiten sind viel mehr eine Frage der Gewohnheit (solange sie sich aus SI-Einheiten zusammensetzen). Sehr wichtig ist mir das jetzt aber ehrlich gesagt nicht wirklich ;-) }
+\todo[inline]{Na, gut. Gegen das Newton-Argument bleibt mir natürlich nichts :P}
 Die Messung der Fallzeit ergibt die Werte in Tabelle \ref{fig:DatenZeit}.
-\todo[color=red]{Fallzeit in Sekunden}
 \input{Daten_Zeit.tex} \\
 Mit der Viskosiät von Wasser bei \SI{20}{\celsius} bzw. \SI{293.15}{\kelvin}\footnote[3]{W. Walcher: Praktikum der Physik, Teubner Studienbücher, 1985, Tabellen-Anhang 1.7}
 \[ \eta_{20} = \SI{1.002e-3}{\kilo\gram\per\metre\per\second} \]
 und der Dichte von Wasser bei derselben Temperatur\footnotemark[3]
-\[ \rho_\text{W} = \SI{992.8}{\kilo\gram\per\metre\squared} \]
+\[ \rho_\text{W} = \SI{992.8}{\kilo\gram\per\metre\cubed} \]
 können durch Umstellen und Einsetzen in Formel \eqref{Visk} die Apparatekonstanten für die kleine
 \begin{align}
 	K_\text{kl} = \frac{\eta_{20}}{(\rho_\text{kl}-\rho_\text{W})t_\text{kl}} = \SI{6.41(2)e-8}{\metre\squared\per\second\squared}
@@ -66,8 +65,8 @@ kann so eine lineare Ausgleichsrechung mit den Werten in Tabelle \ref{fig:DatenR
 \input{Daten_Regression.tex}
 Mit Hilfe von Python errechnen sich die Konstanten
 \begin{align}
-	B &= \SI{1775(42)}{\kelvin\ln\metre\squared\per\second\squared} \\
-	\ln A = \SI{-13.0(1)}{\ln\metre\squared\per\second\squared} \quad \Rightarrow \quad A &= \SI{2.4(3)e-6}{\metre\squared\per\second\squared} \ .
+	B &= \SI{1775(42)}{\kelvin} \\
+	\ln A = \SI{-13.0(1)}{\ln\kilo\gram\per\metre\per\second} \quad \Rightarrow \quad A &= \SI{2.4(3)e-6}{\kilo\gram\per\metre\per\second} \ .
 \end{align}
 Die Gerade ist mit den Regressionswerten in Abbildung \ref{fig:Regression} zu sehen.
 \begin{figure}[h!]
@@ -87,13 +86,13 @@ Die Andradesche Gleichung ist somit
 \todo[inline]{In allen Quellen (leider immer nur Internet), die ich gelesen habe, steht, das muss die Länge des Körpers in Strömungsrichtung sein. Bei uns also der Durchmesser der Kugel. \\
 Ich habe mir aber jetzt mal mehr Information gesucht und auch in den Geschke auf Google reingeschaut. Scheinbar ist das so: Ganz grundsätzlich kann man sich das hindefinieren, wie man will. Das ist ja keine physikalische Größe, sondern ein Vergleichswert. Häufig wird dann diese \glqq charakteristische Länge\grqq benutzt, weil das bei nicht kugelförmigen Gegenständen eine sehr einfach zu berechnende Größe ist. Zum Beispiel bei Flugzeugen ist das sehr gut vergleichbar, sodass auch die Reynoldszahlen gut vergleichbar sind. In so Beschreibungen für Praktikumsversuche, wo sowieso immer alles gerade und schön und vor allem rund ist, wird dann gerne der Radius der Kugel verwendet, da das halt die Standard-Kugel-Größe ist. \\
 Ich habe noch ne nette Umformung dazu gefunden ($A$ ist die Grundfläche, $V$ das Volumen und $m$ die Masse):}
-\begin{align*}
-	\text{RE} &= \frac{\rho vl}{\eta} \\
-	&= \frac{m v V}{V \eta A} \\
-	&= \frac{m v^2}{\eta A v} \\
-	&= \frac{2 E_\text{kin}}{\eta A v} \\
-	&= \frac{2 E_\text{kin}}{W_\text{Reibung}}
-\end{align*}
+%\begin{align*}
+%	\text{RE} &= \frac{\rho vl}{\eta} \\
+%	&= \frac{m v V}{V \eta A} \\
+%	&= \frac{m v^2}{\eta A v} \\
+%	&= \frac{2 E_\text{kin}}{\eta A v} \\
+%	&= \frac{2 E_\text{kin}}{W_\text{Reibung}}
+%\end{align*}
 \todo[inline]{Wenn man statt der charakteristischen Länge, lieber den Radius nehmen möchte, dann kommt halt $\frac{E_\text{kin}}{W_\text{Reibung}}$ raus. \\
 Unterm Strich: Lass uns den Radius nehmen, wenn du dazu ne Buchquelle hast, ich passe die Auswertung dann an.}
 Zuletzt soll die Reynoldsche Zahl berechnet werden. Dafür wird benötigt
@@ -101,12 +100,12 @@ Zuletzt soll die Reynoldsche Zahl berechnet werden. Dafür wird benötigt
 	\item die Dichte von Wasser, sie ist eigentlich von der Temperatur abhängig, schwankt aber kaum im betrachteten Temperaturbereich, sodass weiterhin \[ \rho_\text{W}=\SI{992.8}{\kilo\gram\per\metre\cubed} \] angenommen wird;
 	\item die Fließgeschwindigkeit des Wassers, welche gleich der Fallgeschwindigkeit
 	\[ v = \frac{s}{t}, \quad s=\SI{0.10}{\metre} \] der Kugel ist;
-	\item einer \glqq charakteristischen Länge\grqq der Kugel, das kann beispielsweise der Durchmesser sein, hier wird der Radius der Kugel \[ d/2 = \SI{15.801e-3}{\metre}/2 \] verwendet; und
+	\item einer \glqq charakteristischen Länge\grqq\ der Kugel, das kann beispielsweise der Durchmesser sein, hier wird der Radius der Kugel \[ \frac{d}{2} = \SI{7.900e-3}{\metre} \] verwendet; und
 	\item die temperaturabhängige Viskosität $\eta$.
 \end{itemize}
 Eingesetzt in \eqref{Reynolds} ergeben sich so die Werte in Tabelle \ref{fig:Reynolds}, die Fehler wiederum mit Gauß:
 \begin{align}
-	\text{RE} = \frac{\rho_\text{W} s d}{\eta t}: \qquad \sigma_{\text{RE}} &= \sqrt{\left(\pdv{\text{RE}}{t}\sigma_t\right)^2+\left(\pdv{\text{RE}}{d}\sigma_d\right)^2+\left(\pdv{\text{RE}}{\eta}\sigma_\eta\right)^2} \\
-	&= \sqrt{\left(-\frac{\rho_\text{W}sd}{\eta t^2}\sigma_t\right)^2+\left(\frac{\rho_\text{W}s}{\eta t}\sigma_d\right)^2+\left(-\frac{\rho_\text{W}sd}{\eta^2 t}\sigma_\eta\right)^2} \ .
+	\text{RE} = \frac{\rho_\text{W} s d}{2\eta t}: \qquad \sigma_{\text{RE}} &= \sqrt{\left(\pdv{\text{RE}}{t}\sigma_t\right)^2+\left(\pdv{\text{RE}}{d}\sigma_d\right)^2+\left(\pdv{\text{RE}}{\eta}\sigma_\eta\right)^2} \\
+	&= \sqrt{\left(-\frac{\rho_\text{W}sd}{2\eta t^2}\sigma_t\right)^2+\left(\frac{\rho_\text{W}s}{2\eta t}\sigma_d\right)^2+\left(-\frac{\rho_\text{W}sd}{2\eta^2 t}\sigma_\eta\right)^2} \ .
 \end{align}
 \input{Daten_Reynolds.tex}

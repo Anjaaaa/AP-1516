@@ -1,5 +1,5 @@
 Die Messung der Fallzeiten ist die Grundlage aller Berechnungen. Durch systematische Fehler kann sie verfälscht werden. Das könnte einerseits durch beim Verschließen im Rohr verbliebene Luftblasen geschehen. Sie wirken durch ihren Auftrieb der Schwerkraft entgegen und verlängern somit die Fallzeiten. Denselben negativen Effekt hat auch der (in den Rechnungen vernachlässigte) Reibungseffekt zwischen Kugel und Wand. \\
-Die Abweichung der Konstanten in der Andrade-Gleichung von Literaturwerten\footnote{\url{http://www.chemie.de/lexikon/Andrade-Gleichung.html}, abgerufen am 28.01.2016 um 14:00 Uhr} ist in Tabelle \ref{fig:Andrade} zu sehen.
+Die Abweichung der Konstanten in der Andrade-Gleichung von Literaturwerten\footnote[4]{\url{http://www.chemie.de/lexikon/Andrade-Gleichung.html}, abgerufen am 28.01.2016 um 14:00 Uhr} ist in Tabelle \ref{fig:Andrade} zu sehen.
 \begin{table}[h!]
 \centering
 \begin{tabular}{c|c|c|c}
@@ -11,5 +11,6 @@ Die Abweichung der Konstanten in der Andrade-Gleichung von Literaturwerten\footn
 \caption{Abweichung der Konstanten der Andrade-Gleichung}
 \label{fig:Andrade}
 \end{table}
-
+Die Abweichung, vor allem des Paramters $A$, ist sehr groß. Woher das kommt ist unklar, denn die berechneten Viskositäten aus Tabelle \ref{fig:DatenTemperatur} liegen dicht an Literaturwerten und auch die Ausgleichsgerade weicht nur wenig von den Messwerten ab. Der Fehler wird in der Methode vermutet. Das Finden einer Ausgleichsfunktion wird mit der Methode der kleinsten Quadrate durchgeführt. Beim Linearisieren der Gleichung, wird dieser quadratische Abstand durch das Logarithmieren verfälscht, so gehen manche Abstände stärker ein als andere.
 \todo[inline, color = red]{Ich sehe leider nicht, wo die Abweichungen her kommen können. In dem Altprotokoll sahen die Werte auf den ersten Blick jedoch noch schlechter aus.}
+\todo[inline]{Das was ich da jetzt geschrieben hab, hatten die im Altprotokoll auch so. Aber ich habe dann nochmal eine Exponential-Funktion gefittet, um zu sehen, ob das wirklich so großer Mist ist. Aber da kamen so gut wie dieselben Werte raus, die wir eh schon hatten...}
