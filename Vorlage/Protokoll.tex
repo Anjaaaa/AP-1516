@@ -1,14 +1,24 @@
 \documentclass[a4,11pt]{article}
-\input{Header.tex}
+\input{../Vorlage/Header.tex}
 
 
+\newcommand{\Versuch}{Versuch}
+\newcommand{\Betreuer}{Max \textsc{Mustermann}}
+\newcommand{\Tag}{TT.MM.JJ}
+\newcommand{\V}{VXXX}
+
+% Bibliographie erstellen:
+% 	pdflatex Protokoll.tex
+% 	biber Protokoll
+% 	pdflatex Protokoll.tex
+% oder einfach make ausführen
 
 \begin{document}
-\input{Titlepage.tex}
+\input{../Vorlage/Titlepage.tex}
 
 
 \tableofcontents
-\newpage
+\clearpage
 
 
 \section{Theorie}
@@ -34,7 +44,15 @@
 \clearpage
 
 
-\section{Diskussion \label{sec:Diskussion}}
+\section{Diskussion}
 \input{Diskussion.tex}
+
+\clearpage
+\listoftodos
+\listoffigures
+\listoftables
+\clearpage
+\nocite{\V}
+\printbibliography[title = Literaturverzeichnis]
 
 \end{document}

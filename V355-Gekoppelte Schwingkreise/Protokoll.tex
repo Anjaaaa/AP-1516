@@ -1,10 +1,16 @@
 \documentclass[a4,11pt]{article}
-\input{Header.txt}
+\input{../Vorlage/Header.tex}
 
+
+
+\newcommand{\Versuch}{Gekoppelte Schwingkreise}
+\newcommand{\Betreuer}{Christian \textsc{Ebberg}}
+\newcommand{\Tag}{12.01.16}
+\newcommand{\V}{V355}
 
 
 \begin{document}
-\input{Titlepage.tex}
+\input{../Vorlage/Titlepage.tex}
 
 
 \tableofcontents
@@ -34,7 +40,17 @@
 \clearpage
 
 
-\section{Diskussion \label{sec:Diskussion}}
+\section{Diskussion}
 \input{Diskussion.tex}
+\clearpage
+
+
+\listoftodos
+\listoffigures
+\listoftables
+
+\clearpage
+\nocite{\V}
+\printbibliography[title = Literaturverzeichnis]
 
 \end{document}

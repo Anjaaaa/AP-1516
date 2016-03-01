@@ -41,3 +41,15 @@ plt.yticks([0, np.pi/8 , np.pi / 4, 3*np.pi /8, np.pi / 2],[r"$0$", r"$\frac{1}{
 
 plt.savefig('')
 plt.show()
+
+
+
+##################
+
+key ist immer die "Kennung" der Quelle
+\nocite{key} = irgendwo ins Dokument schreiben, kommt dann im Literaturverzeichnis vor auch, wenn niemals direkt darauf verwiesen wird
+\cite[prenote][postnote]{key}
+\footcitetext[prenote][postnote]{key} = Zitation in Fußnote
+\cites(multiprenote)(multipostnote)[prenote1][postnote1]{key1}...[prenote_n][postnote_n]{key_n} = mehrere Quellen
+prenote ist sowas wie "siehe" oder "nach"
+postnote könnte die Seitenangabe sein

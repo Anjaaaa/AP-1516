@@ -1,7 +1,12 @@
-
 *.aux
 *.log
-*.idx
 *.synctex.gz
+*.idx
+*.tdo
 *.toc
+*.bbl
+*.bcf
+*.blg
+*.run.xml
 
+Protokoll.pdf
