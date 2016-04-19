@@ -1,0 +1,7 @@
+# Druck Impulse
+# bar einheitenlos
+-0.8 57
+-0.8 53
+-0.8 54
+-0.8 45
+-0.8 55
