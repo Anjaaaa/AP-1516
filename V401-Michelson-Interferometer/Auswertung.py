@@ -1,5 +1,6 @@
 import numpy as np
 from uncertainties import ufloat
+import uncertainties.unumpy as unp
 from table import (
 	make_table,
 	make_SI,
@@ -34,14 +35,31 @@ write('build/Tabelle3.tex', make_table([Anfang, Ende, Anfang_2, Ende_2, Impuls, 
 Wellenlange_Mittel = np.mean(Wellenlange)
 Wellenlange_Fehler = np.std(Wellenlange, ddof=1)
 
-print(Wellenlange_Mittel)
-print(Wellenlange_Fehler)
+Wellenlange_gesamt = ufloat(Wellenlange_Mittel, Wellenlange_Fehler)
 
-write('build/Wellenlange_Mittel.tex', make_SI(Wellenlange_Mittel,r'\meter','e-12', figures=2))
-write('build/Wellenlange_Fehler.tex', make_SI(Wellenlange_Fehler,r'\meter','e-12', figures=2))
+print(Wellenlange_gesamt)
 
 
+write('build/Wellenlange_gesamt.tex', make_SI(Wellenlange_gesamt,r'\meter','e-12', figures=4))
 
 
+# Brechungsindex berechnen
 
-print(Wellenlange)
+b = 5e-3 #Kammernbreite in meter
+T = 293.15 # Raumtemperatur in Kelvin
+T_0 = 273.15 # Normaltemperatur in Kelvin
+p_0 = 1.10132 # Normaldruck in bar
+
+deltan_Luft = Wellenlange_gesamt *10**-12 * Impuls_Luft / 2 / b
+n_Luft = 1 + deltan_Luft * (T/T_0)*(p_0/np.abs(Druck_Luft))
+
+write('build/Tabelle4.tex', make_table([np.abs(Druck_Luft), Impuls_Luft, unp.nominal_values(n_Luft), unp.std_devs(n_Luft)],[1,0,8,8]))
+
+deltan_CO2 = Wellenlange_gesamt *10**-12 * Impuls_CO2 / 2 / b
+n_CO2 = 1 + deltan_CO2 * (T/T_0)*(p_0/np.abs(Druck_CO2))
+
+print(n_Luft)
+print(unp.nominal_values(n_Luft))
+print(n_CO2)
+
+
