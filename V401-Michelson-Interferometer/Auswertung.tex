@@ -1,3 +1,4 @@
+\subsection{Bestimmung der Wellenlänge des Lasers}
 \begin{table}
 	\centering
 	\begin{tabular}{cc|cc|c|c}
@@ -10,5 +11,18 @@
 
 Die durchschnittliche Wellenlänge beträgt
 \begin{align}
-	\lambda = \input{build/Wellenlange_Mittel.tex}
+	\lambda = \input{build/Wellenlange_gesamt.tex}
 \end{align}
+
+\subsection{Bestimmung des Brechungsindexes von Luft und CO$_2$}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{cccc}
+		Druckunterschied in \si{\bar} & Impulse & Brechungsindex & Fehler \\
+		\hline
+		\input{build/Tabelle4.tex}
+	\end{tabular}
+	\label{tab:BrechungsindexLuft}
+	\captionof{table}{Brechungsindex Luft}
+\end{table}
+\todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
