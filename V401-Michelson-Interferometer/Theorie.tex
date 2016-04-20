@@ -25,9 +25,16 @@ verwendet. Der Integrationszeitraum $t_2-t_1$ sollte dabei groß gegenüber der 
 	&= \frac{\vec{E}_0^2}{t_2-t_1}\int_{t_1}^{t_2}
 	\left(2+2\cos(\delta_2-\delta_1)\right)
 	\text{d}t \\
-	&= 2\vec{E}_0^2\left(1+\cos(\delta_2-\delta_1)\right) \ .
+	&\label{Intensitat}= 2\vec{E}_0^2\left(1+\cos(\delta_2-\delta_1)\right) \ .
 \end{align}
 Demnach kann die Interferenz auch über die Intensität gemessen werden. Sie liegt, abhängig vom Gangunterschied $\delta_2-\delta_1$, zwischen $0$ und $4\vec{E}_0^2$.
 \subsection*{Voraussetzungen für die Beobachtung von Interferenz}
-Bei alltäglichen Lichtquellen, wie der Sonne oder einer Glühbirne, sind $\delta_1$ und $\delta_2$ keine Konstanten, sondern statistische Funktionen der Zeit, sodass das Integral des Cosinus-Terms über eine lange Zeit $t_2-t_1$ verschwindet und eine konstante Intensität beobachtet wird. Dieses Licht ist nicht interferenzfähig und wird als inkohärent bezeichnet. Kohärentes Licht dagegen kann durch \emph{einen} Ausdruck \ref{E-Feld} mit festen $k, \omega$ und $\delta$ beschrieben werden. \\
-Üblicherweise wird ein Laser verwendet, wenn Licht mit hoher Kohärenz gebraucht wird. Durch geeignete Abschirmung können allerdings auch bei nichtkohärenten Lichtquellen Interferenz-Erscheinungen beobachtet werden.
+Bei alltäglichen Lichtquellen, wie der Sonne oder einer Glühbirne, sind $\delta_1$ und $\delta_2$ keine Konstanten, sondern statistische Funktionen der Zeit, sodass das Integral des Cosinus-Terms über eine lange Zeit $t_2-t_1$ verschwindet und eine konstante Intensität beobachtet wird. Dieses Licht ist nicht interferenzfähig und wird als inkohärent bezeichnet. Kohärentes Licht dagegen kann durch \emph{einen} Ausdruck \eqref{E-Feld} mit festen $k, \omega$ und $\delta$ beschrieben werden. \\
+Üblicherweise wird ein Laser verwendet, wenn Licht mit hoher Kohärenz gebraucht wird. Durch einen geeigneten Versuchsaufbau (siehe Abbildung \ref{Gluhlampe}) können allerdings auch bei nichtkohärenten Lichtquellen Interferenz-Erscheinungen beobachtet werden.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{Koharenz_Gluhlampe.png}
+	\caption{Versuchsaufbau, der eine nicht interferenzfähige Lichtquelle für Interferenz-Experimente erlaubt}
+	\label{Gluhlampe}
+\end{figure} 
+Hierbei wird das Licht in zwei kohärente Strahlen geteilt, die so umgelenkt werden, dass sie am Schirm interferieren können. Es gilt zu beachten, dass die Lichtquelle zum Beispiel durch Glühemission Wellenpakete emittiert. Der Emissionsvorgang passiert nicht instantan, sondern dauert eine endliche Zeit $\tau$, woraus eine endliche Länge $l$ des Paketes resultiert. Damit sich die Wellenpakete, nachdem sie unterschiedliche Wege zum Schirm gegangen sind, am Schirm treffen können, darf der Wegunterschied nicht größer als die Kohärenzlänge $l$ sein.
