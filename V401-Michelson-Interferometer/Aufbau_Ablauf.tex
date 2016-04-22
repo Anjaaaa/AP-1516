@@ -1,12 +1,11 @@
 \subsection*{Das Michelson-Interferometer}
-%\begin{figure}[h!]
-%	\centering
-%	\includegraphics[width=0.7\textwidth]{Interferometer.png}
-%	\caption{Versuchsaufbau, der eine nicht interferenzfähige Lichtquelle für Interferenz-Experimente erlaubt}
-%	\label{Gluhlampe}
-%\end{figure}
-%\input{Interferometer.tex}
-Zentraler Bestandteil des Experiments ist ein Michelson-Interferometer (siehe Abbildung VERWEIS). Als Michelson-Interferometer bezeichnet man einen kreuzförmigen Versuchsaufbau, bei dem sich jeweils ein Spiegel (S1) und ein Laser und ein zweiter Spiegel (S2) und ein Photodetektor gegenüber stehen. In der Mitte befindet sich ein semipermeabler Spiegel (SP). \\
+\begin{figure}[h!]
+	\centering
+	\input{Interferometer.tex}
+	\caption{Schematischer Aufbau des verwendeten Michelson-Interferometers}
+	\label{Interferometer}
+\end{figure}
+Zentraler Bestandteil des Experiments ist ein Michelson-Interferometer (siehe Abbildung \ref{Interferometer}). Als Michelson-Interferometer bezeichnet man einen kreuzförmigen Versuchsaufbau, bei dem sich jeweils ein Spiegel (S1) und ein Laser und ein zweiter Spiegel (S2) und ein Photodetektor gegenüber stehen. In der Mitte befindet sich ein semipermeabler Spiegel (SP). \\
 Beim Einschalten des Lasers bewegt sich der Lichtstrahl auf SP zu. Dort wird er geteilt. Die beiden einzelnen Strahlen laufen auf S1 oder S2 zu und werden dort reflektiert. Jeder dieser Strahlen wird bei SP abermals geteilt und so treffen zwei parallele Lichtstrahlen auf die Photodiode und erzeugen ein Interferenzbild. Die Intensität im Zentrum wird durch \eqref{Intensitat}
 \begin{align}
 	I = 2\vec{E}_0^2\left(1+\cos\Delta s\right) \ ,
@@ -23,10 +22,14 @@ Die Wellenlänge des Lasers (sichtbares Licht) liegt im \si{nm}-Bereich. Um vom 
 \end{align}
 gilt.
 \subsection*{Bestimmung des Brechungsindex}
-Im zweiten Versuchsteil wird die Messbox zwischen SP und S2 benötigt. Die Messbox wird evakuiert, dadurch läuft eines der Strahlenbündel während eines Weges $b$ ein Medium mit Brechungsindex $n' = n_\text{Luft} + \Delta n$. Der Wegunterschied der beiden Strahlen, die an der Photodiode auftreffen ist damit $\Delta n\cdot b$. Lässt man die Luft langsam wieder einströmen, können an der Photodiode Impulse gezählt werden, für die wieder der Zusammenhang \eqref{Wellenlange}
+Im zweiten Versuchsteil wird die Messbox zwischen SP und S2 benötigt. Die Messbox wird evakuiert, sodass eines der Strahlenbündel während eines Weges $b$ ein Medium mit Brechungsindex $n' = n + \Delta n$ durchläuft. Der Wegunterschied der beiden Strahlen, die an der Photodiode auftreffen ist damit $\Delta n\cdot b$. Lässt man die Luft langsam wieder einströmen, können an der Photodiode Impulse gezählt werden, für die wieder der Zusammenhang \eqref{Wellenlange}
 \begin{align}
 	\Delta n\cdot b = z \frac{\lambda}{2}
 \end{align}
-gilt. Da der Brechungsindex im Vakuum $n_0=1$ ist, kann so auf $n_\text{Luft}$ geschlossen werden. \\
+gilt. Da bei Experimenten mit Gasen Druck und Temperatur besonders berücksichtigt werden müssen, verwendet man zur Berechnung der Brechzahl die Funktion
+\begin{align}
+	n(p_0,T_0) = 1 + \Delta n\frac{T}{T_0}\frac{p_0}{p-p'} \ .
+\end{align}
+Sie erweitert den Zusammenhang $n_Luft = n_0+\Delta n$ mit einem Quotienten aus der Temperatur in der Messbox $T$ und der Normaltemperatur $T_0=\SI{273.15}{\kelvin}$, sowie einem Quotienten, aus dem Normaldruck $p_0=\SI{1013.2}{\milli\bar}$ und der Differenz der Drucke $p'$ in der evakuierten und $p$ in der mit Luft gefüllten Messbox. \\
 Dieser Versuchsteil wird für \ce{CO2} wiederholt, indem die Messbox mit dem Gas gefüllt wird und man es langsam heraus strömen lässt. \\
 In diesem zweiten Versuchsteil ist auch die Kompensationsplatte relevant. Sie gleicht die Störungen aus, die durch das Glas an der Messbox verursacht werden.

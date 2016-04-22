@@ -15,7 +15,7 @@ Die durchschnittliche Wellenlänge beträgt
 \end{align}
 
 \subsection{Bestimmung des Brechungsindexes von Luft und CO$_2$}
-\begin{table}[H]
+\begin{table}[h!]
 	\centering
 	\begin{tabular}{cccc}
 		Druckunterschied in \si{\bar} & Impulse & Brechungsindex & Fehler \\
@@ -26,3 +26,10 @@ Die durchschnittliche Wellenlänge beträgt
 	\captionof{table}{Brechungsindex Luft}
 \end{table}
 \todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
+\todo[inline,color=green]{Da hast du was angesprochen... Ich hab mal recherchiert und auf Wikipedia und in ein paar Skripten konnte ich konsistent dasselbe finden und ich meine auch, dass wir das immer so gemacht haben. \\
+Auf Wikipedia steht: \\ \ \\ \ \\
+\emph{Hat man von der Größe $x$ $N$ mit zufälligen Fehlern behaftete Werte $x_j$, so kommt man [...] zu einer, gegenüber dem Einzelwert, verbesserten Aussage durch Bildung des arithmetischen Mittelwertes \[ \overline {x}=\frac{1}{N}\sum_{j=1}^{N}x_j \ . \]
+Jeder neu hinzukommende Wert verändert mit seinem individuellen zufälligen Fehler den Mittelwert und macht ihn somit unsicher. Die Unsicherheit $Delta_x$, die dem berechneten Mittelwert anhaftet, ist gegeben durch
+\[ \Delta_{\overline{x}} = \sqrt{\frac{1}{N(N-1)}\sum_{j=1}^{N}(x_j-\overline{x})^2} \ .\]
+Anschaulich sind hier näherungsweise die quadrierten zufälligen Fehler addiert worden. Für große $N$ strebt die Unsicherheit gegen null, und bei Abwesenheit systematischer Fehler strebt der Mittelwert gegen den richtigen Wert.} \\ \ \\ \ \\
+Zusammengefasst: Stinknormaler Fehler des Mittelwerts. In einem Skript der TU Berlin habe ich dann noch was von gewichtetem Mittelwert gefunden: \url{https://www.pl-physik.tu-berlin.de/fileadmin/fg146/Anleitungen/Fehlerrechnung.pdf}}
