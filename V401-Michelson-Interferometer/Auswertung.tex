@@ -1,29 +1,84 @@
 \subsection{Bestimmung der Wellenlänge des Lasers}
-\begin{table}
-	\centering
-	\begin{tabular}{cc|cc|c|c}
-		Anfangspunkt & Endpunkt & Anfungspunkt in \si{\milli\meter} & Endpunkt \si{\milli\meter}  &  Impuls & Wellenlänge \si{\nano\meter} \\
-		\hline
-		\input{build/Tabelle3.tex}
-	\end{tabular}
-\end{table}
 
-
-Die durchschnittliche Wellenlänge beträgt
+Die Bestimmung der Wellenlänge erfolgt durch Umstellung der Formel \eqref{Wellenlange}
+\begin{align}
+		\lambda =   \frac{2 \cdot d}{z}  \quad .
+\end{align}
+Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronmoters $u = 1:5.046$ beachtet werden. Die Ergebnisse für alle zehn Messungen sind in Tabelle~\ref{tab:wellenlange} aufgelistet. Die durchschnittliche Wellenlänge beträgt
 \begin{align}
 	\lambda = \input{build/Wellenlange_gesamt.tex}
 \end{align}
 
+\begin{table}[H]
+	\centering	
+	\caption{Wellenlänge}
+	\begin{tabular}{cc|cc|c||c}
+		Anfangs- & Endpunkt & Anfangs- / \si{\milli\meter} & Endpunkt / \si{\milli\meter}  &  Impuls & Wellenlänge / \si{\nano\meter} \\
+		\hline
+		\input{build/Tabelle3.tex}
+	\end{tabular}
+
+	\label{tab:wellenlange}
+\end{table}
+
+
+
+
 \subsection{Bestimmung des Brechungsindexes von Luft und CO$_2$}
-\begin{table}[h!]
+Zur Bestimmung des Brechungsindex werden die Gleichungen \eqref{brechungsindex1} und (VERWEIS!!!) benötigt. Die Endgleichung ist
+\begin{align}
+	n(p_0, T_0) = 1+\frac{z \lambda}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \quad .
+\end{align}
+Wobei die Kammernweite $b$, die Raumtemperatur $T$ und die durch das Vakuum erzeugte Druckdifferenz $\Delta p$ berücksichtigt werden müssen, um den druck- und temperaturabhängigen Brechungsindex für die Standardbedingungen $T_0$ und $p_0$ zu erhalten.
+\begin{align}
+	b &= \SI{0.05}{\meter} \\
+	T &= \SI{293.15}{\kelvin} \\
+	T_0 &= \SI {273.15}{\kelvin} \\
+	p_0 &= \SI{1.01325}{\bar} \\
+\end{align}
+Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:BrechungsindexLuft} zu finden und die für Kohlenstoffdioxid in Tabelle~\ref{tab:BrechungsindexCO2}.
+
+\begin{table}[H]
+	\centering	
+	\captionof{table}{Brechungsindex Luft}	
+	\begin{tabular}{ccc}
+		Druckunterschied / \si{\bar} & Impulse & Brechungsindex \\
+		\hline
+		\input{build/Tabelle5.tex}
+	\end{tabular}
+	\label{tab:BrechungsindexLuft}
+\end{table}
+
+\subsection{Bestimmung des Brechungsindexes von Luft und \ce{CO}}
+\todo[color=red]{Sicher H und nicht h! zur Positionierung des tables? Ich kann H nicht kompilieren. Mach das was anderes als h!?}
+\begin{table}[H]
 	\centering
+	\captionof{table}{Brechungsindex Kohlenstoffdioxid}	
+	\begin{tabular}{ccc}
+		Druckunterschied / \si{\bar} & Impulse & Brechungsindex \\
+		\hline
+		\input{build/Tabelle6.tex}
+	\end{tabular}
+	\label{tab:BrechungsindexCO2}
+\end{table}
+
+
+
+
+
+
+
+
+
+\begin{table}[H]
+	\centering
+	\captionof{table}{Brechungsindex Luft ???!???}	
 	\begin{tabular}{cccc}
 		Druckunterschied in \si{\bar} & Impulse & Brechungsindex & Fehler \\
 		\hline
 		\input{build/Tabelle4.tex}
 	\end{tabular}
-	\label{tab:BrechungsindexLuft}
-	\captionof{table}{Brechungsindex Luft}
+   \label{fig:BrechungsindexLuft}
 \end{table}
 \todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
 \todo[inline,color=green]{Da hast du was angesprochen... Ich hab mal recherchiert und auf Wikipedia und in ein paar Skripten konnte ich konsistent dasselbe finden und ich meine auch, dass wir das immer so gemacht haben. \\

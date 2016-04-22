@@ -1,4 +1,13 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {german}
+<<<<<<< HEAD
 \contentsline {table}{\numberline {1}{\ignorespaces Brechungsindex Luft\relax }}{6}
+||||||| merged common ancestors
+\contentsline {table}{\numberline {1}{\ignorespaces Brechungsindex Luft\relax }}{7}
+=======
+\contentsline {table}{\numberline {1}{\ignorespaces Wellenl\IeC {\"a}nge\relax }}{7}
+\contentsline {table}{\numberline {2}{\ignorespaces Brechungsindex Luft\relax }}{7}
+\contentsline {table}{\numberline {3}{\ignorespaces Brechungsindex Kohlenstoffdioxid\relax }}{7}
+\contentsline {table}{\numberline {4}{\ignorespaces Brechungsindex Luft ???!???\relax }}{7}
+>>>>>>> 573622626b24dbd56e2db131d4265776b5e6150b
