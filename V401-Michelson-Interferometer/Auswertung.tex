@@ -4,7 +4,8 @@ Die Bestimmung der Wellenlänge erfolgt durch Umstellung der Formel \eqref{Welle
 \begin{align}
 		\lambda =   \frac{2 \cdot d}{z}  \quad .
 \end{align}
-Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronmoters $u = 1:5.046$ beachtet werden. Die Ergebnisse für alle zehn Messungen sind in Tabelle~\ref{tab:wellenlange} aufgelistet. Die durchschnittliche Wellenlänge beträgt
+Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronmoters $u = 1:5.046$
+ beachtet werden. Die Ergebnisse für alle zehn Messungen sind in Tabelle~\ref{tab:wellenlange} aufgelistet. Die durchschnittliche Wellenlänge beträgt
 \begin{align}
 	\lambda = \input{build/Wellenlange_gesamt.tex}
 \end{align}
@@ -36,13 +37,19 @@ mit einem Fehler, der sich nach der Gaußschen Fehlerfortpflanzung berechnet
 
 
 Wobei die Kammernweite $b$, die Raumtemperatur $T$ und die durch das Vakuum erzeugte Druckdifferenz $\Delta p$ berücksichtigt werden müssen, um den druck- und temperaturabhängigen Brechungsindex für die Standardbedingungen $T_0$ und $p_0$ zu erhalten.
-\begin{align}
+\begin{align*}
 	b &= \SI{0.05}{\meter} \\
 	T &= \SI{293.15}{\kelvin} \\
 	T_0 &= \SI {273.15}{\kelvin} \\
 	p_0 &= \SI{1.01325}{\bar} \\
-\end{align}
+\end{align*}
 Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:BrechungsindexLuft} zu finden und die für Kohlenstoffdioxid in Tabelle~\ref{tab:BrechungsindexCO2}.
+Bei der Berechnung der Mittelwerte $n_\text{Luft}$ und $n_\text{CO$_2$}$wurden auch die einzelnen Fehler berücksichtigt und die Formel für gewichtete Fehler (siehe \ref{sec:Fehlerrechnung})  verwendet.
+
+\begin{align}
+	n_\text{Luft} &=\input{build/Brechungsindex_Luft.tex} \\
+	n_\text{CO$_2$} &= \input{build/Brechungsindex_CO2.tex}
+\end{align}
 
 \begin{table}[h!]
 	\centering	
@@ -68,10 +75,6 @@ Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:
 \end{table}
 
 
-\begin{align}
-	n_\text{Luft} &=\input{build/Brechungsindex_Luft.tex} \\
-	n_\text{CO$_2$} &= \input{build/Brechungsindex_CO2.tex}
-\end{align}
 
 
 
@@ -87,6 +90,7 @@ Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:
 
 
 
+\clearpage
 \todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
 \todo[inline,color=green]{Da hast du was angesprochen... Ich hab mal recherchiert und auf Wikipedia und in ein paar Skripten konnte ich konsistent dasselbe finden und ich meine auch, dass wir das immer so gemacht haben. \\
 Auf Wikipedia steht: \\ \ \\ \ \\
