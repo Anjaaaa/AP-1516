@@ -25,10 +25,16 @@ Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronm
 
 
 \subsection{Bestimmung des Brechungsindexes von Luft und CO$_2$}
-Zur Bestimmung des Brechungsindex werden die Gleichungen \eqref{brechungsindex1} und (VERWEIS!!!) benötigt. Die Endgleichung ist
+Zur Bestimmung des Brechungsindex $n$ werden die Gleichungen \eqref{brechungsindex1} und \eqref{brechungsindex} benötigt. Die Endgleichung ist
 \begin{align}
-	n(p_0, T_0) = 1+\frac{z \lambda}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \quad .
+	n(p_0, T_0) = 1+\frac{z \lambda}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \quad ,
 \end{align}
+mit einem Fehler, der sich nach der Gaußschen Fehlerfortpflanzung berechnet
+\begin{align}
+\Delta_{n(p_0, T_0)} = \frac{z }{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \Delta_{\lambda}\quad .
+\end{align}
+
+
 Wobei die Kammernweite $b$, die Raumtemperatur $T$ und die durch das Vakuum erzeugte Druckdifferenz $\Delta p$ berücksichtigt werden müssen, um den druck- und temperaturabhängigen Brechungsindex für die Standardbedingungen $T_0$ und $p_0$ zu erhalten.
 \begin{align}
 	b &= \SI{0.05}{\meter} \\
@@ -41,21 +47,20 @@ Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:
 \begin{table}[h!]
 	\centering	
 	\captionof{table}{Brechungsindex Luft}	
-	\begin{tabular}{ccc}
-		Druckunterschied / \si{\bar} & Impulse & Brechungsindex \\
+	\begin{tabular}{cccc}
+		Druckunterschied / \si{\bar} & Impulse & Brechungsindex & Fehler \\
 		\hline
 		\input{build/Tabelle5.tex}
 	\end{tabular}
 	\label{tab:BrechungsindexLuft}
 \end{table}
 
-\subsection{Bestimmung des Brechungsindexes von Luft und \ce{CO2}}
-\todo[color=red]{Sicher H und nicht h! zur Positionierung des tables? Ich kann H nicht kompilieren. Mach das was anderes als h!?}
+
 \begin{table}[h!]
 	\centering
 	\captionof{table}{Brechungsindex Kohlenstoffdioxid}	
-	\begin{tabular}{ccc}
-		Druckunterschied / \si{\bar} & Impulse & Brechungsindex \\
+	\begin{tabular}{cccc}
+		Druckunterschied / \si{\bar} & Impulse & Brechungsindex   & Fehler \\
 		\hline
 		\input{build/Tabelle6.tex}
 	\end{tabular}
@@ -63,6 +68,10 @@ Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:
 \end{table}
 
 
+\begin{align}
+	n_\text{Luft} &=\input{build/Brechungsindex_Luft.tex} \\
+	n_\text{CO$_2$} &= \input{build/Brechungsindex_CO2.tex}
+\end{align}
 
 
 
@@ -70,16 +79,14 @@ Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:
 
 
 
-\begin{table}[h!]
-	\centering
-	\captionof{table}{Brechungsindex Luft ???!???}	
-	\begin{tabular}{cccc}
-		Druckunterschied in \si{\bar} & Impulse & Brechungsindex & Fehler \\
-		\hline
-		\input{build/Tabelle4.tex}
-	\end{tabular}
-   \label{fig:BrechungsindexLuft}
-\end{table}
+
+
+
+
+
+
+
+
 \todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
 \todo[inline,color=green]{Da hast du was angesprochen... Ich hab mal recherchiert und auf Wikipedia und in ein paar Skripten konnte ich konsistent dasselbe finden und ich meine auch, dass wir das immer so gemacht haben. \\
 Auf Wikipedia steht: \\ \ \\ \ \\
