@@ -3,15 +3,24 @@
 
 
 \newcommand{\Versuch}{Das Michelson-Interferometer}
-\newcommand{\Betreuer}{Julia \textsc{Mustermann}}
+\newcommand{\Betreuer}{Julia \textsc{Muchowski}}
 \newcommand{\Tag}{19.04.16}
 \newcommand{\V}{V401}
 
 % Bibliographie erstellen:
 % 	pdflatex Protokoll.tex
 % 	biber Protokoll
-% 	pdflatex Protokoll.tex
+% 	pdflatex Pbbbbbbbbbbbrotokoll.tex
 % oder einfach make ausführen
+
+\usepackage[
+	disable,
+	colorinlistoftodos,
+	linecolor=yellow,
+	backgroundcolor=yellow,
+	textwidth=0.15\textwidth,
+	textsize=footnotesize
+	]{todonotes} % Notizen
 
 \begin{document}
 \input{../Vorlage/Titlepage.tex}
@@ -32,13 +41,12 @@
 
 
 \section{Auswertung}
-\subsection{Statistische Formeln}
-\subsubsection{Fehlerrechnung}
+\subsection{Statistische Formeln zur Fehlerrechnung}
 \label{sec:Fehlerrechnung}
-\input{Fehlerrechnung.tex}
+\input{../Vorlage/Fehlerrechnung.tex}
 %\subsubsection{Regression}
 %\label{sec:regression}
-%\input{Regression.tex}
+%\input{../Vorlage/egression.tex}
 \clearpage
 \input{Auswertung.tex}
 \clearpage
@@ -48,10 +56,10 @@
 \input{Diskussion.tex}
 
 \clearpage
+\section{Anhang}
 \listoftodos
 \listoffigures
 \listoftables
-\clearpage
 \nocite{\V}
 \printbibliography[title = Literaturverzeichnis]
 

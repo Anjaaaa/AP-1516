@@ -2,12 +2,12 @@
 
 Die Bestimmung der Wellenlänge erfolgt durch Umstellung der Formel \eqref{Wellenlange}
 \begin{align}
-		\lambda =   \frac{2 \cdot d}{z}  \quad .
+		\lambda =   \frac{2 \cdot d}{z}  \ .
 \end{align}
 Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronmoters $u = 1:5.046$
  beachtet werden. Die Ergebnisse für alle zehn Messungen sind in Tabelle~\ref{tab:wellenlange} aufgelistet. Die durchschnittliche Wellenlänge beträgt
 \begin{align}
-	\lambda = \input{build/Wellenlange_gesamt.tex}
+	\lambda = \input{build/Wellenlange_gesamt.tex} \ .
 \end{align}
 
 \begin{table}[h!]
@@ -28,11 +28,11 @@ Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronm
 \subsection{Bestimmung des Brechungsindexes von Luft und CO$_2$}
 Zur Bestimmung des Brechungsindex $n$ werden die Gleichungen \eqref{brechungsindex1} und \eqref{brechungsindex} benötigt. Die Endgleichung ist
 \begin{align}
-	n(p_0, T_0) = 1+\frac{z \lambda}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \quad ,
+	n(p_0, T_0) = 1+\frac{z \lambda}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \ ,
 \end{align}
 mit einem Fehler, der sich nach der Gaußschen Fehlerfortpflanzung berechnet
 \begin{align}
-\Delta_{n(p_0, T_0)} = \frac{z }{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \Delta_{\lambda}\quad .
+\Delta_{n(p_0, T_0)} = \frac{z }{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \Delta_{\lambda} \ .
 \end{align}
 
 
@@ -89,13 +89,13 @@ Bei der Berechnung der Mittelwerte $n_\text{Luft}$ und $n_\text{CO$_2$}$wurden a
 
 
 
-
-\clearpage
-\todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
-\todo[inline,color=green]{Da hast du was angesprochen... Ich hab mal recherchiert und auf Wikipedia und in ein paar Skripten konnte ich konsistent dasselbe finden und ich meine auch, dass wir das immer so gemacht haben. \\
-Auf Wikipedia steht: \\ \ \\ \ \\
-\emph{Hat man von der Größe $x$ $N$ mit zufälligen Fehlern behaftete Werte $x_j$, so kommt man [...] zu einer, gegenüber dem Einzelwert, verbesserten Aussage durch Bildung des arithmetischen Mittelwertes \[ \overline {x}=\frac{1}{N}\sum_{j=1}^{N}x_j \ . \]
-Jeder neu hinzukommende Wert verändert mit seinem individuellen zufälligen Fehler den Mittelwert und macht ihn somit unsicher. Die Unsicherheit $Delta_x$, die dem berechneten Mittelwert anhaftet, ist gegeben durch
-\[ \Delta_{\overline{x}} = \sqrt{\frac{1}{N(N-1)}\sum_{j=1}^{N}(x_j-\overline{x})^2} \ .\]
-Anschaulich sind hier näherungsweise die quadrierten zufälligen Fehler addiert worden. Für große $N$ strebt die Unsicherheit gegen null, und bei Abwesenheit systematischer Fehler strebt der Mittelwert gegen den richtigen Wert.} \\ \ \\ \ \\
-Zusammengefasst: Stinknormaler Fehler des Mittelwerts. In einem Skript der TU Berlin habe ich dann noch was von gewichtetem Mittelwert gefunden: \url{https://www.pl-physik.tu-berlin.de/fileadmin/fg146/Anleitungen/Fehlerrechnung.pdf}}
+%
+%\clearpage
+%\todo[color=red, inline]{Anja, ich habe einen Knoten im Kopf oder eventuell auch sonst keine Ahnung, wie man das ausrechnet. In Tabelle \ref{tab:BrechungsindexLuft} sind die Bechungsindices und deren Fehler. Wie berechne ich den Mittelwert mit Standartabweichung? Haben Mittelwert und Fehler jeweils eine Standartabweichung?!}
+%\todo[inline,color=green]{Da hast du was angesprochen... Ich hab mal recherchiert und auf Wikipedia und in ein paar Skripten konnte ich konsistent dasselbe finden und ich meine auch, dass wir das immer so gemacht haben. \\
+%Auf Wikipedia steht: \\ \ \\ \ \\
+%\emph{Hat man von der Größe $x$ $N$ mit zufälligen Fehlern behaftete Werte $x_j$, so kommt man [...] zu einer, gegenüber dem Einzelwert, verbesserten Aussage durch Bildung des arithmetischen Mittelwertes \[ \overline {x}=\frac{1}{N}\sum_{j=1}^{N}x_j \ . \]
+%Jeder neu hinzukommende Wert verändert mit seinem individuellen zufälligen Fehler den Mittelwert und macht ihn somit unsicher. Die Unsicherheit $Delta_x$, die dem berechneten Mittelwert anhaftet, ist gegeben durch
+%\[ \Delta_{\overline{x}} = \sqrt{\frac{1}{N(N-1)}\sum_{j=1}^{N}(x_j-\overline{x})^2} \ .\]
+%Anschaulich sind hier näherungsweise die quadrierten zufälligen Fehler addiert worden. Für große $N$ strebt die Unsicherheit gegen null, und bei Abwesenheit systematischer Fehler strebt der Mittelwert gegen den richtigen Wert.} \\ \ \\ \ \\
+%Zusammengefasst: Stinknormaler Fehler des Mittelwerts. In einem Skript der TU Berlin habe ich dann noch was von gewichtetem Mittelwert gefunden: \url{https://www.pl-physik.tu-berlin.de/fileadmin/fg146/Anleitungen/Fehlerrechnung.pdf}}

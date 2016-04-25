@@ -1,6 +1,6 @@
 NAME=Protokoll
 
-all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Fehlerrechnung.tex Regression.tex Theorie.tex $(NAME).tex Titlepage.tex
+all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Regression.tex Theorie.tex $(NAME).tex Titlepage.tex
 	pdflatex $(NAME).tex
 	biber $(NAME)
 	pdflatex $(NAME).tex
