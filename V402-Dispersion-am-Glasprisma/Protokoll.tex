@@ -1,0 +1,66 @@
+\documentclass[a4,11pt]{article}
+\input{../Vorlage/Header.tex}
+
+
+\newcommand{\Versuch}{Das Michelson-Interferometer}
+\newcommand{\Betreuer}{Max \textsc{Mustermann}}
+\newcommand{\Tag}{26.04.16}
+\newcommand{\V}{V402}
+
+% Bibliographie erstellen:
+% 	pdflatex Protokoll.tex
+% 	biber Protokoll
+% 	pdflatex Protokoll.tex
+% oder einfach make ausführen
+
+\usepackage[
+	disable,
+	colorinlistoftodos,
+	linecolor=yellow,
+	backgroundcolor=yellow,
+	textwidth=0.15\textwidth,
+	textsize=footnotesize
+	]{todonotes} % Notizen
+
+\begin{document}
+\input{../Vorlage/Titlepage.tex}
+
+
+\tableofcontents
+\clearpage
+
+
+\section{Theorie}
+\input{Theorie.tex}
+\clearpage
+
+
+\section{Versuchsaufbau: Das Michelson-Interferometer}
+\input{Aufbau_Ablauf.tex}
+\clearpage
+
+
+\section{Auswertung}
+\subsection{Statistische Formeln zur Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+\input{../Vorlage/Fehlerrechnung.tex}
+%\subsubsection{Regression}
+%\label{sec:regression}
+%\input{../Vorlage/Regression.tex}
+\clearpage
+\input{Auswertung.tex}
+\clearpage
+
+
+\section{Diskussion}
+\input{Diskussion.tex}
+
+\clearpage
+\section{Anhang}
+\listoftodos
+\listoffigures
+\listoftables
+\nocite{\V}
+\printbibliography[title = Literaturverzeichnis]
+
+\end{document}
