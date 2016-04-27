@@ -1,0 +1,47 @@
+\label{math:ErrorAver}
+\label{math:ErrorBrechindex}
+\label{math:QuadrAbw}
+\label{math:Regression}
+{\Large\bfseries Mathematische Formeln} \\
+Der Mittelwert mehrerer Werte $x_i$ und der Fehler dieses Mittelwerts wurden mit
+\begin{align*}
+	\bar{x} &=  \frac{1}{N} \sum_{i=1}^\text{N} x_i \\
+	\Delta_{x} &= \frac{\sigma_x}{\sqrt{N}}
+\end{align*}
+berechnet.
+\subsubsection*{Fehlerfortpflanzung}
+Den Fehler des Brechungsindex
+\begin{align*}
+	n(\eta,\phi) = \frac{\sin\frac{\eta+\phi}{2}}{\sin\frac{\phi}{2}}
+\end{align*}
+ erhält man durch die Gauß'sche Fehlerfortpflanzung
+\begin{align*}
+	\Delta_n &= \sqrt{\left( \frac{\partial n}{\partial \eta} \right)^2 \Delta_\eta^2 
+		+ \left( \frac{\partial n}{\partial \phi} \right)^2 \Delta_\phi^2} \\
+	&= \sqrt{\left(\frac{\sin\frac{\phi}{2}\cos\frac{\eta+\phi}{2}-\sin\frac{\eta+\phi}{2}\cos\frac{\phi}{2}}{2\sin^2\frac{\phi}{2}}\right)^2 \Delta_\phi^2} \ ,
+\end{align*}
+wenn systematische Fehler vernachlässigt werden, sodass $\Delta_\phi=0$.
+\subsubsection*{Lineare Regression}
+Bei der lineare Regression mit den acht Wertepaaren $\{ (X_i^2, n^2(X_i)) \}$ wurde die Steigung
+\begin{align*}
+	P_2 = \dfrac{8\cdot\sum\limits_{i=1}^8X_i\cdot n^2(X_i)-\sum\limits_{i=1}^8X_i\cdot\sum\limits_{i=1}^8n^2(X_i)}
+	{8\cdot\sum\limits_{i=1}^8X_i^2-\left(\sum\limits_{i=1}^8X_i\right)^2}
+\end{align*}
+und die Verschiebung in $y$-Richtung
+\begin{align*}
+	P_0 = \dfrac{\sum\limits_{i=1}^8X_i^2\cdot\sum\limits_{i=1}^8n^2(X_i)-\sum\limits_{i=1}^8X_i\cdot\sum\limits_{i=1}^8X_i\cdot n^2(X_i)}
+	 {8\cdot\sum\limits_{i=1}^8X_i^2-\left(\sum\limits_{i=1}^8X_i\right)^2}
+\end{align*}
+verwendet. Die Fehler dieser Werte sind
+\begin{align*}
+	\Delta_{P_2}^2 = S^2 \cdot\dfrac{8}{8\cdot\sum\limits_{i=1}^8X_i^2-\left(\sum\limits_{i=1}^8X_i\right)^2}
+\end{align*}
+und
+\begin{align*}
+	\Delta_{P_0}^2 = S^2 \cdot \dfrac{\sum\limits_{i=1}^8X_i^2}{8\cdot\sum\limits_{i=1}^8X_i^2-\left(\sum\limits_{i=1}^8X_i\right)^2} \ .
+\end{align*}
+Hierbei wird die quadratische Abweichung
+\begin{align*}
+	S^2 = \dfrac{\sum\limits_{i=1}^8\left(n^2(X_i)-P_0-P_2X_i\right)^2}{6}
+\end{align*}
+verwendet.\cite[Kap. 1.2.10]{Walcher}

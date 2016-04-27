@@ -99,6 +99,7 @@ plt.show()
 
 ################################################################
 ### Entscheidung für eine der beiden Gleichungen 11 bzw. 11a durch Regression
+### WICHTIG! 1 hier ist gestrichen im Protokoll und 2 hier ist ungestrichen im Protokoll
 ################################################################
 ### wavelength^2 -> n^2
 print('Regression mit Lambda^2')
@@ -158,11 +159,16 @@ plt.show()
 
 
 ### Abweichungsquadrate
-abw2 = 1/6 * sum(n**2 - versch2 - steigung2 / wavelength**2)
-abw1 = 1/6 * sum(n**2 - versch1 - steigung1 * wavelength**2)
+abw2 = 1/6 * sum(n_nom**2 - versch2.n - steigung2.n / wavelength**2)
+abw1 = 1/6 * sum(n_nom**2 - versch1.n - steigung1.n * wavelength**2)
+print('n_nom**2:', n_nom**2)
+print('P_0:', versch2.n)
+print('P_2:', steigung2.n/wavelength**2)
+print('s**2:', abw2)
+print('s**2Strich:', abw1)
 
-write('build/abw1.tex', make_SI(abw1,r'',figures=2))
-write('build/abw2.tex', make_SI(abw2,r'',figures=2))
+write('build/abw1.tex', make_SI(abw1,r'',figures=3))
+write('build/abw2.tex', make_SI(abw2*10**14,r'', 'e-14',figures=3))
 
 
 

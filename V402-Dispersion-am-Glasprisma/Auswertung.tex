@@ -1,3 +1,8 @@
+\subsection{Berechnung von Innenwinkel und Brechwinkel}
+Bei der Messung des Innenwinkels des Prismas und mit Formel \eqref{Phi} ergeben sich die die Werte in Tabelle \ref{tab:WinkelPhi}. Der Mittelwert\footnote{siehe \nameref{math:ErrorAver}} ist
+\begin{align}
+	\overline{\phi} = \input{build/Winkel_Prisma.tex} \ .
+\end{align}
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c}
@@ -7,10 +12,8 @@
 	\end{tabular}
 	\caption{Messwerte zur Bestimmung des Innenwinkels $\phi$ in \si{\degree}}
 	\label{tab:WinkelPhi}
-\end{table}
-Mittelwert $\overline{\phi} = \input{build/Winkel_Prisma.tex}$
-\todo[color=red, inline]{Schreibt man Winkel $\varphi$ in \si{\degree} oder $\varphi$ in Grad? Ich finde ersteres hässlich und zweiteres inkonsistent.}
-
+\end{table} \\
+Tabelle \ref{tab:WinkelFarben} zeigt die Winkel $\Omega_l$ und $\Omega_r$, die zusammen mit Formel \eqref{Eta} die Werte für die Brechwinkel $\eta$ ergeben. Zu beachten ist hierbei, dass zwischen den beiden Winkel die Nulllinie überschritten wurde, sodass, um die eigentliche Differenz zu erhalten, zu $\Omega_l$ jeweils \SI{360}{\degree} addiert werden müssen.
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c|c}
@@ -21,55 +24,83 @@ Mittelwert $\overline{\phi} = \input{build/Winkel_Prisma.tex}$
 	\caption{Messwerte zur Bestimmung des Brechwinkels $\eta$ in \si{\degree}}
 	\label{tab:WinkelFarben}
 \end{table}
-
+\clearpage
+\subsection{Bestimmung der Dispersionskurve}
+Mit Hilfe von Formel \eqref{BrechIndex} kann nun für jede Wellenlänge $\lambda$ der Brechungsindex (siehe Tabelle \ref{tab:Brechzahl}) ausgerechnet werden.
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c}
-		$\lambda$ in \si{\nano\meter} & $n$ & Fehler $\sigma_n$ \\
+		$\lambda$ in \si{\nano\meter} & $n$ & Fehler $\Delta_n$ \\
 		\hline
 		\input{build/Brechzahlen.tex}
 	\end{tabular}
-	\caption{Errechnete Brechzahlen $n$ für jede Wellenlänge $\lambda$}
+	\caption[Errechnete Brechzahlen $n$ mit Fehlern für jede Wellenlänge $\lambda$]{Errechnete Brechzahlen $n$ mit Fehlern\footnotemark\ für jede Wellenlänge $\lambda$}
 	\label{tab:Brechzahl}
 \end{table}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\textwidth]{Tendenz.png}
-	\caption{Graphik zur Abschätzung, ob die Absorptionsstelle größer oder kleiner als das betrachtete Spektrum ist}
-\end{figure}
-
+\footnotetext{siehe: \nameref{math:ErrorBrechindex}} \\
+Wie in der Theorie beschrieben muss nun entschieden werden, ob das betrachtete Spektrum über (Fall 1) oder unter (Fall 2) der Absorptionsstelle liegt. Dazu werden Formel \eqref{Fall1} als
+\begin{align}\label{Reg:1}
+	n^2(\lambda) = A_0 + \frac{A_2}{\lambda^2}
+\end{align}
+und Formel \eqref{Fall2} als
+\begin{align}\label{Reg:2}
+	n^2(\lambda) = A_0' + A_2'\lambda^2
+\end{align}
+genähert. Es wird jeweils eine lineare Regression\footnote{siehe: \nameref{math:Regression}} mit den Wertepaaren $\{ (\frac{1}{\lambda_i^2}, n^2(\lambda_i)) \}$ (bei \eqref{Reg:1}) bzw. $\{ (\lambda_i^2, n^2(\lambda_i)) \}$ (bei \eqref{Reg:2}) durchgeführt, um die Parameter $A_0, A_2, A_0', A_2'$ auszurechnen. Die \glqq Güte\grqq\ der Parameter kann durch die quadratischen Abweichungen\footnote{siehe: \nameref{math:QuadrAbw}} $s^2, s'^2$ bestimmt werden. Alle diese Werte finden sich in Tabelle \ref{tab:Regression}.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c|c|c}
 		Größe & Wert & relativer Fehler \\
 		\hline
-		$A_2'$ & \input{build/Reg1Steig.tex} & \input{build/Reg1SteigRel.tex}
-		\\
 		$A_2$ & \input{build/Reg2Steig.tex} & \input{build/Reg2SteigRel.tex} \\
-		$A_0'$ & \input{build/Reg1Versch.tex} & \input{build/Reg1VerschRel.tex}
-		\\
+		$A_2'$ & \input{build/Reg1Steig.tex} & \input{build/Reg1SteigRel.tex} \\
 		$A_0$ & \input{build/Reg2Versch.tex} & \input{build/Reg2VerschRel.tex} \\
+		$A_0'$ & \input{build/Reg1Versch.tex} & \input{build/Reg1VerschRel.tex} \\
 		\hline
-		$s'^2(A_0',A_2')$ & \input{build/abw1.tex} & \\
 		$s^2(A_0,A_2)$ & \input{build/abw2.tex} & \\
+		$s'^2(A_0',A_2')$ & \input{build/abw1.tex} &
 	\end{tabular}
 	\caption{Durch die lineare Regression berechnete Werte $A_0,A_0',A_2,A_2'$ mit Fehlern und relativen Fehlern, sowie die quadratischen Abweichungen $s^2,s'^2$ der Regressionsgeraden zu den Datenpunkten}
+	\label{tab:Regression}
 \end{table}
-Dispersionskurve
-\[ n(\lambda) = \sqrt{3.47 - \SI{1.6e-14}\lambda^{-2}} \]
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Tendenz.png}
+	\caption{Graphik zur Abschätzung, ob die Absorptionsstelle größer oder kleiner als das betrachtete Spektrum ist}
+	\label{Abb:Krummung}
+\end{figure} \\
+Eigentlich sollte die Entscheidung welche Näherung die bessere ist allein durch Betrachtung der Krümmung der Kurve, die die Messwerte in Abbildung \ref{Abb:Krummung} beschreiben, getroffen werden können. In diesem Fall ist das nicht sehr aussagekräftig, weshalb sich hier nur auf die Abweichungsquadrate verlassen wird. Demnach ist \eqref{Reg:1} die bessere Wahl und die Dispersionsgleichung wird zu
+\begin{align*}
+	n(\lambda) = \sqrt{3.47 - \SI{1.6e-14}\lambda^{-2}}
+\end{align*}
+bestimmt. Der Funktionsgraf ist in Abbildung \ref*{fig:DispKurve} zu sehen.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Dispersionskurve.png}
 	\caption{Dispersionskurve}
 	\label{fig:DispKurve}
 \end{figure}
-
-
-Abbesche Zahl \[ \nu = \input{build/Abbe.tex} \]
-
-Auflösungsvermögen
-\begin{table}
+Für die nächstgelegene Absorptionsstelle $\lambda_1$ gilt also $\lambda_1\gg\lambda_i$. Es wird davon ausgegangen, dass es nur eine Absorptionsstelle gibt. Es folgt dann aus \eqref{Absorptionsstelle}, dass der Brechindex für $\omega\rightarrow\omega_1$ bzw. $\lambda\rightarrow\lambda_1$ gegen 1 geht. Es gilt also für \eqref{Reg:1}:
+\begin{align*}
+	n^2(\lambda_1) = 1 &= A_0 + \frac{A_2}{\lambda_1^2} \\
+	\Leftrightarrow\quad \lambda_1 &= \sqrt{\frac{A_2}{A_0-1}} = \input{build/absorb.tex}
+\end{align*}
+\clearpage
+\subsection{Kenndaten des Prismas}
+Zuletzt sollen einige Kenndaten des verwendeten Prismas berechnet werden. \\
+\ \\
+Die Abbesche Zahl ist ein Maß für die Farbzerstreuung bei Gläsern. Sie ist definiert als
+\begin{align}
+	\nu = \frac{n(\lambda_\text{D})-1}{n(\lambda_\text{F})-n(\lambda_\text{C})} = \input{build/Abbe.tex} \ ,
+\end{align}
+wobei die $\lambda_i$ die Wellenlängen der Fraunhoferschen Linien $\lambda_\text{D} = \SI{589}{\nano\meter}$, $\lambda_\text{F} = \SI{486}{\nano\meter}$ und $\lambda_\text{C} = \SI{656}{\nano\meter}$ sind. \\
+\ \\
+Das Auflösungsvermögen bezeichnet den Koeffizienten $\frac{\lambda}{\Delta\lambda}$, der beschreibt, wie nah zwei Spektrallinien liegen dürfen, sodass sie vom Prisma noch getrennt werden können. Für das verwendete Prisma kann das Auflösungsvermögen mit
+\begin{align*}
+	\frac{\lambda}{\Delta\lambda} = b\frac{\text{d}n}{\text{d}\lambda}
+\end{align*}
+berechnet werden (Werte für jede Wellenlänge siehe Tabelle \ref{tab:Aufl}). Die Länge $b=\SI{3}{\centi\meter}$ ist die Seitenlänge des Prismas.
+\begin{table}[h!]
 	\centering
 	\begin{tabular}{c|c}
 		Wellenlänge in \si{\nano\meter} & Auflösungsvermögen \\
@@ -77,10 +108,8 @@ Auflösungsvermögen
 		\input{build/Aufl.tex}
 	\end{tabular}
 	\caption{Auflösungsvermögen bei verschiedenen Wellenlängen}
+	\label{tab:Aufl}
 \end{table}
-
-Absorptionsstelle \[ \lambda_1 = \sqrt{\frac{A_2}{A_0-1}} = \input{build/absorb.tex} \]
-
 
 \clearpage
 
