@@ -1,0 +1,111 @@
+\begin{table}[h!]
+	\centering	
+	\begin{tabular}{c|c|c}
+		$\varphi_1$ & $\varphi_2$ & $\varphi$ \\
+		\hline
+		\input{build/Messwerte1.tex}
+	\end{tabular}
+	\caption{Messwerte zur Bestimmung des Winkels $\varphi$ des Prismas in \si{\degree}}
+	\label{tab:WinkelPhi}
+\end{table}
+Mittelwert $\varphi = \input{build/Winkel_Prisma.tex}$
+\todo[color=red, inline]{Schreibt man Winkel $\varphi$ in \si{\degree} oder $\varphi$ in Grad? Ich finde ersteres hässlich und zweiteres inkonsistent.}
+
+\begin{table}[h!]
+	\centering	
+	\begin{tabular}{c|c|c|c}
+		Wellenlänge $\lambda$ in \si{\nano\meter} & $\eta_1$ & $\eta_2$ & $\eta$ \\
+		\hline
+		\input{build/Messwerte2.tex}
+	\end{tabular}
+	\caption{Messwerte zur Bestimmung des Brechwinkels $\eta$ in \si{\degree}}
+	\label{tab:WinkelFarben}
+\end{table}
+
+\begin{table}[h!]
+	\centering	
+	\begin{tabular}{c|c|c}
+		$\lambda$ in \si{\nano\meter} & $n$ & Fehler $\sigma_n$ \\
+		\hline
+		\input{build/Brechzahlen.tex}
+	\end{tabular}
+	\caption{Errechnete Brechzahlen $n$ für jede Wellenlänge $\lambda$}
+	\label{tab:Brechzahl}
+\end{table}
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{c|c|c}
+		Größe & Wert & relativer Fehler \\
+		\hline
+		Steigung bei $\lambda^2$ & \input{build/Reg1Steig.tex} & \input{build/Reg1SteigRel.tex}
+		\\
+		Steigung bei $\lambda^{-2}$ & \input{build/Reg2Steig.tex} & \input{build/Reg2SteigRel.tex} \\
+		Achsenabschnitt bei $\lambda^2$ & \input{build/Reg1Versch.tex} & \input{build/Reg1VerschRel.tex}
+		\\
+		Achsenabschnitt bei $\lambda^{-2}$ & \input{build/Reg2Versch.tex} & \input{build/Reg2VerschRel.tex} \\
+		\hline
+		Abweichungsquadrat bei $\lambda^2$ & \input{build/abw1.tex} & \\
+		Abweichungsquadrat bei $\lambda^{-2}$ & \input{build/abw2.tex} & \\
+	\end{tabular}
+\end{table}
+Dispersionskurve
+\[ n(\lambda) = \sqrt{3.47 - \SI{1.6e-14}\lambda^{-2}} \]
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Dispersionskurve.png}
+	\caption{Dispersionskurve}
+	\label{fig:DispKurve}
+\end{figure}
+
+
+Abbesche Zahl \[ \nu = \input{build/Abbe.tex} \]
+
+Auflösungsvermögen
+\begin{table}
+	\centering
+	\begin{tabular}{c|c}
+		Wellenlänge in \si{\nano\meter} & Auflösungsvermögen \\
+		\hline
+		\input{build/Aufl.tex}
+	\end{tabular}
+\end{table}
+
+Absorptionsstelle \[ \lambda_1 = \sqrt{\frac{Steigung^{-2}}{Verschiebung^{-2}-1}} = \input{build/absorb.tex} \]
+
+
+\clearpage
+
+
+\begin{table}
+\centering
+\begin{tabular}{c|c|c}
+	Farben & Quecksilber & Cadmium \\
+	\hline
+	violett1 & 407.78 / 404.66 & \\
+	violett2 & 435.84 & 441.46 \\
+	blau &  & 467.82 \\
+	türkis & 491.60 & 479.99 \\
+	grün & 546.07 & \\
+	gelb & 579.07 / 576.95 & \\
+	orange &  & 635.99 \\
+	rot &  & 643.85 \\
+\end{tabular}
+\end{table}
+Walcher: \\
+Cadmium \\
+643.85	rot			stark \\
+635.99	gelbrot		schwach \\
+508.58	grün		stark \\
+479.99	blaugrün	stark \\
+467.82	blau		stark \\
+441.46	blau		mittel \qquad haben wir als violett gesehen \\
+\ \\
+Quecksilber \\
+708.19	rot			schwach \\
+690.72	rot			schwach \\
+579.07 und 576.95	gelb		sehr stark \\
+546.07	grün		stark \\
+491.60	blaugrün	mittel \\
+435.84	blau		stark \qquad haben wir als violett gesehen \\
+407.78 und 404.66	violett		mittel \\
