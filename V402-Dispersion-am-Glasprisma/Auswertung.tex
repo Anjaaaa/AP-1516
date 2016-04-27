@@ -1,20 +1,20 @@
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c}
-		$\varphi_1$ & $\varphi_2$ & $\varphi$ \\
+		$\phi_r$ & $\phi_l$ & $\phi$ \\
 		\hline
 		\input{build/Messwerte1.tex}
 	\end{tabular}
-	\caption{Messwerte zur Bestimmung des Winkels $\varphi$ des Prismas in \si{\degree}}
+	\caption{Messwerte zur Bestimmung des Innenwinkels $\phi$ in \si{\degree}}
 	\label{tab:WinkelPhi}
 \end{table}
-Mittelwert $\varphi = \input{build/Winkel_Prisma.tex}$
+Mittelwert $\overline{\phi} = \input{build/Winkel_Prisma.tex}$
 \todo[color=red, inline]{Schreibt man Winkel $\varphi$ in \si{\degree} oder $\varphi$ in Grad? Ich finde ersteres hässlich und zweiteres inkonsistent.}
 
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c|c}
-		Wellenlänge $\lambda$ in \si{\nano\meter} & $\eta_1$ & $\eta_2$ & $\eta$ \\
+		Wellenlänge $\lambda$ in \si{\nano\meter} & $\Omega_l$ & $\Omega_r$ & $\eta$ \\
 		\hline
 		\input{build/Messwerte2.tex}
 	\end{tabular}
@@ -33,21 +33,28 @@ Mittelwert $\varphi = \input{build/Winkel_Prisma.tex}$
 	\label{tab:Brechzahl}
 \end{table}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Tendenz.png}
+	\caption{Graphik zur Abschätzung, ob die Absorptionsstelle größer oder kleiner als das betrachtete Spektrum ist}
+\end{figure}
+
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c|c|c}
 		Größe & Wert & relativer Fehler \\
 		\hline
-		Steigung bei $\lambda^2$ & \input{build/Reg1Steig.tex} & \input{build/Reg1SteigRel.tex}
+		$A_2'$ & \input{build/Reg1Steig.tex} & \input{build/Reg1SteigRel.tex}
 		\\
-		Steigung bei $\lambda^{-2}$ & \input{build/Reg2Steig.tex} & \input{build/Reg2SteigRel.tex} \\
-		Achsenabschnitt bei $\lambda^2$ & \input{build/Reg1Versch.tex} & \input{build/Reg1VerschRel.tex}
+		$A_2$ & \input{build/Reg2Steig.tex} & \input{build/Reg2SteigRel.tex} \\
+		$A_0'$ & \input{build/Reg1Versch.tex} & \input{build/Reg1VerschRel.tex}
 		\\
-		Achsenabschnitt bei $\lambda^{-2}$ & \input{build/Reg2Versch.tex} & \input{build/Reg2VerschRel.tex} \\
+		$A_0$ & \input{build/Reg2Versch.tex} & \input{build/Reg2VerschRel.tex} \\
 		\hline
-		Abweichungsquadrat bei $\lambda^2$ & \input{build/abw1.tex} & \\
-		Abweichungsquadrat bei $\lambda^{-2}$ & \input{build/abw2.tex} & \\
+		$s'^2(A_0',A_2')$ & \input{build/abw1.tex} & \\
+		$s^2(A_0,A_2)$ & \input{build/abw2.tex} & \\
 	\end{tabular}
+	\caption{Durch die lineare Regression berechnete Werte $A_0,A_0',A_2,A_2'$ mit Fehlern und relativen Fehlern, sowie die quadratischen Abweichungen $s^2,s'^2$ der Regressionsgeraden zu den Datenpunkten}
 \end{table}
 Dispersionskurve
 \[ n(\lambda) = \sqrt{3.47 - \SI{1.6e-14}\lambda^{-2}} \]
@@ -69,9 +76,10 @@ Auflösungsvermögen
 		\hline
 		\input{build/Aufl.tex}
 	\end{tabular}
+	\caption{Auflösungsvermögen bei verschiedenen Wellenlängen}
 \end{table}
 
-Absorptionsstelle \[ \lambda_1 = \sqrt{\frac{Steigung^{-2}}{Verschiebung^{-2}-1}} = \input{build/absorb.tex} \]
+Absorptionsstelle \[ \lambda_1 = \sqrt{\frac{A_2}{A_0-1}} = \input{build/absorb.tex} \]
 
 
 \clearpage

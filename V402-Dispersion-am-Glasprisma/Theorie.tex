@@ -6,7 +6,7 @@ Dieser Zusammenhang wird auch Snelliussches Gesetz genannt. Die Ausbreitungsgesc
 Die Brechung ist im Allgemeinen abhängig von der Wellenlänge $\lambda$ des einfallenden Lichtes. Man spricht von \textbf{Dispersion}. \\
 Eine, für viele Phänomene hinreichend genaue, Dispersionsrelation wird aus der Maxwellschen Theorie der elektromagnetischen Wellen hergeleitet. Sie gilt für Wellenlängen, bei denen kaum Absorption auftritt. Überlegungen zur Kraft eines Elektrischen Feldes liefern eine inhomogene Differentialgleichung (DGL) zweiter Ordnung, die der einer gezwungenen und gedämpften Schwingung entspricht. Die Reibungskraft dämpft proportional zur Geschwindigkeit und die Rücktreibende kraft hängt von der Auslenkung des des Ladungsträgers aus seiner Ruhelage ab
 \begin{align}
-	m_i \dv[2]{\va{x}_i}{t} + f_i \dv{\va{x}_i}{t} + a_i \va{x}_i = q_i \va{E}_0 \quad . e^{i\omega t}
+	m_i \dv[2]{\va{x}_i}{t} + f_i \dv{\va{x}_i}{t} + a_i \va{x}_i = q_i \va{E}_0 e^{i\omega t} \quad .
 \end{align}
 Diese DGL kann auch über die Polarisation
 \begin{align}
@@ -18,7 +18,7 @@ ausgedrückt werden. Die Lösung lautet dann
 \end{align}
 Der Bezug zum Brechungsindex wird über die dielektische Verschiebung $\epsilon$, eine Materialeigenschaft, hergestellt
 \begin{align}
-\va{P} = (\tilde{\epsilon} -1) \epsilon_o \va{E} = (\tilde{n}^2 - 1) \epsilon_0 \va{E}_0 e^{i \omega t} \quad, \tilde{\epsilon}, \tilde{n} = n(1-i k) \in \mathbb{C} \quad .
+\va{P} = (\tilde{\epsilon} -1) \epsilon_o \va{E} = (\tilde{n}^2 - 1) \epsilon_0 \va{E}_0 e^{i \omega t} \ , \quad \tilde{\epsilon}, \tilde{n} = n(1-i k) \in \mathbb{C} \quad .
 \end{align}
 Es folgt
 \begin{align}
@@ -38,11 +38,11 @@ In Gleichung \eqref{eq:dispersionsrelation} wird noch die Windelgeschwindigkeit 
 Hierbei werden zwei Fälle unterschieden: Ist die Wellenlänge größer oder kleiner als die Absorptionsstelle $\lambda_1$. Es wird davon ausgegangen, dass nur eine solche Absorptionsstelle vorliegt. \\
 \underline{Fall 1 $(\lambda \gg \lambda_1)$ :}  \\
 \begin{align}
-n^2(\lambda) = A_0 + \frac{A_2}{\lambda^2} + \frac{A_4}{\lambda^4} + ... \quad , A_0, A_2, A_4 > 0
+n^2(\lambda) = A_0 + \frac{A_2}{\lambda^2} + \frac{A_4}{\lambda^4} + ... \ , \quad A_0, A_2, A_4 > 0
 \end{align}
 \underline{Fall 1 $(\lambda \ll \lambda_1)$ :}  \\
 \begin{align}
-n^2(\lambda) = 1 + A'_2 \lambda^2 + A'_4 \lambda^4 + ... \quad , A'_2, A'_4 > 0
+n^2(\lambda) = 1 + A'_2 \lambda^2 + A'_4 \lambda^4 + ... \ , \quad A'_2, A'_4 > 0
 \end{align}
 Die beiden Dispersionskurven stellen die normale Dispersion dar. Das bedeutet, dass der Brechungsindex mit zunehmender Wellenlänge abnimmt. Die beiden Fälle unterscheiden sich jedoch in der Krümmung. Abbildung~\ref{fig:dispersionskurven} zeigt Fall 1 in a) und Fall 2 in b).
 

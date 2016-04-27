@@ -38,7 +38,7 @@ print('phi_Mittel:', phi_Mittel)
 
 write('build/Messwerte1.tex', make_table([phi_1, phi_2, phi],[0,0,0]))
 write('build/Winkel_Prisma.tex', make_SI(phi_Mittel,r'',figures=1))
-write('build/Messwerte2.tex', make_table([wavelength, eta_1, eta_2, eta],[1,1,1,1]))
+write('build/Messwerte2.tex', make_table([wavelength*10**9, eta_1, eta_2, eta],[1,1,1,1]))
 ################################################################
 
 
@@ -78,8 +78,9 @@ plt.plot(wavelength*10**9, f(wavelength,m,b), 'r-', label = 'Hilfslinie')
 plt.xlabel(r'$\mathrm{\lambda} \ /\  \mathrm{nm}$')
 plt.ylabel(r'$n^2$')
 plt.legend(loc='best')
-plt.show()
+
 plt.savefig('Tendenz.png')
+plt.show()
 
 
 
@@ -171,10 +172,11 @@ write('build/abw2.tex', make_SI(abw2,r'',figures=2))
 def nFkt(wavelength):
      return np.sqrt( values2[1]+values2[0]/wavelength**2 )
 
-plt.plot(wavelength*10**9, n_nom, 'r.', label='Messpunkte')
+plt.plot(wavelength*10**9, n_nom, 'r.', label='Datenpunkte')
 plt.plot(wavelength*10**9, nFkt(wavelength), 'b-', label = 'Dispersionsfunktion')
 plt.xlabel(r'$\mathrm{\lambda} \ /\  \mathrm{nm}$')
 plt.ylabel(r'$n$')
+plt.legend(loc='best')
 
 plt.savefig('Dispersionskurve.png')
 plt.show()
