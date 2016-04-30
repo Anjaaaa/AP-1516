@@ -38,7 +38,7 @@ print('phi_Mittel:', phi_Mittel)
 
 write('build/Messwerte1.tex', make_table([phi_1, phi_2, phi],[0,0,0]))
 write('build/Winkel_Prisma.tex', make_SI(phi_Mittel,r'',figures=1))
-write('build/Messwerte2.tex', make_table([wavelength*10**9, eta_1, eta_2, eta],[1,1,1,1]))
+write('build/Messwerte2.tex', make_table([wavelength*10**9, eta_1, eta_2, eta],[2,1,1,1]))
 ################################################################
 
 
@@ -54,7 +54,7 @@ n_nom = unp.nominal_values(n)
 n_std = unp.std_devs(n)
 
 
-write('build/Brechzahlen.tex', make_table([wavelength*10**9, n_nom, n_std],[1,3,3]))
+write('build/Brechzahlen.tex', make_table([wavelength*10**9, n_nom, n_std],[2,3,3]))
 ################################################################
 
 
@@ -71,7 +71,7 @@ def f(X,m,b):
 
 
 ### Wellenlänge -> n^2
-plt.plot(wavelength*10**9, Y, 'bx', label='Messwerte')
+plt.plot(wavelength*10**9, Y, 'kx', label='Messwerte')
 plt.plot(wavelength*10**9, f(wavelength,m,b), 'r-', label = 'Hilfslinie')
 #plt.plot(wavelength*10**9, n_nom, 'gx')
 
@@ -159,16 +159,16 @@ plt.show()
 
 
 ### Abweichungsquadrate
-abw2 = 1/6 * sum(n_nom**2 - versch2.n - steigung2.n / wavelength**2)
-abw1 = 1/6 * sum(n_nom**2 - versch1.n - steigung1.n * wavelength**2)
+abw2 = 1/6 * sum((n_nom**2 - versch2.n - steigung2.n / wavelength**2)**2)
+abw1 = 1/6 * sum((n_nom**2 - versch1.n - steigung1.n * wavelength**2)**2)
 print('n_nom**2:', n_nom**2)
 print('P_0:', versch2.n)
 print('P_2:', steigung2.n/wavelength**2)
 print('s**2:', abw2)
 print('s**2Strich:', abw1)
 
-write('build/abw1.tex', make_SI(abw1,r'',figures=3))
-write('build/abw2.tex', make_SI(abw2*10**14,r'', 'e-14',figures=3))
+write('build/abw1.tex', make_SI(abw1*1000,r'','e-3',figures=1))
+write('build/abw2.tex', make_SI(abw2*1000,r'','e-3',figures=1))
 
 
 
@@ -178,8 +178,8 @@ write('build/abw2.tex', make_SI(abw2*10**14,r'', 'e-14',figures=3))
 def nFkt(wavelength):
      return np.sqrt( values2[1]+values2[0]/wavelength**2 )
 
-plt.plot(wavelength*10**9, n_nom, 'r.', label='Datenpunkte')
-plt.plot(wavelength*10**9, nFkt(wavelength), 'b-', label = 'Dispersionsfunktion')
+plt.plot(wavelength*10**9, n_nom, 'k.', label='Datenpunkte')
+plt.plot(wavelength*10**9, nFkt(wavelength), 'r-', label = 'Dispersionsfunktion')
 plt.xlabel(r'$\mathrm{\lambda} \ /\  \mathrm{nm}$')
 plt.ylabel(r'$n$')
 plt.legend(loc='best')

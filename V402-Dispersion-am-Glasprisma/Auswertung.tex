@@ -1,16 +1,73 @@
+\subsection{Die Wellenlängen der Spektrallinien}
+Für Berechnungen werden die genauen Wellenlängen der Spektrallinien benötigt. Um sie zu bestimmen wird ein Auszug aus \cite[Tabellenanhang Tab. A 4.3]{Walcher} (Tablle \ref{tab:Wellenlange}) verwendet. Bei der Messung wird ein Spektrum wie in Abbildung \ref{abb:Spektrum}, allerdings ohne die kurzwelligen dunkelroten Linien, gesehen.
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{llll}
+		Element & $\lambda$ in \si{\nano\meter} & Farbeindruck & Helligkeitseindruck\footnotemark \\
+		\hline
+		Cadmium (Cd) & 643.86 & rot & stark \\
+		& 635.99 & gelbrot & schwach \\
+		& 508.58 & grün & stark \\
+		& 479.99 & blaugrün & stark \\
+		& 467.82 & blau & stark \\
+		& 441.46 & blau & mittel \\
+		\hline
+		Quecksilber (Hg) & 708.19 & rot & schwach \\
+		& 690.72 & rot & schwach \\
+		& 579.07 & gelb & sehr stark \\
+		& 576.96 & gelb & sehr stark \\
+		& 546.07 & grün & stark \\
+		& 491.60 & blaugrün & mittel \\
+		& 435.84 & blau & stark \\
+		& 407.78 & violett & mittel \\
+		& 404.66 & violett & mittel \\
+		\hline
+	\end{tabular}
+	\caption{Wellenlängen der Spektrallinien von Cadmium und Quecksilber}
+	\label{tab:Wellenlange}
+\end{table}
+\footnotetext{relative Lichtstärke für ein einzelnes Element}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = \textwidth]{Cd.jpg}
+	\includegraphics[width = \textwidth]{Hg.jpg}
+	\caption{Spektrallinien einer Cadmiumspektrallampe\cite{Cadmium} (oben) und einer Quecksilberdampflampe\cite{Quecksilber} (unten)}
+	\label{abb:Spektrum}
+\end{figure}\newline
+Durch Kombination von Tabelle \ref{tab:Wellenlange} und Abbildung \ref{abb:Spektrum} wird sich für die in Tabelle \ref{tab:Wellen} aufgelisteten Wellenlängen entschieden.
+\begin{table}[h!]
+\centering
+\begin{tabular}{lll}
+	Farbe & $\lambda$ in \si{\nano\meter} & Element \\
+	\hline
+	rot & 643.86 & Cd \\
+	gelb & 576.96 / 579.07 & Hg \\
+	grün & 546.07 & Hg \\
+	grün & 508.58 & Cd \\
+	blaugrün & 479.99 & Cd \\
+	blau & 467.82 & Cd \\
+	blau & 435.84 / 441.46 & Hg / Cd \\
+	violett & 404.66 / 407.78 & Hg
+\end{tabular}
+\caption{Beobachtete Wellenlängen}
+\label{tab:Wellen}
+\end{table}
+\clearpage
+
+
 \subsection{Berechnung von Innenwinkel und Brechwinkel}
-Bei der Messung des Innenwinkels des Prismas und mit Formel \eqref{Phi} ergeben sich die die Werte in Tabelle \ref{tab:WinkelPhi}. Der Mittelwert\footnote{siehe \nameref{math:ErrorAver}} ist
+Bei der Messung des Innenwinkels des Prismas und mit Formel \eqref{Phi} ergeben sich die die Werte in Tabelle \ref{tab:WinkelPhi}. Der Mittelwert\footnote{siehe \ref{math:ErrorAver}} ist
 \begin{align}
-	\overline{\phi} = \input{build/Winkel_Prisma.tex} \ .
+	\overline{\varphi} = \input{build/Winkel_Prisma.tex} \ .
 \end{align}
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c}
-		$\phi_r$ & $\phi_l$ & $\phi$ \\
+		$\varphi_r$ & $\varphi_l$ & $\varphi$ \\
 		\hline
 		\input{build/Messwerte1.tex}
 	\end{tabular}
-	\caption{Messwerte zur Bestimmung des Innenwinkels $\phi$ in \si{\degree}}
+	\caption{Messwerte zur Bestimmung des Innenwinkels $\varphi$ in \si{\degree}}
 	\label{tab:WinkelPhi}
 \end{table} \\
 Tabelle \ref{tab:WinkelFarben} zeigt die Winkel $\Omega_l$ und $\Omega_r$, die zusammen mit Formel \eqref{Eta} die Werte für die Brechwinkel $\eta$ ergeben. Zu beachten ist hierbei, dass zwischen den beiden Winkel die Nulllinie überschritten wurde, sodass, um die eigentliche Differenz zu erhalten, zu $\Omega_l$ jeweils \SI{360}{\degree} addiert werden müssen.
@@ -25,6 +82,8 @@ Tabelle \ref{tab:WinkelFarben} zeigt die Winkel $\Omega_l$ und $\Omega_r$, die z
 	\label{tab:WinkelFarben}
 \end{table}
 \clearpage
+
+
 \subsection{Bestimmung der Dispersionskurve}
 Mit Hilfe von Formel \eqref{BrechIndex} kann nun für jede Wellenlänge $\lambda$ der Brechungsindex (siehe Tabelle \ref{tab:Brechzahl}) ausgerechnet werden.
 \begin{table}[h!]
@@ -37,7 +96,7 @@ Mit Hilfe von Formel \eqref{BrechIndex} kann nun für jede Wellenlänge $\lambda
 	\caption[Errechnete Brechzahlen $n$ mit Fehlern für jede Wellenlänge $\lambda$]{Errechnete Brechzahlen $n$ mit Fehlern\footnotemark\ für jede Wellenlänge $\lambda$}
 	\label{tab:Brechzahl}
 \end{table}
-\footnotetext{siehe: \nameref{math:ErrorBrechindex}} \\
+\footnotetext{siehe: \ref{math:ErrorBrechindex}} \\
 Wie in der Theorie beschrieben muss nun entschieden werden, ob das betrachtete Spektrum über (Fall 1) oder unter (Fall 2) der Absorptionsstelle liegt. Dazu werden Formel \eqref{Fall1} als
 \begin{align}\label{Reg:1}
 	n^2(\lambda) = A_0 + \frac{A_2}{\lambda^2}
@@ -46,7 +105,7 @@ und Formel \eqref{Fall2} als
 \begin{align}\label{Reg:2}
 	n^2(\lambda) = A_0' + A_2'\lambda^2
 \end{align}
-genähert. Es wird jeweils eine lineare Regression\footnote{siehe: \nameref{math:Regression}} mit den Wertepaaren $\{ (\frac{1}{\lambda_i^2}, n^2(\lambda_i)) \}$ (bei \eqref{Reg:1}) bzw. $\{ (\lambda_i^2, n^2(\lambda_i)) \}$ (bei \eqref{Reg:2}) durchgeführt, um die Parameter $A_0, A_2, A_0', A_2'$ auszurechnen. Die \glqq Güte\grqq\ der Parameter kann durch die quadratischen Abweichungen\footnote{siehe: \nameref{math:QuadrAbw}} $s^2, s'^2$ bestimmt werden. Alle diese Werte finden sich in Tabelle \ref{tab:Regression}.
+genähert. Es wird jeweils eine lineare Regression\footnote{siehe: \ref{math:Regression}} mit den Wertepaaren $\{ (\frac{1}{\lambda_i^2}, n^2(\lambda_i)) \}$ (bei \eqref{Reg:1}) bzw. $\{ (\lambda_i^2, n^2(\lambda_i)) \}$ (bei \eqref{Reg:2}) durchgeführt, um die Parameter $A_0, A_2, A_0', A_2'$ auszurechnen. Die \glqq Güte\grqq\ der Parameter kann durch die quadratischen Abweichungen\footnote{siehe: \ref{math:QuadrAbw}} $s^2, s'^2$ bestimmt werden. Alle diese Werte finden sich in Tabelle \ref{tab:Regression}.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{c|c|c}
@@ -63,27 +122,28 @@ genähert. Es wird jeweils eine lineare Regression\footnote{siehe: \nameref{math
 	\caption{Durch die lineare Regression berechnete Werte $A_0,A_0',A_2,A_2'$ mit Fehlern und relativen Fehlern, sowie die quadratischen Abweichungen $s^2,s'^2$ der Regressionsgeraden zu den Datenpunkten}
 	\label{tab:Regression}
 \end{table}
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\textwidth]{Tendenz.png}
-	\caption{Graphik zur Abschätzung, ob die Absorptionsstelle größer oder kleiner als das betrachtete Spektrum ist}
-	\label{Abb:Krummung}
-\end{figure} \\
-Eigentlich sollte die Entscheidung welche Näherung die bessere ist allein durch Betrachtung der Krümmung der Kurve, die die Messwerte in Abbildung \ref{Abb:Krummung} beschreiben, getroffen werden können. In diesem Fall ist das nicht sehr aussagekräftig, weshalb sich hier nur auf die Abweichungsquadrate verlassen wird. Demnach ist \eqref{Reg:1} die bessere Wahl und die Dispersionsgleichung wird zu
+Eigentlich sollte die Entscheidung welche Näherung die bessere ist, allein durch Betrachtung der Krümmung der Kurve, die die Messwerte in Abbildung \ref{Abb:Krummung} beschreiben, getroffen werden können. In diesem Fall ist das nicht sehr aussagekräftig, weshalb sich hier nur auf die Abweichungsquadrate verlassen wird. Demnach ist \eqref{Reg:1} die bessere Wahl und die Dispersionsgleichung wird zu
 \begin{align*}
-	n(\lambda) = \sqrt{3.47 - \SI{1.6e-14}\lambda^{-2}}
+	n(\lambda) = \sqrt{3.51 - \SI{2.3e-14}\lambda^{-2}}
 \end{align*}
 bestimmt. Der Funktionsgraf ist in Abbildung \ref*{fig:DispKurve} zu sehen.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Dispersionskurve.png}
+	\includegraphics[width=0.7\textwidth]{Tendenz.png}
+	\caption{Graphik zur Abschätzung, ob die Absorptionsstelle größer oder kleiner als das betrachtete Spektrum ist}
+	\label{Abb:Krummung}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Dispersionskurve.png}
 	\caption{Dispersionskurve}
 	\label{fig:DispKurve}
 \end{figure}
-Für die nächstgelegene Absorptionsstelle $\lambda_1$ gilt also $\lambda_1\gg\lambda_i$. Es wird davon ausgegangen, dass es nur eine Absorptionsstelle gibt. Es folgt dann aus \eqref{Absorptionsstelle}, dass der Brechindex für $\omega\rightarrow\omega_1$ bzw. $\lambda\rightarrow\lambda_1$ gegen 1 geht. Es gilt also für \eqref{Reg:1}:
+\newline
+Für die nächstgelegene Absorptionsstelle $\lambda_1$ gilt also $\lambda_1\gg\lambda_i$. Es wird davon ausgegangen, dass es nur eine Absorptionsstelle gibt. Es folgt dann aus \eqref{Absorptionsstelle}, dass der Brechindex für $\omega\rightarrow\omega_1$ bzw. $\lambda\rightarrow\lambda_1$ gegen 1 geht. Es gilt für \eqref{Reg:1}:
 \begin{align*}
 	n^2(\lambda_1) = 1 &= A_0 + \frac{A_2}{\lambda_1^2} \\
-	\Leftrightarrow\quad \lambda_1 &= \sqrt{\frac{A_2}{A_0-1}} = \input{build/absorb.tex}
+	\Leftrightarrow\quad \lambda_1 &= \sqrt{\frac{A_2}{A_0-1}} = \input{build/absorb.tex} \ .
 \end{align*}
 \clearpage
 \subsection{Kenndaten des Prismas}
@@ -111,38 +171,3 @@ berechnet werden (Werte für jede Wellenlänge siehe Tabelle \ref{tab:Aufl}). Di
 	\label{tab:Aufl}
 \end{table}
 
-\clearpage
-
-
-\begin{table}
-\centering
-\begin{tabular}{c|c|c}
-	Farben & Quecksilber & Cadmium \\
-	\hline
-	violett1 & 407.78 / 404.66 & \\
-	violett2 & 435.84 & 441.46 \\
-	blau &  & 467.82 \\
-	türkis & 491.60 & 479.99 \\
-	grün & 546.07 & \\
-	gelb & 579.07 / 576.95 & \\
-	orange &  & 635.99 \\
-	rot &  & 643.85 \\
-\end{tabular}
-\end{table}
-Walcher: \\
-Cadmium \\
-643.85	rot			stark \\
-635.99	gelbrot		schwach \\
-508.58	grün		stark \\
-479.99	blaugrün	stark \\
-467.82	blau		stark \\
-441.46	blau		mittel \qquad haben wir als violett gesehen \\
-\ \\
-Quecksilber \\
-708.19	rot			schwach \\
-690.72	rot			schwach \\
-579.07 und 576.95	gelb		sehr stark \\
-546.07	grün		stark \\
-491.60	blaugrün	mittel \\
-435.84	blau		stark \qquad haben wir als violett gesehen \\
-407.78 und 404.66	violett		mittel \\

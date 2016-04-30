@@ -1,4 +1,4 @@
-\documentclass[a4,11pt]{article}
+\documentclass[a4,10.5pt]{article}
 \input{../Vorlage/Header.tex}
 
 
@@ -14,14 +14,14 @@
 % oder einfach make ausführen
 
 \usepackage[
-%	disable,
+	disable,
 	colorinlistoftodos,
 	linecolor=yellow,
 	backgroundcolor=yellow,
 	textwidth=0.15\textwidth,
 	textsize=footnotesize
 	]{todonotes} % Notizen
-\usepackage{hyperref}
+%\usepackage{hyperref}
 
 \begin{document}
 \input{Titlepage.tex}
@@ -57,12 +57,15 @@
 \input{Diskussion.tex}
 
 \clearpage
-\section{Appendix}
+\begin{appendix}
+\section{Anhang}
+\subsection{Mathematische Formeln}
 \input{Anhang.tex}
-\listoftodos
-\listoffigures
-\listoftables
+\end{appendix}
+\clearpage
 \nocite{\V}
 \printbibliography[title = Literaturverzeichnis]
-
+\listoffigures
+\listoftables
+\listoftodos
 \end{document}
