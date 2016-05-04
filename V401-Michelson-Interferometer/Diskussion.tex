@@ -8,10 +8,15 @@ sehr gering. Es kann argumentiert werden, dass die eigentliche Aussagekraft der 
 	\begin{tabular}{c|c|c|c|c}
 		& gemessen & Literaturwert & Abweichung & Abweichung ab \num{e-4} \\
 		\hline
-		$n_\text{Luft}$ & \num{1.000298} & \num{1,000292 } & \SI{6e-6}{\percent} & \SI{2}{\percent}\\
-		$n_\text{CO$_2$}$ & \num{1.000468} &  \num{1.000 449} & \SI{2e-3}{\percent} &\SI{4}{\percent}
+		$n_\text{Luft}$ & \num{1.000299} & \num{1,000292 } & \SI{7e-4}{\percent} & \SI{3.2}{\percent}\\
+		$n_\text{CO$_2$}$ & \num{1.000475} &  \num{1.000 449} & \SI{2.6e-3}{\percent} &\SI{5.5}{\percent}
 	\end{tabular}
 	\label{tab:Vergleich}
 \end{table}
 
-Für die Wellenlängenmessung des Lasers  ist es nicht mögliche einen Vergleichswert anzugeben ohne die Kenntnis technischer Daten.  Die Wellenlänge liegt im roten Bereich des Spektrums. Da jedoch die Wellenlänge bei der Berechnung des Brechungsindex genutzt wird, ist davon auszugehen, dass auch der Messwert der Wellenlänge sehr präzise ist.
+Die gemessene Wellenlänge des Lasers weicht allerdings von dem Wert, der am Versuchsaufbau vermerkt ist ab.
+\begin{align}
+	\lambda_\text{gemessen} &= \SI{661.5+-6.6e-9}{\meter} \\
+	\lambda_\text{gegeben} &= \SI{635e-9}{\meter}
+\end{align}
+Dies scheint zunächst verwunderlich, ist doch der Brechungsindez so genau gestimmt worden. Allerdings muss hier die Abweichung von der vierten Nachkommastelle berücksichtigt werden. Diese weicht zumindest bei der Berechnung mit Kohlenstoffdioxid ebenso wie die Wellenlänge um zirka fünf Prozent vom Erwartungswert ab.

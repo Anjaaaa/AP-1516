@@ -28,12 +28,13 @@ Bei den Angaben von Start- und Endpunkt muss die Hebeluntersetzung des Synchronm
 \subsection{Bestimmung des Brechungsindexes von Luft und CO$_2$}
 Zur Bestimmung des Brechungsindex $n$ werden die Gleichungen \eqref{brechungsindex1} und \eqref{brechungsindex} benötigt. Die Endgleichung ist
 \begin{align}
-	n(p_0, T_0) = 1+\frac{z \lambda}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \ ,
+	n(p_0, T_0) = 1+\frac{z}{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \lambda = 1+a\lambda \quad .
 \end{align}
-mit einem Fehler, der sich nach der Gaußschen Fehlerfortpflanzung berechnet
+Der Fehler ist nach der Gaußschen Fehlerfortpflanzung
 \begin{align}
-\Delta_{n(p_0, T_0)} = \frac{z }{2b}\frac{T}{T_0}\frac{p_0}{\Delta p} \Delta_{\lambda} \ .
+	\Delta_{n(p_0, T_0)} = \sqrt{a^2 \Delta_\lambda^2 + \lambda^2 \Delta_a^2} \quad .
 \end{align}
+
 
 
 Wobei die Kammernweite $b$, die Raumtemperatur $T$ und die durch das Vakuum erzeugte Druckdifferenz $\Delta p$ berücksichtigt werden müssen, um den druck- und temperaturabhängigen Brechungsindex für die Standardbedingungen $T_0$ und $p_0$ zu erhalten.
@@ -43,21 +44,29 @@ Wobei die Kammernweite $b$, die Raumtemperatur $T$ und die durch das Vakuum erze
 	T_0 &= \SI {273.15}{\kelvin} \\
 	p_0 &= \SI{1.01325}{\bar} \\
 \end{align*}
-Die errechneten Werte für den Brechungsindex von Luft sind in Tabelle~\ref{tab:BrechungsindexLuft} zu finden und die für Kohlenstoffdioxid in Tabelle~\ref{tab:BrechungsindexCO2}.
-Bei der Berechnung der Mittelwerte $n_\text{Luft}$ und $n_\text{CO$_2$}$wurden auch die einzelnen Fehler berücksichtigt und die Formel für gewichtete Fehler (siehe \ref{sec:Fehlerrechnung})  verwendet.
-
+Die errechneten Werte für den Koeffizienten $a_{\text{Luft}}$ von Luft sind in Tabelle~\ref{tab:BrechungsindexLuft} zu finden und die für Kohlenstoffdioxid  $a{\text{CO$_2$}$ in Tabelle~\ref{tab:BrechungsindexCO2}.
+Die Mittelwerte sind:
 \begin{align}
-	n_\text{Luft} &=\input{build/Brechungsindex_Luft.tex} \\
-	n_\text{CO$_2$} &= \input{build/Brechungsindex_CO2.tex}
+	a_\text{Luft} &=\input{build/a_Luft_korrigiert.tex} \\
+	a_\text{CO$_2$} &= \input{build/a_CO2_korrigiert.tex}
 \end{align}
+
+Daraus ergeben sich die Brechungsindizes und ihrer Fehler:
+\begin{align}
+	n_\text{Luft} &=\input{build/Brechungsindex_Luft_korrigiert.tex} \\
+	n_\text{CO$_2$} &= \input{build/Brechungsindex_CO2_korrigiert.tex}
+\end{align}
+
+
+
 
 \begin{table}[h!]
 	\centering	
 	\captionof{table}{Brechungsindex Luft}	
-	\begin{tabular}{cccc}
-		Druckunterschied / \si{\bar} & Impulse & Brechungsindex & Fehler \\
+	\begin{tabular}{ccc}
+		Druckunterschied / \si{\bar} & Impulse & $a_{\text{Luft}}$ / \si{\per\meter} \\
 		\hline
-		\input{build/Tabelle5.tex}
+		\input{build/Tabelle4_korrigiert.tex}
 	\end{tabular}
 	\label{tab:BrechungsindexLuft}
 \end{table}
@@ -67,9 +76,9 @@ Bei der Berechnung der Mittelwerte $n_\text{Luft}$ und $n_\text{CO$_2$}$wurden a
 	\centering
 	\captionof{table}{Brechungsindex Kohlenstoffdioxid}	
 	\begin{tabular}{cccc}
-		Druckunterschied / \si{\bar} & Impulse & Brechungsindex   & Fehler \\
+		Druckunterschied / \si{\bar} & Impulse & $a_{\text{CO$_2$}}$ / \si{\per\meter}\\
 		\hline
-		\input{build/Tabelle6.tex}
+		\input{build/Tabelle6_korrigiert.tex}
 	\end{tabular}
 	\label{tab:BrechungsindexCO2}
 \end{table}
