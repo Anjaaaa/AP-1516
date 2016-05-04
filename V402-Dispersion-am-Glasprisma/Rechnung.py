@@ -36,13 +36,14 @@ eta = 180 - (eta_1-eta_2) # mit den Werten von Sonja und Saskia
 print('eta:', eta)
 print('phi_Mittel:', phi_Mittel)
 
-phi_Mittel = 60
 
 write('build/Messwerte1.tex', make_table([phi_1, phi_2, phi],[1,1,1]))
 write('build/Winkel_Prisma.tex', make_SI(phi_Mittel,r'',figures=1))
 write('build/Messwerte2.tex', make_table([wavelength*10**9, eta_1, eta_2, eta],[2,1,1,1]))
 ################################################################
 
+
+phi_Mittel = 60
 
 
 ################################################################
