@@ -1,2 +1,21 @@
-Die Abweichung um $\SI{-8.7}{\%}$ von den erwarteten $\SI{60}{\degree}$ bei der Messung des Innenwinkels könnte noch durch das Alter des Prismas und damit verbundenen Stürzen erklärt werden. Alle weiteren Werte legen allerdings nahe, dass ein großer systematischer Fehler bei den Messung vorliegen musste. So ist der berechnete Brechwinkel in einem Bereich von fast $\SI{100}{\nano\meter}$ konstant und bricht davor und danach nach oben aus (siehe Tabelle \ref{tab:WinkelFarben}). Alle weiteren Berechnungen machen daher auch nur wenig Sinn. So steigt die Dispersionsfunktion statt abzufallen und die Abbesche Zahl ist negativ, was nicht sein kann. \\
-Es wird vermutet, dass ein (kleiner) Teil der Fehler auf das Prisma zurück zuführen sind. Die Kanten waren nicht mehr scharf, teilweise abgeschlagen. Weitaus größere Fehler kommen dadurch zustande, dass die Brechwinkel mutmaßlich in einem Bereich von etwa $\SI{5}{\degree}$ liegen und derart feine Messungen immer Schwierigkeiten mit sich bringen. Der entscheidende Fehler wird allerdings von den Experimentatoren verursacht worden sein. Das Ablesen der (entscheidenden) Nachkommastellen der Gradanzeige führte zu Verwirrung und die Werte wurden von verschiedenen Leuten abgelesen, sodass hier möglicherweise verschiedene Methoden angewandt wurden.
+Tabelle \ref{fig:Vergleichswerte} zeigt die Brechzahlen einiger Gläser und ihre Abbezahl. Die berechneten Werte von $n_\text{C},n_\text{D},n_\text{F}$ liegen etwas über denen der Literaturwerte. Es könnte sein, dass das verwendete Prisma aus einem Glas mit relativ hohem Brechindex ist. Vermutlich liegt die Ursache der Abweichung aber in der Methode der Bestimmung von $n(\lambda)$. Dabei wurde Gleichung \ref{eq:dispersionsrelation} als Polynom mit nur zwei Termen genähert, sodass hier unvermeidbar ein Fehler entstand.
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcccc}
+	Stoff & $n_\text{C}$ & $n_\text{D}$ & $n_\text{F}$ & $\nu$ \\
+	\hline
+	FK 1 & 1.46 & 1.47 & 1.48 & 67 \\
+	BK 1 & 1.51 & 1.51 & 1.51 & 63 \\
+	SK 1 & 1.61 & 1.61 & 1.62 & 57 \\
+	LF 1 & 1.57 & 1.57 & 1.58 & 43 \\
+	F 1 & 1.62 & 1.63 & 1.64 & 46 \\
+	SF 4 & 1.75 & 1.76 & 1.77 & 28 \\
+	SF 6 & 1.79 & 1.80 & 1.83 & 20 \\
+	Quarzglas & 1.46 & 1.46 & 1.46 & 67 \\
+	\hline
+	$n(\lambda)$ & 1.93 & 1.93 & 1.95 & 41
+\end{tabular}
+\caption{Brechzahlen verschiedener Gläser bei den Fraunhofer-Linien (siehe Kapitel \ref{sec:Kenndaten}) und Abbezahlen \cite[Tabellenanhang Tab. A 4.3]{Walcher} und berechnete Werte $n(\lambda)$}
+\label{fig:Vergleichswerte}
+\end{table}
+Die Abweichung um \SI{-8.1}{\%} von $\varphi$ von den erwarteten \SI{60}{\degree} deuteten allerdings darauf hin, dass auch die Messung nicht ganz zu vernachlässigende Fehler verursacht hat. Diese liegen vielleicht im Messprozess, wahrscheinlich aber auch am Prisma selbst, das nach einigen Jahren Verwendung schon abgestoßene Kanten hat, sodass die verwendeten Formeln das Experiment nur unzureichend beschreiben.

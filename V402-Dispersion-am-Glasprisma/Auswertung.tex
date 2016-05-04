@@ -70,7 +70,8 @@ Bei der Messung des Innenwinkels des Prismas und mit Formel \eqref{Phi} ergeben 
 	\caption{Messwerte zur Bestimmung des Innenwinkels $\varphi$ in \si{\degree}}
 	\label{tab:WinkelPhi}
 \end{table} \\
-Tabelle \ref{tab:WinkelFarben} zeigt die Winkel $\Omega_l$ und $\Omega_r$, die zusammen mit Formel \eqref{Eta} die Werte für die Brechwinkel $\eta$ ergeben. Zu beachten ist hierbei, dass zwischen den beiden Winkel die Nulllinie überschritten wurde, sodass, um die eigentliche Differenz zu erhalten, zu $\Omega_l$ jeweils \SI{360}{\degree} addiert werden müssen.
+Die nachfolgenden Werte werden allerdings mit dem zu erwartenden Wert $\varphi= \SI{60}{\degree}$ berechnet.
+Tabelle \ref{tab:WinkelFarben} zeigt die Winkel $\Omega_l$ und $\Omega_r$, die zusammen mit Formel \eqref{Eta} die Werte für die Brechwinkel $\eta$ ergeben.
 \begin{table}[h!]
 	\centering	
 	\begin{tabular}{c|c|c|c}
@@ -111,22 +112,22 @@ genähert. Es wird jeweils eine lineare Regression\footnote{siehe: \ref{math:Reg
 	\begin{tabular}{c|c|c}
 		Größe & Wert & relativer Fehler \\
 		\hline
-		$A_2$ & \input{build/Reg2Steig.tex} & \input{build/Reg2SteigRel.tex} \\
-		$A_2'$ & \input{build/Reg1Steig.tex} & \input{build/Reg1SteigRel.tex} \\
-		$A_0$ & \input{build/Reg2Versch.tex} & \input{build/Reg2VerschRel.tex} \\
-		$A_0'$ & \input{build/Reg1Versch.tex} & \input{build/Reg1VerschRel.tex} \\
+		$A_2$ & \input{build/RegSteig.tex} & \input{build/RegSteigRel.tex} \\
+		$A_2'$ & \input{build/RegStrichSteig.tex} & \input{build/RegStrichSteigRel.tex} \\
+		$A_0$ & \input{build/RegVersch.tex} & \input{build/RegVerschRel.tex} \\
+		$A_0'$ & \input{build/RegStrichVersch.tex} & \input{build/RegStrichVerschRel.tex} \\
 		\hline
-		$s^2(A_0,A_2)$ & \input{build/abw2.tex} & \\
-		$s'^2(A_0',A_2')$ & \input{build/abw1.tex} &
+		$s^2(A_0,A_2)$ & \input{build/abw.tex} & \\
+		$s'^2(A_0',A_2')$ & \input{build/abwStrich.tex} &
 	\end{tabular}
 	\caption{Durch die lineare Regression berechnete Werte $A_0,A_0',A_2,A_2'$ mit Fehlern und relativen Fehlern, sowie die quadratischen Abweichungen $s^2,s'^2$ der Regressionsgeraden zu den Datenpunkten}
 	\label{tab:Regression}
 \end{table}
 Eigentlich sollte die Entscheidung welche Näherung die bessere ist, allein durch Betrachtung der Krümmung der Kurve, die die Messwerte in Abbildung \ref{Abb:Krummung} beschreiben, getroffen werden können. In diesem Fall ist das nicht sehr aussagekräftig, weshalb sich hier nur auf die Abweichungsquadrate verlassen wird. Demnach ist \eqref{Reg:1} die bessere Wahl und die Dispersionsgleichung wird zu
 \begin{align*}
-	n(\lambda) = \sqrt{3.51 - \SI{2.3e-14}\lambda^{-2}}
+	n(\lambda) = \sqrt{3.6 + \SI{4.6e-14}\lambda^{-2}}
 \end{align*}
-bestimmt. Der Funktionsgraf ist in Abbildung \ref*{fig:DispKurve} zu sehen.
+bestimmt. Der Funktionsgraf ist in Abbildung \ref{fig:DispKurve} zu sehen.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Tendenz.png}
@@ -146,18 +147,21 @@ Für die nächstgelegene Absorptionsstelle $\lambda_1$ gilt also $\lambda_1\gg\l
 	\Leftrightarrow\quad \lambda_1 &= \sqrt{\frac{A_2}{A_0-1}} = \input{build/absorb.tex} \ .
 \end{align*}
 \clearpage
-\subsection{Kenndaten des Prismas}
+\subsection{Kenndaten des Prismas\label{sec:Kenndaten}}
 Zuletzt sollen einige Kenndaten des verwendeten Prismas berechnet werden. \\
 \ \\
 Die Abbesche Zahl ist ein Maß für die Farbzerstreuung bei Gläsern. Sie ist definiert als
 \begin{align}
-	\nu = \frac{n(\lambda_\text{D})-1}{n(\lambda_\text{F})-n(\lambda_\text{C})} = \input{build/Abbe.tex} \ ,
+	\nu = \frac{n_\text{D}-1}{n_\text{F}-n_\text{C}} \ ,
 \end{align}
-wobei die $\lambda_i$ die Wellenlängen der Fraunhoferschen Linien $\lambda_\text{D} = \SI{589}{\nano\meter}$, $\lambda_\text{F} = \SI{486}{\nano\meter}$ und $\lambda_\text{C} = \SI{656}{\nano\meter}$ sind. \\
+wobei die $n_\text{I}$ die Brechzahlen der Fraunhoferschen Linien $\lambda_\text{D} = \SI{589}{\nano\meter}$, $\lambda_\text{F} = \SI{486}{\nano\meter}$ und $\lambda_\text{C} = \SI{656}{\nano\meter}$ sind. Sie hat hier den Wert
+\begin{align}
+	\nu = \input{build/Abbe.tex} \ .
+\end{align}
 \ \\
 Das Auflösungsvermögen bezeichnet den Koeffizienten $\frac{\lambda}{\Delta\lambda}$, der beschreibt, wie nah zwei Spektrallinien liegen dürfen, sodass sie vom Prisma noch getrennt werden können. Für das verwendete Prisma kann das Auflösungsvermögen mit
 \begin{align*}
-	\frac{\lambda}{\Delta\lambda} = b\frac{\text{d}n}{\text{d}\lambda}
+	\left|\frac{\lambda}{\Delta\lambda}\right| = \left|b\frac{\text{d}n}{\text{d}\lambda}\right| = b\frac{\SI{4.6e-14}\lambda^{-3}}{\sqrt{3.6+\SI{4.6e-14}\lambda^{-2}}}
 \end{align*}
 berechnet werden (Werte für jede Wellenlänge siehe Tabelle \ref{tab:Aufl}). Die Länge $b=\SI{3}{\centi\meter}$ ist die Seitenlänge des Prismas.
 \begin{table}[h!]
@@ -165,7 +169,7 @@ berechnet werden (Werte für jede Wellenlänge siehe Tabelle \ref{tab:Aufl}). Di
 	\begin{tabular}{c|c}
 		Wellenlänge in \si{\nano\meter} & Auflösungsvermögen \\
 		\hline
-		\input{build/Aufl.tex}
+		\input{build/Auflu.tex}
 	\end{tabular}
 	\caption{Auflösungsvermögen bei verschiedenen Wellenlängen}
 	\label{tab:Aufl}

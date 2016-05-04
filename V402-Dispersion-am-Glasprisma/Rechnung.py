@@ -16,7 +16,7 @@ from table import (
 
 
 
-wavelength, phi_1, phi_2, eta_1, eta_2 = np.genfromtxt('Werte.txt', unpack = True)
+wavelength, phi_1, phi_2, eta_2, eta_1 = np.genfromtxt('Werte_Sonja_Saskia.txt', unpack = True)
 
 ### Umrechnungen, nan wegmachen
 wavelength = wavelength * 10**(-9)
@@ -31,12 +31,14 @@ print('eta_2:', eta_2)
 ################################################################
 phi = 0.5 * (phi_1 - phi_2)
 phi_Mittel = ufloat(np.mean(phi), np.std(phi)/np.sqrt(len(phi)))
-eta = 180 - (360 + eta_1 - eta_2)
+# eta = 180 - (360 + eta_1 - eta_2)
+eta = 180 - (eta_1-eta_2) # mit den Werten von Sonja und Saskia
 print('eta:', eta)
 print('phi_Mittel:', phi_Mittel)
 
+phi_Mittel = 60
 
-write('build/Messwerte1.tex', make_table([phi_1, phi_2, phi],[0,0,0]))
+write('build/Messwerte1.tex', make_table([phi_1, phi_2, phi],[1,1,1]))
 write('build/Winkel_Prisma.tex', make_SI(phi_Mittel,r'',figures=1))
 write('build/Messwerte2.tex', make_table([wavelength*10**9, eta_1, eta_2, eta],[2,1,1,1]))
 ################################################################
@@ -85,7 +87,7 @@ plt.show()
 
 
 ### NUR ZUR ANSCHAUUNG: Wellenlänge -> n und Wellenlänge -> Brechwinkel
-plt.plot(wavelength*10**9, n_nom, 'gx', label='Brechungsindex')
+#plt.plot(wavelength*10**9, n_nom, 'gx', label='Brechungsindex')
 plt.plot(wavelength*10**9, eta/30, 'bx', label='Brechwinkel/30')
 
 
@@ -99,33 +101,33 @@ plt.show()
 
 ################################################################
 ### Entscheidung für eine der beiden Gleichungen 11 bzw. 11a durch Regression
-### WICHTIG! 1 hier ist gestrichen im Protokoll und 2 hier ist ungestrichen im Protokoll
+### WICHTIG! Strich hier ist gestrichen im Protokoll und nichts hier ist ungestrichen im Protokoll
 ################################################################
 ### wavelength^2 -> n^2
 print('Regression mit Lambda^2')
 # Hier mache ich die Wellenlänge größer, weil Python sonst ein Speicherproblem bekommt, weil die Zahlen so klein sind.
 X = (wavelength*10**9)**2
-regression1 = np.polyfit(X, Y, 1)
-regFkt1 = np.poly1d(regression1)
+regressionStrich = np.polyfit(X, Y, 1)
+regFktStrich = np.poly1d(regressionStrich)
 
-values1, errors1 = curve_fit(f, X, Y)
+valuesStrich, errorsStrich = curve_fit(f, X, Y)
 
 
-steigung1 = 10**(-18)*ufloat(values1[0],np.sqrt(errors1[0,0]))
-versch1 = ufloat(values1[1], np.sqrt(errors1[1,1]))
-print('Steigung:', steigung1)
-print('y-Achsenabschnitt:', versch1)
+steigungStrich = 10**(-18)*ufloat(valuesStrich[0],np.sqrt(errorsStrich[0,0]))
+verschStrich = ufloat(valuesStrich[1], np.sqrt(errorsStrich[1,1]))
+print('Steigung:', steigungStrich)
+print('y-Achsenabschnitt:', verschStrich)
 
 plt.plot(X, Y, 'r.', label='Datenpunkte')
-plt.plot(X, regFkt1(X), 'g-', label = 'Regressionsgerade')
+plt.plot(X, regFktStrich(X), 'g-', label = 'Regressionsgerade')
 
 plt.xlabel(r'$\mathrm{\lambda^2} \ /\  \mathrm{m}^2$')
 plt.ylabel(r'$n^2$')
 
-write('build/Reg1Steig.tex', make_SI(steigung1*10**(25),r'\meter^{-2}','e-25',figures=2))
-write('build/Reg1Versch.tex', make_SI(versch1,r'',figures=2))
-write('build/Reg1SteigRel.tex', make_SI(unp.std_devs(steigung1)/steigung1.n,r'\meter^{-2}',figures=2))
-write('build/Reg1VerschRel.tex', make_SI(unp.std_devs(versch1)/versch1.n,r'',figures=2))
+write('build/RegStrichSteig.tex', make_SI(steigungStrich*10**(25),r'\meter^{-2}','e-25',figures=1))
+write('build/RegStrichVersch.tex', make_SI(verschStrich,r'',figures=1))
+write('build/RegStrichSteigRel.tex', make_SI(unp.std_devs(steigungStrich)/steigungStrich.n,r'\meter^{-2}',figures=1))
+write('build/RegStrichVerschRel.tex', make_SI(unp.std_devs(verschStrich)/verschStrich.n,r'',figures=3))
 
 plt.show()
 
@@ -133,42 +135,42 @@ plt.show()
 ### 1/wavelength^2 -> n^2
 print('Regression mit 1/Lambda^2')
 X = 1 / wavelength**2
-regression2 = np.polyfit(X, Y, 1)
-regFkt2 = np.poly1d(regression2)
+regression = np.polyfit(X, Y, 1)
+regFkt = np.poly1d(regression)
 
-values2, errors2 = curve_fit(f, X, Y)
+values, errors = curve_fit(f, X, Y)
 
-steigung2 = ufloat(values2[0],np.sqrt(errors2[0,0]))
-versch2 = ufloat(values2[1], np.sqrt(errors2[1,1]))
-print('Steigung:', steigung2)  
-print('y-Achsenabschnitt:', versch2)
+steigung = ufloat(values[0],np.sqrt(errors[0,0]))
+versch = ufloat(values[1], np.sqrt(errors[1,1]))
+print('Steigung:', steigung)  
+print('y-Achsenabschnitt:', versch)
 
 plt.plot(X, Y, 'r.', label='Datenpunkte')
-plt.plot(X, regFkt2(X), 'g-', label = 'Regressionsgerade')
+plt.plot(X, regFkt(X), 'g-', label = 'Regressionsgerade')
 
 plt.xlabel(r'$\mathrm{\frac{1}{\lambda^2}} \ /\  \mathrm{m}^{-2}$')
 plt.ylabel(r'$n^2$')
 
-write('build/Reg2Steig.tex', make_SI(steigung2*10**(14),r'\meter\squared','e-14',figures=2))
-write('build/Reg2Versch.tex', make_SI(versch2,r'',figures=2))
-write('build/Reg2SteigRel.tex', make_SI(-unp.std_devs(steigung2)/steigung2.n,r'\meter\squared',figures=2))
-write('build/Reg2VerschRel.tex', make_SI(unp.std_devs(versch2)/versch2.n,r'',figures=2))
+write('build/RegSteig.tex', make_SI(steigung*10**(14),r'\meter\squared','e-14',figures=1))
+write('build/RegVersch.tex', make_SI(versch,r'',figures=1))
+write('build/RegSteigRel.tex', make_SI(-unp.std_devs(steigung)/steigung.n,r'\meter\squared',figures=1))
+write('build/RegVerschRel.tex', make_SI(unp.std_devs(versch)/versch.n,r'',figures=3))
 
 plt.show()
 
 
 
 ### Abweichungsquadrate
-abw2 = 1/6 * sum((n_nom**2 - versch2.n - steigung2.n / wavelength**2)**2)
-abw1 = 1/6 * sum((n_nom**2 - versch1.n - steigung1.n * wavelength**2)**2)
+abw = 1/6 * sum((n_nom**2 - versch.n - steigung.n / wavelength**2)**2)
+abwStrich = 1/6 * sum((n_nom**2 - verschStrich.n - steigungStrich.n * wavelength**2)**2)
 print('n_nom**2:', n_nom**2)
-print('P_0:', versch2.n)
-print('P_2:', steigung2.n/wavelength**2)
-print('s**2:', abw2)
-print('s**2Strich:', abw1)
+print('P_0:', versch.n)
+print('P_2:', steigung.n/wavelength**2)
+print('s**2:', abw)
+print('s**2Strich:', abwStrich)
 
-write('build/abw1.tex', make_SI(abw1*1000,r'','e-3',figures=1))
-write('build/abw2.tex', make_SI(abw2*1000,r'','e-3',figures=1))
+write('build/abwStrich.tex', make_SI(abwStrich*1000,r'','e-3',figures=1))
+write('build/abw.tex', make_SI(abw*1000,r'','e-3',figures=1))
 
 
 
@@ -176,7 +178,7 @@ write('build/abw2.tex', make_SI(abw2*1000,r'','e-3',figures=1))
 ### Endgültige Dispersionskurve
 ################################################################
 def nFkt(wavelength):
-     return np.sqrt( values2[1]+values2[0]/wavelength**2 )
+     return np.sqrt( values[1]+values[0]/wavelength**2 )
 
 plt.plot(wavelength*10**9, n_nom, 'k.', label='Datenpunkte')
 plt.plot(wavelength*10**9, nFkt(wavelength), 'r-', label = 'Dispersionsfunktion')
@@ -196,27 +198,33 @@ C = 656 * 10**(-9)
 D = 589 * 10**(-9)
 F = 486 * 10**(-9)
 
+print('n(C):', nFkt(C))
+print('n(D):', nFkt(D))
+print('n(F):', nFkt(F))
+
+
+
 abbe = ( nFkt(D)-1 ) / ( nFkt(F)-nFkt(C) )
-write('build/Abbe.tex', make_SI(abbe,r'',figures=3))
+write('build/Abbe.tex', make_SI(abbe,r'',figures=0))
 
 
 
 ################################################################
 ### Auflösungsvermögen
 ################################################################
-b = 0.02
-A = - b * (values2[0]*wavelength**(-3)) / (nFkt(wavelength))
-print(A)
+b = 0.03
+A = b * (values[0]*wavelength**(-3)) / (nFkt(wavelength))
+print('Auflösungsvermögen:', A)
 
-write('build/Aufl.tex', make_table([wavelength*10**9, A],[1,0]))
+write('build/Auflu.tex', make_table([wavelength*10**9, A],[1,0]))
 
 
 
 ################################################################
 ### Absorptionsstelle (n=1)
 ################################################################
-wave1 = np.sqrt( -values2[0]/(values2[1]-1) )
-print(wave1)
+wave1 = np.sqrt( values[0]/(values[1]-1) )
+print('Absorptionsstelle:', wave1)
 
-write('build/absorb.tex', make_SI(wave1*10**8,r'\nano\meter','e-8',figures=3))
+write('build/absorb.tex', make_SI(wave1*10**9,r'\nano\meter',figures=0))
 
