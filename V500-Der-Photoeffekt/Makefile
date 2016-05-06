@@ -1,6 +1,4 @@
-NAME=Protokoll
-
-all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Theorie.tex $(NAME).tex
+all:  Aufbau_Ablauf.tex Auswertung.tex Diskussion.tex Fehlerrechnung.tex Regression.tex Theorie.tex $(NAME).tex Titlepage.tex
 	pdflatex $(NAME).tex
 	biber $(NAME)
 	pdflatex $(NAME).tex
@@ -48,3 +46,4 @@ clean-all:
 	rm -rf *.lof
 	rm -rf *.lot
 	rm -rf $(NAME).pdf
+

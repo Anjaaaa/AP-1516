@@ -1,0 +1,86 @@
+\subsection{Bestimmung der Gegenspannung}
+Die Spektrallinien ist im folgenden so bezeichnet:
+\begin{align}
+	\text{rot:} \quad & \input{build/Wellenlange_0.tex} \\
+	\text{grün:} \quad & \input{build/Wellenlange_1.tex} \\
+	\text{lila:} \quad & \input{build/Wellenlange_2.tex} \\
+	\text{blau:} \quad & \input{build/Wellenlange_3.tex} \\
+	\text{UV:} \quad & \input{build/Wellenlange_4.tex} \\
+\end{align}
+	
+	
+	
+	
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/AlleWellenlangen.png}
+	\caption{gemessene Spektrallinien}
+	\label{fig:spektrallinien}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Gemessene elektrische Ströme / \si{\pico\ampere}}
+	\begin{tabular}{c|ccccc}
+		Spannung / V & rot & grün & lila & blau & UV \\
+		\hline
+		\input{build/tabelle_alle_wellenlangen.tex}
+	\end{tabular}
+	\label{tab:}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:0.png}
+	\caption{Regression der roten Spektrallinie}
+	\label{fig:regression_rot}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:1.png}
+	\caption{Regression der grünen Spektrallinie}
+	\label{fig:regression_grun}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:2.png}
+	\caption{Regression der lila Spektrallinie}
+	\label{fig:regression_lila}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:3.png}
+	\caption{Regression der blauen Spektrallinie}
+	\label{fig:regression_blau}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:4.png}
+	\caption{Regression der ultravioletten Spektrallinie}
+	\label{fig:regression_uv}
+\end{figure}
+
+
+\begin{align}
+	\text{rot:} \quad m &= \input{build/Steigung_0.tex} \\
+		b &= \input{build/y-Achsenabschnitt_0.tex} \\
+		U_g &= \input{build/Grenzspannung_0.tex} \\
+	\text{grün:} \quad m &= \input{build/Steigung_1.tex} \\
+	b &= \input{build/y-Achsenabschnitt_1.tex} \\
+	U_g &= \input{build/Grenzspannung_1.tex} \\
+	\text{lila:} \quad m &= \input{build/Steigung_2.tex} \\
+	b &= \input{build/y-Achsenabschnitt_2.tex} \\
+	U_g &= \input{build/Grenzspannung_2.tex} \\
+	\text{blau:} \quad m &= \input{build/Steigung_3.tex} \\
+	b &= \input{build/y-Achsenabschnitt_3.tex} \\
+	U_g &= \input{build/Grenzspannung_3.tex} \\
+	\text{UV:} \quad m &= \input{build/Steigung_4.tex} \\
+	b &= \input{build/y-Achsenabschnitt_4.tex} \\
+	U_g &= \input{build/Grenzspannung_4.tex}
+\end{align}
+
+
