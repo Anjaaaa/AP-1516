@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
 \select@language {german}
@@ -7,3 +8,9 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Regression der lila Spektrallinie\relax }}{7}
 \contentsline {figure}{\numberline {5}{\ignorespaces Regression der blauen Spektrallinie\relax }}{7}
 \contentsline {figure}{\numberline {6}{\ignorespaces Regression der ultravioletten Spektrallinie\relax }}{8}
+||||||| merged common ancestors
+=======
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {german}
+>>>>>>> 3b4fa355dba8cd59aa3ea10f21bc6ea1d5a5dcc8
