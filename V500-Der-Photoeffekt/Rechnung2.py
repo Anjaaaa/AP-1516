@@ -87,7 +87,13 @@ L_lila = 435
 L_blau = 405
 L_uv = 365
 L = np.array([L_rot, L_grun, L_lila, L_blau, L_uv])
-print(L)
+#Wellenlängen übergeben:
+for i in range(0,5):
+	write('build/Wellenlange_'+str(i)+'.tex', make_SI(L[i], r'\nano\meter', figures=0))
+
+
+
+
 
 # in frequenz (1/s) umrechnen:
 c = 298792458 #Lichtgeschwindgkeit in m/s
