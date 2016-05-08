@@ -1,16 +1,31 @@
 \subsection{Bestimmung der Gegenspannung}
-Die Spektrallinien ist im folgenden so bezeichnet:
-\begin{align}
+Um die Gegenspannung der einzelnen Spektrallinien zu bestimmen wird der Photostrom in Abhängigkeit einer angelegten Bremsspannung $U$ (im Folgenden einfach als Spannung bezeichnet) gemessen. Für jede der fünf ausgewerteten Spektrallinien werden zehn Messwerte im Bereich vonnotiert.
+Die hier betrachteten Spektrallinien der Quecksilberlampe sind:
+\begin{align*}
 	\text{rot:} \quad & \input{build/Wellenlange_0.tex} \\
 	\text{grün:} \quad & \input{build/Wellenlange_1.tex} \\
 	\text{lila:} \quad & \input{build/Wellenlange_2.tex} \\
 	\text{blau:} \quad & \input{build/Wellenlange_3.tex} \\
 	\text{UV:} \quad & \input{build/Wellenlange_4.tex} \\
+\end{align*}
+Die gemessenen Daten sind in Tabelle \ref{tab:messdaten1}  zu sehen und in Abbildung \ref{fig:spektrallinien} grafisch dargestellt. Wobei die Wurzel des Photostromes aufgetragen wird, um einen linearen Zusammenhang zu erhalten. Es gilt allgemein
+\todo[color = red]{Diese Formel fehlt in der Theorie (das mit dem Kaptiel Messung finde ich irgendwie eigenartig), auch Abbildung 5 aus der Versuchsanleitung wäre nützlich}
+\begin{align}
+	I \sim U^2 \quad .
 \end{align}
-	
-	
-	
-	
+
+Deswegen wurden die negativen Photostöme nicht weiter beachtet, sodass zum Beispiel bei der roten Spektrallinie nur sechs von zehn Messwerten in der Auswertung berücksichtigt werden. \\
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Gemessene Photoströme / \si{\pico\ampere}}
+	\begin{tabular}{c|ccccc}
+		Spannung / V & rot & grün & lila & blau & UV \\
+		\hline
+		\input{build/tabelle_alle_wellenlangen.tex}
+	\end{tabular}
+	\label{tab:messdaten1}
+\end{figure}
+
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\textwidth]{build/AlleWellenlangen.png}
@@ -18,16 +33,42 @@ Die Spektrallinien ist im folgenden so bezeichnet:
 	\label{fig:spektrallinien}
 \end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\captionof{table}{Gemessene elektrische Ströme / \si{\pico\ampere}}
-	\begin{tabular}{c|ccccc}
-		Spannung / V & rot & grün & lila & blau & UV \\
-		\hline
-		\input{build/tabelle_alle_wellenlangen.tex}
-	\end{tabular}
-	\label{tab:}
-\end{figure}
+\clearpage
+Um die Gegenspannung $U_g$ zu bestimmen werden Ausgleichsgeraden mit Hilfe von Python nach den Formeln aus Kapitel \ref{sec:regression} erstellt und jeweils der x-Achsenabschnitt berechnet
+\begin{align}
+	\sqrt{I} = mU +b = 0\quad  \Leftrightarrow 	\quad U_g = - \frac{b}{m}
+\end{align}	
+
+Die Ausgleichsgeraden und Messwerte für jede Spektrallinie sind in den Abbildungen \ref{fig:regression_rot}, \ref{fig:regression_grun}, \ref{fig:regression_lila}, \ref{fig:regression_blau} und \ref{fig:regression_uv} dargestellt. Die berechneten Parameter sind
+
+\begin{align*}
+	\text{rot:} \quad m &= \input{build/Steigung_0.tex} \\
+	b &= \input{build/y-Achsenabschnitt_0.tex} \\
+	U_g &= \input{build/Grenzspannung_0.tex} \\[1em]
+	\text{grün:} \quad m &= \input{build/Steigung_1.tex} \\
+	b &= \input{build/y-Achsenabschnitt_1.tex} \\
+	U_g &= \input{build/Grenzspannung_1.tex} \\[1em]
+	\text{lila:} \quad m &= \input{build/Steigung_2.tex} \\
+	b &= \input{build/y-Achsenabschnitt_2.tex} \\
+	U_g &= \input{build/Grenzspannung_2.tex} \\[1em]
+	\text{blau:} \quad m &= \input{build/Steigung_3.tex} \\
+	b &= \input{build/y-Achsenabschnitt_3.tex} \\
+	U_g &= \input{build/Grenzspannung_3.tex} \\[1em]
+	\text{UV:} \quad m &= \input{build/Steigung_4.tex} \\
+	b &= \input{build/y-Achsenabschnitt_4.tex} \\
+	U_g &= \input{build/Grenzspannung_4.tex}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
 
 \begin{figure}[h!]
 	\centering
@@ -64,23 +105,63 @@ Die Spektrallinien ist im folgenden so bezeichnet:
 	\label{fig:regression_uv}
 \end{figure}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{build/regression_aufgabe2.png}
+\caption{Regression zur Bestimmung von $h$ und $A_k$}
+\label{fig:regression2}
+\end{figure}
+
+
+\clearpage
+
+\subsection{Bestimmung des Verhältnisses $\frac{h}{e_0}$}
+Da jetzt die Gegenspannungen bekannt sind, kann mit Hilfe einer linearen Regression das Verhältnis vom Planckschen Wirkungsquantum $h$ zur Elementarladung $e_0$ bestimmt werden. Auch die Austrittsarbeit $A_k$ kann auf diese Weise bestimmt werden.
+\begin{align}
+	h \nu = e_0 U_g + A_k \quad \Leftrightarrow \quad U_g = -\frac{A_k}{e_0} +\nu \frac{h}{e_0} = b + m \cdot \nu
+\end{align}
+Die Wellenlänge des Lichtes  wird zunächst in die Frequenz umgerechnet
+\begin{align}
+	\nu = \frac{c}{ \lambda}, \quad c =\SI{298792458}{\meter\per\second} \quad .
+\end{align}
+Die Werte sind in Tabelle \ref{tab:h_durch_e} aufgetragen.
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Gemessene Photoströme / \si{\pico\ampere}}
+	\begin{tabular}{c|c|c}
+		Gegenspannung / V & Wellenlange / \si{\nano\meter}  & Frequenz / \si{\tera\hertz}\\
+		\hline
+		\input{build/tabelle_h_druch_e.tex}
+	\end{tabular}
+	\label{tab:h_durch_e}
+\end{figure}
+
+Die lineare Regression liefert schlussendlich den Graph, der in Abbildung \ref{fig:regression2} dargestellt ist und folgende Werte:
+
+
 
 \begin{align}
-	\text{rot:} \quad m &= \input{build/Steigung_0.tex} \\
-		b &= \input{build/y-Achsenabschnitt_0.tex} \\
-		U_g &= \input{build/Grenzspannung_0.tex} \\
-	\text{grün:} \quad m &= \input{build/Steigung_1.tex} \\
-	b &= \input{build/y-Achsenabschnitt_1.tex} \\
-	U_g &= \input{build/Grenzspannung_1.tex} \\
-	\text{lila:} \quad m &= \input{build/Steigung_2.tex} \\
-	b &= \input{build/y-Achsenabschnitt_2.tex} \\
-	U_g &= \input{build/Grenzspannung_2.tex} \\
-	\text{blau:} \quad m &= \input{build/Steigung_3.tex} \\
-	b &= \input{build/y-Achsenabschnitt_3.tex} \\
-	U_g &= \input{build/Grenzspannung_3.tex} \\
-	\text{UV:} \quad m &= \input{build/Steigung_4.tex} \\
-	b &= \input{build/y-Achsenabschnitt_4.tex} \\
-	U_g &= \input{build/Grenzspannung_4.tex}
-\end{align}
+	& m = \frac{h}{e_0} = \input{build/h_durch_e.tex} \\
+	& \Rightarrow h =  \input{build/h_durch_e_2.tex} \\
+	& b = - \frac{A_k}{e_0} = \input{build/austrittsarbeit.tex} \\
+	& \Rightarrow A_k = \input{build/austrittsarbeit_2.tex} 
+	\end{align}
+	
+	
+\clearpage
+\subsection{Photostrom des orangenen Spektrallinie}
+Bei der orangenen Spektralline ($\lambda = \SI{578}{\nano\meter}$) wird der Photonenstrom wie bei den anderen Spektrallinen auch gemessen - hier aber über eine größeres Intervall der Bremsspannung von  \num{-20} bis \num{20} Volt. Die Daten werden aufgetragen und der Plot (siehe Abbildung \ref{fig:orange}) beschrieben. \\
+Für hohe beschleunigende Spannungen -- d.h. niedrige Bremsspannung -- erreicht der Photonenstrom einen Grenzwert. Das liegt daran, dass nicht beliebig viele Elektronen zur Verfügung stehen, sonder nur so viele, wie durch die Lichtquelle aus der Elektronenkathode ausgelöst werden. Das heißt, dass die Intensität der Lichtquelle den Grenzwert des Photonenstromes bestimmt. \\
+Der Photostrom bricht nicht abrupt auf null ab, wenn die Grenzspannung erreicht ist. Die Elektronen haben bereits in dem Material eine Energie durch ihre Konfiguration(Fermie-Energie). Diese ist für alle Elektronen unterschiedlich. Obwohl alle Elektronen die gleiche Lichtintensität erfahren, werden deswegen einig Elektronen die Anode bereits erreichen, währen andere nicht über die hinreichende Energie verfügen. \\
+Für hinreichend große Bremsspannungen tritt ein negativer Photonenstrom. Die Elektronen, die hier übertragen werden, entstammen der Anode. Die werden nicht durch Licht ausgelöst, sondern werden wegen der niedrigen Verdampfungstemperatur des Anodenmaterials freigesetzt.
 
+\todo[inline, color = red]{Alle Fragen kann ich leider nicht beantworten - irgendwie verstehe ich das dafür wohl nicht gut genug.}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{build/OrangeWellenlange.png}
+	\caption{Photonenstrom der oragnenen Spektrallinie}
+	\label{fig:orange}
+\end{figure}
+
+	
