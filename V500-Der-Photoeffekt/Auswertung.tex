@@ -9,7 +9,6 @@ Die hier betrachteten Spektrallinien der Quecksilberlampe sind:
 	\text{UV:} \quad & \input{build/Wellenlange_4.tex} \\
 \end{align*}
 Die gemessenen Daten sind in Tabelle \ref{tab:messdaten1}  zu sehen und in Abbildung \ref{fig:spektrallinien} grafisch dargestellt. Wobei die Wurzel des Photostromes aufgetragen wird, um einen linearen Zusammenhang zu erhalten. Es gilt allgemein
-\todo[color = red]{Diese Formel fehlt in der Theorie (das mit dem Kaptiel Messung finde ich irgendwie eigenartig), auch Abbildung 5 aus der Versuchsanleitung wäre nützlich}
 \begin{align}
 	I \sim U^2 \quad .
 \end{align}
@@ -116,9 +115,13 @@ Die Ausgleichsgeraden und Messwerte für jede Spektrallinie sind in den Abbildun
 \clearpage
 
 \subsection{Bestimmung des Verhältnisses $\frac{h}{e_0}$}
-Da jetzt die Gegenspannungen bekannt sind, kann mit Hilfe einer linearen Regression das Verhältnis vom Planckschen Wirkungsquantum $h$ zur Elementarladung $e_0$ bestimmt werden. Auch die Austrittsarbeit $A_k$ kann auf diese Weise bestimmt werden.
+Die Gleichungen \eqref{eq:Energie} und \eqref{eq:einstein} liefern beide einen Ausdruck für die Energie der Photoelektronen. Durch Gleichsetzen ergibt sich
 \begin{align}
-	h \nu = e_0 U_g + A_k \quad \Leftrightarrow \quad U_g = -\frac{A_k}{e_0} +\nu \frac{h}{e_0} = b + m \cdot \nu
+	h\nu = e_0U_g \ .
+\end{align}
+Da nach dem vorigen Kapitel die Gegenspannungen bekannt sind, kann mit Hilfe einer linearen Regression das Verhältnis vom Planckschen Wirkungsquantum $h$ zur Elementarladung $e_0$ bestimmt werden. Auch die Austrittsarbeit $A_k$ kann auf diese Weise bestimmt werden.
+\begin{align}
+	U_g = -\frac{A_k}{e_0} +\nu \frac{h}{e_0} = b + m \cdot \nu
 \end{align}
 Die Wellenlänge des Lichtes  wird zunächst in die Frequenz umgerechnet
 \begin{align}
@@ -153,9 +156,7 @@ Die lineare Regression liefert schlussendlich den Graph, der in Abbildung \ref{f
 Bei der orangenen Spektralline ($\lambda = \SI{578}{\nano\meter}$) wird der Photonenstrom wie bei den anderen Spektrallinen auch gemessen - hier aber über eine größeres Intervall der Bremsspannung von  \num{-20} bis \num{20} Volt. Die Daten werden aufgetragen und der Plot (siehe Abbildung \ref{fig:orange}) beschrieben. \\
 Für hohe beschleunigende Spannungen -- d.h. niedrige Bremsspannung -- erreicht der Photonenstrom einen Grenzwert. Das liegt daran, dass nicht beliebig viele Elektronen zur Verfügung stehen, sonder nur so viele, wie durch die Lichtquelle aus der Elektronenkathode ausgelöst werden. Das heißt, dass die Intensität der Lichtquelle den Grenzwert des Photonenstromes bestimmt. \\
 Der Photostrom bricht nicht abrupt auf null ab, wenn die Grenzspannung erreicht ist. Die Elektronen haben bereits in dem Material eine Energie durch ihre Konfiguration(Fermie-Energie). Diese ist für alle Elektronen unterschiedlich. Obwohl alle Elektronen die gleiche Lichtintensität erfahren, werden deswegen einig Elektronen die Anode bereits erreichen, währen andere nicht über die hinreichende Energie verfügen. \\
-Für hinreichend große Bremsspannungen tritt ein negativer Photonenstrom. Die Elektronen, die hier übertragen werden, entstammen der Anode. Die werden nicht durch Licht ausgelöst, sondern werden wegen der niedrigen Verdampfungstemperatur des Anodenmaterials freigesetzt.
-
-\todo[inline, color = red]{Alle Fragen kann ich leider nicht beantworten - irgendwie verstehe ich das dafür wohl nicht gut genug.}
+Für hinreichend große Bremsspannungen tritt ein negativer Photonenstrom auf. Die Elektronen, die hier gemessen werden, entstammen der Anode. Sie werden nicht durch das Licht ausgelöst, sondern sie werden wegen der niedrigen Verdampfungstemperatur des Anodenmaterials freigesetzt.
 
 \begin{figure}[h!]
 	\centering

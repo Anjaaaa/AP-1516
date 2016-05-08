@@ -1,6 +1,5 @@
 \subsection{Aufbau}
-In diesem Experiment zum Photoeffekt sieht der Versuchsaufbau wie in Abbildung \ref{fig:Aufbau} aus. Das \glqq zylindrische Gehäuse\grqq\ beinhaltet dabei die Photozelle. Eine Photozelle besteht aus einem evakuierten Glaskolben und zwei Elektroden. Eine davon ist die Photokathode. Sie hat eine große Oberfläche, mit einer aufgedampften Metall- oder Legierungsschicht. Diese Schicht wird vom Licht bestrahlt. Die andere Elektrode, die Auffangelektrode, ist ein Drahtring, der wenige Millimeter neben der Kathodenoberfläche verläuft.
-\todo[inline]{Ich habe hier jetzt einfach mal kurz beschrieben, wie eine Photozelle aufgebaut ist. Ich dachte mir, das ist ganz gut zu wissen, nicht nur, aber auch im Hinblick auf die Prüfung. Wenn dus ganz fehl am Platz findest, dann packe ich das in einen Kommentar und druck es nicht mit aus.}
+In diesem Experiment zum Photoeffekt sieht der Versuchsaufbau wie in Abbildung \ref{fig:Aufbau} aus. Gemessen wird der Photostrom am Ampèremeter in Abhängigkeit von der angelegten Gegenspannung. Das \glqq zylindrische Gehäuse\grqq\ beinhaltet die Photozelle. Eine Photozelle besteht aus einem evakuierten Glaskolben und zwei Elektroden. Eine davon ist die Photokathode. Sie hat eine große Oberfläche, mit einer aufgedampften Metall- oder Legierungsschicht. Diese Schicht wird vom Licht bestrahlt. Die andere Elektrode, die Auffangelektrode, ist ein Drahtring, der wenige Millimeter neben der Kathodenoberfläche verläuft.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.5\textwidth]{Aufbau.png}
@@ -18,15 +17,15 @@ Um Licht verschiedener Wellenlängen, also verschiedener Frequenzen, messen zu k
 \subsection{Mögliche Schwierigkeiten dieses Aufbaus}
 Die Messung kann durch verschiedene Faktoren vom erwarteten Ergebnis abweichen.
 \begin{enumerate}
-	\item Die Photoelektronen sind nicht monoenergetisch, da die Elektronen schon vorher im gebundenen Zustand verschiedene Energien hatten (Die Energieverteilung wird durch die Fermi-Dirac-Statistik beschrieben, wobei $0\leq E\leq\zeta$ (Fermi-Energie) gilt.). Das sorgt dafür, dass der Photostrom bei der Grenzspannung nicht sofort und schlagartig verschwindet, sondern absinkt und erst bei einer Spannung $U<U_\text{g}$ nicht mehr vorhanden ist.
-	\item Die Austrittsarbeit des Anodenmaterials $A_\text{A}$ ist sehr groß, insbesondere größer, als die Austrittsarbeit des Kathodenmaterials $A_\text{K}$. Es kann dann passieren, dass die Elektronen aus der Kathode austreten können, da $h\nu<A_\text{K}$, aber kein Photostrom gemessen werden kann, weil die Energie der Elektronen kleiner ist, als die Fermi-Energie des Anodenmaterials. Um dennoch einen Photostrom messen zu können, muss die angelegte Spannung beschleunigend wirken.
+	\item Die Photoelektronen sind nicht monoenergetisch, da die Elektronen schon vorher im gebundenen Zustand verschiedene Energien hatten (Die Energieverteilung wird durch die Fermi-Dirac-Statistik beschrieben, wobei $0\leq E\leq\zeta$ (Fermi-Energie) gilt.). Das sorgt dafür, dass der Photostrom bei der Grenzspannung nicht sofort und schlagartig verschwindet, sondern absinkt und erst bei einer Spannung $U<U_\text{g}$ nicht mehr vorhanden ist. (siehe Abbildung \ref{fig:UI})
+	\item Die Austrittsarbeit des Anodenmaterials $A_\text{A}$ ist sehr groß, insbesondere größer, als die Austrittsarbeit des Kathodenmaterials $A_\text{K}$. Es kann dann passieren, dass die Elektronen aus der Kathode austreten können, da $h\nu>A_\text{K}$, aber kein Photostrom gemessen werden kann, weil die Energie der Elektronen kleiner ist, als die Fermi-Energie des Anodenmaterials. Um dennoch einen Photostrom messen zu können, muss die angelegte Spannung beschleunigend wirken.
 \end{enumerate}
-\subsection{Messung}
-\todo[color = red]{Wie viele Messwerte waren das jeweils?}
-\todo[]{Ich glaube  mir wäre ganz lieb, diesen Abschnitt raus zu nehmen und das I proportional U quadrat in die Theorie zu schreiben oder ganz raus zu lassen, wenn das sonst zu viel Arbeit macht. Geht das?}
-Es werden für verschiedenfarbiges Licht mehrere Beschleunigungsspannungen angelegt und dann der jeweils fließende Strom gemessen. \\
-Zunächst geschieht das für die Orange-farbige Spektrallinie ($\lambda = \SI{578}{\nano\meter}$) und einem $\SI{-20}{\volt}\leq U \leq\SI{+20}{\volt}$. Hierbei werden XXX Messwerte genommen. \\
-Danach wird die Messung für XXX weitere Spektrallinien auf einem Bereich von $\SI{-2}{\volt}\leq U \leq\SI{+2}{\volt}$ mit jeweils XXX Messwerten wiederholt. \\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.6\textwidth]{IU.png}
+	\caption{Photostrom in Abhängigkeit von der Bremsspannung bei einer mit monochromatischem Licht bestrahlten Photozelle \cite{V500}}
+	\label{fig:UI}
+\end{figure}
 Werden die beschriebenen Schwierigkeiten beachtet und bestimmte Annahmen gemacht, gilt der Zusammenhang
 \begin{align}
 	I \propto U^2

@@ -75,9 +75,9 @@ for i in range (0,5):
 	plt.savefig('build/regression_Farbe:'+str(i)+'.png')
 	plt.show()
 	#daten speichern
-	write('build/Steigung_'+str(i)+'.tex', make_SI(m, r'\sqrt{\ampere}\per\volt', figures=2))
-	write('build/y-Achsenabschnitt_'+str(i)+'.tex', make_SI(b, r'\sqrt{\ampere}', figures=2))
-	write('build/Grenzspannung_'+str(i)+'.tex', make_SI(Ug, r'\volt', figures=2))
+	write('build/Steigung_'+str(i)+'.tex', make_SI(m*10**6, r'\sqrt{\ampere}\per\volt', 'e-6', figures=1))
+	write('build/y-Achsenabschnitt_'+str(i)+'.tex', make_SI(b*10**6, r'\sqrt{\ampere}', 'e-6', figures=1))
+	write('build/Grenzspannung_'+str(i)+'.tex', make_SI(Ug, r'\volt', figures=1))
 		
 
 
