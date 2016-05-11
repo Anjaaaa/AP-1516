@@ -1,5 +1,6 @@
 \subsection{Bestimmung der Gegenspannung}
-Um die Gegenspannung der einzelnen Spektrallinien zu bestimmen wird der Photostrom in Abhängigkeit einer angelegten Bremsspannung $U$ (im Folgenden einfach als Spannung bezeichnet) gemessen. Für jede der fünf ausgewerteten Spektrallinien werden zehn Messwerte im Bereich vonnotiert.
+\label{sec:gegenspannung}
+Um die Gegenspannung der einzelnen Spektrallinien zu bestimmen wird der Photostrom in Abhängigkeit einer angelegten Bremsspannung $U$ (im Folgenden einfach als Spannung bezeichnet) gemessen. Für jede der fünf ausgewerteten Spektrallinien werden zehn Messwerte im Bereich von  \num{-2} bis \num{2} Volt notiert.
 Die hier betrachteten Spektrallinien der Quecksilberlampe sind:
 \begin{align*}
 	\text{rot:} \quad & \input{build/Wellenlange_0.tex} \\
@@ -8,7 +9,7 @@ Die hier betrachteten Spektrallinien der Quecksilberlampe sind:
 	\text{blau:} \quad & \input{build/Wellenlange_3.tex} \\
 	\text{UV:} \quad & \input{build/Wellenlange_4.tex} \\
 \end{align*}
-Die gemessenen Daten sind in Tabelle \ref{tab:messdaten1}  zu sehen und in Abbildung \ref{fig:spektrallinien} grafisch dargestellt. Wobei die Wurzel des Photostromes aufgetragen wird, um einen linearen Zusammenhang zu erhalten. Es gilt allgemein
+Die gemessenen Daten sind in Tabelle \ref{tab:messdaten1}  zu sehen, in Tabelle \ref{tab:messdaten2} die Wurzel ihre gezogen und in Abbildung \ref{fig:spektrallinien} grafisch dargestellt. Wobei die Wurzel des Photostromes aufgetragen wird, um einen linearen Zusammenhang zu erhalten. Es gilt allgemein
 \begin{align}
 	I \sim U^2 \quad .
 \end{align}
@@ -27,13 +28,24 @@ Deswegen wurden die negativen Photostöme nicht weiter beachtet, sodass zum Beis
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/AlleWellenlangen.png}
+	\captionof{table}{Wurzel der gemessene Photoströme / \si{\sqrt{\pico\ampere}}}
+	\begin{tabular}{c|ccccc}
+		Spannung / V & rot & grün & lila & blau & UV \\
+		\hline
+		\input{build/tabelle_alle_wellenlangen_wurzel.tex}
+	\end{tabular}
+	\label{tab:messdaten2}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{build/AlleWellenlangen.png}
 	\caption{gemessene Spektrallinien}
 	\label{fig:spektrallinien}
 \end{figure}
 
 \clearpage
-Um die Gegenspannung $U_g$ zu bestimmen werden Ausgleichsgeraden mit Hilfe von Python nach den Formeln aus Kapitel \ref{sec:regression} erstellt und jeweils der x-Achsenabschnitt berechnet
+Um die Grenzspannung $U_g$ zu bestimmen werden Ausgleichsgeraden mit Hilfe von Python nach den Formeln aus Kapitel \ref{sec:regression} erstellt und jeweils der x-Achsenabschnitt berechnet
 \begin{align}
 	\sqrt{I} = mU +b = 0\quad  \Leftrightarrow 	\quad U_g = - \frac{b}{m}
 \end{align}	
@@ -71,42 +83,42 @@ Die Ausgleichsgeraden und Messwerte für jede Spektrallinie sind in den Abbildun
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:0.png}
+	\includegraphics[width=0.8\textwidth]{build/regression_Farbe:0.png}
 	\caption{Regression der roten Spektrallinie}
 	\label{fig:regression_rot}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:1.png}
+	\includegraphics[width=0.8\textwidth]{build/regression_Farbe:1.png}
 	\caption{Regression der grünen Spektrallinie}
 	\label{fig:regression_grun}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:2.png}
+	\includegraphics[width=0.8\textwidth]{build/regression_Farbe:2.png}
 	\caption{Regression der lila Spektrallinie}
 	\label{fig:regression_lila}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:3.png}
+	\includegraphics[width=0.8\textwidth]{build/regression_Farbe:3.png}
 	\caption{Regression der blauen Spektrallinie}
 	\label{fig:regression_blau}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/regression_Farbe:4.png}
+	\includegraphics[width=0.8\textwidth]{build/regression_Farbe:4.png}
 	\caption{Regression der ultravioletten Spektrallinie}
 	\label{fig:regression_uv}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.7\textwidth]{build/regression_aufgabe2.png}
+\includegraphics[width=0.8\textwidth]{build/regression_aufgabe2.png}
 \caption{Regression zur Bestimmung von $h$ und $A_k$}
 \label{fig:regression2}
 \end{figure}
@@ -115,6 +127,7 @@ Die Ausgleichsgeraden und Messwerte für jede Spektrallinie sind in den Abbildun
 \clearpage
 
 \subsection{Bestimmung des Verhältnisses $\frac{h}{e_0}$}
+\label{sec:h_durch_h}
 Die Gleichungen \eqref{eq:Energie} und \eqref{eq:einstein} liefern beide einen Ausdruck für die Energie der Photoelektronen. Durch Gleichsetzen ergibt sich
 \begin{align}
 	h\nu = e_0U_g \ .
@@ -147,22 +160,35 @@ Die lineare Regression liefert schlussendlich den Graph, der in Abbildung \ref{f
 	& m = \frac{h}{e_0} = \input{build/h_durch_e.tex} \\
 	& \Rightarrow h =  \input{build/h_durch_e_2.tex} \\
 	& b = - \frac{A_k}{e_0} = \input{build/austrittsarbeit.tex} \\
-	& \Rightarrow A_k = \input{build/austrittsarbeit_2.tex} 
+	& \Rightarrow A_k = \input{build/austrittsarbeit_2.tex} \label{eq:austrittsarbeit}
 	\end{align}
 	
 	
 \clearpage
 \subsection{Photostrom des orangenen Spektrallinie}
-Bei der orangenen Spektralline ($\lambda = \SI{578}{\nano\meter}$) wird der Photonenstrom wie bei den anderen Spektrallinen auch gemessen - hier aber über eine größeres Intervall der Bremsspannung von  \num{-20} bis \num{20} Volt. Die Daten werden aufgetragen und der Plot (siehe Abbildung \ref{fig:orange}) beschrieben. \\
+Bei der orangenen Spektralline ($\lambda = \SI{578}{\nano\meter}$) wird der Photonenstrom wie bei den anderen Spektrallinen auch gemessen - hier aber über eine größeres Intervall der Bremsspannung von  \num{-20} bis \num{20} Volt. Die Daten (siehe Tabelle \ref{tab:orange}) werden aufgetragen und der in Abbildung \ref{fig:orange} dargestellte Plot beschrieben. \\
 Für hohe beschleunigende Spannungen -- d.h. niedrige Bremsspannung -- erreicht der Photonenstrom einen Grenzwert. Das liegt daran, dass nicht beliebig viele Elektronen zur Verfügung stehen, sonder nur so viele, wie durch die Lichtquelle aus der Elektronenkathode ausgelöst werden. Das heißt, dass die Intensität der Lichtquelle den Grenzwert des Photonenstromes bestimmt. \\
-Der Photostrom bricht nicht abrupt auf null ab, wenn die Grenzspannung erreicht ist. Die Elektronen haben bereits in dem Material eine Energie durch ihre Konfiguration(Fermie-Energie). Diese ist für alle Elektronen unterschiedlich. Obwohl alle Elektronen die gleiche Lichtintensität erfahren, werden deswegen einig Elektronen die Anode bereits erreichen, währen andere nicht über die hinreichende Energie verfügen. \\
-Für hinreichend große Bremsspannungen tritt ein negativer Photonenstrom auf. Die Elektronen, die hier gemessen werden, entstammen der Anode. Sie werden nicht durch das Licht ausgelöst, sondern sie werden wegen der niedrigen Verdampfungstemperatur des Anodenmaterials freigesetzt.
+Dieser Grenzwert wird mit der vorliegenden Versuchsanordnung allerdings nie erreicht werden. Nicht alle freiwerdenden Elektronen erreichen die Anode, da ihre Kapazität beschränkt ist. Eine Verbesserung  im Versuchsaufbau, um möglichst nah an den Grenzwert zu kommen, ist eine größere Anode. \\
+
+Der Photostrom bricht nicht abrupt auf null ab, wenn die Grenzspannung erreicht ist. Die Elektronen haben bereits in dem Material eine Energie (Fermi-Energie), die in Abhängigkeit von den Elektronenkonfigurationen variiert. Obwohl alle Elektronen die gleiche Lichtintensität erfahren, werden deswegen einige Elektronen die Anode bereits erreichen, währen andere nicht über die hinreichende Energie verfügen. \\
+Für hinreichend große Bremsspannungen tritt ein negativer Photonenstrom auf. Wegen der niedrigen Verdampfungstemperatur der Kathode, wird schon bei Raumtemperatur Material der Kathode freigesetzt, dass sich auf der Anode ansammelt. Als Folge tritt ein Photoeffekt an der Anode auf : Es werden Elektronen freigesetzt, die zu einem negativen Strom führen.
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/OrangeWellenlange.png}
-	\caption{Photonenstrom der oragnenen Spektrallinie}
+	\includegraphics[width=0.8\textwidth]{build/OrangeWellenlange.png}
+	\caption{Photonenstrom der $\lambda = 578 \si{\nano\meter}$ Spektrallinie}
 	\label{fig:orange}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Gemessenen Photostrom der $\lambda = 578 \si{\nano\meter}$ Spektrallinie}
+	\begin{tabular}{c|c}
+		Gegenspannung / V & Photostrom / \si{\pico\ampere}  \\
+		\hline
+		\input{build/tabelle_orange.tex}
+	\end{tabular}
+	\label{tab:orange}
 \end{figure}
 
 	
