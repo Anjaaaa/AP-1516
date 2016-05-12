@@ -1,0 +1,35 @@
+Fallende Öltröpfchen sind so leicht, dass sie einen hohen Luftwiderstand erfahren und sich in Folge dessen mit konstanter Grenzgeschwindigkeit $v_0$ bewegen, anstatt stetig zu beschleunigen.  Die Geschichtskraft $F_g$ ausgrdrückt über die Dichte der Luft $\rho_L$ und des Tropfens $\rho_{Oel}$ und den Tropfenradius $r$  Gleichgewicht:
+\begin{align}
+	F_g = m g = V \rho_{eff} g = \frac{4}{3} \pi r^3 (\rho_{Oel }- \rho_{L}) g
+\end{align}
+	und die Stokesche Kraft $F_s$ sind im
+\begin{align} \label{eq:gleichgewicht}
+F_g=F_s \Rightarrow \frac{4}{3} \pi r^3 (\rho_{Oel}-\rho_{L}) g= 6 \pi \eta_L r v_0 \quad .
+\end{align}
+Wobei $\eta_L$ die Viskosität der Luft ist. \\
+Ein von außen angelegtes Feld soll gerade so stark sein, dass die Teilchen sich mit einer Geschwindigkeit $v_{auf}$ nach oben bewegen, wenn die Kraft des Feld dem Gravitationsfeld entgegen gerichtet ist. Bei einer Umpolung des Feldes sinkt das Teilchen mit der Geschwindigkeit $v_ab$.
+\begin{align}
+	& \frac{4}{3} \pi r^3 (\rho_{Oel}-\rho_{L}) - 6 \pi \eta_L r v_ab = -qE \label{eq:feld1}\\
+	& \frac{4}{3} \pi r^3 (\rho_{Oel}+\rho_{L}) - 6 \pi \eta_L r v_ab = qE \label{eq:feld2}
+\end{align}
+
+Unter Vernachlässigung der Dichte der Luft ($\rho_L << \rho_{Oel}$) folgen aus Gleichung~\eqref{eq:feld1} und~\eqref{eq:feld2} Formeln für die Radius $r$ und die Ladung $q$ der Öltröpfchen.
+\begin{align}
+ r & = \sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g\rho_{Oel}}} \label{eq:radius}  \\
+q & = 3 \pi \eta_L \sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g\rho_{Oel}}}  \frac{v_{ab}+v_{auf}}{E}
+\end{align}
+
+In diesem Versuch muss noch ein zusätzlicher Korrekturterm eingeführt werden, da die Öltröpfchen kleiner als die freie Weglänge der Luft sind. Die Modifizierung ist abhängig vom Radius $r$, dem Luftdruck $P$ und der Konstante $B$
+\begin{align}
+q^{2/3} = q_0^{2/3}(1+\frac{B}{pr}) \quad,
+\end{align}
+mit
+\begin{align}
+B = \SI{6.17e-3}{\torr\centi\meter} =  \SI{8.2e-3}{\pascal\meter} \quad .
+\end{align}
+
+Aus den Radien, die durch Gleichung \eqref{eq:gleichgewicht} und \eqref{eq:radius} für das Öltröpfchen berechnet werden können, folgt die Beziehung
+\begin{align}
+2 v_0 = v_{ab} - v_{auf} \quad .
+\end{align}
+

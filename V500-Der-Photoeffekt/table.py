@@ -55,7 +55,7 @@ def make_SI(num, unit, exp='', figures=None):
 
 def write(filename, content):
     f = codecs.open(filename, "w", "utf-8")
-    if type(content) == uncertainties.core.Variable:
+    if type(content) == uncertainties.Variable:
         content = "\num{" + str(x.n) + " +- " + str(x.s) + "}"
         f.write(content)
         if not content.endswith('\n'):
