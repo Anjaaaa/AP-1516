@@ -1,6 +1,6 @@
 \subsection{Bestimmung der Gegenspannung}
 \label{sec:gegenspannung}
-Um die Gegenspannung der einzelnen Spektrallinien zu bestimmen wird der Photostrom in Abhängigkeit einer angelegten Bremsspannung $U$ (im Folgenden einfach als Spannung bezeichnet) gemessen. Für jede der fünf ausgewerteten Spektrallinien werden zehn Messwerte im Bereich von  \num{-2} bis \num{2} Volt notiert.
+Um die Gegenspannung der einzelnen Spektrallinien zu bestimmen wird der Photostrom in Abhängigkeit einer angelegten Bremsspannung $U$ gemessen. Für jede der fünf ausgewerteten Spektrallinien werden zehn Messwerte im Bereich von  \num{-2} bis \num{2} Volt notiert.
 Die hier betrachteten Spektrallinien der Quecksilberlampe sind:
 \begin{align*}
 	\text{rot:} \quad & \input{build/Wellenlange_0.tex} \\
@@ -19,7 +19,7 @@ Deswegen wurden die negativen Photostöme nicht weiter beachtet, sodass zum Beis
 	\centering
 	\captionof{table}{Gemessene Photoströme / \si{\pico\ampere}}
 	\begin{tabular}{c|ccccc}
-		Spannung / V & rot & grün & lila & blau & UV \\
+		Gegenspannung / V & rot & grün & lila & blau & UV \\
 		\hline
 		\input{build/tabelle_alle_wellenlangen.tex}
 	\end{tabular}
@@ -30,9 +30,19 @@ Deswegen wurden die negativen Photostöme nicht weiter beachtet, sodass zum Beis
 	\centering
 	\captionof{table}{Wurzel der gemessene Photoströme / \si{\sqrt{\pico\ampere}}}
 	\begin{tabular}{c|ccccc}
-		Spannung / V & rot & grün & lila & blau & UV \\
+		Gegenspannung / V & rot & grün & lila & blau & UV \\
 		\hline
-		\input{build/tabelle_alle_wellenlangen_wurzel.tex}
+	-2.00 & 2.8 & 16.1 & 24.5 & 18.7 & 19.0 \\
+	-1.60 & 2.4 & 15.5 & 22.8 & 16.7 & 17.3 \\
+	-1.20 & 2.4 & 14.1 & 20.0 & 15.8 & 16.4 \\
+	-0.80 & 2.0 & 11.8 & 17.6 & 14.1 & 15.2 \\
+	-0.40 & 1.4 & 9.5  & 14.8 & 11.8 & 12.6 \\
+	0.00  & 0.0 & 5.5  & 9.5  & 9.5  & 10.5 \\
+	0.40  & -- & --  & 7.1  & 6.2  & 8.1  \\
+	0.80  & -- & -- & 0.0  & 2.8  & 4.7  \\
+	1.20  & -- & --  & --  & --  & 2.0  \\
+	1.60  & -- & --  & --  & --  & --  \\
+	2.00  & -- & --  & -- & --  & --  \\
 	\end{tabular}
 	\label{tab:messdaten2}
 \end{figure}
@@ -175,7 +185,7 @@ Für hinreichend große Bremsspannungen tritt ein negativer Photonenstrom auf. W
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{build/OrangeWellenlange.png}
+	\includegraphics[width=\textwidth]{build/OrangeWellenlange.png}
 	\caption{Photonenstrom der $\lambda = 578 \si{\nano\meter}$ Spektrallinie}
 	\label{fig:orange}
 \end{figure}
