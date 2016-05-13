@@ -1,0 +1,35 @@
+\documentclass[a4,11pt]{article}
+\usepackage{geometry}
+\geometry{a4paper, top=40mm, left=30mm, right=30mm, bottom=35mm}
+\setlength\parindent{0pt}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm, amssymb}
+
+
+\begin{document}
+Erstmal eine Frage zu einer Formel: \\
+In der Anleitung steht
+\[ q_0 = 3\pi\eta_\text{L}\sqrt{\frac{9}{4}\frac{\eta_\text{L}}{g}\frac{(v_\text{ab}-v_\text{auf})}{\rho_\text{Öl}-\rho_\text{L}}} \ . \]
+Setzt man jetzt die Cunningham-Korrektur
+\[ \eta_\text{L,eff} = \eta_\text{L}\left( \frac{1}{1+\frac{B}{pr}} \right) \]
+da ein, kommt folgendes raus
+\begin{align}
+	q_\text{korr} &= 3\pi\eta_\text{L,eff}\sqrt{\frac{9}{4}\frac{\eta_\text{L,eff}}{g}\frac{(v_\text{ab}-v_\text{auf})}{\rho_\text{Öl}-\rho_\text{L}}} \\
+	&= 3\pi\sqrt{\frac{9}{4}\frac{\eta^3_\text{L,eff}}{g}\frac{(v_\text{ab}-v_\text{auf})}{\rho_\text{Öl}-\rho_\text{L}}} \\
+	&= 3\pi\sqrt{\frac{9}{4}\frac{\left( \eta_\text{L}\left( \frac{1}{1+\frac{B}{pr}} \right) \right)^3}{g}\frac{(v_\text{ab}-v_\text{auf})}{\rho_\text{Öl}-\rho_\text{L}}} \\
+	&= 3\pi\eta_\text{L}\sqrt{\frac{9}{4}\frac{\eta_\text{L}}{g}\frac{(v_\text{ab}-v_\text{auf})}{\rho_\text{Öl}-\rho_\text{L}}} \left( \frac{1}{1+\frac{B}{pr}} \right)^\frac{3}{2} \\
+	&= q_0 \left( \frac{1}{1+\frac{B}{pr}} \right)^\frac{3}{2} \ .
+\end{align}
+Die Anleitung sagt aber
+\begin{align}
+	q_\text{korr}^\frac{2}{3} &= q_0^\frac{2}{3}\left( 1+\frac{B}{pr} \right) \\
+	\Leftrightarrow\qquad q_\text{korr} &= q_0\left( 1+\frac{B}{pr} \right)^\frac{3}{2} \ .
+\end{align}
+Was habe ich da jetzt nicht verstanden?? \\
+\ \\
+\ \\
+\ \\
+Zweite Frage: \\
+Am Ende der Auswertung soll man zwei Methoden vergleichen. Das Altprotokoll nennt als diese beiden Methoden die \glqq normale\grqq\ Lösung und die korrigierte Lösung. Meiner Meinung nach sind das keine zwei verschiedene Methoden. Das ist wie einmal ohne Reibung und einmal mit Reibung zu rechnen. Natürlich ist da das eine genauer als das andere, weils die Realität doch besser beschreibt??
+\end{document}

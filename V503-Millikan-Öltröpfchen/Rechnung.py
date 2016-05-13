@@ -2,8 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from uncertainties import ufloat
-from uncertainties import unumpy as unp
-
+from uncertainties.umath import *
 from table import(
         make_table,
         make_SI,
@@ -51,6 +50,9 @@ NTime0 = NTime0[np.invert(np.isnan(NTime0))]
 
 
 
+
+
+
 ##########################################################################################################################################
 ##########################################################################################################################################
 ##########################################################################################################################################
@@ -74,7 +76,6 @@ KVel0 = s / KTime0
 LVel0 = s / LTime0
 MVel0 = s / MTime0
 NVel0 = s / NTime0
-
 
 ### v_ab
 
@@ -181,12 +182,12 @@ print('N:', NVel0Abw)
 
 
 
+# Anton, Emil, Julius, Kaufmann und Nordpol werden auskommentiert, da ihre Abweichung von v_0 mehr als 50% ist.
 
-
 ##########################################################################################################################################
 ##########################################################################################################################################
 ##########################################################################################################################################
-### Viskosität von Luft berechnen und andere Konstanten definieren
+### Konstanten definieren
 
 
 # Widerstände
@@ -209,14 +210,14 @@ T_LMN = 34
 m = ( 1.88 - 1.81 )*10**(-5) / ( 32 - 17 )
 t = 1.81*10**(-5)-m * 17
 
-def eta(T):
+def etaL(T):
    return m*T+t
 
-eta_ABC = eta(T_ABC)
-eta_D = eta(T_D)
-eta_EFGH = eta(T_EFGH)
-eta_IJK = eta(T_IJK)
-eta_LMN = eta(T_LMN)
+etaL_ABC = etaL(T_ABC)
+etaL_D = etaL(T_D)
+etaL_EFGH = etaL(T_EFGH)
+etaL_IJK = etaL(T_IJK)
+etaL_LMN = etaL(T_LMN)
 
 
 # Spannungen
@@ -226,15 +227,98 @@ U_IJK = 290
 U_LMN = 300
 
 
-# Durchmesser des Kondensators
+# Weitere Konstanten
+d = ufloat(7.6250*0.001, 0.0051*0.001)       # Durchmesser des Kondensators
+B = 6.17 * 10**(-3) * 10**(-2) * 101325/760  # Meter * Newton/Quadratmeter # Konstante für Cunningham-Korrektur
+p = 101325                                  # Normaldruck
+rhoO = 886                                   # Dichte Öl
+R_S = 287.058                                # spezifische Gaskonstante für trockene Luft
+g = 9.807                                    # Erdbeschleunigung
 
-d = ufloat(7.6250*0.001, 0.0051*0.001)
+def rhoL(T):                                 # Dichte von Luft
+   return p / R_S / T
 
 
 
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+### Radius, Ladung, Cunningham-Korrektur
+
+### Radius
+
+def Radius(VelDown, VelUp, T):
+   return ( 9/4 * etaL(T)/g * (VelDown - VelUp)/(rhoO - rhoL(T)) )
+
+
+# ARadius = Radius(AVelDown, AVelUp, T_ABC)
+BRadius = Radius(BVelDown, BVelUp, T_ABC)
+CRadius = Radius(CVelDown, CVelUp, T_ABC)
+DRadius = Radius(DVelDown, DVelUp, T_D)
+# ERadius = Radius(EVelDown, EVelUp, T_EFGH)
+FRadius = Radius(FVelDown, FVelUp, T_EFGH)
+GRadius = Radius(GVelDown, GVelUp, T_EFGH)
+HRadius = Radius(HVelDown, HVelUp, T_EFGH)
+IRadius = Radius(IVelDown, IVelUp, T_IJK)
+# JRadius = Radius(JVelDown, JVelUp, T_IJK)
+# KRadius = Radius(KVelDown, KVelUp, T_IJK)
+LRadius = Radius(LVelDown, LVelUp, T_LMN)
+MRadius = Radius(MVelDown, MVelUp, T_LMN)
+# NRadius = Radius(NVelDown, NVelUp, T_LMN)
+
+# DEr Radius von N ist bei einem Werte negativ
+
+### Cunningham-Korrektur
+
+def etaEff(T, Radius):
+   return ( etaL(T) * ( 1 / ( 1 + B/Radius/p ) ) )
 
 
 
+### Ladung
+
+def q(T, VelDown, VelUp, U, Radius):
+   a = (VelDown-VelUp)/(rhoO-rhoL(T))
+   b = (VelDown-VelUp) * d / U
+   return ( 3*np.pi*etaEff(T,Radius) * np.sqrt( 9/4 * etaEff(T,Radius)/g * a ) * b )
+
+
+
+# Aq = q(T_ABC, AVelDown, AVelUp, U_ABCD, ARadius)
+Bq = q(T_ABC, BVelDown, BVelUp, U_ABCD, BRadius)
+Cq = q(T_ABC, CVelDown, CVelUp, U_ABCD, CRadius)
+Dq = q(T_D, DVelDown, DVelUp, U_ABCD, DRadius)
+# Eq = q(T_EFGH, EVelDown, EVelUp, U_EFGH, ERadius)
+Fq = q(T_EFGH, FVelDown, FVelUp, U_EFGH, FRadius)
+Gq = q(T_EFGH, GVelDown, GVelUp, U_EFGH, GRadius)
+Hq = q(T_EFGH, HVelDown, HVelUp, U_EFGH, HRadius)
+Iq = q(T_IJK, IVelDown, IVelUp, U_IJK, IRadius)
+# Jq = q(T_IJK, JVelDown, JVelUp, U_IJK, JRadius)
+# Kq = q(T_IJK, KVelDown, KVelUp, U_IJK, KRadius)
+Lq = q(T_LMN, LVelDown, LVelUp, U_LMN, LRadius)
+Mq = q(T_LMN, MVelDown, MVelUp, U_LMN, MRadius)
+# Nq = q(T_LMN, NVelDown, NVelUp, U_LMN, NRadius)
+
+
+def qEff(q, Radius):
+   return ( q * (np.sqrt( 1+B/p/Radius ))**3 )
+
+
+
+# AqEff = qEff(Aq, ARadius)
+BqEff = qEff(Bq, BRadius)
+CqEff = qEff(Cq, CRadius)
+DqEff = qEff(Dq, DRadius)
+# EqEff = qEff(Eq, ERadius)
+FqEff = qEff(Fq, FRadius)
+GqEff = qEff(Gq, GRadius)
+HqEff = qEff(Hq, HRadius)
+IqEff = qEff(Iq, IRadius)
+# JqEff = qEff(Jq, JRadius)
+# KqEff = qEff(Kq, KRadius)
+LqEff = qEff(Lq, LRadius)
+MqEff = qEff(Mq, MRadius)
+# NqEff = qEff(Nq, NRadius)
 
 
 
