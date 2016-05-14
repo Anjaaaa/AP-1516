@@ -1,4 +1,4 @@
-\documentclass[a4,11pt]{article}
+\documentclass[a4,10.5pt]{article}
 \input{../Vorlage/Header.tex}
 
 
@@ -54,17 +54,17 @@ textsize=footnotesize
 %\clearpage
 \input{Auswertung.tex}
 \clearpage
-
+%\input{Fehlerrechnung.tex}  %%% Fehlerkapitel ist vorhanden, da aber immer alle meinten, wenn wir das eh mit Python machen brauchen wir das nicht, hab ich das mal auskommentiert.
+%\clearpage
 
 \section{Diskussion}
 \input{Diskussion.tex}
-\input{Messwerte.tex}
 \clearpage
+
 \listoftodos
 \listoffigures
 \listoftables
-\clearpage
 \nocite{\V}
 \printbibliography[title = Literaturverzeichnis]
-
+\input{Messwerte.tex}
 \end{document}
