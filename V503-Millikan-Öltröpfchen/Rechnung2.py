@@ -19,6 +19,10 @@ from table import(
 # 290 V: I, J, K
 # 300 V: L, M, N
 
+
+name = ["Anton", "Berta", "Caesar", "Dora", "Emil", "Friedrich", "Gustav", "Heinrich", "Ida", "Julius", "Kaufmann", "Ludwig", "Martha", "Nordpol"]
+
+
 # t_0   t_ab       t_auf    R   U
 ATime0, ATimeUp, ATimeDown = np.genfromtxt('Anton.txt', unpack = True)
 BTime0, BTimeUp, BTimeDown = np.genfromtxt('Berta.txt', unpack = True)
@@ -140,6 +144,8 @@ for i in range(0,len(TimeDownN)):
 
 
 
+
+
 ##########################################################################################################################################
 ##########################################################################################################################################
 ##########################################################################################################################################
@@ -157,6 +163,9 @@ Vel0Exp = 0.5 * (VelDownAll - VelUpAll)
 VelAbw = (Vel0 - Vel0Exp) / Vel0
 
 
+
+
+
 print('Abweichung des gewollten v_0 vom gemessenen v_0:')
 print(VelAbw)
 
@@ -167,6 +176,9 @@ print(VelAbw)
 
 VelUp = np.array([VelUpAll[1], VelUpAll[2], VelUpAll[3], VelUpAll[5], VelUpAll[6], VelUpAll[7], VelUpAll[8], VelUpAll[11], VelUpAll[12]])
 VelDown = np.array([VelDownAll[1], VelDownAll[2], VelDownAll[3], VelDownAll[5], VelDownAll[6], VelDownAll[7], VelDownAll[8], VelDownAll[11], VelDownAll[12]])
+
+
+
 
 
 
@@ -194,6 +206,7 @@ T_LMN = 34
 # T = np.array([T_ABC, T_ABC, T_ABC, T_D, T_EFGH, T_EFGH, T_EFGH, T_EFGH, T_IJK, T_IJK, T_IJK, T_LMN, T_LMN, T_LMN])
 T = np.array([T_ABC, T_ABC, T_D, T_EFGH, T_EFGH, T_EFGH, T_IJK, T_LMN, T_LMN])
 T = T + 273.15
+
 
 # Aus Abbildung 3 folgt dann die Viskosität der Luft
 m = ( 1.88 - 1.81 )*10**(-5) / ( 32 - 17 )
@@ -224,38 +237,119 @@ rhoL = p / R_S / T                           # Dichte von Luft
 
 
 
+
 ##########################################################################################################################################
 ##########################################################################################################################################
 ##########################################################################################################################################
 ### Radius, Ladung, Cunningham-Korrektur
 
-R = un.sqrt(9/4 * etaL/g * (VelDown-VelUp)/(rhoO-rhoL))     # Radius
+R = un.sqrt(9/4 * etaL/g * (VelDown-VelUp)/(rhoO))     # Radius
 
-q = 3*np.pi*etaL * un.sqrt( 9/4 * etaL/g * (VelDown-VelUp)/(rhoO-rhoL) ) * (VelDown-VelUp) * d / U   # Ladung
+q = 3*np.pi*etaL * un.sqrt( 9/4 * etaL/g * (VelDown-VelUp)/(rhoO) ) * (VelDown-VelUp) * d / U   # Ladung
 
 # qEff = q * (un.sqrt( 1 / (1+B/p/R) ) )**3                 # Korrigierte Ladung mit Cunningham-Eta
 qEff = q * (un.sqrt( 1+B/p/R ) )**3
 
-X = un.nominal_values(R)
-Yerr = un.std_devs(q)
-Y = un.nominal_values(q)
-YEff = un.nominal_values(qEff)
-YEfferr = un.std_devs(qEff)
-#sx = plt.subplots(1, 1)
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+### Berechnen der falschen Werte
+
+VelUpNot = np.array([VelUpAll[0], VelUpAll[4], VelUpAll[9], VelUpAll[10], VelUpAll[13]])
+VelDownNot = np.array([VelDownAll[0], VelDownAll[4], VelDownAll[9], VelDownAll[10], VelDownAll[13]])
+
+TNot = np.array([T_ABC, T_EFGH, T_IJK, T_IJK, T_LMN])
+TNot = TNot + 273.15
+
+etaLNot = m * (TNot-273.15) + t
+
+UNot = np.array([U_ABCD, U_EFGH, U_IJK, U_IJK, U_LMN])
+
+rhoLNot = p / R_S / TNot
+
+RNot = un.sqrt(9/4 * etaLNot/g * (VelDownNot-VelUpNot)/(rhoO-rhoLNot))
+
+qNot = 3*np.pi*etaLNot * un.sqrt( 9/4 * etaLNot/g * (VelDownNot-VelUpNot)/(rhoO-rhoLNot) ) * (VelDownNot-VelUpNot) * d / UNot
+
+qEffNot = qNot * (un.sqrt( 1+B/p/RNot ) )**3
 
 
 
 
-fig, ax = plt.subplots(1, 1)
-minor_locator = AutoMinorLocator(7)
+
+
+
+
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+### Plot
+
+
+sns.set_style("whitegrid")
+plt.figure(dpi=1200)
+fig, ax = plt.subplots()
+minor_locator = AutoMinorLocator(3.425)
 ax.yaxis.set_minor_locator(minor_locator)
-ax.grid(b=True, which='major', color='k', linewidth=1.0)
-ax.grid(b=True, which='minor', color='b', linewidth=0.8)
-plt.errorbar(X, Y, yerr=Yerr, fmt='ko', ecolor='r', capthick=1.0, label = 'Ladungen')
+ax.grid(b=True, which='major', color='0.75', linewidth=1)
+ax.grid(b=True, which='minor', color='k', linewidth=1)
+
+# Die richtigen Werte
+X = un.nominal_values(R)
+Y = un.nominal_values(qEff)
+Yerr = un.std_devs(qEff)
+
+plt.errorbar(X*10**6, Y*10**(18), yerr=Yerr*10**(18), fmt='ko', ecolor='r', capthick=1.0, label = 'verwendete Werte')
+
+# Die falschen Werte
+XNot = un.nominal_values(RNot)
+YNot = un.nominal_values(qEffNot)
+YerrNot = un.std_devs(qEffNot)
+
+plt.errorbar(XNot*10**6, YNot*10**(18), yerr=YerrNot*10**(18), fmt='k.', ecolor='lightgreen', capthick=0.5, label = 'nicht verwendete Werte')
+
+
+plt.ylabel(r'Ladung $U$ in  $10^{-18}\mathrm{C}$')
+plt.xlabel(r'Radius $r$ in $\mu\mathrm{m}$')
 plt.legend(loc='best')
+
+fig.tight_layout()
+plt.savefig('Plot.pdf')
 
 plt.show()
 
 
 
+##########################################################################################################################################
+##########################################################################################################################################
+##########################################################################################################################################
+### Bestimmung der Elementarladung
+
+
+
+# n = np.array( [7, 11, 18, 24, 35, 37, 38, 39, 40] )
+# n = np.array( [5, 8, 12, 17, 24, 26, 27, 27, 28] )   # für minor_locator = 7
+# n = np.array( [2, 4, 7, 9, 12, 13, 13, 14, 14] )     # für minor_locator = 3.25
+n2 = np.array( [2,3,5, 6, 9, 9, 9, 10, 10] )          # für minor_locator = 2.28 (Der erste Punkt soll dann auf der zweiten Linie liegen.)
+n = np.array( [3, 4, 7, 9, 13, 14, 14, 15, 15] )          # für minor_locator = 0.5*0.438*3 = 3.425 (Der erste Punkt soll dann auf der dritten Linie liegen.)
+print(qEff)
+e = q / n
+e = np.mean(e)
+e2 = np.mean(q / n2)
+print(e2)
+print(e)
+
+
+
+# write('build/Steigung.tex', make_SI(m*10**8, r'\newton\second\per\meter\squared\per\celsius', 'e-8', figures=1))
+# write('build/Verschiebung.tex', make_SI(t*10**5, r'\newton\second\per\meter\squared', 'e-5', figures=1))
+# 
+# write('build/Konstanten.tex', make_table([U, T, etaL*10**6],[0,2,3]))
+# write('build/RQ.tex', make_table([R*10**6, q*10**18],[1,1]))
+# write('build/RQ_korr.tex', make_table([qEff*10**18],[1]))
+# 
+# write('build/Zeiten.tex', make_table([Time0, TimeUp, TimeDown],[2,1,2]))
+# write('build/Elementarladung.tex', make_SI(e*10**19, r'\coulomb', 'e-19', figures=1))
+# write('build/Geschwindigkeiten.tex', make_table([Vel0*10**3, VelUpAll*10**3, VelDownAll*10**3, un.nominal_values(VelAbw)],[2,1,1,2]))
 

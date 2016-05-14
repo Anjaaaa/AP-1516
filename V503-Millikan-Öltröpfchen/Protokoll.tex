@@ -2,16 +2,26 @@
 \input{../Vorlage/Header.tex}
 
 
-\newcommand{\Versuch}{Versuch}
-\newcommand{\Betreuer}{Max \textsc{Mustermann}}
-\newcommand{\Tag}{TT.MM.JJ}
-\newcommand{\V}{VXXX}
+\newcommand{\Versuch}{Der Millikan-Öltröpfchenversuch}
+\newcommand{\Betreuer}{Rigo \textsc{Bause}}
+\newcommand{\Tag}{10.05.16}
+\newcommand{\V}{V503}
 
 % Bibliographie erstellen:
 % 	pdflatex Protokoll.tex
 % 	biber Protokoll
 % 	pdflatex Protokoll.tex
 % oder einfach make ausführen
+
+
+\usepackage[
+%	disable,
+colorinlistoftodos,
+linecolor=yellow,
+backgroundcolor=yellow,
+textwidth=0.15\textwidth,
+textsize=footnotesize
+]{todonotes} % Notizen
 
 \begin{document}
 \input{../Vorlage/Titlepage.tex}
@@ -34,10 +44,10 @@
 
 
 \section{Auswertung}
-\subsection{Statistische Formeln}
-\subsubsection{Fehlerrechnung}
-\label{sec:Fehlerrechnung}
-\input{../Vorlage/Fehlerrechnung.tex}
+%\subsection{Statistische Formeln}
+%\subsubsection{Fehlerrechnung}
+%\label{sec:Fehlerrechnung}
+%\input{../Vorlage/Fehlerrechnung.tex}
 %\subsubsection{Regression}
 %\label{sec:regression}
 %\input{Regression.tex}
@@ -48,7 +58,7 @@
 
 \section{Diskussion}
 \input{Diskussion.tex}
-
+\input{Messwerte.tex}
 \clearpage
 \listoftodos
 \listoffigures

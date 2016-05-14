@@ -1,0 +1,103 @@
+\subsection{Auswahl der Tröpfchen}
+Für jedes Elektron werden die Zeiten $t_\text{auf},t_\text{ab}$ gemittelt (siehe Tabelle \ref{fig:Zeiten}).
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{cccccc}
+		& $t_0$ & $t_\text{auf}$ & $\Delta t_\text{auf}$ & $t_\text{ab}$ & $\Delta t_\text{ab}$ \\
+		\hline
+		\input{build/Zeiten.tex}
+	\end{tabular}
+	\caption{Gemittelte und für die Rechnungen verwendeten Zeiten, alle Werte in \si{\second}}
+	\label{fig:Zeiten}
+\end{table}
+Die während dieser Zeit zurückgelegte Strecke ist
+\begin{align}
+	s = \SI{2.5e-3}{\meter} \ .
+\end{align}
+Damit werden die Geschwindigkeiten $v_0,v_\text{auf},v_\text{ab}$ in Tabelle \ref{fig:Vel} berechnet. Um die Richtigkeit der nachfolgenden Rechnungen zu gewährleisten wird Gleichung \eqref{eq:Bedingung} überprüft. Dafür wird
+\begin{align}
+	v_{0,\text{exp}} = \frac{1}{2}(v_\text{ab}-v_\text{auf})
+\end{align}
+berechnet und die Abweichung
+\begin{align}
+	a = \frac{v_0-v_{0,\text{exp}}}{v_0}
+\end{align}
+bestimmt (siehe Tabelle \ref{fig:Vel}).
+\begin{table}[h!]
+	\centering
+\begin{tabular}{cccccc|c}
+	& $v_0$ & $v_\text{auf}$ & $\sigma_\text{auf}$ & $v_\text{ab}$ & $\sigma_\text{ab}$ & $a$ \\
+	\hline
+	\input{build/Geschwindigkeiten.tex}
+\end{tabular}
+\caption{Geschwindigkeiten der Elektronen in \SI{e-3}{\meter\per\second} und Abweichung $a$}
+\label{fig:Vel}
+\end{table}
+Die Elektronen, für die gilt
+\begin{align}
+	|a|\leq 0.5 \ ,
+\end{align}
+können zur weiteren Auswertung verwendet werden. Daher werden Anton, Emil, Julius, Kaufmann und Nordpol nicht mehr berücksichtigt. \\
+\ \\
+
+\subsection{Berechnung der Gesamtladung}
+Für die Berechnung der Ladungen \eqref{eq:ladung} bzw. der Radien \eqref{eq:radius} werden verschiedene Größen gebraucht. Sie sind in Tabelle \ref{fig:Konstanten} aufgetragen. 
+Die Spannungen werden direkt gemessen. Die Viskosität wird mit Hilfe der gemessenen Widerstände und Abbildung VERWEIS bestimmt. Zunächst werden die Widerstände mit der Thermistor-Tabelle in Temperaturen \glqq übersetzt\grqq. Damit kann dann die Viskosität aus dem Diagramm abgelesen werden. Um Ablesefehler zu minimieren wird eine Geradengleichung durch die beiden gut lesbaren Punkte $(17,1.82),(32,1.88)$ gelegt, mit der die Viskosität ausgerechnet wird:
+\begin{align}
+\eta_\text{L} = \input{build/Steigung.tex}(T-\SI{273.15}{\celsius}) + \input{build/Verschiebung.tex} \ .
+\end{align}
+\begin{table}[h!]
+	\centering
+\begin{tabular}{ccccc}
+	& $U$ in \si{\volt} & $T$ in \si{\kelvin} & $\eta_\text{L}$ in \SI{e-6}{\pascal\second} \\
+	\hline
+	\input{build/Konstanten.tex}
+\end{tabular}
+\caption{Viskosität von Luft $\eta_\text{L}$, am Kondensator angelegte Spannungen $U$}
+\label{fig:Konstanten}
+\end{table} \\
+%Die Dichte der Luft wird, unter Verwendung der allgemeinen Gasgleichung, mit
+%\begin{align}
+%	\rho_\text{L} = \frac{m_\text{L}}{V_\text{L}} = \frac{p}{R_\text{S}T}
+%\end{align}
+%berechnet. $R_\text{S} = \SI{287.058}{}$ ist die spezifische Gaskonstante für trockene Luft, $p=\SI{101325}{\pascal}$ ist der Normaldruck und $T$ die jeweilige Temperatur in Kelvin.
+Eingesetzt in die Gleichungen \eqref{eq:radius} und \eqref{eq:ladung} kann so der Radius und die Ladung jedes Öltröpfchens berechnet werden (siehe Tabelle \ref{fig:RQ_unkorr}).
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccc}
+	& $r$ in \si{\micro\meter} & $\sigma_r$ in \si{\micro\meter} & $q$ in \SI{e-18}{\coulomb} & $\sigma_q$ in \SI{e-18}{\coulomb} \\
+	\hline
+	\input{build/RQ.tex}
+\end{tabular}
+\caption{Radius und unkorrigierte Ladung}
+\label{fig:RQ_unkorr}
+\end{table}
+Wird nun die nötige Korrektur \eqref{eq:Korrektur} beachtet, sind die Ladungen der Öltröpfchen fertig bestimmt (siehe Tabelle \ref{fig:RQ_korr}).
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccc}
+	& $q$ in \SI{e-18}{\coulomb} & $\sigma_q$ in \SI{e-18}{\coulomb} \\
+	\hline
+	\input{build/RQ_korr.tex}
+\end{tabular}
+\caption{Korrigierte Ladungen}
+\label{fig:RQ_korr}
+\end{table}
+Diese Werte werden in Diagramm \ref{fig:Elementarladung} dargestellt. \\
+\ \\
+\subsection{Bestimmung der Elementarladung}
+Zur Bestimmung der Elementarladung wird der erste Wert
+\begin{align}
+	q_1 = q(r_\text{min}) = \SI{4.4(5)e-19}{\coulomb}
+\end{align}
+als fest angenommen, da sein Fehler sehr klein ist. Im ersten Schritt wird angenommen, dass $q_1=e_0$. Die dicken Hilfslinien im Plot werden mit diesem Abstand aufgetragen, sodass eine Ladung nahe der fünften Linie dem fünffachen der angenommenen Elementarladung $q_1$ entspricht. Dabei sind die Datenpunkte allerdings sehr weit von den Linien entfernt. In jedem nächsten Schritt wird angenommen, dass $q_1=ne_0$. Die Hilfslinien sind demnach $n$-Mal so nah beieinander. Jedes Mal wird optisch überprüft, ob die Daten zufriedenstellend nahe an den Linien liegen. Natürlich gilt, dass die Linien beliebig nah an die Punkte gebracht werden können, wenn $e_0$ nur klein genug gewählt wird. Da aber ein endliches $e_0$ gesucht wird, muss das größtmögliche $n$ bzw. $e_0$ gewählt werden. Bei $n=3$ ist die Nähe zwischen Daten und Linien zufriedenstellend. Dieser Plot ist in Abbildung \ref{fig:Elementarladung} zu sehen. \\
+Die Elementarladung kann nun berechnet werden, indem für jeden Datenpunkt überprüft wird, welcher dicken Linie er am nächsten liegt. Die Gesamtladung des Öltröpfchens wird dann durch die Nummer dieser Linie geteilt. Werden diese Ergebnisse gemittelt ergibt sich schließlich die Elementarladung
+\begin{align}
+	e_0 = \input{build/Elementarladung.tex} \ .
+\end{align}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = \textwidth]{Plot.pdf}
+	\caption{Zu sehen sind die Ladung der Öltröpfchen aufgetragen gegen ihren Radius. Die breiten schwarzen Hilfslinien sind das ein-, zwei-, drei-, etc. fache der vermuteten Elementarladung. Die schwachen grauen Linien sind die normalen Koordinatenlinien, die den Wert der Ladung anzeigen.}
+	\label{fig:Elementarladung}
+\end{figure}
