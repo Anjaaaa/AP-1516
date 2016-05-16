@@ -16,11 +16,11 @@ Ein von außen angelegtes elektrisches Feld soll gerade so stark sein, dass die 
 Unter Vernachlässigung der Dichte der Luft ($\rho_L << \rho_{Oel}$) folgen aus Gleichung~\eqref{eq:feld1} und~\eqref{eq:feld2} Formeln für die Radius $r$ und die Ladung $q$ der Öltröpfchen.
 \begin{align}
  r & = \sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g\rho_{Oel}}} \label{eq:radius}  \\
-q & = 3 \pi \eta_L \sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g\rho_{Oel}}}  \frac{v_{ab}+v_{auf}}{E}
+q & = 3 \pi \eta_L \sqrt{\frac{9 \eta_L (v_{ab}-v_{auf})}{4g\rho_{Oel}}} \label{eq:ladung} \frac{v_{ab}+v_{auf}}{E}
 \end{align}
 
 In diesem Versuch muss noch ein zusätzlicher Korrekturterm eingeführt werden, da die Öltröpfchen kleiner als die freie Weglänge der Luft sind. Die Modifizierung ist abhängig vom Radius $r$, dem Luftdruck $P$ und der Konstanten $B$
-\begin{align}
+\begin{align}\label{eq:Korrektur}
 q^{2/3} = q_0^{2/3}(1+\frac{B}{pr}) \quad,
 \end{align}
 mit
@@ -29,7 +29,7 @@ B = \SI{6.17e-3}{\torr\centi\meter} =  \SI{8.2e-3}{\pascal\meter} \quad .
 \end{align}
 
 Aus den Radien, die durch Gleichung \eqref{eq:gleichgewicht} und \eqref{eq:radius} für das Öltröpfchen berechnet werden können, folgt die zudem Beziehung
-\begin{align}
+\begin{align}\label{eq:Bedingung}
 2 v_0 = v_{ab} - v_{auf} \quad .
 \end{align}
 
