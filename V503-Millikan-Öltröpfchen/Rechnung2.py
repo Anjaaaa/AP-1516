@@ -303,11 +303,11 @@ Yerr = un.std_devs(qEff)
 plt.errorbar(X*10**6, Y*10**(18), yerr=Yerr*10**(18), fmt='ko', ecolor='r', capthick=1.0, label = 'verwendete Werte')
 
 # Die falschen Werte
-XNot = un.nominal_values(RNot)
-YNot = un.nominal_values(qEffNot)
-YerrNot = un.std_devs(qEffNot)
+# XNot = un.nominal_values(RNot)
+# YNot = un.nominal_values(qEffNot)
+# YerrNot = un.std_devs(qEffNot)
 
-plt.errorbar(XNot*10**6, YNot*10**(18), yerr=YerrNot*10**(18), fmt='k.', ecolor='lightgreen', capthick=0.5, label = 'nicht verwendete Werte')
+# plt.errorbar(XNot*10**6, YNot*10**(18), yerr=YerrNot*10**(18), fmt='k.', ecolor='lightgreen', capthick=0.5, label = 'nicht verwendete Werte')
 
 
 plt.ylabel(r'Ladung $U$ in  $10^{-18}\mathrm{C}$')
