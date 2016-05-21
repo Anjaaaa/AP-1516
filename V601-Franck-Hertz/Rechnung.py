@@ -3,10 +3,28 @@ import matplotlib.pyplot as plt
 from scipy.stats import sem
 import scipy.constants as const
 from uncertainties import ufloat
+from table import(
+	make_table,
+	make_SI,
+	write)
 
 Strom1, Spannung1 = np.genfromtxt('Messung1.txt', unpack=True)
 Strom2, Spannung2 = np.genfromtxt('Messung2.txt', unpack=True)
 Anregungsspannung = np.genfromtxt('Messung3.txt', unpack=True)
+Temperatur = np.genfromtxt('Messung_Temperatur.txt', unpack=True)
+
+
+#Temperatuten umrechnen
+Temperatur = Temperatur + const.zero_Celsius #celsius in kelvin
+Sattigungsdruck = 5.5*10**7*np.exp(-6876/Temperatur) # p in mbar und T in kelvin
+Weglange = 0.0029 / Sattigungsdruck # Weglange in cm und Druck in mabr
+#Stöße pro ein cm (Röhrenlänge) ausrechnen
+Stosse = 1 / Weglange
+
+print(Temperatur, Sattigungsdruck, Weglange, Stosse)
+
+write('build/tabelle_temperatur.tex', make_table([Temperatur, Sattigungsdruck, Weglange*10**4, Stosse], [2,2,2,2]))
+
 
 
 #in Ampere und Volt umrechnen
