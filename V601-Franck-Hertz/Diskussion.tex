@@ -1,5 +1,32 @@
-elastische Stöße  bei der Frank-Hertz-Kurve \\
-- keinen Unterschhied, das das nur auf die Höhe der Maxima einwirkt \\
-Energieverteilung Raumtemperatur und hohe Temoeratur vergleichen \\
-Literaturwert Anregungsspannung für Hg
- 
+\textbf{Anzahl der Stöße} \\
+Die Stoßzahlen (siehe Tabelle~\ref{tab:temperaturen}) liegen im Größenordnungsbereich \num{1} bis \num{e3}. Laut Anleitung ist die optimale Anzahl von Stößen $A$  in der Röhre \num{1000} bis {4000}. Die Temperatur in Abhängigkeit der Stoßzahl lautet:
+
+\begin{align}
+	T [\si{\celsius}] = \left( -\frac{1}{6870} \ln{\left( \frac{0.0029}{\num{5.5e7}} \  A \right) }\right)^{-1} -273.15 \quad .
+\end{align}
+Der optimale Temperaturbereich ist somit $T = \si{137}{\celsius}$ bis $T = \si{174}{\celsius}$. In diesem Bereich liegt lediglich eine Messung und zwar die zweite Messung der integralen Energieverteilung. Die Messreihen zur Frank-Hertz-Kurve und dem Ionisierungspotential liegen recht nahe an dem Bereich. Lediglich die Messung bei Raumtemperatur weißt nicht mal 2 Stöße auf der gesamten Röhrenlänge auf, was eindeutig zu wenige sind, um eine Anregung zu beobachten.
+\vspace{0.5cm}
+
+\textbf{Frank-Hertz-Kurve} \\
+Die Frank-Hertz-Kurve ist ist bei dem hier vorliegenden Versuchsaufbau nur schlecht realisiert worden. Es sind nur die Maxima zwei bis vier gut und das erste schwach zu erkennen. Die Anzahl der elastischen Stöße hat nur einen Einfluss auf die Höhe der Maxima der Frank-Hertz-Kurve. Die Abstände der Maxima bleiben bei unterschiedlichen Zahlen von elastischen Stößen unverändert. Die hier berechnete Spannungsdifferenz zwischen den Maxima liegt sehr nah am Literaturwert für die ersten Anregungsenergie eines Quecksibleratoms  (siehe Tabelle \ref{tab:literaturwert}).\todo[color=red]{Quellenangabe}
+\begin{figure}[h!]
+	\centering
+	\captionof{table}{Vergleich der gemessenen ersten Anregungsenergie des Hg-Atoms mit Literaturwert}
+	\begin{tabular}{c|c|c}
+Messung & Literaturwert & Abweichung   \\
+		\hline
+	\SI{4.95}{\volt} & 	\SI{4.9}{\volt} & \SI{1}{\percent}
+	\end{tabular}
+	\label{tab:literaturwert}
+\end{figure}
+
+\vspace{0.5cm}
+
+\textbf{Kontaktpotential}
+Das Kontaktpotential wird  in diesem Versuch auf zwei Arten bestimmt. Beide Ergebnisse liegen zufriedenstellend nah beieinander.
+\begin{align}
+	K_1 = \SI{3.08+-0.18}{\volt} \\
+	K_2  =  \SI{2.85}{\volt} 
+\end{align}
+
+

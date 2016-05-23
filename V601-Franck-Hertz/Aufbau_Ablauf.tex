@@ -10,11 +10,11 @@
 Abbildung \ref{fig:Schaltbild} zeigt den verwendeten Versuchsaufbau. Gelb hinterlegt ist der im vorigen Kapitel beschriebene eigentliche Aufbau. Beim tatsächlichen Aufbau im Labor und den damit zu erwartenden Ergebnissen sind allerdings weitere Punkte zu beachten:
 \subsubsection*{Dampfdruck}
 Der Dampfdruck im Glaskolben muss kontrolliert werden. Ist er zu gering, sind die \ce{Hg}-Atome zu weit von einander entfernt. Dann würden die Elektronen ohne Stoß bis zur Beschleunigungselektrode kommen, selbst wenn ihre Energie für eine Anregung der Atome ausreichend ist. Ist er zu hoch, liegen die Atome so dicht beieinander, dass die Elektronen sehr häufig elastische Stöße ausführen (und ihre Richtung ändern), was dafür sorgt, dass weniger Elektronen an der Beschleunigungselektrode ankommen. Für die mittlere Weglänge $w$ in \si{\centi\meter} zwischen den Atomen gilt
-\begin{align}
+\begin{align}\label{eq:weglange}
 	w = \frac{2.9}{p_\text{sät}} \ ,
 \end{align}
 wobei $p_\text{sät}$ der Sättigungsdampfdruck in \si{\bar} ist. Für den Dampfdruck gilt
-\begin{align}
+\begin{align}\label{eq:dampfdruck}
 	p(T) = \SI{5.5e7}\exp\left(-\frac{6876}{T}\right) \ ,
 \end{align}
 er kann also einfach über die Temperatur $T$ im Gefäß reguliert werden.
@@ -47,7 +47,7 @@ Dann wird die Franck-Hertz-Kurve $I_\text{A}(U_\text{B})$, mit konstanter Bremss
 \begin{align}
 	U_\text{A} = \SI{1}{\volt}
 \end{align}
-bei einer Temperatur von $T = ???$\todo{Hier bräuchte ich noch den Wert.} aufgezeichnet. \\
+bei einer Temperatur von $T = \SI{100}{\celsius}$. \\
 Zuletzt wird zur Bestimmung der Ionisierungsenergie eine (nun beschleunigende) Spannung
 \begin{align}
 	U_\text{A} = \SI{-30}{\volt}

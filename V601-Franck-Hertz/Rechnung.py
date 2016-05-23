@@ -42,10 +42,15 @@ matrix1 = np.ones((2, len(Spannung1)-1))
 for i in range(0, len(Spannung1)-1):
 	matrix1[0,i] = (Strom1[i+1] -Strom1[i])/(Spannung1[i]-Spannung1[i+1])
 	matrix1[1,i] = Spannung1[i]
-	
+
+x=np.linspace(0,1)	
 plt.plot(matrix1[1,:], matrix1[0,:]*10**9, 'ro')
+plt.plot(x+8.15, x*100000, 'k--', label='Maximale Energie')
 plt.xlabel('Spannung / V')
 plt.ylabel('Steigung des Stromes / nA/V')
+plt.xlim(-0.2, 9)
+plt.ylim(0,1600)
+plt.legend(loc='best')
 plt.savefig('build/Energieverteilung_25.png')
 plt.show()
 
