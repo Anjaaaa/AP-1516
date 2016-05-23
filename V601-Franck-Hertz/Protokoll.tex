@@ -15,7 +15,7 @@
 
 
 \usepackage[
-	disable,
+	%disable,
 colorinlistoftodos,
 linecolor=yellow,
 backgroundcolor=yellow,
@@ -44,10 +44,10 @@ textsize=footnotesize
 
 
 \section{Auswertung}
-\subsection{Statistische Formeln}
-\subsubsection{Fehlerrechnung}
-\label{sec:Fehlerrechnung}
-\input{../Vorlage/Fehlerrechnung.tex}
+%\subsection{Statistische Formeln}
+%\subsubsection{Fehlerrechnung}
+%\label{sec:Fehlerrechnung}
+%\input{../Vorlage/Fehlerrechnung.tex}
 %\subsubsection{Regression}
 %\label{sec:regression}
 %\input{../Vorlage/Regression.tex}
@@ -58,6 +58,33 @@ textsize=footnotesize
 
 \section{Diskussion}
 \input{Diskussion.tex}
+
+\clearpage
+\section{Anhang}\label{sec:anhang}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[angle=90,origin=c, width=0.7\textwidth]{scan/Messung1.pdf}
+	\caption{Integrale Energieverteilung bei  T = \SI{25}{\celsius}}
+	\label{fig:messung1}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[angle=90,origin=c, width=0.7\textwidth]{scan/Messung2.pdf}
+	\caption{Integrale Energieverteilung bei  T = \SI{140}{\celsius}}
+	\label{fig:messung2}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[angle=90,origin=c, width=0.7\textwidth]{scan/Messung3.pdf}
+	\caption{Frank-Hertz-Kurve T = \SI{180}{\celsius}}
+	\label{fig:messung3}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[angle=90,origin=c, width=0.7\textwidth]{scan/Messung4.pdf}
+	\caption{Grafik zur Bestimmung der Ionisierungsspannung T = \SI{100}{\celsius}}
+	\label{fig:messung4}
+\end{figure}
 
 \clearpage
 \listoftodos

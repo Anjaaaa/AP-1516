@@ -1,7 +1,16 @@
+Alle Messungen werden mit einem x-y-Schreiber aufgezeichnet. Die Graphen, die dieser Auswertung zu Grunde liegen, sind im Anhang~\ref{sec:anhang} zu sehen.
+Messung 1 (Abb.~\ref{fig:messung1})  und Messung 2 (Abb.~\ref{fig:messung2}) gehen in Kapitel~\ref{sec:auswertung1} ein, wobei Messung 1 zusätzlich in Kapitel~\ref{sec:auswertung4} verwendet wird. Messung 3 (Abb.~\ref{fig:messung3})-- die Frank-Hertz-Kurve --  wird im Auswertungsteil~\ref{sec:auswertung3} analysiert. Messung 4 (Abb.~\ref{fig:messung4})wird in Kapitel~\ref{sec:auswertung4}
+ benötigt.
+\subsection{Statistische Formeln}
+\subsubsection{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+\input{../Vorlage/Fehlerrechnung.tex}
+
+
 \subsection{Anzahl der Stöße in der Röhre}
 Für das Gelingen des Versuches ist es wichtig, dass weder zu viele noch zu wenige Elektronen mit Quecksilberatomen zusammenstoßen. Bei zu wenig Stößen treten kaum Wechselwirkungen auf, die beobachtet werden sollen. Gibt es hingegen zu viele Stöße, sind einige elastisch unter Änderung der Richtung, sodass sie nicht an der Kathode ankommen und fälschlicherweise nicht zu Strom beitragen. \\
-Aus den Temperaturen in Kelvin lässt sich nach Gleichung (VERWEIS) und (VERWEIS) der Sättigungsdruck und daraus die freie Weglänge d.h. die Strecke, die ein Teilchen ohne Kollisionen zurücklegt, berechnet. Die Ergebnisse sind in Tabelle \ref{tab:temperaturen} dargestellt.
-\todo[color=red]{Formeln für Druck und Weglänge aus Theorie}
+Aus den Temperaturen in Kelvin lässt sich nach Gleichung \eqref{eq:weglange} und \eqref{eq:dampfdruck} der Sättigungsdruck und daraus die freie Weglänge d.h. die Strecke, die ein Teilchen ohne Kollisionen zurücklegt, berechnet. Die Ergebnisse sind in Tabelle \ref{tab:temperaturen} dargestellt.
+
 
 
 \begin{figure}[h!]
@@ -18,14 +27,14 @@ Aus den Temperaturen in Kelvin lässt sich nach Gleichung (VERWEIS) und (VERWEIS
 
 
 
-\subsection{Differentielle Energieverteilung}
-
-Aus der Messung des Stromes bei veränderlicher Spannung kann die Energieverteilung der der austretenden Elektronen bestimmt werten
+\subsection{Differentielle Energieverteilung} \label{sec:auswertung1}
+Aus der Messung des Stromes bei veränderlicher Bremsspannung $U_A$ kann die Energieverteilung der der austretenden Elektronen bestimmt werten
 \begin{align}
 	E(U_A) \sim \frac{I(U_A)-I(U_{A+1})}{U_A - U_{A+1}}
 \end{align}
 
-Strom und Spannung sind bekannt. Sie werden mit Hilfe eines x-y-Schreibers aufgenommen. Es werden zwei Messreihen für die Temperaturen T = \SI{25}{\celsius} und T = \SI{140}{\celsius} erstellt. Die Werte des Stromes für T = \SI{25}{\celsius} sind in Tabelle~\ref{tab:stromverlauf_25} zu finden und die Steigung  (Tabelle~\ref{tab:energieverteilung_25}) in Abbildung~\ref{fig:energieverteilung_25} grafisch dargestellt, während die Daten zu T = \SI{140}{\celsius} in den Tabellen~\ref{tab:stromverlauf_140} und~\ref{tab:energieverteilung_140} und der Abbildung~\ref{fig:energieverteilung_140}  stehen.
+Strom und Spannung sind bekannt. Sie werden mit Hilfe eines x-y-Schreibers aufgenommen. Es werden zwei Messreihen für die Temperaturen T = \SI{25}{\celsius} und T = \SI{140}{\celsius} erstellt. Die Werte des Stromes für T = \SI{25}{\celsius} sind in Tabelle~\ref{tab:stromverlauf_25} zu finden und die Steigung  (Tabelle~\ref{tab:energieverteilung_25}) in Abbildung~\ref{fig:energieverteilung_25} grafisch dargestellt, während die Daten zu T = \SI{140}{\celsius} in den Tabellen~\ref{tab:stromverlauf_140} und~\ref{tab:energieverteilung_140} und der Abbildung~\ref{fig:energieverteilung_140}  stehen. \\
+Aus der Energieverteilung bei Raumtemperatur kann das Kontaktpotential bestimmt werden (siehe Kapitel~\ref{cap:kontaktpotential} ).
 
 
 
@@ -55,7 +64,7 @@ Strom und Spannung sind bekannt. Sie werden mit Hilfe eines x-y-Schreibers aufge
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/Energieverteilung_25.png}
+	\includegraphics[width=0.9\textwidth]{build/Energieverteilung_25.png}
 	\caption{Energieverteilung bei  T = \SI{25}{\celsius} ist proportional zur Steigung des Stromes}
 	\label{fig:energieverteilung_25}
 \end{figure}
@@ -85,14 +94,14 @@ Strom und Spannung sind bekannt. Sie werden mit Hilfe eines x-y-Schreibers aufge
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{build/Energieverteilung_140.png}
+	\includegraphics[width=0.9\textwidth]{build/Energieverteilung_140.png}
 	\caption{Energieverteilung bei  T = \SI{140}{\celsius} ist proportional zur Steigung des Stromes}
 	\label{fig:energieverteilung_140}
 \end{figure}
 
 \clearpage
 
-\subsection{Erste Anregungsenergie des Quecksilberatoms}
+\subsection{Erste Anregungsenergie des Quecksilberatoms}\label{sec:auswertung2}
 Die erste Anregungsenergie wird aus den Abständen der Maxima der Frank-Hertz-Kurve bestimmt. Die Spannungsdifferenzen sind in Tabelle~\ref{tab:anregungsspannung} dargestellt. Ihr Mittelwert und deren Fehler ist
 
 \begin{align}
@@ -103,15 +112,14 @@ Die erste Anregungsenergie wird aus den Abständen der Maxima der Frank-Hertz-Ku
 	\centering
 	\captionof{table}{Die Differenzen der Strommaxima der Frank-Hertz-Kurve entsprechen der Anregungsspannung des Quecksilberatoms}
 	\begin{tabular}{c}
-		Spannung / \si{\volt}}   \\
+		Spannung / \si{\volt}   \\
 		\hline
 		\input{build/tabelle_anregungsspannung.tex}
 	\end{tabular}
 	\label{tab:anregungsspannung}
 \end{figure}
 
-Aus der Anregungsspannung kann mit Hilfe der Formeln (VERWEIS) die Anregungsenergie und daraus die Wellenlänge bestimmt werden.
-\todo[color=red]{Verweis auf die Theorie E =e*U, lambda = h*c/ DeltaE}
+Aus der Anregungsspannung kann mit Hilfe den Formeln \eqref{eq:energie1} und \eqref{eq:energie2} die Anregungsenergie und daraus die Wellenlänge bestimmt werden.
 Für die Anregungsenergie ergibt sich der Wert
 \begin{align}
 	\Delta E = \input{build/Energie.tex}
@@ -131,25 +139,35 @@ und
 
 
 
-\subsubsection{Bestimmung der Kontaktpotentials}
+\subsubsection{Bestimmung der Kontaktpotentials} \label{sec:auswertung3}
+\label{cap:kontaktpotential}
+\underline{Methode 1:} \\
 Die Frank-Hertz-Kurve ist genau um das Kontaktpotential $K$ nach rechts verschoben. Das erste Maximum liegt bei
 \begin{align}
 	U_1 = \SI{8.0256}{\volt} \quad .
 \end{align}
 Folglich ist das Kontaktpotential
 \begin{align}
-K = U_1 - U_{\text{Mittel}} = \SI{3.08+-0.18}{\volt}
+K_1 = U_1 - U_{\text{Mittel}} = \SI{3.08+-0.18}{\volt}
+\end{align}
+\underline{Methode 2:} \\
+In Abbildung \ref{fig:energieverteilung_25} ist erkennbar, dass bei einer Bremsspannung $U_{A, \text{max}}$ von \SI{8.15}{\volt} Elektronen die größte Energie haben. Das Kontaktpotential ist die Differenz der Bremsspannung bei größter Energie und der konstanten Beschleunigungsspannung $U_B = \SI{11}{\volt} $.
+\begin{align}
+	K_2 = U_B - U_{A, \text{max}} =  \SI{2.85}{\volt} 
 \end{align}
 
-
-\subsubsection{Bestimmung der Ionisierungsspannung}
+\subsubsection{Bestimmung der Ionisierungsspannung}\label{sec:auswertung4}
 Die Ionisierungsspannung $U_\text{ION}$ ergibt sich aus der letzten Messung des Stromes bei einer höheren Gegenspannung von \SI{30}{\volt}.  Die Asymptote des 1. Maximums wird aufgezeichnet. Die Spannung, an der der Strom stark zunimmt
 \begin{align}
 	U'_1 = \SI{13}{\volt}
 \end{align}
- setzt sich zusammen aus der Ionisierungsspannung und dem Kontaktpotential $K$
+ setzt sich zusammen aus der Ionisierungsspannung und dem Kontaktpotential $K$, wobei für K der Mittelwert der in Kapitel \ref{cap:kontaktpotential} bestimmten Werte $K_1$ und $K_2$
+ \begin{align}
+ K = \frac{K_1+K_2}{2} = \SI{2.965}{\volt}
+ \end{align}
+ angenommen wird. 
 \begin{align}
-	U_\text{ION} = U'_1 - K = \SI{9.92+-0.18}{\volt} \quad .
+	U_\text{ION} = U'_1 - K = \SI{10.035}{\volt}
 \end{align}
 
 
