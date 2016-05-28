@@ -1,0 +1,81 @@
+\documentclass[a4,11pt]{article}
+\input{../Vorlage/Header.tex}
+
+
+\newcommand{\Versuch}{Die Spektren der Alkali-Atome}
+\newcommand{\Betreuer}{Max \textsc{Mustermann}}
+\newcommand{\Tag}{24.05.16}
+\newcommand{\V}{V605}
+
+% Bibliographie erstellen:
+% 	pdflatex Protokoll.tex
+% 	biber Protokoll
+% 	pdflatex Protokoll.tex
+% oder einfach make ausführen
+\usepackage[
+	labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+	font=small,          % Schrift etwas kleiner als Dokument
+	width=0.9\textwidth, % maximale Breite einer Caption schmaler
+	]{caption}
+\sisetup{table-format=1.2}
+\usepackage{booktabs}
+\usepackage[
+%	disable,
+	colorinlistoftodos,
+	linecolor=yellow,
+	backgroundcolor=yellow,
+	textwidth=0.15\textwidth,
+	textsize=footnotesize
+	]{todonotes} % Notizen
+
+
+% zu breite Tabellen/Figures:
+%\OverfullCenter{
+%  \begin{figure}
+%   ...
+%  \end{figure}
+%}
+
+\begin{document}
+\input{../Vorlage/Titlepage.tex}
+
+
+\tableofcontents
+\clearpage
+
+
+\section{Theorie}
+\input{Theorie.tex}
+\clearpage
+
+
+\section{Aufbau und Ablauf des Experiments}
+\input{Aufbau_Ablauf.tex}
+\clearpage
+
+
+\section{Auswertung}
+\subsection{Statistische Formeln}
+\subsubsection{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+\input{../Vorlage/Fehlerrechnung.tex}
+%\subsubsection{Regression}
+%\label{sec:regression}
+%\input{../Vorlage/Regression.tex}
+%\clearpage
+\input{Auswertung.tex}
+\clearpage
+
+
+\section{Diskussion}
+\input{Diskussion.tex}
+
+\clearpage
+\listoftodos
+\listoffigures
+\listoftables
+\clearpage
+\nocite{\V}
+\printbibliography[title = Literaturverzeichnis]
+
+\end{document}

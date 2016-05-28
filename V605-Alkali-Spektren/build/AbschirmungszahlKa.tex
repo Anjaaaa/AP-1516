@@ -1,0 +1,29 @@
+\begin{table}
+    \centering
+    \caption{Kalium -- Abschirmungszahl für jedes betrachtete Duplett, sowie bei der Berechnung verwendeten Größen}
+    \label{tab:Kalium}
+    \sisetup{parse-numbers=false}
+    \begin{tabular}{
+	S[table-format=3.0]
+	@{${}\pm{}$}
+	S[table-format=1.0, table-number-alignment = left]
+	S[table-format=2.1]
+	@{${}\pm{}$}
+	S[table-format=1.1, table-number-alignment = left]
+	S[table-format=3.0]
+	S[table-format=2.1]
+	@{${}\pm{}$}
+	S[table-format=1.1, table-number-alignment = left]
+	S[table-format=2.8]
+	@{${}\pm{}$}
+	S[table-format=1.8, table-number-alignment = left]
+	}
+	\toprule
+	\multicolumn{2}{c}{$\lambda \ \mathrm{ in } \ \si{\nano\meter}$}		& \multicolumn{2}{c}{$\Delta\lambda \ \mathrm{ in } \ \si{\nano\meter}$}		& 
+	{$\Delta s \ \mathrm{in} \ \mathrm{Skt}$}		& \multicolumn{2}{c}{$\Delta E_\text{D} \ \mathrm{ in } \ \si{\milli\electronvolt}$}		& 
+	\multicolumn{2}{c}{$\sigma_2$}		\\ 
+	\midrule
+    \input{build/AbschirmungszahlKalium.tex}
+    \bottomrule
+    \end{tabular}
+    \end{table}
