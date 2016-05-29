@@ -104,10 +104,10 @@ lambda1 = wavelength[6]       # 6-te Spektrallinie laut Messheft
 lambda2 = wavelength[8]       # 8-te Spektrallinie laut Messheft
 
 phiMittel = ufloat(np.mean([PhiHe[6], PhiHe[8]]), np.std([PhiHe[6], PhiHe[8]])/np.sqrt(2))
-
 Xi = (lambda2-lambda1) / sHe / unp.cos(phiMittel)
-#write('build/Eichgrosse.tex', make_SI(Eichgrosse*10**9, r'\nano\meter', figures=1))
-print(Xi)
+Xi = ufloat(unp.nominal_values(Xi), unp.std_devs(Xi))    # Aus irgendeinem Grund geht make_SI nur, wenn ich das vorher mache...
+write('build/Xi.tex', make_SI(Xi*10**9, r'\nano\meter', figures=1))
+
 
 
 ##########################################################################################################
