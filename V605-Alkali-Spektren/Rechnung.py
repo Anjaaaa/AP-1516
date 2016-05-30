@@ -21,19 +21,20 @@ NullWinkel = NullWinkel[np.invert(np.isnan(NullWinkel))]
 
 # Diese Rechnungen sind aus dem Protokoll von Marius und Matthias. Ich habe keine Ahnung warum das so geht.
 Beta = 90-0.5*(400-NullWinkel)
+print(Beta)
 PhiHe = NullWinkel - Beta - PhiHe
 PhiNa = NullWinkel - Beta - PhiNa
 PhiKa = NullWinkel - Beta - PhiKa
 PhiRu = NullWinkel - Beta - PhiRu
 
-
-write('build/Winkel.tex', make_table([PhiNa, PhiKa, PhiRu],[1,1,1]))
+write('build/Winkel.tex', make_table([PhiHe, PhiNa, PhiKa, PhiRu],[1,1,1,1]))
 write('build/WinkelGanz.tex', make_full_table(
-    r'Gemessene Beugungswinkel $\varphi$ in \si{\degree} von Natrium, Kalium und Rubidium',
+    r'Gemessene mittlere Beugungswinkel $\varphi$ in \si{\degree} der Dubletts von Natrium, Kalium und Rubidium',
     'tab:Winkel',
     'build/Winkel.tex',
     [],
-    [r'$\varphi_\text{\ce{Na}}$',
+    [r'$\varphi_\text{\ce{He}}$',
+    r'$\varphi_\text{\ce{Na}}$',
     r'$\varphi_\text{\ce{K}}$',
     r'$\varphi_\text{\ce{Ru}}$']))
 
@@ -46,6 +47,11 @@ sNa = sNa[np.invert(np.isnan(sNa))]
 sKa = sKa[np.invert(np.isnan(sKa))]
 sRu = sRu[np.invert(np.isnan(sRu))]
 
+print(PhiHe)
+print(PhiNa)
+print(PhiKa)
+print(PhiRu)
+
 
 # Umrechnen in Bogenmaß
 PhiHeDeg = PhiHe # Phi möchte ich in der Tabelle in Grad haben
@@ -53,7 +59,6 @@ PhiHe = 2*np.pi/360 * PhiHe
 PhiNa = 2*np.pi/360 * PhiNa
 PhiKa = 2*np.pi/360 * PhiKa
 PhiRu = 2*np.pi/360 * PhiRu
-
 
 ##########################################################################################################
 ### Bestimmung der Gitterkonstante durch Regression ######################################################
@@ -91,9 +96,9 @@ write('build/HeliumGanz.tex', make_full_table(
     'tab:Helium',
     'build/Helium.tex',
     [],
-    [r'$\lambda \ \mathrm{in} \ \si{\nano\meter}$',
+    [r'$\lambda_\text{\ce{He}} \ \mathrm{in} \ \si{\nano\meter}$',
     r'$\varphi_\text{\ce{He}} \ \mathrm{in} \ \si{\degree}$',
-    r'$\sin(\varphi)$']))
+    r'$\sin(\varphi_\text{\ce{He}})$']))
 
 
 
@@ -107,7 +112,6 @@ phiMittel = ufloat(np.mean([PhiHe[6], PhiHe[8]]), np.std([PhiHe[6], PhiHe[8]])/n
 Xi = (lambda2-lambda1) / sHe / unp.cos(phiMittel)
 Xi = ufloat(unp.nominal_values(Xi), unp.std_devs(Xi))    # Aus irgendeinem Grund geht make_SI nur, wenn ich das vorher mache...
 write('build/Xi.tex', make_SI(Xi*10**9, r'\nano\meter', figures=1))
-
 
 
 ##########################################################################################################
@@ -150,14 +154,14 @@ R = 10973731.568508
 def sigma(z, E, n):
    Wurzel = E * 2 * n**3 / R / a**2
    return z - Wurzel**(1/4)
-
+print(ENa/e0)
 sigmaNa = sigma(11, ENa, 3)
 sigmaKa = sigma(19, EKa, 4)
 sigmaRu = sigma(37, ERu, 5)
 
 write('build/AbschirmungszahlNatrium.tex', make_table([wavelengthNa*10**9, D_wavelengthNa*10**9, sNa, ENa/e0*10**3, sigmaNa],[1,1,0,1,1]))
 write('build/AbschirmungszahlNa.tex', make_full_table(
-    r'Natrium -- Abschirmungszahl für jedes betrachtete Duplett, sowie bei der Berechnung verwendeten Größen',
+    r'Natrium ($n=3,z=11$) -- Abschirmungszahl für jedes betrachtete Dublett, sowie bei der Berechnung verwendete Größen',
     'tab:Natrium',
     'build/AbschirmungszahlNatrium.tex',
     [0, 1, 3, 4],
@@ -169,7 +173,7 @@ write('build/AbschirmungszahlNa.tex', make_full_table(
 
 write('build/AbschirmungszahlKalium.tex', make_table([wavelengthKa*10**9, D_wavelengthKa*10**9, sKa, EKa/e0*10**3, sigmaKa],[1,1,0,1,1]))
 write('build/AbschirmungszahlKa.tex', make_full_table(
-    r'Kalium -- Abschirmungszahl für jedes betrachtete Duplett, sowie bei der Berechnung verwendeten Größen',
+    r'Kalium ($n=4,z=19$) -- Abschirmungszahl für jedes betrachtete Dublett, sowie bei der Berechnung verwendete Größen',
     'tab:Kalium',
     'build/AbschirmungszahlKalium.tex',
     [0, 1, 3, 4],
@@ -181,7 +185,7 @@ write('build/AbschirmungszahlKa.tex', make_full_table(
 write('build/AbschirmungszahlRubidium.tex', make_table([wavelengthRu*10**9, D_wavelengthRu*10**9, sRu, ERu/e0*10**3, sigmaRu],[1,1,0,1,1]))
 
 write('build/AbschirmungszahlRu.tex', make_full_table(
-    r'Rubidium -- Abschirmungszahl für das betrachtete Duplett, sowie bei der Berechnung verwendeten Größen',
+    r'Rubidium ($n=5,z=37$) -- Abschirmungszahl für das betrachtete Dublett, sowie bei der Berechnung verwendete Größen',
     'tab:Rubidium',
     'build/AbschirmungszahlRubidium.tex',
     [0, 1,  3, 4],
@@ -197,7 +201,9 @@ sigmaNaMittel = np.mean(sigmaNa)
 sigmaKaMittel = np.mean(sigmaKa)
 sigmaRuMittel = np.mean(sigmaRu)
 
-
+print(sigmaNaMittel)
+print(sigmaKaMittel)
+print(sigmaRuMittel)
 
 
 write('build/AbschirmungNaMittel.tex', make_SI(sigmaNaMittel, r'', figures=1))

@@ -1,26 +1,68 @@
-\subsection{Gitterkonstante}
-\input{build/HeliumGanz.tex}
-\input{build/WinkelGanz.tex}
+Die Abschirmungszahl kann durch Umstellen von Formel \eqref{Abschirm} zu
 \begin{align}
-	g = m &= \input{build/Gitterkonstante.tex} \\
-	t &= \input{build/Regression.tex}
+	\sigma_2 = z - \sqrt[4]{\frac{\Delta E_\text{D}}{R_\infty\alpha^2}l(l+1)n^3} \ ,
 \end{align}
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{Regression.png}
-\caption{Messwerte und Regressionsgerade zur Bestimmung der Gitterkonstante}
-\end{figure} \\
-\subsection{Eichgröße}
+direkt berechnet werden. Nachfolgend werden die dafür nötigen Größen aus den Messwerten bestimmt.
+\subsection{Umrechnung der gemessenen Winkel}
+Als Winkel der Totalreflexion wird
 \begin{align}
-	\chi = \input{build/Xi.tex}
-\end{align} \\
-\subsection{Abschirmungszahl}
+	\delta = \SI{338.4}{\degree}
+\end{align}
+gemessen. Mit der Winkelbeziehung \eqref{Beta} kann der Winkel
+\begin{align}
+	\beta = \SI{59.2}{\degree}
+\end{align}
+bestimmt werden. Die mit Beziehung \eqref{Beugungswinkel} umgerechneten Beugungswinkel finden sich in Tabelle \ref{tab:Winkel}.
+\input{build/WinkelGanz.tex}
+\subsection{Energiedifferenz $\Delta E$}
+Zur Berechnung von $\Delta E_\text{D}$ wird \eqref{DeltaE} herangezogen. Dafür werden die Wellenlängendifferenz $\Delta\lambda$ der beiden Linien eines Dubletts, sowie die gemittelte Wellenlänge $\lambda$ der ebendieser Linien benötigt.
+\subsubsection{Wellenlängendifferenz $\Delta\lambda$}
+Für $\Delta\lambda$ gilt \eqref{DeltaLambda}:
+\begin{align}
+	\Delta\lambda = \chi\cos\varphi\Delta s \ .
+\end{align}
+Der Abstand $\Delta s$ zwischen den Linien wird in Einheiten des Okulars \todo[]{Das hieß anders.} (\si{Skt}) abgelesen. Die Umrechnung in SI-Einheiten erfolgt über die Eichgröße $\chi$. Um sie zu bestimmen werden zwei Spektrallinien von Helium verwendet, wobei
+\begin{align}
+	\lambda_1 = \SI{504.8}{\nano\meter} \qquad& \varphi_1 = \SI{-159}{\degree} \\
+	\lambda_2 = \SI{667.8}{\nano\meter} \qquad& \varphi_2 = \SI{-4.6}{\degree} \ .
+\end{align}
+Der Abstand zwischen den beiden beträgt
+\begin{align}
+	\Delta t = \SI{690}{Skt} \ .
+\end{align}
+Eingesetzt in \eqref{Eichgrosse} ergibt sich die Eichgröße
+\begin{align}
+	\chi = \input{build/Xi.tex} \ .
+\end{align}
+Mit Hilfe der Winkel in Tabelle \ref{tab:Winkel} werden so die Wellenlängendifferenzen $\Delta\lambda$ bestimmt.
+\subsubsection{Mittlere Wellenlänge $\lambda$}
+Formel \eqref{Gitterkonstante} beschreibt den Zusammenhang zwischen dem Beugungswinkel $\varphi$ und der Wellenlänge $\lambda$ eines gebeugten Lichtstrahls. Die Wellenlängen der Spektrallinien von Helium sind bekannt, die dazugehörigen Beugungswinkel können nach Kapitel \ref{sec:Umrechnung} berechnet werden. So kann mit Hilfe einer linearen Regression mit den Wertepaaren $\{\sin\varphi_\text{\ce{He}}, \lambda_\text{\ce{He}}\}$ (siehe Tabelle \ref{tab:Helium}) die Geradengleichung bestimmt werden, die Wellenlänge und Beugungswinkel in Zusammenhang bringt. Die Regression mit Python liefert
+\begin{align}\label{Reg}
+	\lambda = \input{build/Gitterkonstante.tex}\cdot \sin\varphi + \input{build/Regression.tex} \ ,
+\end{align}
+die Regressionsgerade ist in Abbildung \ref{fig:Regression} zu sehen.
+\input{build/HeliumGanz.tex}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{Regression.png}
+	\caption{Messwerte und Regressionsgerade zur Bestimmung der Gitterkonstante}
+	\label{fig:Regression}
+\end{figure}
+Die gemessenen Beugungswinkel aus Tabelle \ref{tab:Winkel} sind die optisch gemittelten Winkel zwischen den beiden Dublett-Linien, sodass die Funktion $\lambda(\varphi)$ auch direkt die mittlere Wellenlänge liefert. \\
+\ \\
+\subsection{Quantenzahlen}
+Die Hauptquantenzahl $n$ und die echte Kernzahl $z$ werden einem Periodensystem entnommen. Die Bahndrehimpulszahl ist in allen Fällen $l=1$.
+\clearpage
+\subsection{Das Ergebnis}
+Nun sind alle benötigten Größen bekannt und die Abschirmungszahl kann berechnet werden. Alle in vorigen Kapiteln besprochenen Größen, sowie die daraus resultierenden Abschirmzahlen für jedes Dublett sind je für die Elemente Natrium, Kalium und Rubidium in den Tabellen \ref{tab:Natrium}, \ref{tab:Kalium} und \ref{tab:Rubidium} dargestellt. \\
+
 \input{build/AbschirmungszahlNa.tex}
 \input{build/AbschirmungszahlKa.tex}
 \input{build/AbschirmungszahlRu.tex}
 
+Die Abschirmungszahl ist für ein Atom immer dieselbe, egal, welches Dublett betrachtet wird. Daher können die erhaltenen Werte für $\sigma_2$ gemittelt werden und  es ergeben sich die Abschrimungszahlen
 \begin{align}
 	\sigma_{2,\text{\ce{Na}}} &= \input{build/AbschirmungNaMittel.tex} \\
 	\sigma_{2,\text{\ce{Ka}}} &= \input{build/AbschirmungKaMittel.tex} \\
-	\sigma_{2,\text{\ce{Ru}}} &= \input{build/AbschirmungRuMittel.tex}
+	\sigma_{2,\text{\ce{Ru}}} &= \input{build/AbschirmungRuMittel.tex} \ .
 \end{align}

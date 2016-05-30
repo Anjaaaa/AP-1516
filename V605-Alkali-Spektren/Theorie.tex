@@ -1,16 +1,42 @@
-Formeln, die ich verwendet habe: \\
-Umgestellt nach $\sigma$
-\begin{align}
-	\Delta E_D = \frac{R_\infty\alpha^2}{n^3}(z-\sigma)^4\frac{1}{l(l+1)}
+In diesem Versuch wird die innere Abschirmzahl von Alkali-Atomen anhand ihrer Spektren bestimmt. \\
+Das Coulomb-Feld der positiv geladenen Atomkerns wird nach außen von den negativ geladenen Elektronen abgeschirmt. Die resultierende Ladung $z_\text{eff}$, die ein Elektron in der äußersten Schicht \todo[]{Schicht finde ich ungünstig. Ich glaube der Fachbegriff ist Schale oder Orbital, muss ich mal nachschauen.} erfährt, wird durch die Abschirmzahl $\sigma$ bestimmt
+\begin{align}\label{Abschirmzahl}
+z_\text{eff} = z - \sigma \ .
 \end{align}
-\ \\
+Alkali-Atome bieten den Vorteil, dass sie in der äußersten Schicht nur ein Elektron haben, was Leuchtelektron genannt wird, während die übrigen Elektronen der gefüllten Schlafen \todo[]{Glorreicher Verschreiber!! Statt Schalen, Schlafen xD} Rumpfelektronen heißen. Dadurch kann eine Ein-Atom Näherung zur Bestimmung der Energien $E$ unterschiedlicher Elektronenkonfigurationen durchgeführt werden. Hierzu werden Lösungen der Schrödingergleichung
 \begin{align}
-	\Delta E_D = hc\frac{\Delta \lambda}{\lambda^2}
+\left(\sum_i \frac{\hat{p}_i^2}{2m_i} + U \right) \psi = E \psi
 \end{align}
+mit den Teilchenmassen $m_i$,  den dazugehörigen Impulsoperatoren $\hat{p}_i$ und dem Potential des Wasserstoff-Atoms
 \begin{align}
+	U = -\frac{e_0^2}{4 \pi \epsilon_0 r} \quad .
+\end{align}
+Nun gilt zu berücksichtigen, dass Alkaliatome statt einem einzelnen, $z$ Protonen im Kern haben, die mit \eqref{Abschirmzahl} genähert werden können. Werden dann noch relativistische Effekte beachtet, gilt für die Energie \begin{align}
+	E = - R_\infty \left( \frac{(z-\sigma)^2}{n^2} + \alpha^2 \frac{(z-\sigma)^4}{n^3}\left(\frac{2}{2 l + 1}  - \frac{3}{4n}  - \frac{j(j+1) - l(l+1)-\frac{3}{4}}{l(l+1)(2l+1) }\right) \right) \ ,
+\end{align}
+mit der Ryberg-Energie $R_\infty$ der Quantenzahl $n$, der Bahndrehimpulszahl $l$ und dem Gesamtdrehimpuls $j$. Der Gesamtdrehimpuls setzt sich zusammen aus dem Bahndrehimpuls und dem dazu parallelen oder antiparallelen Spin, der für Elektronen $\pm\frac{1}{2}$ beträgt d.h. $j = l \pm \frac{1}{2}$. Laut der Auswahlregeln folgt eine zusätzliche Bedingung für $l$: $\Delta l = \pm 1$.
+Es folgt:
+\begin{align}
+	E = - R_\infty \left( \frac{(z-\sigma_1)^2}{n^2} + \alpha^2 \frac{(z-\sigma_2)^4}{n^3}\left(\frac{1}{j+\frac{1}{2}}  - \frac{3}{4n}\right) \right) \ .
+\end{align}
+Die Abschirmzahl wird hier aufgeteilt in die Konstante der \todo[color = red]{Das habe ich immer noch nicht verstanden. Entweder müsstest du mir das nochmal für richtig Blöde erklären oder wir schreiben das als Frage hinten rein.} vollständigen Abschirmung $\sigma_1$ zu der sämtliche Rumpfelektronen beitragen und der inneren Abschirmung $\sigma_2$ zu der nur das Leuchtelektron beiträgt. Die Abschirmzahl wird bestimmt, indem Energiedifferenzen aus ein und der selben Schale betrachtet werden, die sich nur durch den Spin unterscheiden
+\begin{align}\label{Abschirm}
+	\Delta E_\text{D} = \frac{R_\infty\alpha^2}{n^3}(z-\sigma_2)^4\frac{1}{l(l+1)} \ .
+\end{align}
+Die zugehörigen emittierten Spektrallinien liegen im sichtbaren Bereich und unterscheiden sich nur so gering, dass sie als Dublett bezeichnet werden. Die Energiedifferenz wird über die Wellenlängen bestimmt
+\begin{align}\label{DeltaE}
+	\Delta E_\text{D} = hc\left(\frac{1}{\lambda}-\frac{1}{\lambda'}\right) \approx hc\frac{\Delta \lambda}{\lambda^2} \ .
+\end{align}
+An einem Beugungsgitter ($k =$ Ordnung der Hauptmaximums, $p =$ Spaltenanzahl des Gitters) werden die Strahlen gemäß
+\begin{align}\label{Gitterkonstante}
 	\sin(\varphi) = k\frac{\lambda}{g}
 \end{align}
-\begin{align}
-	\Xi &= \frac{\Delta\lambda}{\Delta t\cdot\cos\overline{\varphi}} \\
-	\Delta \lambda &= \Xi \cos(\varphi)\Delta s
+gebrochen.
+Die Wellenlängendifferenz $\Delta \lambda$ ist genau
+\begin{align}\label{DeltaLambda}
+	\Delta \lambda &= \chi \cos(\varphi)\Delta s \ ,
+\end{align}	
+mit
+\begin{align}\label{Eichgrosse}
+	\chi &= \frac{\Delta\lambda}{\Delta t\cdot\cos\overline{\varphi}} \ , \quad \overline{\varphi} = \frac{1}{2}(\varphi_1 + \varphi_2) \quad .
 \end{align}
