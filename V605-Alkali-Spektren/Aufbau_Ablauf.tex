@@ -1,8 +1,25 @@
-Umrechnung des gemessenen Nullwinkels $\delta$ in einen verwendbaren Winkel:
+Die Wellenlängen der Dublettlinien werden mit Hilfe eines Gitterspektralapparates bestimmt (siehe Abbildung \ref{Spektralapparat}). Der Strahl der Lichtquelle -- hier Natrium, Kalium und Rubidium -- wird gebündelt und auf ein optisches Gitter fokussiert. Mit dem Fernrohr kann der gebrochene Strahl in Abhängigkeit des Brechungswinkels untersucht werden. \\
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Spektrometer.png}
+	\caption{Aufbau eines Gitterspektrometers \cite{\V}}
+	\label{Spektralapparat}
+\end{figure} \\
+Zunächst werfen die bekannten Spektrallinien der Helium-Quelle ausgemessen, um die Gitterkonstante der Apparatur zu bestimmen. Bei dem Transmissionsgitter muss zunächst die Achse des transmittierten Stahls d.h. des nullten Hauptmaximums notiert werden, um die Differenzen zum jeweils nächsten Maximum ermitteln zu können. Mit Abbildung \ref{Winkelbeziehung1} gilt für den abgelesenen Winkel $\delta$ des nullten Maximums
 \begin{align}\label{Beta}
-	\beta = 90 - \frac{1}{2}(400-\delta)
+	\beta = 90-0.5(400-\delta) \ .
 \end{align}
-Für die Beugungswinkel $\phi$:
+Die gemessenen Winkel können dann wie folgt
 \begin{align}\label{Beugungswinkel}
-	\varphi' = \delta - \beta - \varphi
+	\varphi_\text{echt} = \delta - \beta - \varphi_\text{gem.}
 \end{align}
+umgerechnet werden.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Winkel1.pdf}
+	\caption{Beziehungen zur Berechnung der echten Winkel}
+	\label{Winkelbeziehung1}
+\end{figure}
+Für die Vermessung der Dublettlinien wird  eine höhere Genauigkeit benötigt, die durch ein Okularmikrometer erreicht wird -- eine Mikrometerskala, die ins Blickfeld des Fernrohrs eingebaut ist.
+
+
