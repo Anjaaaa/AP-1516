@@ -50,7 +50,13 @@
 	\end{scope}
 }
 
-
+\usepackage[
+labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+font=small,          % Schrift etwas kleiner als Dokument
+width=0.9\textwidth, % maximale Breite einer Caption schmaler
+]{caption}
+\sisetup{table-format=1.2}
+\usepackage{booktabs}
 
 % Kopf- und Fußzeile
 \usepackage{fancyhdr}

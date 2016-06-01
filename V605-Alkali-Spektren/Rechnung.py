@@ -21,7 +21,7 @@ NullWinkel = NullWinkel[np.invert(np.isnan(NullWinkel))]
 
 # Diese Rechnungen sind aus dem Protokoll von Marius und Matthias. Ich habe keine Ahnung warum das so geht.
 Beta = 90-0.5*(400-NullWinkel)
-print(Beta)
+
 PhiHe = NullWinkel - Beta - PhiHe
 PhiNa = NullWinkel - Beta - PhiNa
 PhiKa = NullWinkel - Beta - PhiKa
@@ -47,10 +47,6 @@ sNa = sNa[np.invert(np.isnan(sNa))]
 sKa = sKa[np.invert(np.isnan(sKa))]
 sRu = sRu[np.invert(np.isnan(sRu))]
 
-print(PhiHe)
-print(PhiNa)
-print(PhiKa)
-print(PhiRu)
 
 
 # Umrechnen in Bogenmaß
@@ -112,7 +108,7 @@ phiMittel = ufloat(np.mean([PhiHe[6], PhiHe[8]]), np.std([PhiHe[6], PhiHe[8]])/n
 Xi = (lambda2-lambda1) / sHe / unp.cos(phiMittel)
 Xi = ufloat(unp.nominal_values(Xi), unp.std_devs(Xi))    # Aus irgendeinem Grund geht make_SI nur, wenn ich das vorher mache...
 write('build/Xi.tex', make_SI(Xi*10**9, r'\nano\meter', figures=1))
-
+print(Xi)
 
 ##########################################################################################################
 ### Abschirmungszahlen ###################################################################################
@@ -150,7 +146,7 @@ ERu = E(D_wavelengthRu, wavelengthRu)
 e0 = 1.6021766208*10**(-19)
 epsilon0 = 8.854187817*10**(-12)
 a = e0**2 / 2 / h / c / epsilon0     # Sommerfeldsche Feinstrukturkonstante
-R = 10973731.568508
+R = 13.60569301*e0
 def sigma(z, E, n):
    Wurzel = E * 2 * n**3 / R / a**2
    return z - Wurzel**(1/4)

@@ -2,39 +2,26 @@
 \input{../Vorlage/Header.tex}
 
 
-\newcommand{\Versuch}{Die Spektren der Alkali-Atome}
-\newcommand{\Betreuer}{Steffen \textsc{Schröder}}
-\newcommand{\Tag}{24.05.16}
-\newcommand{\V}{V605}
+\newcommand{\Versuch}{Grundlagen der Ultraschalltechnik}
+\newcommand{\Betreuer}{Jessica \textsc{Garczarczyk}}
+\newcommand{\Tag}{31.05.16}
+\newcommand{\V}{US1}
 
 % Bibliographie erstellen:
 % 	pdflatex Protokoll.tex
 % 	biber Protokoll
 % 	pdflatex Protokoll.tex
 % oder einfach make ausführen
-\usepackage[
-	labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
-	font=small,          % Schrift etwas kleiner als Dokument
-	width=0.9\textwidth, % maximale Breite einer Caption schmaler
-	]{caption}
-\sisetup{table-format=1.2}
-\usepackage{booktabs}
-\usepackage[
-	disable,
-	colorinlistoftodos,
-	linecolor=yellow,
-	backgroundcolor=yellow,
-	textwidth=0.15\textwidth,
-	textsize=footnotesize
-	]{todonotes} % Notizen
 
 
-% zu breite Tabellen/Figures:
-%\OverfullCenter{
-%  \begin{figure}
-%   ...
-%  \end{figure}
-%}
+\usepackage[
+%	disable,
+colorinlistoftodos,
+linecolor=yellow,
+backgroundcolor=yellow,
+textwidth=0.15\textwidth,
+textsize=footnotesize
+]{todonotes} % Notizen
 
 \begin{document}
 \input{../Vorlage/Titlepage.tex}
@@ -44,13 +31,15 @@
 \clearpage
 
 
+\section{Einleitung}
+\input{Einleitung}
+
 \section{Theorie}
 \input{Theorie.tex}
 \clearpage
 
 
 \section{Aufbau und Ablauf des Experiments}
-\label{sec:aufbau}
 \input{Aufbau_Ablauf.tex}
 \clearpage
 

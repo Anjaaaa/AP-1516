@@ -2,8 +2,8 @@ Die Abschirmungszahl kann durch Umstellen von Formel \eqref{Abschirm} zu
 \begin{align}
 	\sigma_2 = z - \sqrt[4]{\frac{\Delta E_\text{D}}{R_\infty\alpha^2}l(l+1)n^3} \ ,
 \end{align}
-direkt berechnet werden. Nachfolgend werden die dafür nötigen Größen aus den Messwerten bestimmt.
-\subsection{Umrechnung der gemessenen Winkel}
+direkt berechnet werden. Nachfolgend werden die dafür nötigen Größen aus den Messwerten bestimmt. Sie sind zusammen mit dem Ergebnis in den Tabellen \ref{tab:Natrium}, \ref{tab:Kalium} und \ref{tab:Rubidium} zu sehen.
+\subsection{Umrechnung der gemessenen Winkel \label{sec:Umrechnung}}
 Als Winkel der Totalreflexion wird
 \begin{align}
 	\delta = \SI{338.4}{\degree}
@@ -15,7 +15,7 @@ gemessen. Mit der Winkelbeziehung \eqref{Beta} kann der Winkel
 bestimmt werden. Die mit Beziehung \eqref{Beugungswinkel} umgerechneten Beugungswinkel finden sich in Tabelle \ref{tab:Winkel}.
 \input{build/WinkelGanz.tex}
 \subsection{Energiedifferenz $\Delta E$}
-Zur Berechnung von $\Delta E_\text{D}$ wird \eqref{DeltaE} herangezogen. Dafür werden die Wellenlängendifferenz $\Delta\lambda$ der beiden Linien eines Dubletts, sowie die gemittelte Wellenlänge $\lambda$ der ebendieser Linien benötigt.
+Zur Berechnung von $\Delta E_\text{D}$ wird \eqref{DeltaE} herangezogen. Dafür werden die Wellenlängendifferenz $\Delta\lambda$ der beiden Linien eines Dubletts, sowie die gemittelte Wellenlänge $\lambda$ ebendieser Linien benötigt.
 \subsubsection{Wellenlängendifferenz $\Delta\lambda$}
 Für $\Delta\lambda$ gilt \eqref{DeltaLambda}:
 \begin{align}
@@ -36,7 +36,7 @@ Eingesetzt in \eqref{Eichgrosse} ergibt sich die Eichgröße
 \end{align}
 Mit Hilfe der Winkel in Tabelle \ref{tab:Winkel} werden so die Wellenlängendifferenzen $\Delta\lambda$ bestimmt.
 \subsubsection{Mittlere Wellenlänge $\lambda$}
-Formel \eqref{Gitterkonstante} beschreibt den Zusammenhang zwischen dem Beugungswinkel $\varphi$ und der Wellenlänge $\lambda$ eines gebeugten Lichtstrahls. Die Wellenlängen der Spektrallinien von Helium sind bekannt, die dazugehörigen Beugungswinkel können nach Kapitel \ref{sec:Umrechnung} berechnet werden. So kann mit Hilfe einer linearen Regression mit den Wertepaaren $\{\sin\varphi_\text{\ce{He}}, \lambda_\text{\ce{He}}\}$ (siehe Tabelle \ref{tab:Helium}) die Geradengleichung bestimmt werden, die Wellenlänge und Beugungswinkel in Zusammenhang bringt. Die Regression mit Python liefert
+Formel \eqref{Gitterkonstante} beschreibt den Zusammenhang zwischen dem Beugungswinkel $\varphi$ und der Wellenlänge $\lambda$ eines gebeugten Lichtstrahls. Die Wellenlängen der Spektrallinien von Helium sind bekannt, die dazugehörigen Beugungswinkel können nach Kapitel \ref{sec:Umrechnung} berechnet werden. So kann mit Hilfe einer linearen Regression mit den Wertepaaren $\{\sin\varphi_\text{\ce{He}}, \lambda_\text{\ce{He}}\}$ (siehe Tabelle \ref{tab:Helium}) die Geradengleichung bestimmt werden, die Wellenlänge und Beugungswinkel beim verwendeten Gitter in Zusammenhang bringt. Die Regression mit Python liefert
 \begin{align}\label{Reg}
 	\lambda = \input{build/Gitterkonstante.tex}\cdot \sin\varphi + \input{build/Regression.tex} \ ,
 \end{align}
@@ -47,8 +47,8 @@ die Regressionsgerade ist in Abbildung \ref{fig:Regression} zu sehen.
 	\includegraphics[width=\textwidth]{Regression.png}
 	\caption{Messwerte und Regressionsgerade zur Bestimmung der Gitterkonstante}
 	\label{fig:Regression}
-\end{figure}
-Die gemessenen Beugungswinkel aus Tabelle \ref{tab:Winkel} sind die optisch gemittelten Winkel zwischen den beiden Dublett-Linien, sodass die Funktion $\lambda(\varphi)$ auch direkt die mittlere Wellenlänge liefert. \\
+\end{figure} \\
+Die gemessenen Beugungswinkel aus Tabelle \ref{tab:Winkel} sind die optisch gemittelten Winkel zwischen den beiden Dublett-Linien, sodass die Funktion $\lambda(\varphi)$ die mittlere Wellenlänge der zugehörigen Strahlen liefert. \\
 \ \\
 \subsection{Quantenzahlen}
 Die Hauptquantenzahl $n$ und die echte Kernzahl $z$ werden einem Periodensystem entnommen. Die Bahndrehimpulszahl ist in allen Fällen $l=1$.
