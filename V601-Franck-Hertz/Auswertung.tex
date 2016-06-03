@@ -28,7 +28,7 @@ Aus den Temperaturen in Kelvin lässt sich nach Gleichung \eqref{eq:weglange} un
 
 
 \subsection{Differentielle Energieverteilung} \label{sec:auswertung1}
-Aus der Messung des Stromes bei veränderlicher Bremsspannung $U_A$ kann die Energieverteilung der der austretenden Elektronen bestimmt werten
+Aus der Messung des Stromes bei veränderlicher Bremsspannung $U_A$ kann die Energieverteilung der austretenden Elektronen bestimmt werten
 \begin{align}
 	E(U_A) \sim \frac{I(U_A)-I(U_{A+1})}{U_A - U_{A+1}}
 \end{align}
@@ -130,11 +130,11 @@ und für die Wellenlänge
 \end{align}
 Die Fehler werden jeweils mit Hilfe der Gaußschen Fehlerfortpflanzung berechnet
 \begin{align}
-	\sigma_{\Delta E} = \abs{e_0 \sigma_{U_\text{Mittel}}}
+	\sigma_{\Delta E} = \left|e_0 \sigma_{U_\text{Mittel}}\right|
 \end{align}
 und
 \begin{align}
-	\sigma_\lambda = \abs{\frac{h c_0}{e_0} \frac{1}{U^2_{\text{Mittel}}} \sigma_{U_\text{Mittel}}} \quad .
+	\sigma_\lambda = \left|\frac{h c_0}{e_0} \frac{1}{U^2_{\text{Mittel}}} \sigma_{U_\text{Mittel}}\right| \quad .
 \end{align} 
 
 
@@ -157,18 +157,15 @@ In Abbildung \ref{fig:energieverteilung_25} ist erkennbar, dass bei einer Bremss
 \end{align}
 
 \subsubsection{Bestimmung der Ionisierungsspannung}\label{sec:auswertung4}
-Die Ionisierungsspannung $U_\text{ION}$ ergibt sich aus der letzten Messung des Stromes bei einer höheren Gegenspannung von \SI{30}{\volt}.  Die Asymptote des 1. Maximums wird aufgezeichnet. Die Spannung, an der der Strom stark zunimmt
+Die Ionisierungsspannung $U_\text{ION}$ ergibt sich aus der letzten Messung des Stromes bei einer höheren Gegenspannung von \SI{30}{\volt}. Um sie zu bestimmen wird eine möglichst steile Asymptote an den Stromverlauf angelegt. Die Beschleunigungsspannung, bei der diese Asymptote die Spannungsachse schneidet ist
 \begin{align}
-	U'_1 = \SI{13}{\volt}
+	U'_1 = \SI{13}{\volt} \ .
 \end{align}
- setzt sich zusammen aus der Ionisierungsspannung und dem Kontaktpotential $K$, wobei für K der Mittelwert der in Kapitel \ref{cap:kontaktpotential} bestimmten Werte $K_1$ und $K_2$
- \begin{align}
- K = \frac{K_1+K_2}{2} = \SI{2.965}{\volt}
- \end{align}
- angenommen wird. 
+Sie setzt sich zusammen aus der Ionisierungsspannung und dem Kontaktpotential $K$, wobei für K der Mittelwert der in Kapitel \ref{cap:kontaktpotential} bestimmten Werte $K_1$ und $K_2$
+\begin{align}
+	K = \frac{K_1+K_2}{2} = \SI{2.965}{\volt}
+\end{align}
+angenommen wird. 
 \begin{align}
 	U_\text{ION} = U'_1 - K = \SI{10.035}{\volt}
 \end{align}
-
-
-

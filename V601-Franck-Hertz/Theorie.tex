@@ -11,12 +11,12 @@ Angenommen ein so aufgebautes Atom ist in Ruhe und trifft auf ein bewegtes Elekt
 	\begin{align}\label{eq:energie1}
 		h\nu = \Delta E
 	\end{align}
-	besitzt. $h$ ist das Plancksche Wirkungsquantum, $\nu$ die Frequenz des emittierten Lichts.
+	besitzt. $h$ ist das Plancksche Wirkungsquantum und $\nu$ die Frequenz des emittierten Lichts.
 \end{enumerate}
 Diese Prozesse können auf beliebige höhere, sowie nicht aufeinanderfolgende Niveaus verallgemeinert werden. Ganz speziell können noch ein beliebiges Niveau $E_i$ und das höchste Niveau $E_\text{max}$ mit der Energiedifferenz $\Delta E = E_\text{max}-E_i$ betrachtet werden. Hat das bewegte Elektron eine kinetische Energie, die größer ist, als $\Delta E$, dann wird ein Elektron aus der Atomhülle ausgelöst. Das Atom ist dann ionisiert. Die dafür nötige Energie wird als Ionisierungsenergie bezeichnet.
 \clearpage
 
-\subsection{Grundsätzlicher Aufbau}
+\subsection{Grundsätzlicher Aufbau \label{sec:Aufbau_Grund}}
 Abbildung \ref{fig:AufbauSchematisch} zeigt den prinzipiellen Aufbau des Franck-Hertz-Versuchs. Der schraffierte Bereich ist ein evakuierter Glaskolben in dem sich Quecksilbergas befindet. Durch Glüh\-emission werden Elektronen aus dem Glühdraht emittiert. Durch die Beschleunigungsspannung $U_\text{B}$ werden die Elektronen beschleunigt. Dabei gilt allgemein der Zusammenhang
 \begin{align}
 	E_\text{kin} = eU \ ,
@@ -26,14 +26,14 @@ Treten nur elastische Stöße auf, haben die Elektronen an der Beschleunigungsel
 \begin{align}
 	v = \sqrt{\frac{2eU_\text{B}}{m}} \ ,
 \end{align}
-mit der Elektronenmasse $m$. Die Beschleunigungselektrode ist ein leitendes Gitter, sodass es Elektronen hindurch lässt, aber dennoch als Spannungspol verwendet werden kann. Je nachdem, ob die Bremsspannung $U_\text{A}$ positiv oder negativ ist, werden die Elektronen gebremst oder positiv beschleunigt und können, falls sie die Auffängerelektrode erreichen, als Strom $I_\text{A}$ gemessen werden.
+mit der Elektronenmasse $m$. Die Beschleunigungselektrode ist ein leitendes Gitter, sodass es Elektronen hindurch lässt, aber dennoch als Spannungspol verwendet werden kann. Je nachdem, wie $U_\text{A}$ gepolt ist, werden die Elektronen gebremst oder positiv beschleunigt und können, falls sie die Auffängerelektrode erreichen, als Strom $I_\text{A}$ gemessen werden. In Abbildung \ref{fig:AufbauSchematisch} ist $U_\text{A}$ als Bremsspannung eingezeichnet.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 0.6\textwidth]{Aufbau_prinzipiell.pdf}
 	\caption{Schematischer Aufbau des Frank-Hertz-Versuchs \cite{\V}}
 	\label{fig:AufbauSchematisch}
 \end{figure} \\
-Sei die Bremsspannung konstant und klein. Wird $U_\text{B}$, beginnend bei $U_\text{B}=\SI{0}{\volt}$, erhöht, wird ein Strom gemessen, sobald die Elektronen das geringe Gegenfeld überwinden können. Ist die Spannung dann gerade
+Die Bremsspannung $U_\text{A}$ sei nun konstant und klein. Wird $U_\text{B}$, beginnend bei $U_\text{B}=\SI{0}{\volt}$, erhöht, wird ein Strom gemessen, sobald die Elektronen das geringe Gegenfeld überwinden können. Ist die Spannung dann gerade
 \begin{align}\label{eq:energie2}
 	eU_\text{B} = \Delta E 
 \end{align}
@@ -42,3 +42,29 @@ Sei die Bremsspannung konstant und klein. Wird $U_\text{B}$, beginnend bei $U_\t
 	2eU_\text{B} = \Delta E
 \end{align}
 kann ein zweiter inelastischer Stoß der Elektronen mit den Atomen statt finden, usw.
+
+\subsection{Einflussfaktoren auf die Gestalt der Franck-Hertz-Kurve\label{sec:Aufbau}}
+\subsubsection*{Dampfdruck}
+Der Dampfdruck im Glaskolben muss kontrolliert werden. Ist er zu gering, sind die \ce{Hg}-Atome zu weit von einander entfernt. Dann würden die Elektronen ohne Stoß bis zur Beschleunigungselektrode kommen, selbst wenn ihre Energie für eine Anregung der Atome ausreichend ist. Ist er zu hoch, liegen die Atome so dicht beieinander, dass die Elektronen sehr häufig elastische Stöße ausführen (und ihre Richtung ändern), was dafür sorgt, dass weniger Elektronen an der Beschleunigungselektrode ankommen. Für die mittlere Weglänge $w$ in \si{\centi\meter} zwischen den Atomen gilt
+\begin{align}\label{eq:weglange}
+	w = \frac{2.9}{p_\text{sät}} \ ,
+\end{align}
+wobei $p_\text{sät}$ der Sättigungsdampfdruck in \si{\bar} ist. Für den Dampfdruck gilt
+\begin{align}\label{eq:dampfdruck}
+	p(T) = \SI{5.5e4}\exp\left(-\frac{6876}{T}\right) \ ,
+\end{align}
+er kann also einfach über die Temperatur $T$ im Gefäß reguliert werden.
+\subsubsection*{Kontaktpotential}
+Haben die zwei Elektroden einer Spannungsquelle unterschiedliche Austrittsarbeiten, weicht die real anliegende Spannung von der am Gerät eingestellten ab. Dieses Problem tritt bei der Beschleunigungsspannung auf, denn der Glühdraht sollte aus einem Material sein, dessen Austrittsarbeit $\Phi_\text{G}$ sehr gering ist. Die Beschleunigungselektrode dagegen hat eine vergleichsweise hohe Austrittsarbeit $\Phi_\text{B}$. Mit Abbildung \ref{fig:Kontakt} gilt
+\begin{align}
+	U_\text{B,eff} = U_\text{B} - \underbrace{\frac{\Phi_\text{B}-\Phi_\text{G}}{e}}_{:=K} \ ,
+\end{align}
+mit dem Kontaktpotential $K$. Die später aufgenommenen Kurven sind demnach um $K$ verschoben.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 0.8\textwidth]{Kontaktpot.pdf}
+	\caption{Veranschaulichung der Zusammenhänge zwischen Austrittsarbeiten und Beschleunigungsspannung \cite{\V}}
+	\label{fig:Kontakt}
+\end{figure}
+\subsubsection*{Energie-Spektrum der Elektronen \label{sec:Spektrum}}
+Idealisiert wird davon ausgegangen, dass die Elektronen direkt nach dem Auslösen aus dem Glühdraht alle eine kinetische Energie von $E_\text{kin} = 0$ haben. In Wirklichkeit aber besitzen die Elektronen schon im Metall unterschiedliche Energien. Die Verteilung dieser Energien der Leitungselektronen wird durch die Fermi-Dirac-Verteilung beschrieben. Sie besagt, dass Elektronen mit sehr geringer Energie im Metall sehr häufig vorkommen, wobei die Häufigkeit mit zunehmender Energie sehr schnell abfällt. Diese kontinuierliche Energieverteilung sorgt dafür, dass die später gemessenen Peaks nicht so steil abfallen, wie aus der Theorie erwartet.
