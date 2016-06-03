@@ -87,9 +87,9 @@ write('build/tabelle_anregungsspannung.tex', make_table([Anregungsspannung], [4]
 
 write('build/Anregungsspannung.tex', make_SI(Anregungsspannung_gesamt, r'\volt', figures=2))
 
-write('build/Energie.tex', make_SI(Energie*10**19, r'\joule','e-19',figures=2))
+write('build/Energie.tex', make_SI(Energie*10**19, r'\joule','e-19',figures=1))
 
-write('build/Wellenlange.tex', make_SI(Wellenlange*10**9, r'\nano\meter', figures=2))
+write('build/Wellenlange.tex', make_SI(Wellenlange*10**9, r'\nano\meter', figures=1))
 
 print(Anregungsspannung_gesamt, Energie, Wellenlange)
 
