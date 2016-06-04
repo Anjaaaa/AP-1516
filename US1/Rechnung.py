@@ -2,6 +2,7 @@ import numpy as np
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 from table import(
 	make_table,
 	make_SI,
@@ -64,12 +65,17 @@ write('build/b_Durchschall.txt', make_SI(b*10**3, r'\milli\meter', figures=2))
 print(m)
 print(b)
 
+
+plt.gca().xaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_:x*10**(5)))
 x = np.linspace(min(laufzeit_2), max(laufzeit_2))
 plt.plot(laufzeit_2, hohe_2, 'ro', label='Messdaten')
 plt.plot(x, g_2(x, *parameters), 'k-', label='Ausgleichsgerade')
 plt.xlabel('Laufzeit in $\mathrm{s}^{-5}$')
 plt.ylabel('Höhe der Zylinder in m')
 plt.legend(loc='best')
+
+ 
+
 plt.savefig('build/Durchschall.png')
 plt.show()
 
