@@ -1,0 +1,19 @@
+\begin{table}
+    \centering
+    \caption{Aus den B-Scans bestimmte Laufzeiten in Pixeln $\tilde{t}$ und umgerechnete Laufzeiten $t$}
+    \label{tab:Zeit}
+    \sisetup{parse-numbers=false}
+    \begin{tabular}{
+	S[table-format=3.0]
+	S[table-format=2.2]
+	S[table-format=3.0]
+	S[table-format=2.2]
+	}
+	\toprule
+	{$\tilde{t}_\text{oben}$ in \si{Pixel}}		& {$t_\text{oben}$ in \si{\micro\second}}		& 
+	{$\tilde{t}_\text{unten}$ in \si{Pixel}}		& {$t_\text{unten}$ in \si{\micro\second}}		\\ 
+	\midrule
+    \input{build/WerteZeit.tex}
+    \bottomrule
+    \end{tabular}
+    \end{table}

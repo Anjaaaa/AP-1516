@@ -1,0 +1,65 @@
+import numpy as np
+from uncertainties import ufloat
+from uncertainties import unumpy as unp
+from scipy.optimize import curve_fit
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+from table import(
+        make_table,
+        make_SI,
+        write,
+        make_full_table,
+        make_composed_table)
+
+
+tObenG, tUntenG = np.genfromtxt('WerteB.txt', unpack = True)
+sOben, sUnten, tO,tU = np.genfromtxt('WerteA.txt', unpack = True)
+sOben *= 0.01
+sUnten *= 0.01
+# 100 * 10**(-6) sekunden = 543.0 pixel
+tOben = tObenG / 544 * 100 * 10**(-6)
+tUnten = tUntenG / 544 * 100 * 10**(-6)
+
+write('build/WerteZeit.tex', make_table([tObenG, tOben*10**6, tUntenG, tUnten*10**6],[0,2,0,2]))
+write('build/Zeit.tex', make_full_table(
+    r'Aus den B-Scans bestimmte Laufzeiten in Pixeln $\tilde{t}$ und umgerechnete Laufzeiten $t$',
+    'tab:Zeit',
+    'build/WerteZeit.tex',
+    [],
+    [r'$\tilde{t}_\text{oben}$ in \si{Pixel}',
+    r'$t_\text{oben}$ in \si{\micro\second}',
+    r'$\tilde{t}_\text{unten}$ in \si{Pixel}',
+    r'$t_\text{unten}$ in \si{\micro\second}']))
+
+
+
+h = 8.020 * 10**(-2)    # Höhe des Quaders
+c = 2725
+
+xOben = 0.5 * tOben * c
+xUnten = 0.5 * tUnten * c
+
+
+d = h - xOben - xUnten
+dGemessen = h - sOben - sUnten
+
+write('build/WerteBScan.tex', make_table([xOben*10**3, sOben*10**3, xUnten*10**3, sUnten*10**3, d*10**3, dGemessen*10**3],[2,2,2,2,2,2]))
+write('build/BScan.tex', make_full_table(
+    r'Berechnete Abstände der Löcher zum oberen Rand $s_\text{oben}$ und zum unteren Rand $s_\text{unten}$, die daraus bestimmte Dicke der Löcher $d$ und jeweils dazu die gemessenen Werte $\tilde{x}_\text{gem.}$. Alle Werte in \si{\milli\meter}.',
+    'tab:ObenGanz',
+    'build/WerteAScan.tex',
+    [],
+    [r'$s_\text{oben}$',
+    r'$\tilde{s}_\text{oben}$',
+    r'$s_\text{unten}$',
+    r'$\tilde{s}_\text{unten}$',
+    r'$d$',
+    r'$\tilde{d}$']))
+
+
+
+# Herz-Modell
+cWasser = 1484
+tHerz = 58.3*10**(-6)
+k = cWasser * 0.5 *tHerz
+print(k)

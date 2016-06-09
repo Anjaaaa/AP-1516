@@ -1,12 +1,80 @@
-\begin{figure}
+\subsection{A-Scan\label{sec:AScan}}
+\subsection{B-Scan}
+Zur einfacheren Beschreibung des Vorgehens wird nun definiert, dass die obere Kante in Abbildung \ref{fig:acrylblock} \emph{oben} sein soll und die in der Abbildung untere Kante \emph{unten}. \\
+Es werden zwei B-Scans aufgenommen, einmal mit \emph{oben} oben und einmal mit \emph{unten} oben. Sie sind in Abbildung \ref{fig:BScan} dargestellt. Die Skala jeweils rechts kennzeichnet die Stärke des reflektierten Signals. Mit Hilfe des Bildbearbeitungsprogrammes \emph{gimp} und seiner \emph{Measure}-Funktion werden die Laufzeiten der Signale in den Graphiken gemessen. Genauer: Die Laufzeit des Signals von \emph{oben} bis zum jeweiligen Loch wird aus \ref{fig:oben} und die Laufzeit von \emph{unten} wird aus \ref{fig:unten} abgelesen. Abbildung \ref{fig:Schema} zeigt welcher Abstand dafür genau gewählt wird.
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{oben.png}
-	\caption{oben}
-	\label{oben}
-\end{figure}
-\begin{figure}
+	\includegraphics[width=0.35\textwidth]{Schema.png}
+	\caption{Die senkrechte schwarze Linie kennzeichnet welcher Abstand im B-Scan zur Bestimmung der Laufzeit des Signals verwendet wird.}
+	\label{fig:Schema}
+\end{figure} \\
+\todo[color = red, inline]{Hier dachte ich: OK, bei rot ist immer irgendwie Luft, bzw. ganz oben ist der rote Balken halt der Übergang zwischen Sonde und Glas. Also messe ich von der Unterkante des roten Balkens (weil da ja das Glas erst losgeht) bis zur Oberkante des jeweiligen Lochs. Dann sind die Werte aber viel zu klein. Von der Oberkante weg passts ganz gut. Kannst du das erklären?}
+\todo{Ja, ich weiß, die Scans sind sehr klein, aber für ein Protokoll ist das sonst zu viel Tintenverschwendung.}
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{unten.png}
-	\caption{unten}
-	\label{unten}
+	\begin{subfigure}{.45\textwidth}
+		\includegraphics[width=\textwidth]{oben.png}
+		\caption{von \emph{oben}}
+		\label{fig:oben}
+	\end{subfigure}
+	\begin{subfigure}{.45\textwidth}
+		\includegraphics[width=\textwidth]{unten.png}
+		\caption{von \emph{unten}}
+		\label{fig:unten}
+	\end{subfigure}
+	\caption{Aufgenommene B-Scans}
+	\label{fig:BScan}
 \end{figure}
+Das Computerprogramm misst die Abstände in Pixeln. Zur Umrechnung in Sekunden wird mit der linken Skala der Maßstab
+\begin{align}
+	\SI{100}{\micro\second} \ \widehat{=} \ \SI{544}{Pixel}
+\end{align}
+bestimmt. Die so bestimmten Laufzeiten stehen in Tabelle \ref{tab:Zeit}. Loch 10 müsste im Scan \ref{fig:unten} rechts unten zu sehen sein. Wie an dem verschmierten Signal darüber von Loch 11 zu sehen ist, ist die Aufnahme dort nicht optimal, sodass kein Wert gemessen werden kann und der Wert 0 eingetragen wird.
+\input{build/Zeit.tex} \\
+Mit der in \ref{sec:AScan} bestimmten Schallgeschwindigkeit $c$ kann nun der Abstand der Löcher nach \emph{oben}
+\begin{align}
+	s_\text{oben} = c \cdot t_\text{oben} \ ,
+\end{align}
+bzw. nach \emph{unten}
+\begin{align}
+	s_\text{unten} = c \cdot t_\text{unten} \ ,
+\end{align}
+berechnet werden. Die Vermessung des Quaders ergibt eine Gesamthöhe von
+\begin{align}
+	h = \SI{80.20}{\milli\meter} \ ,
+\end{align}
+sodass auch der Durchmesser der Löcher
+\begin{align}
+	d = h - s_\text{oben} - s_\text{unten}
+\end{align}
+bestimmt werden kann. Die so berechneten Werte werden in Tabelle \ref{tab:ObenGanz} mit den gemessenen Werten verglichen.
+\input{build/BScan.tex}
+\clearpage
+\subsection{TM-Scan}
+Zunächst wird mit einem A-Scan die Laufzeit eines Ultraschall-Signals im Ruhezustand bestimmt. Sie beträgt
+\begin{align}
+	t = \SI{58.3}{\micro\second} \ .
+\end{align}
+Mit der Schallgeschwindigkeit in Wasser
+\begin{align}
+	c_\text{Wasser} = \SI{1484}{\meter\per\second}
+\end{align}
+\todo{Quelle} wird die Wasserhöhe
+\begin{align}
+	h = \SI{43.2586}{\milli\meter}
+\end{align}
+bestimmt. Während des Pumpens, wird ein TM-Scan durchgeführt, der in Abbildung \ref{fig:Herz} zu sehen ist. Daraus wird abgelesen, dass das Herz mit einer Frequenz von
+\begin{align}
+	\nu = \frac{6}{16}\si{\hertz} = \SI{0.375}{\hertz}
+\end{align}
+\grqq schlägt\grqq.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{TimeScan.png}
+	\caption{TM-Scan eines pulsierenden Herz-Modells}
+	\label{fig:Herz}
+\end{figure} \\
+Als endsystolisches Herzvolumen ESV bezeichnet man das kleinste Volumen, das während eines Herzzyklus in den Herzkammern ist. Das enddiastolische Volumen EDV dagegen ist das größte Blutvolumen während eines Zyklusses. Das Herzvolumen HZV ist dann definiert als
+\begin{align}
+	\text{HZV} = (\text{EDV} - \text{ESV}) \cdot \nu \ .
+\end{align}
