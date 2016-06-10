@@ -101,13 +101,13 @@ write('build/HeliumGanz.tex', make_full_table(
 ##########################################################################################################
 ### Eichgröße ############################################################################################
 
-lambda1 = wavelength[6]       # 6-te Spektrallinie laut Messheft
-lambda2 = wavelength[8]       # 8-te Spektrallinie laut Messheft
+lambda1 = wavelength[3]       # 6-te Spektrallinie laut Messheft
+lambda2 = wavelength[4]       # 7-te Spektrallinie laut Messheft
 
-phiMittel = ufloat(np.mean([PhiHe[6], PhiHe[8]]), np.std([PhiHe[6], PhiHe[8]])/np.sqrt(2))
+phiMittel = ufloat(np.mean([PhiHe[3], PhiHe[4]]), np.std([PhiHe[3], PhiHe[4]]))
 Xi = (lambda2-lambda1) / sHe / unp.cos(phiMittel)
 Xi = ufloat(unp.nominal_values(Xi), unp.std_devs(Xi))    # Aus irgendeinem Grund geht make_SI nur, wenn ich das vorher mache...
-write('build/Xi.tex', make_SI(Xi*10**9, r'\nano\meter', figures=1))
+write('build/Xi.tex', make_SI(Xi*10**11, r'', 'e-11', figures=1))
 print(Xi)
 
 ##########################################################################################################
