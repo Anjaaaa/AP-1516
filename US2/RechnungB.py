@@ -59,7 +59,42 @@ write('build/BScan.tex', make_full_table(
 
 
 # Herz-Modell
+
+tMaxG, tMinG = np.genfromtxt('WerteHerz.txt', unpack = True)
+# 100 * 10**(-6) sekunden = 543.0 pixel
+tMax = tMaxG / 544 * 100 * 10**(-6)
+tMin = tMinG / 544 * 100 * 10**(-6)
+dHerz = 49.45 * 10**(-3)
 cWasser = 1484
-tHerz = 58.3*10**(-6)
-k = cWasser * 0.5 *tHerz
-print(k)
+t0Herz = 58.3*10**(-6)
+hoeheHerz = cWasser * 0.5 * t0Herz
+
+nu = 6/16
+write('build/Hoehe.tex', make_SI(hoeheHerz*10**3, r'\milli\meter', figures=1))
+
+
+
+write('build/WerteTMScan.tex', make_table([tMaxG, tMax*10**6, tMinG, tMin*10**6],[0,2,0,2]))
+write('build/TMScan.tex', make_full_table(
+    r'Aus dem TM-Scan bestimmte Laufzeiten in Pixeln $\tilde{t}$ und umgerechnete Laufzeiten $t$',
+    'tab:ZeitHerz',
+    'build/WerteTMScan.tex',
+    [],
+    [r'$\tilde{t}_{max}$ in \si{Pixel}',
+    r'$t_{max}$ in \si{\micro\second}',
+    r'$\tilde{t}_{min}$ in \si{Pixel}',
+    r'$t_{min}$ in \si{\micro\second}']))
+
+
+Max = ufloat(np.mean(tMax), np.std(tMax)/(len(tMax)-1))
+Min = ufloat(np.mean(tMin), np.std(tMin)/(len(tMin)-1))
+
+T = Min - Max
+
+a = cWasser * 0.5 * T
+write('build/Kugel.tex', make_SI(a*10**3, r'\milli\meter', figures=1))
+
+HZV = a * np.pi / 3 * (3/4 * dHerz**2 + a**2) * nu
+
+write('build/HZV.tex', make_SI(HZV*10**6, r'\centi\meter\cubed', figures=1))
+

@@ -1,0 +1,19 @@
+\begin{table}
+    \centering
+    \caption{Aus dem TM-Scan bestimmte Laufzeiten in Pixeln $\tilde{t}$ und umgerechnete Laufzeiten $t$}
+    \label{tab:ZeitHerz}
+    \sisetup{parse-numbers=false}
+    \begin{tabular}{
+	S[table-format=3.0]
+	S[table-format=2.2]
+	S[table-format=3.0]
+	S[table-format=2.2]
+	}
+	\toprule
+	{$\tilde{t}_{max}$ in \si{Pixel}}		& {$t_{max}$ in \si{\micro\second}}		& 
+	{$\tilde{t}_{min}$ in \si{Pixel}}		& {$t_{min}$ in \si{\micro\second}}		\\ 
+	\midrule
+    \input{build/WerteTMScan.tex}
+    \bottomrule
+    \end{tabular}
+    \end{table}

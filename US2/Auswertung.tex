@@ -1,5 +1,5 @@
 \subsection{A-Scan\label{sec:AScan}}
-\subsection{B-Scan}
+\subsection{B-Scan\label{sec:BScan}}
 Zur einfacheren Beschreibung des Vorgehens wird nun definiert, dass die obere Kante in Abbildung \ref{fig:acrylblock} \emph{oben} sein soll und die in der Abbildung untere Kante \emph{unten}. \\
 Es werden zwei B-Scans aufgenommen, einmal mit \emph{oben} oben und einmal mit \emph{unten} oben. Sie sind in Abbildung \ref{fig:BScan} dargestellt. Die Skala jeweils rechts kennzeichnet die Stärke des reflektierten Signals. Mit Hilfe des Bildbearbeitungsprogrammes \emph{gimp} und seiner \emph{Measure}-Funktion werden die Laufzeiten der Signale in den Graphiken gemessen. Genauer: Die Laufzeit des Signals von \emph{oben} bis zum jeweiligen Loch wird aus \ref{fig:oben} und die Laufzeit von \emph{unten} wird aus \ref{fig:unten} abgelesen. Abbildung \ref{fig:Schema} zeigt welcher Abstand dafür genau gewählt wird.
 \begin{figure}[h!]
@@ -61,7 +61,7 @@ Mit der Schallgeschwindigkeit in Wasser
 \end{align}
 \todo{Quelle} wird die Wasserhöhe
 \begin{align}
-	h = \SI{43.2586}{\milli\meter}
+	h_\text{Herz} = \input{build/Hoehe.tex}
 \end{align}
 bestimmt. Während des Pumpens, wird ein TM-Scan durchgeführt, der in Abbildung \ref{fig:Herz} zu sehen ist. Daraus wird abgelesen, dass das Herz mit einer Frequenz von
 \begin{align}
@@ -74,7 +74,27 @@ bestimmt. Während des Pumpens, wird ein TM-Scan durchgeführt, der in Abbildung
 	\caption{TM-Scan eines pulsierenden Herz-Modells}
 	\label{fig:Herz}
 \end{figure} \\
-Als endsystolisches Herzvolumen ESV bezeichnet man das kleinste Volumen, das während eines Herzzyklus in den Herzkammern ist. Das enddiastolische Volumen EDV dagegen ist das größte Blutvolumen während eines Zyklusses. Das Herzvolumen HZV ist dann definiert als
+Als Diastole wird die Phase bezeichnet, in der sich das Herz entspannt und dadurch mit Blut füllt. Im TM-Scan sind das die abfallenden Flanken der Peaks, an den Tiefpunkten ist das Blutvolumen im Herzmodell maximal. Dieses Volumen wird enddiastolisches Herzvolumen EDV genannt. In diesem Fall, ist das das Volumen eines Zylinders mit Höhe $h_\text{Herz}$ und Durchmesser
 \begin{align}
-	\text{HZV} = (\text{EDV} - \text{ESV}) \cdot \nu \ .
+        d_\text{Herz} = \SI{49.45}{\milli\meter} \ .
 \end{align}
+Während der Systole kontrahiert das Herz und pumpt das Blut in den Körper, die Kurve im TM-Scan steigt. Das Maximum der Kurve kennzeichnet den Zeitpunkt des endsystolischen Volumens ESV, es ist das kleinste Blutvolumen während eines Zyklusses. Das ESV wird als der Zylinder mit $h_\text{Herz}$ und $d_\text{Herz}$, reduziert durch das Volumen eines Kugelsegments mit Durchmesser $d_\text{Herz}$ und Höhe $a$ genähert. In Formeln ausgdrückt bedeutet das
+\begin{align}
+	EDV &= \pi \frac{d^2_\text{Herz}}{4} h_\text{Herz} \\
+	ESV &= \pi \frac{d^2_\text{Herz}}{4} h_\text{Herz} - \frac{a}{3} \pi (3d_\text{Herz}^2 + a^2) \ .
+\end{align}
+Das Herzvolumen HZV ist definiert als
+\begin{align}
+	\text{HZV} &= (\text{EDV} - \text{ESV}) \cdot \nu \\
+	&= \frac{a}{3} \pi (\frac{3}{4}d_\text{Herz}^2 + a^2) \cdot \nu \ .
+\end{align}
+Aus dem TM-Scan werden die Laufzeiten der Schallwelle an den Minima und Maxima mit der in Kapitel \ref{sec:BScan} beschriebenen Methode extrahiert. Sie sind in Tabelle \ref{tab:HerzZeit} aufgetragen. Die Werte der Maxima und der Minima werden jeweils gemittelt und mit der Differenz der beiden $t_\text{Herz}$ kann die Höhe $a$ bestimmt werden
+\begin{align}
+	a &= \frac{1}{2}c_\text{Wasser}t_\text{Herz} \\
+	&= \input{build/Kugel.tex} \ .
+\end{align}
+Damit kann das Herzvolumen bestimmt werden
+\begin{align}
+	\text{HZV} = \input{build/HZV.tex} \ .
+\end{align}
+\input{build/TMScan.tex}
