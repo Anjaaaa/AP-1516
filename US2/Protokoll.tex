@@ -1,6 +1,9 @@
 \documentclass[a4,11pt]{article}
 \input{../Vorlage/Header.tex}
 
+\usepackage{floatrow}
+\floatplacement{figure}{!ht}
+\floatplacement{table}{!ht}
 
 \newcommand{\Versuch}{Scanverfahren in der Ultraschalltechnik}
 \newcommand{\Betreuer}{Jessica \textsc{Garczarczyk}}
@@ -16,7 +19,7 @@
 
 
 \usepackage[
-%	disable,
+	disable,
 colorinlistoftodos,
 linecolor=yellow,
 backgroundcolor=yellow,
@@ -29,9 +32,12 @@ textsize=footnotesize
 
 
 \tableofcontents
+\ \\
+[3cm]
+\emph{Hinweis:} Der Versuch wurde in Anlehnung an die Versuchsanleitung \grqq Scanverfahren in der Ultraschalltechnik\grqq\footnote{\emph{US2: Scanverfahren in der Ultraschalltechnik}, Anfängerpraktikum für Physiker, TU Dortmund, \url{http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/UltraschallScan.pdf} aufgerufen am 13.06.16, um 21:34 Uhr} durchgeführt und protokolliert.
+
+
 \clearpage
-
-
 \section{Theorie}
 \input{Theorie.tex}
 \clearpage

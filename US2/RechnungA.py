@@ -28,4 +28,4 @@ print(np.mean(s2-e2))
 print(s1)
 print(s2[::-1])
 
-write('build/tabelle_WerteA.txt', make_table([e1*100, s1*100, (s1-np.mean(s1-e1))*100, e2*100, s2*100, (s2-np.mean(s2-e2))*100], [2,2,2,2,2,2]))
+write('build/tabelle_WerteA.txt', make_table([e1*100, s1*100, (s1-np.mean(s1-e1))*100, e2*100, s2*100, (s2-np.mean(s2-e2))*100], [3,3,3,3,3,3]))

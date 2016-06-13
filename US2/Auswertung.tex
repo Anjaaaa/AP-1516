@@ -1,6 +1,6 @@
 \subsection{A-Scan\label{sec:AScan}}
 \todo{Hmmm, irgendwie war das jetzt doch ganz anders als letztes Mal und ich habe mir einfach etwas ausgedacht, das ich für sinnvoll erachtet habe...}
-Die Tiefe der Löcher $d_\text{gemessen}$ im Acrylblock werden zunächst mit einer Schieblehre vermessen. Der A-Scan liefert im Anschluss daran Aufschluss über die Laufzeiten bis zur Stelle, an der der Schall reflektiert wird und zurück. Die nach nach 
+Die Tiefe der Löcher $d_\text{gemessen}$ im Acrylblock werden zunächst mit einer Schieblehre vermessen. Der A-Scan liefert im Anschluss daran Aufschluss über die Laufzeiten bis zur Stelle, an der der Schall reflektiert wird und zurück. Die nach 
 \begin{align}
 	s = \frac{1}{2} \cdot c_\text{Acryl} \cdot t
 \end{align} mit $c_\text{Acryl} = \SI{2730}{\meter\per\second}$\footnote{\url{http://www.olympus-ims.com/de/ndt-tutorials/thickness-gage/appendices-velocities/}} berechneten Tiefen $d_\text{berechnet}$ sind alle etwas zu groß. Das liegt an der Übergangsschicht. Sie hat ungefähr die Dicke
@@ -20,29 +20,15 @@ Die wirkliche Tiefe ergibt sich damit nach
 \end{align}
 Es ist immer die Tiefe der Lochoberkante gemeint. Die Werte für die beiden Messreihen sind in Tabelle~\ref{tab:werteA} dargestellt.
 
-
- \begin{figure}[h!]
- 	\centering
- 	\captionof{table}{Tiefen der Löcher in cm}
- 	\begin{tabular}{ccc||ccc}
- 		\multicolumn{3}{c}{Messung 1} & \multicolumn{3}{c}{Messung 2} \\
- 		$d_\text{gemessen}$ & $d_\text{berechnet}$ & $d_\text{korrigiert}$ & $d_\text{gemessen}$ & $d_\text{berechnet}$ & $d_\text{korrigiert}$ \\
- 		\hline
- 		\input{build/tabelle_WerteA.txt}
- 	\end{tabular}
- 	\label{tab:werteA}
- \end{figure}
- 
- 
- 
- 
+\input{build/WerteA.tex}
+\clearpage
  
 \subsection{B-Scan\label{sec:BScan}}
 Zur einfacheren Beschreibung des Vorgehens wird nun definiert, dass die obere Kante in Abbildung \ref{fig:acrylblock} \emph{oben} sein soll und die in der Abbildung untere Kante \emph{unten}. \\
 Es werden zwei B-Scans aufgenommen, einmal mit \emph{oben} oben und einmal mit \emph{unten} oben. Sie sind in Abbildung \ref{fig:BScan} dargestellt. Die Skala jeweils rechts kennzeichnet die Stärke des reflektierten Signals. Mit Hilfe des Bildbearbeitungsprogrammes \emph{gimp} und seiner \emph{Measure}-Funktion werden die Laufzeiten der Signale in den Graphiken gemessen. Genauer: Die Laufzeit des Signals von \emph{oben} bis zum jeweiligen Loch wird aus \ref{fig:oben} und die Laufzeit von \emph{unten} wird aus \ref{fig:unten} abgelesen. Abbildung \ref{fig:Schema} zeigt welcher Abstand dafür genau gewählt wird.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.35\textwidth]{Schema.png}
+	\includegraphics[width=0.3\textwidth]{Schema.png}
 	\caption{Die senkrechte schwarze Linie kennzeichnet welcher Abstand im B-Scan zur Bestimmung der Laufzeit des Signals verwendet wird.}
 	\label{fig:Schema}
 \end{figure} \\
@@ -50,12 +36,12 @@ Es werden zwei B-Scans aufgenommen, einmal mit \emph{oben} oben und einmal mit \
 \todo{Ja, ich weiß, die Scans sind sehr klein, aber für ein Protokoll ist das sonst zu viel Tintenverschwendung.}
 \begin{figure}[h!]
 	\centering
-	\begin{subfigure}{.45\textwidth}
+	\begin{subfigure}{.35\textwidth}
 		\includegraphics[width=\textwidth]{oben.png}
 		\caption{von \emph{oben}}
 		\label{fig:oben}
 	\end{subfigure}
-	\begin{subfigure}{.45\textwidth}
+	\begin{subfigure}{.35\textwidth}
 		\includegraphics[width=\textwidth]{unten.png}
 		\caption{von \emph{unten}}
 		\label{fig:unten}
@@ -65,11 +51,11 @@ Es werden zwei B-Scans aufgenommen, einmal mit \emph{oben} oben und einmal mit \
 \end{figure}
 Das Computerprogramm misst die Abstände in Pixeln. Zur Umrechnung in Sekunden wird mit der linken Skala der Maßstab
 \begin{align}
-	\SI{100}{\micro\second} \ \widehat{=} \ \SI{544}{Pixel}
+	\SI{100}{\micro\second} \ \widehat{=} \ \SI{543}{Pixel}
 \end{align}
 bestimmt. Die so bestimmten Laufzeiten stehen in Tabelle \ref{tab:Zeit}. Loch 10 müsste im Scan \ref{fig:unten} rechts unten zu sehen sein. Wie an dem verschmierten Signal darüber von Loch 11 zu sehen ist, ist die Aufnahme dort nicht optimal, sodass kein Wert gemessen werden kann und der Wert 0 eingetragen wird.
 \input{build/Zeit.tex} \\
-Mit der in \ref{sec:AScan} bestimmten Schallgeschwindigkeit $c$ kann nun der Abstand der Löcher nach \emph{oben}
+Mit der schon in \ref{sec:AScan} verwendeten Schallgeschwindigkeit $c_\text{Acryl}=\SI{2730}{\meter\per\second}=c$ kann nun der Abstand der Löcher nach \emph{oben}
 \begin{align}
 	s_\text{oben} = c \cdot t_\text{oben} \ ,
 \end{align}
@@ -87,17 +73,16 @@ sodass auch der Durchmesser der Löcher
 \end{align}
 bestimmt werden kann. Die so berechneten Werte werden in Tabelle \ref{tab:ObenGanz} mit den gemessenen Werten verglichen.
 \input{build/BScan.tex}
-\clearpage
+\ \\
+\ \\
+
+
 \subsection{TM-Scan}
 Zunächst wird mit einem A-Scan die Laufzeit eines Ultraschall-Signals im Ruhezustand bestimmt. Sie beträgt
 \begin{align}
 	t = \SI{58.3}{\micro\second} \ .
 \end{align}
-Mit der Schallgeschwindigkeit in Wasser
-\begin{align}
-	c_\text{Wasser} = \SI{1484}{\meter\per\second}
-\end{align}
-\todo{Quelle} wird die Wasserhöhe
+Mit der Schallgeschwindigkeit in Wasser $c_\text{Wasser} = \SI{1480}{\meter\per\second}$\footnote{Tabellen-Anhang A 2.2, W. Walcher: \emph{Praktikum der Physik}, Teubner Studienbücher Physik, 1989.} wird die Wasserhöhe
 \begin{align}
 	h_\text{Herz} = \input{build/Hoehe.tex}
 \end{align}
@@ -108,7 +93,7 @@ bestimmt. Während des Pumpens, wird ein TM-Scan durchgeführt, der in Abbildung
 \grqq schlägt\grqq.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.6\textwidth]{TimeScan.png}
+	\includegraphics[width=0.4\textwidth]{TimeScan.png}
 	\caption{TM-Scan eines pulsierenden Herz-Modells}
 	\label{fig:Herz}
 \end{figure} \\
@@ -126,10 +111,9 @@ Das Herzvolumen HZV ist definiert als
 	\text{HZV} &= (\text{EDV} - \text{ESV}) \cdot \nu \\
 	&= \frac{a}{3} \pi (\frac{3}{4}d_\text{Herz}^2 + a^2) \cdot \nu \ .
 \end{align}
-Aus dem TM-Scan werden die Laufzeiten der Schallwelle an den Minima und Maxima mit der in Kapitel \ref{sec:BScan} beschriebenen Methode extrahiert. Sie sind in Tabelle \ref{tab:HerzZeit} aufgetragen. Die Werte der Maxima und der Minima werden jeweils gemittelt und mit der Differenz der beiden $t_\text{Herz}$ kann die Höhe $a$ bestimmt werden
+Aus dem TM-Scan werden die Laufzeiten der Schallwelle an den Minima und Maxima mit der in Kapitel \ref{sec:BScan} beschriebenen Methode extrahiert. Sie sind in Tabelle \ref{tab:ZeitHerz} aufgetragen. Die Werte der Maxima und der Minima werden jeweils gemittelt und mit der Differenz der beiden $t_\text{Herz}$ kann die Höhe $a$ bestimmt werden
 \begin{align}
-	a &= \frac{1}{2}c_\text{Wasser}t_\text{Herz} \\
-	&= \input{build/Kugel.tex} \ .
+	a = \frac{1}{2}c_\text{Wasser}t_\text{Herz} = \input{build/Kugel.tex} \ .
 \end{align}
 Damit kann das Herzvolumen bestimmt werden
 \begin{align}

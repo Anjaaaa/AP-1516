@@ -1,0 +1,14 @@
+\begin{table}
+    \centering
+    \caption{Abweichung $a$ der berechneten Abstände der Löcher zum oberen Rand $a_\text{oben}$ und zum unteren Rand $a_\text{unten}$ in Prozent}
+    \label{tab:Disussion}
+
+    \begin{tabular}{cccc}
+	\toprule
+	{$a_\text{A,oben}$}		& {$a_\text{B,oben}$}		& 
+	{$a_\text{A,unten}$}		& {$a_\text{B,unten}$}		\\ 
+	\midrule
+    \input{build/Vergleich.txt}
+    \bottomrule
+    \end{tabular}
+    \end{table}
