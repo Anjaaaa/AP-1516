@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.mlab as mlab
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import scipy.stats
 from scipy.optimize import curve_fit
 from scipy.special import factorial
 from uncertainties import ufloat
@@ -157,58 +158,60 @@ messung3_std = np.std(messung3, ddof=1)
 print('Mittelwert', messung3_mittel, 'Standtartabweichung', messung3_std)
 
 
-# Histogramm zeichnen und Parameter bestimmen (n=Wahrscheinlichkeiten, bins = Intervallgrenzen)
-n, bins, patches = plt.hist(messung3, bins=8, normed=1, facecolor='green')
+n, bins, patches = plt.hist(messung3, bins=8, normed=1, facecolor='green', alpha=0.75)
 
-#datensatz für poisson:
-xp = np.linspace(1,8,8)
-
-#datensatz für gauß:
+#datensatz für gauß (nimmt die mitte der x-achsen-intervalle):
 xg = np.ones(len(bins)-1)
 for i in range(0,len(bins)-1):
-	xg[i] = (bins[i]+bins[i+1])/2
-	
+    xg[i] = (bins[i]+bins[i+1])/2
+
+xp = np.round(xg)
+
 # regressionen (gauß und poisson)
 
 def poisson(k, z):
-	return z**k/factorial(k)*np.exp(-z)
-	
+#    return z**k/factorial(k)*np.exp(-z)
+    return scipy.stats.poisson.pmf(k, z)
+
 def gauss(xp, s, mu):
-	return 1/(s * np.sqrt(2*np.pi))*np.exp(-1/2*((xp-mu)/s)**2)
-	
+#    return 1/(s * np.sqrt(2*np.pi))*np.exp(-1/2*((xp-mu)/s)**2)
+    return scipy.stats.norm.pdf(xp, mu, s)
 
-parameters_poisson, popt_poisson = curve_fit(poisson, xp, n, p0 = [np.mean(n)])
+#hier ist der startvektor geraten
+parameters_poisson, popt_poisson = curve_fit(poisson, xp, n, p0 = [np.mean(messung3)])
+print(parameters_poisson)
+print(popt_poisson)
 
-parameters_gauss, popt_gauss = curve_fit(gauss, xg, n, p0 = [np.mean(n), np.std(n)])
+#der startvektor müsste den optimalen daten entsprechen
+parameters_gauss, popt_gauss = curve_fit(gauss, xg, n, p0 = [np.mean(messung3), np.std(messung3)])
+print(parameters_gauss)
+print(popt_gauss)
 
-z = ufloat(parameters_poisson[0], np.sqrt(popt_poisson[0,0]))
-s = ufloat(parameters_gauss[0], np.sqrt(popt_gauss[0,0]))
-mu = ufloat(parameters_gauss[1], np.sqrt(popt_gauss[1,1]))
-print(z, s, mu)
+# auf ganzzahlige werte achten wegen der poissonverteilung!
+x = np.linspace(3400, 4100, 101)
 
+plt.plot(x, poisson(x, *parameters_poisson), 'b-', label='Poissonverteilung')
+plt.plot(x, gauss(x, *parameters_gauss), 'r-', label='Gaußverteilung')
 
-#plt.plot(xg, poisson(xp, *parameters_poisson), 'b-')
-
-#plt.plot(xg, gauss(xg, *parameters_gauss), 'g-')
-
-plt.plot(xg, n, 'ro')
-
-#y = mlab.normpdf(bins, np.mean(n), np.std(n))
-
-#plt.plot(bins, y, 'b--', linewidth=1)
-
-
-
-
-#gaussglocke plotten
-#x = np.linspace(3400, 4100)
-#plt.plot(x, 1/(messung3_std * np.sqrt(2 * np.pi)) *np.exp( - (x - messung3_mittel)**2 / (2 * messung3_std**2) ),linewidth=2, color='r', label='Gaussverteilung')
-
-#numpy.random.normal(loc=0.0, scale=1.0, size=None)
-
+#werte plotten, die für die regression verwendet werden
+plt.plot(xg, n, 'bo', label='Werte für den Fit')
+plt.xlabel('Anzahl der Pulse')
+plt.ylabel('Wahrscheinlichkeit')
 plt.legend(loc='best')
+plt.savefig('build/histogramm.png')
 plt.show()
 
+mu = ufloat(parameters_gauss[1], np.sqrt(popt_gauss[1,1]))
+sigma = ufloat(parameters_gauss[0], np.sqrt(popt_gauss[0,0]))
+lam = ufloat(parameters_poisson[0], np.sqrt(popt_poisson[0,0]))
 
-plt.plot(xg, gauss(xg, *parameters_gauss), 'g-')
-plt.show()
+print('mu=', mu, 'simga=', sigma)
+
+write('build/mu.txt', make_SI(mu, r'\mega\electronvolt', figures=1))
+write('build/sigma.txt', make_SI(sigma, r'', figures=1))
+write('build/lambda.txt', make_SI(lam, r'', figures=1))
+
+
+
+
+
