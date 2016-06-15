@@ -1,0 +1,68 @@
+\documentclass[a4,11pt]{article}
+\input{../Vorlage/Header.tex}
+
+
+\newcommand{\Versuch}{V701: Reichweite von $\alpha$-Strahlung}
+\newcommand{\Betreuer}{Max \textsc{Mustermann}}
+\newcommand{\Tag}{14.06.16}
+\newcommand{\V}{V701}
+
+% Bibliographie erstellen:
+% 	pdflatex Protokoll.tex
+% 	biber Protokoll
+% 	pdflatex Protokoll.tex
+% oder einfach make ausführen
+
+
+\usepackage[
+%	disable,
+colorinlistoftodos,
+linecolor=yellow,
+backgroundcolor=yellow,
+textwidth=0.15\textwidth,
+textsize=footnotesize
+]{todonotes} % Notizen
+
+\begin{document}
+\input{../Vorlage/Titlepage.tex}
+
+
+\tableofcontents
+\clearpage
+
+
+\section{Theorie}
+\input{Theorie.tex}
+\clearpage
+
+
+\section{Aufbau und Ablauf des Experiments}
+\input{Aufbau_Ablauf.tex}
+\clearpage
+
+
+\section{Auswertung}
+\subsection{Statistische Formeln}
+\subsubsection{Fehlerrechnung}
+\label{sec:Fehlerrechnung}
+\input{../Vorlage/Fehlerrechnung.tex}
+\subsubsection{Regression}
+\label{sec:regression}
+\input{../Vorlage/Regression.tex}
+\clearpage
+\input{Auswertung.tex}
+\clearpage
+
+
+\section{Diskussion}
+\input{Diskussion.tex}
+
+\clearpage
+\listoftodos
+\listoffigures
+\listoftables
+\clearpage
+\nocite{\V}
+\printbibliography[title = Literaturverzeichnis]
+
+\end{document}

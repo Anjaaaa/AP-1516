@@ -1,0 +1,1 @@
+\SI{-0.98+-0.03}{\mega\electronvolt\per\centi\meter}
