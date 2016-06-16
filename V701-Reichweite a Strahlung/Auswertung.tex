@@ -148,8 +148,8 @@ die Energie der $\alpha$-Teilchen zu erhalten. Für die Plots (Abbildung~\ref{fi
 
 
 \subsection{Statistik des radioaktiven Zerfalls}
-Aus 100 Messdaten wird eine Verteilung der Pulse erstellt, die innerhalb zehn Sekunden gemessen werden.
-An das Histogramm wird mit Hilfe von Python eine Gauß- und eine Poissonkurve genähert, wie in Abbildung~\ref{fig:histogramm} zu sehen ist.
+Aus 100 Messdaten wird eine Verteilung der Pulse erstellt, die innerhalb zehn Sekunden gemessen werden. Das Histogramm ist in Abbildung~\ref{fig:histogramm_unnormiert} dargestellt.
+An das Histogramm wird mit Hilfe von Python eine Gauß- und eine Poissonkurve genähert, wie in Abbildung~\ref{fig:histogramm} zu sehen ist. Die Wertepaare stehen in Tabelle~\ref{tab:histogramm}.
 Die Gaußkurve hat die Form
 \begin{align}
 	g(x) = \frac{1}{\sigma \sqrt{2\pi}}\operatorname{e}^{- \frac{1}{2} \left( \frac{x - \mu}{\sigma}   \right)^2} \quad .
@@ -170,12 +170,33 @@ Es ist darauf zu achten, dass k ganze Zahlen sein müssen, also die x-Werte geru
  \end{align}
 
 
+  
+     \begin{figure}[h!]
+     	\centering
+     	\includegraphics[width=0.75\textwidth]{build/histogramm_unnormiert.png}
+     	\caption{100 Messungen für die Dauer von 10 Sekunden}
+     	\label{fig:histogramm_unnormiert}
+     \end{figure}
+  
+  
+  
    \begin{figure}[h!]
    	\centering
    	\includegraphics[width=0.75\textwidth]{build/histogramm.png}
    	\caption{100 Messungen für die Dauer von 10 Sekunden}
    	\label{fig:histogramm}
    	\end{figure}
+   	
+   	  \begin{figure}[h!]
+   	  	\centering
+   	  	\captionof{table}{Werte für den Fit (siehe Abbildung \ref{fig:histogramm})}
+   	  	\begin{tabular}{c|c|c}
+   	  		Position des Bins (Gauß) & Position des Bins (Poisson) & Höhe des Bins \\
+   	  		\hline
+   	  		\input{build/tabelle_histogramm.txt}
+   	  	\end{tabular}
+   	  	\label{tab:histogramm}
+   	  \end{figure}
  
 
 

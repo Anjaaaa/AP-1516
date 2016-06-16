@@ -38,7 +38,8 @@ b1 = ufloat(parameters1[1], np.sqrt(popt1[1,1]))
 
 x = np.linspace(0,2.5)
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_:x*10**(-3)))
-plt.plot(x1, puls1, 'ro', label='Messdaten')
+plt.plot(x1[16:], puls1[16:], 'ro', label='Messdaten (Regression)')
+plt.plot(x1[:15], puls1[:15], 'ko', label='Messdaten')
 plt.plot(x, linear(x, *parameters1),'k-', label = 'Regression an den linearen Teil')
 plt.xlabel('Effektiver Abstand zwischen Detektor und Strahler x in cm')
 plt.ylabel('$10^3$ Pulse pro 120s')
@@ -66,7 +67,8 @@ b2 = ufloat(parameters2[1], np.sqrt(popt2[1,1]))
 
 x = np.linspace(0,3)
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_:x*10**(-3)))
-plt.plot(x2, puls2, 'ro', label='Messdaten')
+plt.plot(x2[12:], puls2[12:], 'ro', label='Messdaten (Regression')
+plt.plot(x2[:11], puls2[:11], 'ko', label='Messdaten')
 plt.plot(x, linear(x, *parameters2),'k-', label = 'Regression an den linearen Teil')
 plt.xlabel('Effektiver Abstand zwischen Detektor und Strahler x in cm')
 plt.ylabel('$10^3$ Pulse pro 120s')
@@ -109,10 +111,12 @@ parameterse1, popte1 = curve_fit(linear, x1, energie1)
 m_e1 = ufloat(parameterse1[0], np.sqrt(popte1[0,0]))
 b_e1 = ufloat(parameterse1[1], np.sqrt(popte1[1,1]))
 
-plt.plot(x1, energie1, 'ro', label='Messdaten')
+plt.plot(x1, energie1, 'ro', label='Messdaten (Regression)')
 plt.plot(x, linear(x, *parameterse1),'k-', label = 'Lineare Regression')
 plt.xlim(0,2.2)
 plt.legend(loc='best')
+plt.xlabel('Effektiver Abstand zwischen Detektor und Strahler x in cm')
+plt.ylabel('Energie in MeV')
 plt.savefig('build/energie1.png')
 plt.show()
 
@@ -123,10 +127,13 @@ parameterse2, popte2 = curve_fit(linear, x2[:13], energie2[:13])
 m_e2 = ufloat(parameterse2[0], np.sqrt(popte2[0,0]))
 b_e2 = ufloat(parameterse2[1], np.sqrt(popte2[1,1]))
 
-plt.plot(x2, energie2, 'ro', label='Messdaten')
+plt.plot(x2[:13], energie2[:13], 'ro', label='Messdaten (Regression')
+plt.plot(x2[12:], energie2[12:], 'ko', label='Messdaten')
 plt.plot(x, linear(x, *parameterse2),'k-', label = 'Regression an den linearen Teil')
 plt.xlim(0,2.2)
 plt.legend(loc='best')
+plt.xlabel('Effektiver Abstand zwischen Detektor und Strahler x in cm')
+plt.ylabel('Energie in MeV')
 plt.savefig('build/energie2.png')
 plt.show()
 
@@ -140,9 +147,6 @@ write('build/m_e1.txt', make_SI(m_e1, r'\mega\electronvolt\per\centi\meter', fig
 write('build/m_e2.txt', make_SI(m_e2, r'\mega\electronvolt\per\centi\meter', figures=1))
 
 
-print(E1_emp, E1_reg)
-print(E2_emp, E2_reg)
-print(m_e1, m_e2)
 
 
 
@@ -157,8 +161,17 @@ messung3_std = np.std(messung3, ddof=1)
 
 print('Mittelwert', messung3_mittel, 'Standtartabweichung', messung3_std)
 
+#Histogramm nicht normiert ausgeben:
 
-n, bins, patches = plt.hist(messung3, bins=8, normed=1, facecolor='green', alpha=0.75)
+plt.hist(messung3, bins=8, normed=False, facecolor='green', alpha=0.75)
+plt.xlabel('Anzahl der Pulse')
+plt.ylabel('Anzahl der Messungen in einem Bin')
+plt.savefig('build/histogramm_unnormiert.png')
+plt.show()
+
+
+
+n, bins, patches = plt.hist(messung3, bins=8, normed=True, facecolor='green', alpha=0.75)
 
 #datensatz für gauß (nimmt die mitte der x-achsen-intervalle):
 xg = np.ones(len(bins)-1)
@@ -168,6 +181,8 @@ for i in range(0,len(bins)-1):
 xp = np.round(xg)
 
 # regressionen (gauß und poisson)
+
+
 
 def poisson(k, z):
 #    return z**k/factorial(k)*np.exp(-z)
@@ -179,13 +194,11 @@ def gauss(xp, s, mu):
 
 #hier ist der startvektor geraten
 parameters_poisson, popt_poisson = curve_fit(poisson, xp, n, p0 = [np.mean(messung3)])
-print(parameters_poisson)
-print(popt_poisson)
+
 
 #der startvektor müsste den optimalen daten entsprechen
 parameters_gauss, popt_gauss = curve_fit(gauss, xg, n, p0 = [np.mean(messung3), np.std(messung3)])
-print(parameters_gauss)
-print(popt_gauss)
+
 
 # auf ganzzahlige werte achten wegen der poissonverteilung!
 x = np.linspace(3400, 4100, 101)
@@ -205,11 +218,14 @@ mu = ufloat(parameters_gauss[1], np.sqrt(popt_gauss[1,1]))
 sigma = ufloat(parameters_gauss[0], np.sqrt(popt_gauss[0,0]))
 lam = ufloat(parameters_poisson[0], np.sqrt(popt_poisson[0,0]))
 
-print('mu=', mu, 'simga=', sigma)
 
 write('build/mu.txt', make_SI(mu, r'\mega\electronvolt', figures=1))
-write('build/sigma.txt', make_SI(sigma, r'', figures=1))
+write('build/sigma.txt', make_SI(sigma, r'\mega\electronvolt', figures=1))
 write('build/lambda.txt', make_SI(lam, r'', figures=1))
+
+#Werte die gefittet wurden in Tabellen schreiben:
+write('build/tabelle_histogramm.txt', make_table([xg, xp, n], [2,0,4]))
+
 
 
 
