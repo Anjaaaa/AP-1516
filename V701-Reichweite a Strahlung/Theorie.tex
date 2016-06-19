@@ -1,8 +1,35 @@
-Alpha-Strahlung ist eine Form von radioaktiver Strahlung, die aus einem zweifach positiv geladenen Helium-Kern besteht. Im Versuch wird als Strahlungsquelle Americium verwendet
+\subsection{Alpha-Zerfall}
+Beim Alpha-Zerfall zerfällt ein instabildes Atom des Elements $X$ in ein Atom eines anderen Elements $Y$ und einen zweifach positiv geladenen Helium Kern, das Alpha-Teilchen. Die charakteristische Größe bei radioaktiven Zerfällen ist die Halbwertszeit $\tau$, das ist die Zeit, nach der die Hälfte der zu Beginn vorhandenen Atome zerfallen ist. Für die Anzahl $N$ der zu einem Zeitpunkt $t$ noch vorhandenen Atome gilt das Zerfallsgesetz
 \begin{align}
-	\text{\ce{^241_95Am}}\rightarrow\text{\ce{^237_93Np}}+\text{\ce{^4_2He^2+}} \ .
+	N(t) = N_02^{-\frac{t}{\tau}} \ .
 \end{align}
-Ihre Reichweite liegt in Luft im \si{\centi\meter}-Bereich. Bei der Bewegung durch Gas verliert die Alpha-Strahlung Energie durch Ionisierung, Anregung und Dissoziation (Spaltung) von anderen Teilchen oder durch elastisches Stoßen. Dieser Energieverlust hängt von der Dichte des Gases und der Energie der Strahlung ab. \todo[color=red]{In der Anleitung steht: Je kleiner die Geschwindigkeit, desto größer die Wahrscheinlichkeit der Wechselwirkung mit Molekülen. Warum?} Ist die Energie groß genug kann der Energieverlust mit der Bethe-Bloch-Gleichung
+
+
+\subsection{Energieverteilung}
+Der Alpha-Zerfall kann mit der Reaktionsgleichung
+\begin{align}
+        X \rightarrow Y + \alpha
+\end{align}
+beschrieben werden. Es gelten Impuls- und Energieerhaltung, sodass
+\begin{align}
+        p_Y = - p_\alpha
+\end{align}
+und
+\begin{align}
+        E_X &= E_Y + E_\alpha \\
+        m_Xc^2 &= \sqrt{m_Y^2c^4 + p_Y^2c^2} + \sqrt{m_\alpha^2c^4 + p_\alpha^2c^2} \\
+        &= \sqrt{m_Y^2c^4 + p_\alpha^2c^2} + \sqrt{m_\alpha^2c^4 + p_\alpha^2c^2}
+\end{align}
+ist. Aufgelöst nach $p_\alpha$ gilt dann
+\begin{align}
+        p_\alpha = c\sqrt{\frac{m_X^2}{4} - \frac{m_Y^2}{2} - \frac{m_\alpha^2}{2}+\frac{\left(m_Y^2 - m_\alpha^2\right)^2}{4m_X^2}}
+\end{align}
+Alle Alpha-Teilchen haben demnach dieselbe Geschwindigkeit bzw. Energie. Das Energiespektrum ist diskret mit nur einem Peak. \\
+Es kann allerdings passieren, dass $Y$ nach der Reaktion nicht im Grundzustand, sondern in einem seiner angeregten Zustände $Y',Y'',...$ vorliegt. Dann ändert sich in der Reaktionsgleichung und obiger Rechnung $Y\rightarrow Y',Y'',...$, sodass je nachdem, in welchem Zustand sich das Atom befindet unterschiedlich schnelle Alpha-Teilchen emittiert werden. Das Spektrum ist nach wie vor diskret, hat aber mehrere Peaks.
+
+
+\subsection{Reichweite}
+Bei der Bewegung durch Gas verliert ein Alpha-Teilchen Energie durch Ionisierung, Anregung und Dissoziation (Spaltung) von anderen Teilchen oder durch elastisches Stoßen. Dieser Energieverlust hängt von der Dichte des Gases und der Energie des Teilchens. \todo[color=red]{In der Anleitung steht: Je kleiner die Geschwindigkeit, desto größer die Wahrscheinlichkeit der Wechselwirkung mit Molekülen. Warum?} Ist die Energie groß genug kann der Energieverlust mit der Bethe-Bloch-Gleichung
 \begin{align}
 	& -\frac{dE_\alpha}{dx} = \frac{z^2e^4}{4\pi\epsilon_0m_e}\frac{nZ}{v^2}\ln{\left(\frac{2m_ev^2}{I}\right)} \\
         & z: \text{ Ladung der Strahlung}\notag \\
@@ -25,5 +52,5 @@ benutzt ($E_\alpha$ in \si{\electronvolt}). Dieser Zusammenhang ist gültig für
 	& x = x_0\frac{p}{p_0} \\
 	& p_0: \text{ Normaldruck } \SI{1013}{\milli\bar}
 \end{align}
-ersetzt werden müssen. \\
-Hier mache ich evtl. noch was zu der statistischen Verteilung.
+ersetzt werden müssen.
+
