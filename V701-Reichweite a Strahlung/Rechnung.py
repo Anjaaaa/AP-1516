@@ -36,21 +36,27 @@ parameters1, popt1 = curve_fit(linear, x1[16:], puls1[16:])
 m1 = ufloat(parameters1[0], np.sqrt(popt1[0,0]))
 b1 = ufloat(parameters1[1], np.sqrt(popt1[1,1]))
 
+#mittelere reichweite bestimmen (lineare gleichung auflösen)
+reichweite1 = (max(puls1)/2 - b1)/m1
+
 x = np.linspace(0,2.5)
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_:x*10**(-3)))
 plt.plot(x1[16:], puls1[16:], 'ro', label='Messdaten (Regression)')
 plt.plot(x1[:15], puls1[:15], 'ko', label='Messdaten')
 plt.plot(x, linear(x, *parameters1),'k-', label = 'Regression an den linearen Teil')
+plt.plot(x, max(puls1)/2+0.00000001*x, 'k--')
+plt.annotate(' Mittlere \n Reichweite', xy=(reichweite1.n, max(puls1)/2), xytext=(2.05, 55000),
+            arrowprops=dict(facecolor='black', shrink=0.05),
+            )
 plt.xlabel('Effektiver Abstand zwischen Detektor und Strahler x in cm')
 plt.ylabel('$10^3$ Pulse pro 120s')
 plt.ylim(30000,120000)
 plt.xlim(0,2.5)
-plt.legend(loc='best')
+plt.legend(loc='lower left') # 2 = upper left
 plt.savefig('build/pulse1.png')
 plt.show()
 
-#mittelere reichweite bestimmen (lineare gleichung auflösen)
-reichweite1 = (max(puls1)/2 - b1)/m1
+
 
 
 write('build/reichweite1.txt', make_SI(reichweite1, r'\centi\meter', figures=2))
@@ -65,11 +71,20 @@ parameters2, popt2 = curve_fit(linear, x2[12:], puls2[12:])
 m2 = ufloat(parameters2[0], np.sqrt(popt2[0,0]))
 b2 = ufloat(parameters2[1], np.sqrt(popt2[1,1]))
 
+#mittelere reichweite bestimmen (lineare gleichung auflösen)
+reichweite2 = (max(puls2)/2 - b2)/m2
+print(reichweite2)
+
+
 x = np.linspace(0,3)
 plt.gca().yaxis.set_major_formatter(mpl.ticker.FuncFormatter(lambda x,_:x*10**(-3)))
 plt.plot(x2[12:], puls2[12:], 'ro', label='Messdaten (Regression')
 plt.plot(x2[:11], puls2[:11], 'ko', label='Messdaten')
 plt.plot(x, linear(x, *parameters2),'k-', label = 'Regression an den linearen Teil')
+plt.plot(x, max(puls2)/2+0.00000001*x, 'k--')
+plt.annotate('Mittlere Reichweite', xy=(reichweite2.n, max(puls2)/2), xytext=(2.2, 28000),
+            arrowprops=dict(facecolor='black', shrink=0.05),
+            )
 plt.xlabel('Effektiver Abstand zwischen Detektor und Strahler x in cm')
 plt.ylabel('$10^3$ Pulse pro 120s')
 plt.ylim(0,50000)
@@ -78,9 +93,7 @@ plt.legend(loc='best')
 plt.savefig('build/pulse2.png')
 plt.show()
 
-#mittelere reichweite bestimmen (lineare gleichung auflösen)
-reichweite2 = (max(puls2)/2 - b2)/m2
-print(reichweite2)
+
 
 write('build/reichweite2.txt', make_SI(reichweite2, r'\centi\meter', figures=2))
 write('build/m2.txt', make_SI(m2, r'\per\centi\meter', figures=1))
@@ -209,7 +222,7 @@ plt.plot(x, gauss(x, *parameters_gauss), 'r-', label='Gaußverteilung')
 #werte plotten, die für die regression verwendet werden
 plt.plot(xg, n, 'bo', label='Werte für den Fit')
 plt.xlabel('Anzahl der Pulse')
-plt.ylabel('Wahrscheinlichkeit')
+plt.ylabel('Wahrscheinlichkeitsdichte')
 plt.legend(loc='best')
 plt.savefig('build/histogramm.png')
 plt.show()

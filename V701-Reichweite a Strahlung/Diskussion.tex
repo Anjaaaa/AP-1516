@@ -1,4 +1,6 @@
-Warum zu Hölle ist ist unsere Poissonverteilung so schlecht???!!!!!
+In diesem Versuch wird lediglich der Druck und die Distanz zwischen Probe und Detektor abgelesen, während die restlichen Observablen -- Anzahl der Pulse und die Energie (angegeben in \glqq Channel\grqq) -- vom Computer ausgewertet werden. Die größte Ungenauigkeit ist folglich beim Ablesen des Druckes und der Distanz zu erwarten. Die analoge Anzeige des Druckmessers hat nie den Nullpunkt erreicht, was für einen systematischen Fehler spricht. Dies schlägt sich in den Energiewerten nieder, da bei der Umrechnung von \glqq Channel\grqq \ in Elektronenvolt davon ausgegangen wird, dass die Energie \SI{4}{\mega\electronvolt} bei \SI{0}{\bar}  ist. Die Anzahl der Pulse sollte sehr genau sein, da der Diskriminator (siehe Kapitel \ref{sec:aufbau}) entsprechend eingestellt wird. \\
+Die \textbf{mittlere Reichweite} der $\alpha$-Strahlen kann mit Hilfe der linearen Regression im Rahmen der soeben diskutierten Ungenauigkeiten bestimmt werden.  \\
+Die\textbf{Energie} der $\alpha$-Strahlung wird auf zwei Arten bestimmt. Die empirische Formel liefert hier höhere Werte als dieses, die mittels linearer Regression bestimmt werden (siehe Tabelle~\ref{tab:energie_vergleich}). Die Abweichungen sind signifikant und liegen zirka bei \SI{150}{\percent}.
 
       \begin{figure}[h!]
    	  	\centering
@@ -12,5 +14,4 @@ Warum zu Hölle ist ist unsere Poissonverteilung so schlecht???!!!!!
    	  	\label{tab:energie_vergleich}
    	  \end{figure}
 
-Ich glaube, dass die Poisson-Verteilung nicht schlecht ist. Sondern, dass der Zerfall halt nunmal durch eine Gauß-Kurve beschrieben wird, sodass es keinen passenden Poisson-Fall gibt. \\
-Auf Wikipedia steht allerdings, dass ab etwa lambda = 30 beide sehr ähnlich sind, wobei $\mu = \lambda$ und $\lambda=\sigma^2$. Von daher glaube ich einfach, dass das zu viele Pulse sind, weil die ja das $\lambda,\mu$ bestimmen.
+Das \textbf{Histogramm} im letzten Versuchsteil zeigt eine große Varianz der gemessenen Anzahl an Pulsen von ungefähr \SI{5}{\percent}. Eigenartig ist, dass Bin 5 höher ist als Bin sechs. Entgegen unserer Erwartung approximiert offensichtlich die Gaußglocke das Histogramm besser als die Poissonverteilung (siehe \ref{fig:histogramm}). Dies kann von vielen Faktoren wie der Anzahl der Ereignisse oder der Varianz abhängen.
