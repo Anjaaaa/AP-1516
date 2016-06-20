@@ -219,8 +219,8 @@ sigma = ufloat(parameters_gauss[0], np.sqrt(popt_gauss[0,0]))
 lam = ufloat(parameters_poisson[0], np.sqrt(popt_poisson[0,0]))
 
 
-write('build/mu.txt', make_SI(mu, r'\mega\electronvolt', figures=1))
-write('build/sigma.txt', make_SI(sigma, r'\mega\electronvolt', figures=1))
+write('build/mu.txt', make_SI(mu, r'', figures=1))
+write('build/sigma.txt', make_SI(sigma, r'', figures=1))
 write('build/lambda.txt', make_SI(lam, r'', figures=1))
 
 #Werte die gefittet wurden in Tabellen schreiben:

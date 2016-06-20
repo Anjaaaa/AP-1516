@@ -1,4 +1,8 @@
-\subsection{Bestimmung der Mittleren Reichweite von $\alpha$-Strahlung} \label{sec:reichweite}
+\subsection{Bestimmung der Mittleren Reichweite von $\alpha$-Strahlung} \label{sec:reichweite}\todo[color=red]{Wenn R die Reichweite ist, sollte dann die Einheit von b nicht cm sein?}
+\todo[color=green]{nein, da y die Pulse sind und b die gleiche einheit hat wie y}
+\todo[color=red]{Lach mich jetzt nicht aus, aber was ist denn m und b überhaupt?}
+\todo[color=green]{die haben keine bedeutung außer steigung und y-achsenabschnitt}\todo[color=red]{Warum ist R überhaupt die Steigung an dem Punkt und nicht die Steigung am ersten Punkt oder so?}
+\todo[color=green]{es ist nicht die steigung in einem punkt, sondern die steigung des linearen anteils}
 Für zwei Messreichen mit unterschiedlichem Abstand zwischen dem Detektor und dem Strahler wird zunächst die mittlere Reichweite von $\alpha$-Strahlung bestimmt. Die Abstände betragen
 \begin{align*}
 	x_{0,1} = \SI{2,1}{cm} \quad \text{und} \quad x_{0,2} = \SI{3,0}{\centi\meter} \, .
@@ -20,13 +24,14 @@ Für die erste Messung folgen Werte
 	m_1 &= \input{build/m1.txt} \ , \\
 	b_1 &= \input{build/b1.txt} \ , \\
 	R_{m,1} &= \input{build/reichweite1.txt} \quad.
-\end{align}\todo[color=red]{Wenn R die Reichweite ist, sollte dann die Einheit von b nicht cm sein?}\todo[color=red]{Lach mich jetzt nicht aus, aber was ist denn m und b überhaupt?}\todo[color=red]{Warum ist R überhaupt die Steigung an dem Punkt und nicht die Steigung am ersten Punkt oder so?}
-Und für die zweite Messung ergibt sich
+\end{align}Und für die zweite Messung ergibt sich
 \begin{align}
 	m_2 &= \input{build/m2.txt} \ , \\
 	b_2 &= \input{build/b1.txt} \ , \\
 	R_{m,2} &= \input{build/reichweite2.txt} \quad.
 \end{align}
+
+\todo[inline, color = yellow]{irgendwie verunsichern mich deine fragen. ist mein text so missverständlich geschrieben? eigentlich ist das nämlich nicht so kompliziert, aber ich weiß nicht, wie ich es ausdrücken soll.}
 
 \clearpage
 
@@ -155,6 +160,7 @@ Die Gaußkurve hat die Form
 	g(x) = \frac{1}{\sigma \sqrt{2\pi}}\operatorname{e}^{- \frac{1}{2} \left( \frac{x - \mu}{\sigma}   \right)^2} \quad .
 \end{align}
 Wobei $\mu$ dem Erwartungswert und $\sigma$ der Varianz der Verteilung entspricht. In diesem Falle ist\todo[color=red]{Warum diese Einheiten? Das sind doch Anzahlen von Pulsen.}
+\todo[color=green]{stimmt du hast recht, danke :)}
 \begin{align}
 	\mu &= \input{build/mu.txt}  \ , \\
 	\sigma &=  \input{build/sigma.txt} \quad .
