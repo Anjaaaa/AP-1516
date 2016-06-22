@@ -27,6 +27,7 @@ Für den Zerfall von Brom gilt
 = N_0\left(1-\exp(-\lambda\Delta t)\right)\exp(-\lambda t) \\
 	\Leftrightarrow \ln N_{\Delta t}(t) &= \ln N_0\left(1-\exp(-\lambda\Delta t)\right) \ - \lambda t \ .
 \end{align}
+\todo{Die Auswertmethode gehört dann nicht in die Theorie?}
 Da $\ln N_0\left(1-\exp(-\lambda\Delta t)\right)=const$ gilt kann eine lineare Ausgleichsrechnung mit den Wertepaaren $\{t_i, \ln N_{\Delta t}(t_i)\}$ durchgeführt werden. Der Zeitpunkt $t_i$ ist hierbei der Zeitpunkt nach dem $i$-ten Messintervall (also $t_3 = 3\Delta t=\SI{450}{\second}$). Der Graph der linearen Regression ist in Abbildung \ref{fig:Brom} zu sehen, die Rechnung mit Python berechnet die Parameter (Steigung $m$, Achsenabschnitt $b$)
 \begin{align}
 	m &= -\lambda = \input{build/Brom.tex} \\
