@@ -36,6 +36,9 @@ tB = np.linspace(0, 33, num=10)
 
 paramsBrom, poptBrom = curve_fit(Regression, tBrom*3, np.log(Brom), sigma = np.log(np.sqrt(Brom)))
 
+TBrom = -np.log(2)/paramsBrom[0]
+write('build/BromT.tex', make_SI(TBrom, r'\second', figures=1))
+
 plt.errorbar(tBrom*3, Brom, xerr=0, yerr=np.sqrt(Brom), fmt='ko', label = 'Messdaten')
 plt.plot(tB, np.exp(Regression(tB, paramsBrom[0], paramsBrom[1])), 'r', label = 'Regressionsgerade')
 
@@ -95,6 +98,12 @@ paramSL, poptSL = curve_fit(Regression, tSilberLang*10, np.log(SilberLang), sigm
 ### Regression kurzer Zerfall
 SilberKurzReg = SilberKurz - Regression(tSilberKurz, paramSL[0], paramSL[1])     # Abziehen des Langen Zerfalls
 paramSK, poptSK = curve_fit(Regression, tSilberKurz*10, np.log(SilberKurzReg), sigma = np.log(np.sqrt(SilberKurzReg)))
+
+TLang = -np.log(2)/paramSL[0]
+write('build/SilberLangT.tex', make_SI(TLang, r'\second', figures=1))
+TKurz = -np.log(2)/paramSK[0]
+write('build/SilberKurzT.tex', make_SI(TKurz, r'\second', figures=1))
+
 
 
 ### Plotten ###################################################################################################
@@ -161,14 +170,5 @@ for i in range(0, len(BromAnf)):
    Brom[i] = ufloat(BromAnf[i], np.sqrt(BromAnf[i]))
 
 
-write('build/W.tex', make_table([Silber,Brom],[1,1]))
-write('build/Werte.tex', make_full_table(
-      r'In einem Intervall gemessene Pulse für Silber und Brom nach dem abziehen des Nullwertes',
-      'tab:Werte',
-      'build/W.tex',
-      [0,1],
-      [r'$N_\text{\ce{Ag}}$',
-#      r'$\Delta N_\text{\ce{Ag}}$',
-      r'$N_\text{\ce{Br}}$'
-#      r'$\Delta N_\text{\ce{Br}}$'
-]))
+write('build/Werte.tex', make_table([Silber,Brom],[1,1]))
+
