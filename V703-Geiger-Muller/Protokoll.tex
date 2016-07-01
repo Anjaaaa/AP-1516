@@ -2,10 +2,10 @@
 \input{../Vorlage/Header.tex}
 
 
-\newcommand{\Versuch}{V701: Reichweite von $\alpha$-Strahlung}
-\newcommand{\Betreuer}{Max \textsc{Mustermann}}
-\newcommand{\Tag}{14.06.16}
-\newcommand{\V}{V701}
+\newcommand{\Versuch}{Das Geiger-Müller-Zählrohr}
+\newcommand{\Betreuer}{Christian \textsc{Ebberg}}
+\newcommand{\Tag}{28.06.16}
+\newcommand{\V}{V703}
 \newcommand{\Korrektur}{1. Abgabe}
 
 % Bibliographie erstellen:
@@ -13,10 +13,16 @@
 % 	biber Protokoll
 % 	pdflatex Protokoll.tex
 % oder einfach make ausführen
-
+\usepackage[
+	labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+	font=small,          % Schrift etwas kleiner als Dokument
+	width=0.9\textwidth, % maximale Breite einer Caption schmaler
+	]{caption}
+\sisetup{table-format=1.2}
+\usepackage{booktabs}
 
 \usepackage[
-	disable,
+%	disable,
 colorinlistoftodos,
 linecolor=yellow,
 backgroundcolor=yellow,
@@ -38,20 +44,19 @@ textsize=footnotesize
 
 
 \section{Aufbau und Ablauf des Experiments}
-\label{sec:aufbau}
 \input{Aufbau_Ablauf.tex}
 \clearpage
 
 
 \section{Auswertung}
-\subsection{Statistische Formeln}
-\subsubsection{Fehlerrechnung}
-\label{sec:Fehlerrechnung}
-\input{../Vorlage/Fehlerrechnung.tex}
-\subsubsection{Regression}
-\label{sec:regression}
-\input{../Vorlage/Regression.tex}
-\clearpage
+%\subsection{Statistische Formeln}
+%\subsubsection{Fehlerrechnung}
+%\label{sec:Fehlerrechnung}
+%\input{../Vorlage/Fehlerrechnung.tex}
+%\subsubsection{Regression}
+%\label{sec:regression}
+%\input{../Vorlage/Regression.tex}
+%\clearpage
 \input{Auswertung.tex}
 \clearpage
 

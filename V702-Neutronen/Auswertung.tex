@@ -1,10 +1,9 @@
-Im Folgenden wird, um unnötig viele Indices zu vermeiden, die Zahl der Messungen in einem Zeitintervall $N_{\Delta t}$ mit $N$ bezeichnet. \\
 Die Messung des Nulleffekts ergibt einen Offset von
 \begin{align}
 	N_{u,\text{\ce{Br}}} &= \frac{182}{900}\si{\counts\per\second} = \SI{36.4}{\counts\per\intervall} \\
 	N_{u,\text{\ce{Ag}}} &= \frac{222}{1200}\si{\counts\per\second} = \SI{1.85}{\counts\per\intervall} \ .
 \end{align}
-Dieser wird von den aufgenommenen Werten abgezogen, die dann erhaltenen eigentlichen Zerfallsraten $N$ pro Messintervall inklusive dem statistischen Fehler $\sqrt{N}$, der aus der Poissonverteilung des radioaktiven Zerfalls kommt, sind in Tabelle \ref{Werte} dargestellt.
+Dieser wird von den aufgenommenen Werten abgezogen, die dann erhaltenen eigentlichen Zerfallsraten $N$ pro Messintervall inklusive dem statistischen Fehler $\sqrt{N}$, der aus der Poissonverteilung des radioaktiven Zerfalls kommt, sind in Tabelle \ref{tab:Werte} dargestellt.
 \begin{table}[h!]
 \centering
         \caption{In einem Intervall gemessene Pulse nach Abziehen des Nullwertes}
@@ -20,15 +19,16 @@ Dieser wird von den aufgenommenen Werten abgezogen, die dann erhaltenen eigentli
 
 
 \subsection{Brom}
-Für den Zerfall von Brom gilt
+Die Anzahl der im Zeitintervall $\Delta t$ Zerfallenen Brom-Atome ist
 \begin{align}
-	N_{\Delta t}(t) &= N_0\exp(-\lambda t) 
-- N_0\exp(-\lambda(t+\Delta t)) 
-= N_0\left(1-\exp(-\lambda\Delta t)\right)\exp(-\lambda t) \\
-	\Leftrightarrow \ln N_{\Delta t}(t) &= \ln N_0\left(1-\exp(-\lambda\Delta t)\right) \ - \lambda t \ .
+	N_{\Delta t}(t) = N_0\exp(-\lambda t) - N_0\exp(-\lambda(t+\Delta t)) = N_0\left(1-\exp(-\lambda\Delta t)\right)\exp(-\lambda t) \ .
+\end{align}
+Logarithmiert ergibt sich so der lineare Zusammenhang
+\begin{align}
+	\Leftrightarrow \ln N_{\Delta t}(t) = \underbrace{\ln N_0\left(1-\exp(-\lambda\Delta t)\right)}{= const} - \lambda t \ .
 \end{align}
 \todo{Die Auswertmethode gehört dann nicht in die Theorie?}
-Da $\ln N_0\left(1-\exp(-\lambda\Delta t)\right)=const$ gilt kann eine lineare Ausgleichsrechnung mit den Wertepaaren $\{t_i, \ln N_{\Delta t}(t_i)\}$ durchgeführt werden. Der Zeitpunkt $t_i$ ist hierbei der Zeitpunkt nach dem $i$-ten Messintervall (also $t_3 = 3\Delta t=\SI{450}{\second}$). Der Graph der linearen Regression ist in Abbildung \ref{fig:Brom} zu sehen, die Rechnung mit Python berechnet die Parameter (Steigung $m$, Achsenabschnitt $b$)
+Es kann eine lineare Ausgleichsrechnung mit den Wertepaaren $\{t_i, \ln N_{\Delta t}(t_i)\}$ durchgeführt werden. Der Zeitpunkt $t_i$ ist hierbei der Zeitpunkt nach dem $i$-ten Messintervall (also $t_3 = 3\Delta t=\SI{450}{\second}$). Der Graph der linearen Regression ist in Abbildung \ref{fig:Brom} zu sehen, die Rechnung mit Python berechnet die Parameter (Steigung $m$, Achsenabschnitt $b$)
 \begin{align}
 	m &= -\lambda = \input{build/Brom.tex} \\
 	b &= \input{build/BromB.tex} \ .
@@ -62,15 +62,15 @@ Um die Halbwertszeit für den kurzlebigen Zerfall zu erhalten werden nun die Wer
 \end{align}
 die Halbwertszeit lautet
 \begin{align}
-        T_{\text{\ce{^108_47Ag}}} = \input{build/SilberLangT.tex} \ .
+        T_{\text{\ce{^110_47Ag}}} = \input{build/SilberKurzT.tex} \ .
 \end{align}
-Abbildung \ref{fig:Silber} zeigt die Regressionsgeraden mit den verwendeten Werten. \\
+Abbildung \ref{fig:Silber} zeigt die Regressionsgeraden mit den verwendeten Werten. 
 \begin{figure}[h!]
         \centering
         \includegraphics[width=0.7\textwidth]{build/Silber.png}
         \caption{Regressionsgeraden Silber. Für die Regression wurden die Werte des reinen kurzen Zerfalls verwendet. Die Werte, bei denen der lange Zerfall noch nicht abgezogen wurde, werden als unkorrigierte Werte bezeichnet.}
         \label{fig:Silber}
-\end{figure}
+\end{figure} \\
 Der gesamte Zerfall beider Isotope kann durch einfach Addition der beiden Geraden erhalten werden. Dabei ist zu beachten, dass gilt
 \begin{align}
 N_{\Delta t}(t) &= N_{0,\text{k}}\exp(-\lambda_\text{k} t) + N_{0,\text{l}}\exp(-\lambda_\text{l} t) - N_{0,\text{k}}\exp(-\lambda_\text{k}(t+\Delta t)) + N_{0,\text{l}}\exp(-\lambda_\text{l}(t+\Delta t)) \\

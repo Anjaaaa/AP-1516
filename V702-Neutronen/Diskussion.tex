@@ -1,0 +1,15 @@
+Literaturwerte\footnote{\url{http://www.periodensystem-online.de}, aufgerufen am 26.06.16 um 21:00 Uhr} zu den berechneten Halbwertszeiten finden sich in Tabelle \ref{tab:Lit}. Wie Abbildung \ref{fig:Brom} schon vermuten lässt, die Messpunkte liegen scheinbar willkürlich verstreut um die Gerade herum, weicht Brom sehr stark von diesem Wert ab. Die Messung von Silber liefert im Gegensatz dazu relativ gute Werte. Wobei auch hier Fehler unvermeidbar sind. Bei der Messung wurde das Zählwerk zunächst falsch eingestellt, sodass zwei Messperioden \glqq verschenkt\grqq\ wurden. Außerdem ist die Wahl der Zeitpunkte, wann ein Zerfall beginnt bzw. endet, (so gut wie) willkürlich. Und zuletzt folgt der radioaktive Zerfall nur einer Statistik, d.h. selbst eine perfekte Messung ohne systematischen Fehler, könnte ein stark vom erwarteten Wert abweichendes Ergebnis liefern.
+\begin{table}[h!]
+\centering
+\caption{Vergleich der berechneten Halbwertszeiten mit Literaturwerten}
+\label{tab:Lit}
+\begin{tabular}{cccc}
+	\toprule
+	Element & gemessene Halbwertszeit & Literaturwert & Abweichung \\
+	\midrule
+	Brom-80 & \input{build/BromT.tex} & \SI{1061}{\second} & -94.6\% \\
+	Silber-108 & \input{build/SilberKurzT.tex} & \SI{24.6}{\second} & 19.9\% \\
+	Silber-110 & \input{build/SilberLangT.tex} & \SI{142.2}{\second} & 3.2\% \\
+	\bottomrule
+\end{tabular}
+\end{table}
