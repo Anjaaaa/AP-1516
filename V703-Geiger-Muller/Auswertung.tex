@@ -36,10 +36,10 @@ Die Messdaten (siehe Tabelle~\ref{tab:charakteristik}) sind in Abbildung~\ref{fi
 \end{figure}
 
 \clearpage
-Die Steigung des Plateaus wird mit Hilfe einer Regression an den linearen Teil der Messdaten (siehe Abbildung~\ref{fig:charakteristik_linear}) ermittelt. Die Regression wird mit Hilfe der Pythonversion 3.5.1 durchgeführt. Für die Regressionsvorschrift
-\begin{align*}
+Die Steigung des Plateaus wird mit Hilfe einer Regression an den linearen Teil der Messdaten (siehe Abbildung~\ref{fig:charakteristik_linear}) ermittelt. Die Regression und Fehlerrechnung wird mit Hilfe der Pythonversion 3.5.1 durchgeführt. Für die Regressionsvorschrift
+\begin{align}
 	Z = m \cdot U +b
-\end{align*}
+\end{align}
 folgen die Fit-Parameter
 \begin{align}
 	m &= \input{build/m1.txt}\quad , \\
@@ -50,3 +50,14 @@ Die Steigung $s$ soll nun in $\si{\percent}}/\SI{100}{\volt}$ angegeben werden.
 	s = 100 \cdot \frac{Z_2 - Z_1}{Z_A} \cdot \frac{\si{\percent}}{\SI{100}{\volt}}
 \end{align}
 Hierbei entspricht $Z_A$ dem Wert der linearen Regression an der Stelle $U_A$, der Mitte des Plateaus, $Z_1$ dem Wert an der Stelle $U_A - \SI{50}{\volt}$ und $Z_2$ dem Wert zu $U_A + \SI{50}{\volt}$.
+
+\begin{align}
+	U_A = \input{build/U_mittel.txt} \quad Z_A = \input{build/Z_mittel.txt} \\
+	U_1 = \input{build/U1.txt} \quad Z_1 = \input{build/Z1.txt} \\
+	U_2 = \input{build/U2.txt} \quad Z2 = \input{build/Z2.txt}
+\end{align}
+Aus diesen Werten folgt eine Steigung von
+\begin{align}
+	s = \input{build/s.txt} \, \frac{\si{\percent}}{\SI{100}{\volt}} \quad .
+\end{align}
+	

@@ -35,8 +35,8 @@ parameters1, popt1 = curve_fit(linear, U[15:27], Z[15:27])
 m1 = ufloat(parameters1[0], np.sqrt(popt1[0,0]))
 b1 = ufloat(parameters1[1], np.sqrt(popt1[1,1]))
 
-write('build/m1.txt', make_SI(m1, r'', figures=1))
-write('build/b1.txt', make_SI(b1, r'', figures=1))
+write('build/m1.txt', make_SI(m1, r'\per\volt\per\second', figures=1))
+write('build/b1.txt', make_SI(b1, r'\per\second', figures=1))
 
 
 
@@ -66,14 +66,14 @@ s = 100 * (Z2 - Z1)/Z_mittel #s in %/100V
 
 print(Z1, Z_mittel, Z2, s, len(U))
 
-write('build/U_mittel.txt', make_SI(U_mittel, r'', figures=1))
-write('build/U1.txt', make_SI(U_mittel-50, r'', figures=1))
-write('build/U2.txt', make_SI(U_mittel+50, r'', figures=1))
-write('build/Z_mittel.txt', make_SI(Z_mittel, r'', figures=1))
-write('build/Z1.txt', make_SI(Z1, r'', figures=1))
-write('build/Z2.txt', make_SI(Z2, r'', figures=1))
+write('build/U_mittel.txt', make_SI(U_mittel, r'\volt', figures=1))
+write('build/U1.txt', make_SI(U_mittel-50, r'\volt', figures=1))
+write('build/U2.txt', make_SI(U_mittel+50, r'\volt', figures=1))
+write('build/Z_mittel.txt', make_SI(Z_mittel, r'\per\second', figures=1))
+write('build/Z1.txt', make_SI(Z1, r'\per\second', figures=1))
+write('build/Z2.txt', make_SI(Z2, r'\per\second', figures=1))
 
-#write('build/b1.txt', make_SI(b1, r'', figures=1))
+write('build/s.txt', make_SI(s, r'', figures=1))
 #write('build/tabelle_messung1.txt', make_table([p1, puls1, x1], [0,0,2]))
 
 
