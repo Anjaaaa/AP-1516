@@ -103,7 +103,11 @@ Q = Q/e
 
 write('build/tabelle_ladungen.txt', make_table([spannung, counts, strom*1e6, Q*1e-9], [0,0,2, 2]))
 
-print(Q)
+plt.plot(spannung, Q, 'ro')
+plt.xlabel(r'Spannung $U \ /\  \mathrm{V}$') 
+plt.ylabel('Anzahl freigesezter Ladungen')
+plt.savefig('build/anzahl_elektronen.png')
+plt.show()
 
 
 

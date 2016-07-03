@@ -104,7 +104,7 @@ In einer letzten Messung wird zusätzlich zu der Anzahl der Impulsen $N$ der Str
 \begin{align}
 	\frac{\mathrm{Elekronen}}{\mathrm{Count}} = \frac{Q }{e \cdot \mathrm{Counts}} = \frac{I \cdot t }{e \cdot \mathrm{Counts}} \quad .
 \end{align}
-Die errechneten Werte sind in Tabelle~\ref{tab:ladungen} dargestellt.
+Die errechneten Werte sind in Tabelle~\ref{tab:ladungen} dargestellt. Der lineare Zusammenhang zwischen der angelegten Spannung und den registrieren Ladungen ist in Abbildung~\ref{fig:anzahl_elektronen} ersichtlich.
 
 
 
@@ -112,11 +112,18 @@ Die errechneten Werte sind in Tabelle~\ref{tab:ladungen} dargestellt.
 	 	\centering
 	 	\captionof{table}{Messung zur Bestimmung der freigesetzten Ladungen pro Impuls}
 	 	\begin{tabular}{cccc}
-	 		$U \ /\  \mathrm{V}$ & N &  $I \ /\  \si{\mirco\ampere}$ & $e \cdot 10^9$ \\
+	 		$U \ /\  \mathrm{V}$ & N &  $I \ /\  \si{\micro\ampere}$ & $e \cdot 10^9$ \\
 	 		\hline
 	 		\input{build/tabelle_ladungen.txt}
 	 	\end{tabular}
 	 	\label{tab:ladungen}
+	 \end{figure}
+	 
+	 \begin{figure}[h!]
+	 	\centering
+	 	\includegraphics[width=0.8\textwidth]{build/anzahl_elektronen.png}
+	 	\caption{Die Anzahl der registrierten Ladungen pro einfallendem Elektron der $\beta$-Strahlung in Abhängigkeit der angelegten Spannung}
+	 	\label{fig:anzahl_elektronen}
 	 \end{figure}
 
 
