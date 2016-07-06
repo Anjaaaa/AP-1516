@@ -36,7 +36,7 @@ tB = np.linspace(0, 33, num=10)
 
 paramsBrom, poptBrom = curve_fit(Regression, tBrom*3, np.log(Brom), sigma = np.log(np.sqrt(Brom)))
 
-TBrom = -np.log(2)/paramsBrom[0]
+TBrom = -np.log(2)/ufloat(paramsBrom[0], poptBrom[0,0])
 write('build/BromT.tex', make_SI(TBrom, r'\second', figures=1))
 
 plt.errorbar(tBrom*3, Brom, xerr=0, yerr=np.sqrt(Brom), fmt='ko', label = 'Messdaten')
@@ -99,9 +99,9 @@ paramSL, poptSL = curve_fit(Regression, tSilberLang*10, np.log(SilberLang), sigm
 SilberKurzReg = SilberKurz - Regression(tSilberKurz, paramSL[0], paramSL[1])     # Abziehen des Langen Zerfalls
 paramSK, poptSK = curve_fit(Regression, tSilberKurz*10, np.log(SilberKurzReg), sigma = np.log(np.sqrt(SilberKurzReg)))
 
-TLang = -np.log(2)/paramSL[0]
+TLang = -np.log(2)/ufloat(paramSL[0], poptSL[0,0])
 write('build/SilberLangT.tex', make_SI(TLang, r'\second', figures=1))
-TKurz = -np.log(2)/paramSK[0]
+TKurz = -np.log(2)/ufloat(paramSK[0], poptSK[0,0])
 write('build/SilberKurzT.tex', make_SI(TKurz, r'\second', figures=1))
 
 
