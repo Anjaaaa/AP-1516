@@ -10,11 +10,11 @@ t = np.array([50, 100, 150, 200, 250, 300])
 # 2.4 cm = 1°  ->  1cm = 1/2.4
 T = np.array([4+2.15/2.35, 4+1.4/2.35, 3+2.25/2.35, 3+1.15/2.35, 3+0.45/2.35, 2+2.3/2.35])
 print('Temperaturdifferenz:', T)
-k = 112
+k = 120
 A = 0.012*0.004
 
-Strom = -k*A*(T/t)
-
+#Strom = -k*A*(T/t)
+Strom = -k*A*T/x
 print('Wärmestrom:', ufloat(np.mean(Strom), np.std(Strom)/len(Strom)), '\n', '\n', '\n')
 
 

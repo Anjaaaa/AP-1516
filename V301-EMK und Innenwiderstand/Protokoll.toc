@@ -1,8 +1,0 @@
-\select@language {german}
-\contentsline {section}{\numberline {1}Theorie}{2}
-\contentsline {section}{\numberline {2}Aufbau und Ablauf des Experiments}{4}
-\contentsline {section}{\numberline {3}Auswertung}{5}
-\contentsline {subsection}{\numberline {3.1}Bestimmung der Leerlaufspannung und Berechnung des Innenwiderstands f\IeC {\"u}r drei Spannungsquellen}{5}
-\contentsline {subsection}{\numberline {3.2}Systematischer Fehler -- endlicher Widerstand des Voltmeters}{8}
-\contentsline {subsection}{\numberline {3.3}Das Maximum der umgesetzten Leistung}{9}
-\contentsline {section}{\numberline {4}Diskussion}{10}
